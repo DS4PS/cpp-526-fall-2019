@@ -77,6 +77,7 @@ iframe {
 
 ## Data-Driven Docs [ [splainer](https://ds4ps.org/docs/) ] 
 * Data-Driven Documents
+* The Importance of Reproducibility 
 * [Markdown](https://ds4ps.org/cpp-526-fall-2019/markdown/)
 * RMD in RStudio 
   - Headers 
