@@ -23,7 +23,7 @@ font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
   background-color: #666;
   color: white;
   font-size: 24px;
-  padding: 5px;
+  padding: 10px;
   margin-top: 70px;
 }
 
