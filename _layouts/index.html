@@ -58,6 +58,31 @@ layout: default
   
 <a class="uk-button uk-button-default" class="uk-align-center" onclick="onlyprint();">PRINT THE SYLLABUS</a>
 
+  
+  <h2></a> Program Info </h2> 
+
+  
+<table id="index" class="table table-condensed" cellspacing="10">
+<thead>
+<tr>
+<th><span></span></th>
+<th><span></span></th>
+</tr>
+</thead>
+
+<tbody>
+
+{% if page.info.program_title %}
+<tr>
+<td>Program Title </td>
+  <td> <b><a onclick="location.href='{{ page.info.program_website }}'">{{page.info.program_title}}</a></b> </td>
+</tr>
+{% endif %}
+  
+</tbody>
+</table>
+  
+  
 
 <h2></a> Course Info </h2> 
 
@@ -269,28 +294,7 @@ layout: default
 
   
   
- <h2></a> Program Info </h2> 
-
-  
-<table id="index" class="table table-condensed" cellspacing="10">
-<thead>
-<tr>
-<th><span></span></th>
-<th><span></span></th>
-</tr>
-</thead>
-
-<tbody>
-
-{% if page.info.program_title %}
-<tr>
-<td>Program Title </td>
-  <td> <b><a onclick="location.href='{{ page.info.program_website }}'">{{page.info.program_title}}</a></b> </td>
-</tr>
-{% endif %}
-  
-</tbody>
-</table>
+ 
 
   
 
