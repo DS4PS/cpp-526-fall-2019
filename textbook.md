@@ -47,18 +47,27 @@ img {
 
 <br>
 
+## Core R
 * What is R?
-* Tour of R Studio
-* Packages 
+* How do Packages Work?
 * Navigation (working directories, list objects, create folders)
-* [Markdown](https://ds4ps.org/cpp-526-fall-2019/markdown/)
-* [Data-Driven Documents](https://ds4ps.org/docs/) 
+
+## R Studio
+* Tour of R Studio 
+* Navigation in R Studio 
 * [Style Guides](https://jef.works/R-style-guide/) 
- 
- 
+
+## Data-Driven Docs
+* [Data-Driven Documents](https://ds4ps.org/docs/) 
+* [Markdown](https://ds4ps.org/cpp-526-fall-2019/markdown/)
+* RMD in RStudio 
+  - Headers 
+  - Chunks 
+  - Knitting 
+
 <br> 
 
-# Foundations 
+# Data Programming in R 
 
 ## CH 01 - R as a Calculator
 * Assignment 
