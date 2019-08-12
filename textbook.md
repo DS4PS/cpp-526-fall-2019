@@ -19,6 +19,13 @@ font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
   color: maroon;
 }
 
+.textbook-toc>h1 {
+  background-color: #333;
+  color: white;
+  font-size: 24px;
+}
+
+
 .uk-navbar-nav>li>a {
     display: flex;
     justify-content: center;
