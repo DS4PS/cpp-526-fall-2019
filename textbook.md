@@ -120,7 +120,7 @@ iframe {
 * Empty vectors: NULL
 
 
-## CH 04 - Altering Vectors
+## CH 05 - Altering Vectors
 * Defining factors, relevel()
 * Recoding Values 
 * Find and replace
@@ -131,7 +131,7 @@ iframe {
 * Implicit Casting (coercion)
 
 
-## CH 05 –Identifying Groups within Data 
+## CH 06 –Identifying Groups within Data 
 * Set theory as categories and membership 
 * Logical Operators 
   - equal
@@ -150,7 +150,7 @@ iframe {
 
 # Two-Dimensional Datasets
 
-## CH 06 – Dataframes
+## CH 07 – Dataframes
 * Creating data frames from vectors
 * the $ operator
 * Checking and changing class types
@@ -158,7 +158,7 @@ iframe {
 * Reorder rows or columns 
 * CSV vs RDS formats
 
-## CH 07 – Matrices and Lists
+## CH 08 – Matrices and Lists
 * Matrix
 * Lists
 * Building data objects: 
@@ -173,7 +173,7 @@ Data wrangling is the process of preparing data for analysis, which includes rea
 
 The goal of data wrangling is to create a **rodeo dataset** (clean and well-structured) that is ready for modeling and visualization. 
 
-## CH 08 – Getting Data into R [ [tutorial](https://www.datacamp.com/community/tutorials/r-data-import-tutorial) ]
+## CH 09 – Getting Data into R [ [tutorial](https://www.datacamp.com/community/tutorials/r-data-import-tutorial) ]
 * Read options   
 * Copy and paste from Excel 
 * Using rdata format 
@@ -189,7 +189,7 @@ The goal of data wrangling is to create a **rodeo dataset** (clean and well-stru
   - Socrata
   - Twitter
 
-## CH 09 - Saving Data [ [tutorial](https://thomasleeper.com/Rcourse/Tutorials/savingdata.html) ]
+## CH 10 - Saving Data [ [tutorial](https://thomasleeper.com/Rcourse/Tutorials/savingdata.html) ]
 * Write options 
   - CSV 
   - R Data Sets (RDS)
@@ -203,7 +203,7 @@ The goal of data wrangling is to create a **rodeo dataset** (clean and well-stru
 
 # TIDY FUNCTIONS
 
-## CH 10 – Slicing Datasets – Base R and dplyr
+## CH 11 – Slicing Datasets – Base R and dplyr
 * Subset operator
 * By index, including order / match
 * By logical
@@ -213,14 +213,14 @@ The goal of data wrangling is to create a **rodeo dataset** (clean and well-stru
 * Selector Vectors
 * Subset by column  ---  dplyr::select()
 
-## CH 11 – Combining Datasets
+## CH 12 – Combining Datasets
 * merge and match
 * join in dplyr
 * inner, outer, right, left
 
 # DESCRIBE
 
-## CH 12 – Summarizing Vectors
+## CH 13 – Summarizing Vectors
 * Counting things:  sum( logical statement )
 * Categorical data:  tables
 * Missing values
@@ -230,7 +230,7 @@ The goal of data wrangling is to create a **rodeo dataset** (clean and well-stru
 * All at once:  summary + data.frame / matrix
 * Creating tables of descriptives: factors vs numeric
 
-## CH 13– Summarizing Groups of Vectors
+## CH 14– Summarizing Groups of Vectors
 * Table ( f1, f2 ), ftable( row.vars=c(“f1”,”f2”), col.vars=”f3” )
 * Function over groups:  tapply( v1, f1 )  or dplyr:: group_by() + summarise()
 * Functions over levels of numeric data:  tapply( v1, cut(v2) )
@@ -241,12 +241,12 @@ The goal of data wrangling is to create a **rodeo dataset** (clean and well-stru
 
 # VISUALIZE
 
-## CH 14 – Principles of Visual Communication
+## CH 15 – Principles of Visual Communication
 * Ground, figure, narrative (context, subject, action)
 * Tufte’s rules 
 * Visual tragedies 
 
-## CH 15 – Core Graphics Engine
+## CH 16 – Core Graphics Engine
 * Defining a canvas: xlim, ylim
 * Adding data
 * Type (point, line, both)
@@ -259,28 +259,28 @@ The goal of data wrangling is to create a **rodeo dataset** (clean and well-stru
 * Adding data labels:  text()
 * Margins
 
-## CH 16 – Advanced Graphics
+## CH 17 – Advanced Graphics
 * Colors and color functions
 * Custom fonts / math symbols
 * Multiple Plots (core graphics)
   - Incorrect:  https://en.wikipedia.org/wiki/File:Smallmult.png#/media/File:Smallmult.png
 * Custom graph layouts
 
-## CH 17 – ggplot2
+## CH 18 – ggplot2
 * Grammar of graphics concept
 * ggplot overview
 
 
 # DYNAMIC DOCUMENTS
 
-## CH 18 - R shiny [ [tutorial](http://rmarkdown.rstudio.com/authoring_shiny.html) ]
+## CH 19 - R shiny [ [tutorial](http://rmarkdown.rstudio.com/authoring_shiny.html) ]
 * What makes documents dynamic? 
 * Widgets 
   - input objects 
 * Render functions 
 * reactive 
 
-## CH 19 - flexdashboards [ [overview](http://rmarkdown.rstudio.com/flexdashboard/) ]
+## CH 20 - flexdashboards [ [overview](http://rmarkdown.rstudio.com/flexdashboard/) ]
 * Principles of good dashboard design 
 * Layouts 
 * Sidebars 
