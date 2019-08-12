@@ -6,7 +6,7 @@ title: Course Notes
 <style>
 ul {
 font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; 
-  font-size: 16px; 
+  font-size: 18px; 
   font-style: normal; 
   font-variant: small-caps; 
   font-weight: 100;
