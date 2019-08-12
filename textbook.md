@@ -94,7 +94,7 @@ iframe {
   - Headers 
   - Chunks 
   - Knitting 
-
+* [Pimp my RMD](https://holtzy.github.io/Pimp-my-rmd/)
  
 
 # Basic Programming in R 
