@@ -26,13 +26,14 @@ img {
  
 ## CH 00 – Getting Started
 * [What is R?](https://vimeo.com/180644880) 
-* Tour of R Studio 
-* [Markdown](https://ds4ps.org/cpp-526-fall-2019/markdown/)
+* Tour of R Studio
 * Packages 
 * Navigation (working directories, list objects, create folders)
+* [Markdown](https://ds4ps.org/cpp-526-fall-2019/markdown/)
+* [Data-Driven Documents](https://ds4ps.org/docs/) 
 * Style Guides 
  
-## CH 01 - Calculations in R
+## CH 01 - R as a Calculator
 * Assignment 
 * Mathematical Operators 
  
