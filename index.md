@@ -3,7 +3,7 @@ layout: index
 title: Syllabus
 
 index:
-    title: Foundations of Data Science I
+    title: Foundations of Data Science Part I
     image: data-science.png
     subtitle: Data programming in R.
     
