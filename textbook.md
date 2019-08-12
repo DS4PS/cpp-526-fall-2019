@@ -40,6 +40,11 @@ img {
 * [Data-Driven Documents](https://ds4ps.org/docs/) 
 * Style Guides 
  
+ 
+<br> 
+
+# Foundations 
+
 ## CH 01 - R as a Calculator
 * Assignment 
 * Mathematical Operators 
