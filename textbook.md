@@ -62,7 +62,7 @@ iframe {
 
 <br>
 
-# Three Parts of R
+# The Three Parts of R
 
 ## Core R [ [video](https://player.vimeo.com/video/180644880) ]
 * What is R?
