@@ -53,10 +53,13 @@ img {
 
 <br>
 
+# Three Parts of R
+
 ## Core R
 * What is R?
 * How do Packages Work?
 * Navigation (working directories, list objects, create folders)
+* Scripts 
 
 ## R Studio
 * Tour of R Studio 
@@ -73,7 +76,7 @@ img {
 
 <br> 
 
-# Data Programming in R 
+# Basic Programming in R 
 
 ## CH 01 - R as a Calculator
 * Assignment 
