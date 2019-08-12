@@ -24,7 +24,7 @@ font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
   color: white;
   font-size: 24px;
   padding: 5px;
-  margin-top: 50px;
+  margin-top: 70px;
 }
 
 
@@ -83,7 +83,7 @@ img {
   - Chunks 
   - Knitting 
 
-<br> 
+ 
 
 # Basic Programming in R 
 
@@ -98,6 +98,9 @@ img {
 * Values 
 * Returns 
 * Reading Help Files 
+
+
+
 
 # One-Dimensional Datasets
 
@@ -142,6 +145,7 @@ img {
   - from categorical variables
   - from numeric variables
   - missing values as a group
+
 
 
 # Two-Dimensional Datasets
