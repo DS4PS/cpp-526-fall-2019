@@ -64,7 +64,7 @@ img {
 
 # Three Parts of R
 
-## Core R
+## Core R [ [video](https://player.vimeo.com/video/180644880) ]
 * What is R?
 * How do Packages Work?
 * Navigation (working directories, list objects, create folders)
@@ -75,8 +75,8 @@ img {
 * Navigation in R Studio 
 * [Style Guides](https://jef.works/R-style-guide/) 
 
-## Data-Driven Docs
-* [Data-Driven Documents](https://ds4ps.org/docs/) 
+## Data-Driven Docs [ [tutorial](https://ds4ps.org/docs/) ] 
+* Data-Driven Documents
 * [Markdown](https://ds4ps.org/cpp-526-fall-2019/markdown/)
 * RMD in RStudio 
   - Headers 
@@ -91,7 +91,7 @@ img {
 * Assignment 
 * Mathematical Operators 
  
-## [CH 02 - Functions](http://ds4ps.org/datacamp-light-demo-for-rmd/calc-mortgage.html) 
+## CH 02 - Functions [ [tutorial](http://ds4ps.org/datacamp-light-demo-for-rmd/calc-mortgage.html) ] 
 * Input-Output Devices 
 * Object-Oriented Coding 
 * Arguments 
