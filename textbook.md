@@ -4,7 +4,7 @@ title: Course Notes
 ---
 
 <style>
-ul {
+.uk-container.ul {
 font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; 
   font-size: 18px; 
   font-style: normal; 
