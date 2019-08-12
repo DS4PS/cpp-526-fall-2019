@@ -61,7 +61,7 @@ iframe {
 
 <div class="textbook-toc">
 
-#### Data Science for the Social Sector
+#### Data Programming for Social Scientists 
 
 # Getting Started
 
