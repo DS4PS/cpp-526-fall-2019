@@ -3,24 +3,24 @@ layout: index
 title: Syllabus
 
 index:
-    title: Foundations of Program Evaluation I
-    image: distribution.svg
-    subtitle: Regression analysis for the study of program impact.
+    title: Foundations of Data Science I
+    image: data-science.png
+    subtitle: Data programming in R.
     
 info: 
  program_title: Program Evaluation and Data Analytics
- program_website: 
- course_title: Foundations of Program Evaluation Part I
- course_number: CPP 523 
+ program_website: https://asuonline.asu.edu/online-degree-programs/graduate/program-evaluation-and-data-analytics-ms/
+ course_title: Foundations of Data Science Part I
+ course_number: CPP 526 
  course_level: Graduate 
- course_website: 'https://canvas.asu.edu/courses/26991'
+ course_website: 'https://canvas.asu.edu/courses/29528'
  course_start_end_dates: Aug 22 to Oct 11, 2019  
- course_prerequisites: College Level Intro. to Stats 
+ course_prerequisites:  
  class_meets_when:  Asynchronous  
- class_meets_where:  'https://asu.zoom.us/j/836463264'
+ class_meets_where:  'https://asu.zoom.us/j/944016877'
  review_sessions_when: TBD 
  review_sessions_where: UCENT Policy Analytics Lab 4th Floor + Zoom
- discussion_board_url: 'https://ds4ps.org/cpp-523-fall-2019/help/'
+ discussion_board_url: 'https://ds4ps.org/cpp-526-fall-2019/help/'
 
 instructor:
 -  name: Jesse Lecy, PhD
