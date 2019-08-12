@@ -41,7 +41,7 @@ font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
 }
 
 
-img {
+iframe {
   display: block;
   margin-left: auto;
   margin-right: auto;
