@@ -30,7 +30,7 @@ img {
 # Getting Started
 
 <iframe src="https://player.vimeo.com/video/180644880" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-<p><a href="https://vimeo.com/180644880">R in 60 Seconds</a> from <a href="https://vimeo.com/user28525110">DS4PS</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+
 
 * What is R?
 * Tour of R Studio
