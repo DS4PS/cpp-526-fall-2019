@@ -20,7 +20,7 @@ font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
 }
 
 .textbook-toc>h1 {
-  background-color: #999;
+  background-color: #666;
   color: white;
   font-size: 22px;
   padding: 5px;
