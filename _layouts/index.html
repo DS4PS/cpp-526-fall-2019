@@ -167,30 +167,6 @@ layout: default
 </tr>
 {% endif %}
   
-{% if page.info.review_sessions_when %}
-<tr>
-<td>Discussion Session Time</td>
-<td><b> {{page.info.review_sessions_when }} </b></td>
-</tr>
-{% endif %}
-
-{% if page.info.review_sessions_where %}
-<tr>
-<td>Discussion Session Location</td>
-<td><b> {{page.info.review_sessions_where }} </b></td>
-</tr>
-{% endif %}  
-
-
-{% if page.info.discussion_board_url %}  
-<tr>
-<td>Assignment Discussion Board</td>
-<td>
-  <a class="uk-button uk-button-default uk-button-small" class="uk-align-center" onclick="location.href='{{page.info.discussion_board_url}}'" target="_blank">SUBMIT A QUESTION</a>
-</td>
-</tr>
-{% endif %}  
-  
 </tbody>
 </table>
 
@@ -285,6 +261,15 @@ layout: default
 </tr> 
 {% endfor %}
 
+{% if page.info.discussion_board_url %}  
+<tr>
+<td>Assignment Discussion Board</td>
+<td>
+  <a class="uk-button uk-button-default uk-button-small" class="uk-align-center" onclick="location.href='{{page.info.discussion_board_url}}'" target="_blank">SUBMIT A QUESTION</a>
+</td>
+</tr>
+{% endif %} 
+  
 </tbody>
 </table>
 
@@ -316,16 +301,7 @@ layout: default
 <td><b> {{page.info.review_sessions_where }} </b></td>
 </tr>
 {% endif %}  
-
-
-{% if page.info.discussion_board_url %}  
-<tr>
-<td>Assignment Discussion Board</td>
-<td>
-  <a class="uk-button uk-button-default uk-button-small" class="uk-align-center" onclick="location.href='{{page.info.discussion_board_url}}'" target="_blank">SUBMIT A QUESTION</a>
-</td>
-</tr>
-{% endif %}  
+ 
   
 </tbody>
 </table>
