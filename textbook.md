@@ -20,7 +20,9 @@ font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
 }
 
 .textbook-toc>h4 { 
-  font-size: 30px;  
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; 
+  font-weight: 100;
+  font-size: 36px;  
   color: #666;
 }
 
