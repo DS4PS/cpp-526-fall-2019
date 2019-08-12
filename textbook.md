@@ -75,7 +75,7 @@ iframe {
 * Navigation in R Studio 
 * [Style Guides](https://jef.works/R-style-guide/) 
 
-## Data-Driven Docs [ [tutorial](https://ds4ps.org/docs/) ] 
+## Data-Driven Docs [ [splainer](https://ds4ps.org/docs/) ] 
 * Data-Driven Documents
 * [Markdown](https://ds4ps.org/cpp-526-fall-2019/markdown/)
 * RMD in RStudio 
@@ -91,7 +91,7 @@ iframe {
 * Assignment 
 * Mathematical Operators 
  
-## CH 02 - Functions [ [tutorial](http://ds4ps.org/datacamp-light-demo-for-rmd/calc-mortgage.html) ] 
+## CH 02 - Functions [ [chapter](http://ds4ps.org/datacamp-light-demo-for-rmd/calc-mortgage.html) ] 
 * Input-Output Devices 
 * Object-Oriented Coding 
 * Arguments 
@@ -167,7 +167,7 @@ iframe {
 
 
 
-# DATA WRANGLING (with dplyr)
+# Data Wrangling (dplyr)
 
 Data wrangling is the process of preparing data for analysis, which includes reading data into R from a variety of formats, cleaning data, tidying datasets, creating subsets and filters, transforming variables, grouping data, and joining datasets. 
 
@@ -201,7 +201,7 @@ The goal of data wrangling is to create a **rodeo dataset** (clean and well-stru
 * Copy to Excel 
 
 
-# TIDY FUNCTIONS
+# Tidy Functions
 
 ## CH 11 – Slicing Datasets – Base R and dplyr
 * Subset operator
@@ -218,7 +218,7 @@ The goal of data wrangling is to create a **rodeo dataset** (clean and well-stru
 * join in dplyr
 * inner, outer, right, left
 
-# DESCRIBE
+# Explore and Describe
 
 ## CH 13 – Summarizing Vectors
 * Counting things:  sum( logical statement )
@@ -239,7 +239,7 @@ The goal of data wrangling is to create a **rodeo dataset** (clean and well-stru
 *  https://cran.r-project.org/web/packages/DescTools/vignettes/DescToolsCompanion.pdf
 
 
-# VISUALIZE
+# Visualize 
 
 ## CH 15 – Principles of Visual Communication
 * Ground, figure, narrative (context, subject, action)
@@ -271,7 +271,7 @@ The goal of data wrangling is to create a **rodeo dataset** (clean and well-stru
 * ggplot overview
 
 
-# DYNAMIC DOCUMENTS
+# Make Dynamic
 
 ## CH 19 - R shiny [ [tutorial](http://rmarkdown.rstudio.com/authoring_shiny.html) ]
 * What makes documents dynamic? 
