@@ -4,7 +4,8 @@ title: Course Notes
 ---
 
 <style>
-div.uk-container.ul {
+  
+ul {
 font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; 
   font-size: 18px; 
   font-style: normal; 
@@ -12,6 +13,19 @@ font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
   font-weight: 100;
   line-height: 26.4px;
 }
+
+.uk-navbar-nav>li>a, .uk-navbar-item, .uk-navbar-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    height: 80px;
+    padding: 0 15px;
+    font-size: .875rem;
+    font-family: system-ui;
+    text-decoration: none;
+}
+
 h2 { 
   font-size: 22px;  
   color: maroon;
