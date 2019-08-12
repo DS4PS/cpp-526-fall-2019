@@ -20,10 +20,10 @@ font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
 }
 
 .textbook-toc>h1 {
-  background-color: #666;
+  background-color: #999;
   color: white;
-  font-size: 24px;
-  padding: 10px;
+  font-size: 22px;
+  padding: 5px;
   margin-top: 50px;
 }
 
@@ -56,7 +56,7 @@ img {
 
 <div class="textbook-toc">
 
-# Getting Started
+## Getting Started
 
 <iframe src="https://player.vimeo.com/video/180644880" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 
