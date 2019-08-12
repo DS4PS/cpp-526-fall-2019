@@ -166,6 +166,129 @@ img {
 * Transformations of Datasets 
 
 
+
+# DATA WRANGLING (with dplyr)
+
+Data wrangling is the process of preparing data for analysis, which includes reading data into R from a variety of formats, cleaning data, tidying datasets, creating subsets and filters, transforming variables, grouping data, and joining datasets. 
+
+The goal of data wrangling is to create a **rodeo dataset** (clean and well-structured) that is ready for modeling and visualization. 
+
+## CH 08 – Getting Data into R [ [tutorial](https://www.datacamp.com/community/tutorials/r-data-import-tutorial) ]
+* Read options   
+* Copy and paste from Excel 
+* Using rdata format 
+* Read from csv or tsv
+* Read text files
+* Import from Excel
+* Import from common format (foreign package)
+* Import from the web (RCurl)
+* Import from GitHub
+* Import from DropBox
+* APIs
+  - Census
+  - Socrata
+  - Twitter
+
+## CH 09 - Saving Data [ [tutorial](https://thomasleeper.com/Rcourse/Tutorials/savingdata.html) ]
+* Write options 
+  - CSV 
+  - R Data Sets (RDS)
+  - CSV vs RDS
+  - Tables 
+  - RData Format
+  - SPSS or Stata 
+* Copy to Clipboard 
+* Copy to Excel 
+
+
+# TIDY FUNCTIONS
+
+## CH 10 – Slicing Datasets – Base R and dplyr
+* Subset operator
+* By index, including order / match
+* By logical
+* Recycling
+* Subset by row  -- dplyr::filter()
+* Indices
+* Selector Vectors
+* Subset by column  ---  dplyr::select()
+
+## CH 11 – Combining Datasets
+* merge and match
+* join in dplyr
+* inner, outer, right, left
+
+# DESCRIBE
+
+## CH 12 – Summarizing Vectors
+* Counting things:  sum( logical statement )
+* Categorical data:  tables
+* Missing values
+* prop.table() and margin.table()
+* Numeric data:  min, max, mean, summary / quantile
+* Missing values
+* All at once:  summary + data.frame / matrix
+* Creating tables of descriptives: factors vs numeric
+
+## CH 13– Summarizing Groups of Vectors
+* Table ( f1, f2 ), ftable( row.vars=c(“f1”,”f2”), col.vars=”f3” )
+* Function over groups:  tapply( v1, f1 )  or dplyr:: group_by() + summarise()
+* Functions over levels of numeric data:  tapply( v1, cut(v2) )
+* tapply( v1, INDEX=list(f1,f2)  or dplyr:: group_by() + summarise()
+* aggregate( dat, FUN, by=f1 )
+*  https://cran.r-project.org/web/packages/DescTools/vignettes/DescToolsCompanion.pdf
+
+
+# VISUALIZE
+
+## CH 14 – Principles of Visual Communication
+* Ground, figure, narrative (context, subject, action)
+* Tufte’s rules 
+* Visual tragedies 
+
+## CH 15 – Core Graphics Engine
+* Defining a canvas: xlim, ylim
+* Adding data
+* Type (point, line, both)
+* Symbols
+* Color
+* Size
+* Adding grids
+* Adding axes
+* Adding titles / axes labels
+* Adding data labels:  text()
+* Margins
+
+## CH 16 – Advanced Graphics
+* Colors and color functions
+* Custom fonts / math symbols
+* Multiple Plots (core graphics)
+  - Incorrect:  https://en.wikipedia.org/wiki/File:Smallmult.png#/media/File:Smallmult.png
+* Custom graph layouts
+
+## CH 17 – ggplot2
+* Grammar of graphics concept
+* ggplot overview
+
+
+# DYNAMIC DOCUMENTS
+
+## CH 18 - R shiny [ [tutorial](http://rmarkdown.rstudio.com/authoring_shiny.html) ]
+* What makes documents dynamic? 
+* Widgets 
+  - input objects 
+* Render functions 
+* reactive 
+
+## CH 19 - flexdashboards [ [overview](http://rmarkdown.rstudio.com/flexdashboard/) ]
+* Principles of good dashboard design 
+* Layouts 
+* Sidebars 
+* Value boxes 
+* CSS basics 
+
+
+
 <br>
 <br>
 <br>
