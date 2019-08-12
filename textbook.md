@@ -96,3 +96,22 @@ img {
   - from numeric variables
   - missing values as a group
 
+
+# Two-Dimensional Datasets
+
+## CH 06 – Dataframes
+* Creating data frames from vectors
+* the $ operator
+* Checking and changing class types
+* Filter rows and select columns 
+* Reorder rows or columns 
+* CSV vs RDS formats
+
+## CH 07 – Other Data Structures
+* Matrix
+* Lists
+* Building data objects: 
+- data.frame() vs cbind() and rbind()
+* Transformations of Datasets 
+
+
