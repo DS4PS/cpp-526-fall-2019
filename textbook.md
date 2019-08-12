@@ -21,7 +21,7 @@ font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
 
 .textbook-toc>h4 { 
   font-size: 30px;  
-  color: #999;
+  color: #666;
 }
 
 .textbook-toc>h1 {
