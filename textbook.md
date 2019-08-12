@@ -19,6 +19,11 @@ font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
   color: maroon;
 }
 
+.textbook-toc>h4 { 
+  font-size: 30px;  
+  color: #999;
+}
+
 .textbook-toc>h1 {
   background-color: #666;
   color: white;
@@ -56,7 +61,7 @@ iframe {
 
 <div class="textbook-toc">
 
-## Data Science for the Social Sector
+#### Data Science for the Social Sector
 
 # Getting Started
 
