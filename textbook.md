@@ -24,6 +24,7 @@ font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
   color: white;
   font-size: 24px;
   padding: 10px;
+  margin-top: 50px;
 }
 
 
