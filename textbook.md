@@ -113,7 +113,7 @@ img {
 * Reorder rows or columns 
 * CSV vs RDS formats
 
-## CH 07 – Other Data Structures
+## CH 07 – Matrices and Lists
 * Matrix
 * Lists
 * Building data objects: 
