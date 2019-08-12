@@ -260,15 +260,6 @@ layout: default
 </td>
 </tr> 
 {% endfor %}
-
-{% if page.info.discussion_board_url %}  
-<tr>
-<td>Assignment Discussion Board</td>
-<td>
-  <a class="uk-button uk-button-default uk-button-small" class="uk-align-center" onclick="location.href='{{page.info.discussion_board_url}}'" target="_blank">SUBMIT A QUESTION</a>
-</td>
-</tr>
-{% endif %} 
   
 </tbody>
 </table>
@@ -302,6 +293,14 @@ layout: default
 </tr>
 {% endif %}  
  
+{% if page.info.discussion_board_url %}  
+<tr>
+<td>Assignment Discussion Board</td>
+<td>
+  <a class="uk-button uk-button-default uk-button-small" class="uk-align-center" onclick="location.href='{{page.info.discussion_board_url}}'" target="_blank">SUBMIT A QUESTION</a>
+</td>
+</tr>
+{% endif %} 
   
 </tbody>
 </table>
