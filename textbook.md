@@ -31,6 +31,7 @@ img {
 
 <iframe src="https://player.vimeo.com/video/180644880" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 
+<br>
 
 * What is R?
 * Tour of R Studio
@@ -38,7 +39,7 @@ img {
 * Navigation (working directories, list objects, create folders)
 * [Markdown](https://ds4ps.org/cpp-526-fall-2019/markdown/)
 * [Data-Driven Documents](https://ds4ps.org/docs/) 
-* Style Guides 
+* [Style Guides](https://jef.works/R-style-guide/) 
  
  
 <br> 
