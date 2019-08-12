@@ -12,6 +12,11 @@ Here are some resources to get you started with the course and to help with proj
 
 Just like learning a new language, there is no way to become fluent in a semester or a year. You can, however, become conversant enough to start traveling extensively in this new world of data science. Much of it has been built in virtual settings, and you will be amazed at how many free resources are available when you know how and where to look.
 
+## R Cheat Sheets
+
+Cheat sheets are parsimonious and stylized notes that help organizat functions and syntax so it is easier to learn and find. R Studio has an extensive list of [R Cheat Sheets](https://www.rstudio.com/resources/cheatsheets/) that you might find helpful.
+
+
 ## The Data Science Ecosystem
 
 Pete Warden created one of the first [data science toolkits](http://www.datasciencetoolkit.org/), which is a collection of open-source tools for common tasks in data science like turning street addresses into geo-coordinates, extracting sentiments from text, and identifying people's names in documents. The original toolkit started out as a simple website with a couple of dozen of these tools.
