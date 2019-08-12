@@ -19,7 +19,7 @@ font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
   color: maroon;
 }
 
-.uk-navbar-nav>li>a, .uk-navbar-item, .uk-navbar-toggle {
+.uk-navbar-nav>li>a {
     display: flex;
     justify-content: center;
     align-items: center;
