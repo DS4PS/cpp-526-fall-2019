@@ -5,13 +5,18 @@ title: Course Notes
 
 <style>
   
-ul {
+.textbook-toc>ul {
 font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; 
   font-size: 18px; 
   font-style: normal; 
   font-variant: small-caps; 
   font-weight: 100;
   line-height: 26.4px;
+}
+
+.textbook-toc>h2 { 
+  font-size: 22px;  
+  color: maroon;
 }
 
 .uk-navbar-nav>li>a, .uk-navbar-item, .uk-navbar-toggle {
@@ -26,10 +31,7 @@ font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
     text-decoration: none;
 }
 
-h2 { 
-  font-size: 22px;  
-  color: maroon;
-}
+
 img {
   display: block;
   margin-left: auto;
@@ -38,8 +40,10 @@ img {
  </style>
  
 
-<br>
 
+
+
+<br>
 
 <div class="textbook-toc">
 
