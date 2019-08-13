@@ -179,11 +179,7 @@ iframe {
 
 
 
-# Data Wrangling (dplyr)
-
-Data wrangling is the process of preparing data for analysis, which includes reading data into R from a variety of formats, cleaning data, tidying datasets, creating subsets and filters, transforming variables, grouping data, and joining datasets. 
-
-The goal of data wrangling is to create a **rodeo dataset** (clean and well-structured) that is ready for modeling and visualization. 
+# Data IO
 
 ## CH 09 – Getting Data into R [ [tutorial](https://www.datacamp.com/community/tutorials/r-data-import-tutorial) ]
 * Read options   
@@ -213,7 +209,11 @@ The goal of data wrangling is to create a **rodeo dataset** (clean and well-stru
 * Copy to Excel 
 
 
-# Tidy Functions
+# Data Wrangling (dplyr)
+
+Data wrangling is the process of preparing data for analysis, which includes reading data into R from a variety of formats, cleaning data, tidying datasets, creating subsets and filters, transforming variables, grouping data, and joining multiple datasets. 
+
+The goal of data wrangling is to create a **rodeo dataset** (clean and well-structured) that is ready for the big show (modeling and visualization)! 
 
 ## CH 11 – Slicing Datasets – Base R and dplyr
 * Subset operator
