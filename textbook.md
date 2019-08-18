@@ -132,12 +132,12 @@ h2.nocount:before, h3.nocount:before, h4.nocount:before, h5.nocount:before, h6.n
 
 
 
+#### Data Programming for Social Scientists 
 
 <br>
 
 <div class="textbook-toc">
 
-#### Data Programming for Social Scientists 
 
 
 
