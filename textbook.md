@@ -53,6 +53,80 @@ iframe {
   margin-left: auto;
   margin-right: auto;
 }
+
+#markdown-toc ul {
+  font-size:calc(0.85em + 0.25vw);
+  line-height:1.2;
+  font-weight: bold;
+} 
+#markdown-toc ul li {
+  list-style-type: disc !important;
+  font-size:calc(0.65em + 0.25vw);
+  line-height:1.2;
+  margin-left: 20px;
+}  
+#markdown-toc a {
+  color: black;
+  font-size:calc(0.65em + 0.25vw);
+  line-height:1.2;
+  font-weight: normal;
+}  
+#markdown-toc a:hover {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+body {
+  counter-reset : h2;
+    }
+
+h2 {
+  counter-reset : h3;
+    }
+
+h3 {
+  counter-reset : h4;
+    }
+
+h4 {
+  counter-reset : h5;
+    }
+
+h5 {
+  counter-reset : h6;
+    }
+
+article h2:before {
+  content : counter(h2,decimal) ". ";
+  counter-increment : h2;
+}
+
+article h3:before {
+  content : counter(h2,decimal) "." counter(h3,decimal) ". ";
+  counter-increment : h3;
+}
+
+article h4:before {
+  content : counter(h2,decimal) "." counter(h3,decimal) "." counter(h4,decimal) ". ";
+  counter-increment : h4;
+}
+
+article h5:before {
+  content : counter(h2,decimal) "." counter(h3,decimal) "." counter(h4,decimal) "." counter(h5,decimal) ". ";
+  counter-increment : h5;
+}
+
+article h6:before {
+  content : counter(h2,decimal) "." counter(h3,decimal) "." counter(h4,decimal) "." counter(h5,decimal) "." counter(h6,decimal) ". ";
+  counter-increment : h6;
+}
+
+h2.nocount:before, h3.nocount:before, h4.nocount:before, h5.nocount:before, h6.nocount:before {
+  content : "";
+  counter-increment : none;
+}
+    
  </style>
  
 
@@ -65,18 +139,23 @@ iframe {
 
 #### Data Programming for Social Scientists 
 
-# Getting Started
+
+
+-----------------------
+
+* TOC
+{:toc}
+
+-----------------------
 
 <br>
 
-<iframe src="https://player.vimeo.com/video/180644880" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 
-<br>
 
-# The Three Parts of R
+# Introducing R
 
-## Core R [ [video](https://player.vimeo.com/video/180644880) ]
-* What is R?
+## Core R 
+* What is R?  [ [video](https://player.vimeo.com/video/180644880) ]
 * How do Packages Work?
 * Navigation (working directories, list objects, create folders)
 * Scripts 
@@ -97,7 +176,9 @@ iframe {
 * [Pimp my RMD](https://holtzy.github.io/Pimp-my-rmd/)
  
 
-# Basic Programming in R 
+# Getting Started
+
+## CH 
 
 ## CH 01 - R as a Calculator
 * Assignment 
