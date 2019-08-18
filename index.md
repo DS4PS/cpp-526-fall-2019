@@ -93,6 +93,16 @@ Students will also explore the social, political, and ethical considerations ass
 
 Students will read several case studies that explore the use of data in organizations, will engage in discussions about socio-economic policy considerations, and write policy guidance frameworks on best practices in evidence-based management, open data, and privacy.
 
+
+# Getting Started
+
+<br>
+
+<iframe src="https://player.vimeo.com/video/180644880" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+
+<br>
+
+
 ## Learning Objectives
 
 At the conclusion of this course, each student will be able to:
