@@ -68,6 +68,7 @@ textbooks:
 
 
 <style> 
+    
 body {
    font-family: "Roboto", sans-serif;
 }
@@ -80,6 +81,13 @@ p.italic {
 #fa-icon {
   font-style: normal;
 }
+
+iframe {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 </style>
 
 
