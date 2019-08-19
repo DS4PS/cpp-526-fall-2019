@@ -91,270 +91,212 @@ iframe {
 </style>
 
 
-# Course Description, Course Goal and Course Learning Objectives: 	
-
-Public agencies are increasingly interested in unlocking the potential of large-scale data to improve service delivery and inform policy efforts. Computational tools capable of making productive use of big data have proliferated in recent years, drastically decreasing the barriers to entry for interested parties. This course will explore the practice of using data to improve organizational performance, including techniques for data collection, analysis, and behavior change. Students will operate as their own laboratory through a data journaling exercise, and devise strategies for incorporating data into management practices of public and nonprofit organizations. 
-
-One of the key course take-aways is that data can make your organization more effective, but data itself is not sufficient without strong management frameworks. The course is built around a quantified-self experiment where you will use life-logging tools and a journaling system to learn about managing information overload and building goal-oriented, evidence-based routines. 
-
-Students will also explore the social, political, and ethical considerations associated with building and managing data analytics programs in the public sphere. Students will engage critical dilemmas of data privacy, data protection, predictive analytics, personalized service delivery and resource provision, algorithmic regulation, and large-scale data analytics for administrative efficiencies and resource management optimization, among others. 
-
-Students will read several case studies that explore the use of data in organizations, will engage in discussions about socio-economic policy considerations, and write policy guidance frameworks on best practices in evidence-based management, open data, and privacy.
 
 
-# Getting Started
+**I.  Course Description, Course Goal and Course Learning Objectives**** :**
+
+Data is an essential ingredient of any program evaluation or performance management system. Organizations that want to embrace an evidence-based approach to management need to develop processes for gathering data, linking multiple datasets, running analysis, and sharing results with stakeholders through reports, dashboards, or web applications. The ability to collect, organize and analyze data is a desirable skill set for professional knowledge workers, high-level management, and evaluators.
+
+The course introduces students to the R data programming language, an open source platform that has become an industry standard because of its flexibility and power. It was designed to allow people to quickly develop and share new statistical tools. It has evolved into a more general data analytics platform that can be used for analytics, customized visualizations, GIS applications, text analysis, building web applications, and much more. It has a large and active user community that has developed thousands of free custom programs.
+
+Typically only 10-20% of a project is spent analyzing data. The other 80-90% consists of merging data sources, cleaning data, defining new variables, and arranging data into the proper format. These steps require knowledge about data wrangling as well as general project management process. The Foundations of Data Science sequence teaches both the data programming fundamentals and well as project management skills to ensure that analysis is transparent, error-free and reproducible.
+
+
+
+The Foundations of Data Science course sequence will cover the fundamentals of data programming – building unique datasets using APIs and custom tools, importing data from the cloud, linking multiple data sources, and wrangling processes to clean, transform, and reshape datasets. Advanced topics will be introduced such as writing functions, running simulations, writing packages for R, and de-bugging techniques. We will spend roughly a third of the units on graphing procedures and reporting packages.
+
+This course, Foundations of Data Science I, will cover the building blocks of data programming in R. We will learn about variables, operators, functions, dataset construction, group structure in data, visualization, and simulation. Students will also be introduced to markdown documents and automated reporting.
+
+The six main learning objectives for the course are:
+
+- Mastery of functions as the building blocks of all R programs, including arguments and scope
+- Knowledge of variable types and data structures in R, including construction and manipulation of data sets
+- Use of logical statements to create and analyze groups within data
+- Basic programming control structures and simulation techniques
+- Ability to build custom visualizations through the base R graphics package
+- Creation of dynamic graphics and data dashboards using R shiny tools
+
+# **Course Prerequisites:**
+
+# There are no prerequisites, and we do not assume any prior background in computer programming or statistics. Students should, however, have installed R and R Studio, and worked through a basic tutorial on R Studio.
+
+# **II.        Assessment of Student Learning Performance &amp; Proficiency: Keys to Student Success**
+
+# Assessment of student performance in this course is based on indications that the course learning objectives stated above have been achieved.  Several areas of measurement will be used to produce a final student performance rating.  These areas of performance assessment include the following:
+
+- The ability to build a custom dataset by important data from multiple sources, merging data, and reshaping, filtering or subsetting as necessary.
+- Translating from plain English business cases to logical statements in R using logical operators and analytical techniques applied to groups.
+- Communicating information by developing custom visualizations and graphics.
+- Using markdown documents to generate data-driven reports and data dashboards.
+
+Students will demonstrate competency in understanding, producing and communicating results of their analyses through the following assignments:
+
+- Short (1-5 question) assessments associated with each lecture to ensure basic comprehension of key concepts and to help students and instructors track progress through the course.
+- Weekly labs that provide opportunities to consolidate and apply material from the lectures.
+- A final project that integrates several components of the learning objectives above.
+
+Assigned work, including the course final project, and the quality of active participation in the regular online discussion sessions that are a critical part of the course learning strategy are the tools the instructors will use to measure comprehension and skill; the student&#39;s course grade is a direct reflection of demonstrated performance. Students should take stated expectations seriously regarding preparation, conduct, and academic honesty in order to receive a grade reflective of outstanding performance.  Students should be aware that merely completing assigned work in no way guarantees an outstanding grade in the course. To receive an outstanding course grade (using the grading scheme described below and the performance assessment approach noted above) all assigned work should completed on time with careful attention to assignment details.
+
+# **III.        Course**  **Structure and Operations; Performance Expectations**
+
+**A. Format and Pedagogical Theory**
+
+Mastering advanced analytical techniques and data programming is like learning a language. You start by mastering basic vocabulary that is specific to statistics and data science. Through your coursework you will become conversant in the domains of regression analysis, research design, and data science. Progress might be slow at first as you work to master core concepts, integrate the building blocks into a coherent mental model of real-world problems, learn to translate technical results into clear narratives for non-technical audiences, and become comfortable with data programming skills. Over time you will find that your thought processes change as you approach problem-solving in a more structured and evidence-based manner, you apply counter-factual reasoning to performance problems, and you start reading the news and viewing scientific evidence differently. You begin to think and speak like a program evaluator.
+
+By the end of this degree you will be conversant in statistics, research design, and data programming. Fluency takes time and will be developed through professional experience. It requires you to practice these skills to develop muscle memory. You can do this through participating in evaluations on the job and gaining experience building and cleaning data sets from scratch. Understand, though, that this degree focuses on building foundations for your career. Don&#39;t be nervous if it feels like it&#39;s impossible to master all of the material in this program – it is impossible to learn everything in this field in a year.
+
+Similar to immersion in a language, the best way to learn the material is to be consistent in doing course work each day. The more frequently you revisit concepts and practice data programming the more you will absorb. The curriculum has been designed around this approach. Lectures are split into small units, and each unit includes questions to test your understanding of the material. Weekly labs allow you to spend some time applying the material to a specific problem. The final exam at the end of the semester is designed to help you make connections between concepts and consolidate knowledge. You will be much better off spending a small amount of time each day on the material instead of trying to cram everything into a couple of days a week.
+
+Online discussion boards are design for students to engage with the material together. The purpose of online discussion sessions is threefold: (1) the online discussion sessions allow students to interact with their peers and share ideas and interpretations of the assigned material, (2) such peer-to-peer discussion online helps build professional relationships with potential future colleagues in the field, and (3) the discussions permit the instructor to assess student engagement with the assigned material.
+
+The online discussions are explicitly intended to meet the objectives stated above.  They are not intended as another form of &quot;lecture&quot; where the instructor provides commentary and students simply react to that.  Rather, the discussions are a chance for peer-to-peer interaction and proactive engagement by each individual student.
+
+The purpose of all exams and assigned written work is also threefold: (1) the assignments and written exam afford students the opportunity to demonstrate substantive understanding of materials covered in course readings, lectures and online discussion, (2) the assignments and exam permit students to develop and demonstrate research, analytic and written communication skills, and (3) the written work permits the instructor to assess student knowledge, skills and ability within this subject domain.
+
+
+
+**B.**  **Assigned**  **Reading**  **Materials**
+
+There is one required textbook for the data science courses (I, II, and III):
+
+Wickham, H., &amp; Grolemund, G. (2016). _R for Data Science._ O&#39;Reilly Press_. (free online)_
+
+The following texts are recommended as good resources:
+
+Teetor, P. (2011). _R Cookbook: Proven recipes for data analysis, statistics, and graphics_. &quot; O&#39;Reilly Media, Inc.&quot;.
+
+Sanchez, G. (2013). _Handling and processing strings in R._ Berkeley: Trowchez Editions. _(free online)_
+
+Peng, R. D., &amp; Matsui, E. (2015). _The Art of Data Science._ _A Guide for Anyone Who Works with Data._ Skybrude Consulting, 200, 162.
+
+
+
+In addition to the required textbooks, the instructor will supplement the assigned unit readings with various journal articles, policy reports, or other related material.  These will be made available in the course shell in Blackboard.
+
+**C.  Course Grading System for Assigned Work, including Final Project:**
+
+Letter grades comport with a traditional set of intervals:
+
+100 – 98% = A+
+
+97 – 94% = A
+
+93 – 90% = A -
+
+89 – 87% = B+
+
+86 – 84% = B
+
+83 – 80% = B –
+
+Below 80% - C, D, F
+
+The assigned work for the term comes in the form of four elements, described below:
+
+- **Short Quizzes 40%):** Each lecture is accompanied by a short (1-5 question) quiz. These are designed to ensure that you are grasping the important concepts associated with each lecture. The content in this class is cumulative, the material each week building upon the previous week. We cover complex topics with a lot of nuances, so you may feel uncomfortable if you don&#39;t understand everything from a lecture. Don&#39;t worry – we will revisit a lot of this material many times through the program to reinforce important ideas and introduce more detail in subsequent stages. These quizzes are designed to give you immediate feedback about whether you grasped the core concepts so that you can spend more time on some material or seek help when necessary.
+
+- **Weekly Labs (40%):  **Each week you will receive a short lab that will help you synthesize the lectures from the week though exercises that involve data, analysis, and important formulas from the lectures. These labs contain exercises that are similar in form or difficulty to what will be presented on the final exam. They are graded pass / fail by the instructors based upon an assessment of whether you have sincerely attempted the lab and answered over half of the questions correctly. This is designed to hold you accountable for the material, but not create anxiety about perfection.
+
+- **Final Project (20%):  **This course will close with a final project that requires you to analyze some data and present your results as a data dashboard. It is designed to give you practice integrating material the we have covered throughout the course.
+
+- **Discussion Sessions (0%):  **Each student in the course will be given the opportunity to participate in discussion sessions designed to answer questions related to labs, review key concepts, and prepare for the final exam. New material will not be presented, but we will review content pertaining to assigned reading materials, video, or other similar materials provided. Students are encouraged to bring questions, respond to discussion topics that are provided, as well as responding meaningfully to other students&#39; responses. More details on the mechanics of discussion session operations, including group designations and instructor assessment of student performance, will be provided at the time of the first discussion session.
+
+**D. General Grading Rubric for Written Work**
+
+Individual assignment grading rubrics will be provided. However, in order to understand the assessment approach for assigned work, in general there are several core elements for the instructor&#39;s assessment when grading students&#39; submitted written assignments and/or exams. First, the submitted work is assessed on whether or not it directly addresses the elements requested in the assignment. That is, when assigning a grade, the instructor will ask: did the submitted work actually address clearly and cogently the assigned questions?  Second, it is assessed in terms of the quality of the writing in the submitted work.  The relevant question: is the submitted work well-written, is it coherent and well organized, does it convey its key content clearly, concisely and effective? Third, does the provided appropriate documentation (where applicable), and is it properly punctuated and adhere to basic standards of appropriate grammar and syntax? (This course will use the APA citation format; additional details on this method of sourcing materials will be provided later.) Fourth, it is assessed by the quality of analytic rigor.  That is, the instructor will ask: is any requested analysis performed in the submitted work, and if so, is it done carefully and completely?  Fifth and finally, the submitted work is assessed on the author&#39;s creativity in completing the assignment.  The relevant question here is: did the submitted work provide an original or innovative way of approaching the subject matter and the questions posed in this assessment or research area?
+
+To summarize, in general any submitted work written work (assignments and/or exams) is assessed on these evaluative criteria:
+
+- Assignment completeness – all elements of the assignment are addressed
+- Quality of analysis – substantively rigorous in addressing the assignment
+- Demonstrated synthesis of core concepts from lecture notes and ability to apply to new problems
+
+However, again, to be clear: assignments are distributed with an accompanying specific assessment rubric.
+
+**E. Late and Missing Assignments**
+
+This course is based on students reading course material, participating in discussion with colleagues and producing analytic essays, through assignments and an essay-based final exam. Accordingly, if students do not participate fully and completely, assessment of student performance will reflect that directly. For example, points lost for lack of participation in a weekly discussion session are not eligible for remedial action. All assigned work is accompanied by detailed instructions, adequate time for completion and opportunities to consult the instructor with questions. As a result, each assignment element in the course is expected to be completed in a timely fashion by the due date.
+
+**F.  Course Communications and Instructor Feedback:**
+
+The course is supported on the university&#39;s BlackBoard platform; as such, electronic course materials will be supported through that course site. Lecture files, assignments and other course communications will be transmitted via BlackBoard and/or through the class email list.
+
+Students should be aware that the course instructor will attempt to respond to any course-related email as quickly as possible. Students are asked to allow between 24 and 48 hours for replies to direct instructor emails, generally, as a reasonable time to reply to questions or other issues posed in an email. Additionally, the general timeline for instructor grading or other feedback on assignments, either writer work or online discussion work, is between 5 and 10 work days.
+
+**G.  Student Conduct: Expectation of Professional Behavior:**
+
+Respectful conversations and tolerance of others&#39; opinions will be strictly enforced. Any inappropriate language, threatening, harassing, or otherwise inappropriate behavior during discussion could result in the student(s) being administratively dropped from the course with no refund, per ASU policy [USI 201-10](http://www.asu.edu/aad/manuals/usi). Students are required to adhere to the behavior standards listed in the [Arizona Board of Regents Policy Manual Chapter V—Campus and Student Affairs](http://azregents.asu.edu/rrc/Policy%20Manual/5-308-Student%20Code%20of%20Conduct.pdf) .
+
+# **H.  Academic Integrity and Honesty**
+
+ASU expects the highest standards of academic integrity. Violations of academic integrity include but are not limited to cheating, plagiarism, fabrication, etc. or facilitating any of these activities. This course relies heavily on writing and original critical thought. Any student who is suspected of not producing his or her own original work will be reported to the College of Public Programs for investigation. **Plagiarism will not be tolerated**. **Any student who plagiarizes or otherwise fabricates his or her work will receive no credit for that assignment. It will be recorded as zero points—and the student will risk a failing grade for the course.** For more information, refer to [http://provost.asu.edu/academicintegrity](http://provost.asu.edu/academicintegrity).
+
+
+
+**I.  Student Learning Environment: Accommodations**
+
+**Disability Accommodations:**  Students should be fully aware that the Arizona State University, the MA in EMHS program, and all program course instructors are committed to providing reasonable accommodation and access to programs and services to persons with disabilities. Students with disabilities who wish to seek academic accommodations must contact the ASU Disability Resources Center directly.  Information on the Center&#39;s procedures, resources and how to contact its staff can be found here: [https://eoss.asu.edu/drc/](https://eoss.asu.edu/drc/).  The Disability Resources Center is responsible for reviewing any student&#39;s requests; once that review has taken place, the Center will provide the student with appropriate information on academic accommodations which in turn will be provided to the course instructor.
+
+**Religious accommodations:** Students will not be penalized for missing an assignment due solely to a religious holiday/observance, but as this class operates with a fairly flexible schedule, all efforts should be made to complete work within the required timeframe. If this is not possible, students must notify the instructor as far in advance as possible in order to make an alternative arrangement.
+
+**Military Accommodations:** A student who is a member of the National Guard, Reserve, or other branch of the armed forces and is unable to complete classes because of military activation may request complete or partial unrestricted administrative withdrawals or incompletes depending on the timing of the activation. For more information see ASU policy [USI 201-18](http://www.asu.edu/aad/manuals/usi).
+
+# IV.        Course Schedule and Unit-specific Learning Objectives
+
+**A. Schedule: Overview of Readings and Assignments**
+
+# As students are all aware, ASU Online courses are typically offered on a seven and a half week schedule. A schedule for each week of the term is outlined here; the course is divided into seven units with specific learning objectives for each unit.
+
+Please note: the course instructor may from time to time adjust assigned readings or adjust the due dates for assignment. The basic course content approach and learning objectives will not change, but slight modifications are possible if circumstances warrant an adjustment.
+
+**Couse Schedule**
+
+**Unit 1                 Functions and Arguments, Markdown Documents**
+
+Readings available on Blackboard
+
+Lab #1 – Markdown Documents
+
+**Unit 2                 Variable Types, Logical Operators, and Subsets**
+
+Readings available on Blackboard
+
+Lab #2 – Logical Operators and Subset Functions
+
+**Unit 3                Data Frames and Merges**
+
+Readings available on Blackboard
+
+Lab #3 – Group Analysis in Data
+
+**Unit 4                Descriptive Statistics**
+
+Readings available on Blackboard
+
+Lab #4 – Basic Graphics
+
+**Unit 5                Graphics and Visualization**
+
+Readings available on Blackboard
+
+Lab #5 – Advanced Graphics
+
+**Unit 6                Dynamic Graphics**
+
+Readings available on Blackboard
+
+Lab #6 – Dynamic Graphics
+
+**Unit 7                Data Programming**
+
+Readings available on Blackboard
+
+Lab #7 – Monty Hall Simulation
+
+**Unit 7.5                Final Project**
 
 <br>
-
-<iframe src="https://player.vimeo.com/video/180644880" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-
 <br>
 
 
-## Learning Objectives
 
-At the conclusion of this course, each student will be able to:
-
-* Describe how public agencies harness large-scale data to inform policy design, increase stakeholder engagement, and improve service delivery.
-* Recognize situations where it's possible to collect data to inform organizational processes.  
-* Intelligently consider the social, political, and ethical considerations of using data analytics. 
-
-
-# II.	Assessment of Student Learning Performance & Proficiency: Keys to Student Success
-
-Assigned work, including the course data journaling project, active engagement with weekly readings, and the quality of participation in discussion boards are a critical part of the course learning strategy.  The student’s course grade is a direct reflection of demonstrated performance on these tasks. 
-
-•	Students should take stated expectations seriously regarding preparation, conduct, and academic honesty in order to receive a grade reflective of outstanding performance.  
-•	Students should be aware that merely completing assigned work in no way guarantees an outstanding grade in the course. 
-•	To receive an outstanding course grade (using the grading scheme described below and the performance assessment approach noted above) all assigned work should completed on time with careful attention to assignment details.  
-
-
-# III.	Course Structure 
-
-### A. Assigned Reading Materials
-
-We will use the following required texts:
-
-1.	Pentland, A. (2015). Social Physics: How social networks can make us smarter. Penguin.  
-2.	Meier, P. (2015). Digital humanitarians: how big data is changing the face of humanitarian response. Routledge.   
-3.	Eagle, N., & Greene, K. (2014). Reality mining: Using big data to engineer a better world. MIT Press.  
-4.	O'Neil, C. (2016). Weapons of math destruction: How big data increases inequality and threatens democracy. Broadway Books.  
-
-In addition to the required textbooks, the instructor will supplement the assigned unit readings with various journal articles, policy reports, or other related material.  These will be made available in the course shell in Canvas. 
-
-
-### B.  Course Grading System for Assigned Work, including Final Project:
-
-Points will be allocated based upon three main assignments: reading summaries and presentations, discussion of topics on the discussion board, and a data journaling exercise. 
-
-Reading summaries & Yellowdig discussions | 	50%   
-Labs | 	30%  
-Final Memo | 20%   
-
-Students will participate in an exercise to collaboratively author a guide to data-driven management by summarizing readings from the course. A schedule of assigned summaries and due dates will be posted on the project site.  Reading summaries ([GitHub chapters](http://ds4ps.org/ddm-textbook-summer-2019/)) are due Sunday of each week (I will give you until Monday night the first week because of the holiday). 
-
-Students will engage with weekly material through the YellowDig discussion system. Points are allocated based upon specific actions on the discussion board (see examples below, points may be adjusted). Note that full credit requires active participation for a minimum of 5 weeks (you can earn up to 20 points each week). 
-
-*	1 point for a new pin with at least 50 words.
-*	2 points for a comment made to another pin.
-*	2 points if you receive a comment on your pin.
-*	1 point for liking another pin.
-*	5 points if you earn an instructor badge for an informative post.
-*	max of 20 points can be earned each week.
-*	max of 100 points can be earned overall
-
-Labs will be used to explore a case study where machine learning is used to predict neighborhood change and gentrification in a city. You will have short tasks for each.  
-
-Letter grades comport with a traditional set of intervals, subject to instructor discretion:
-
-* 100  = A+
-* 99 – 94% = A
-* 93 – 90% = A -
-* 89 – 87% = B+
-* 86 – 84% = B
-* 83 – 80% = B – 
-* Below 80% - C, D, F
-
-
-### D. General Grading Rubric for Written Work
-
-Individual assignment grading rubrics will be provided. However, in order to understand the assessment approach for assigned work, in general all written work (assignments and labs) is assessed on these evaluative criteria:
-
-* Assignment completeness – all elements of the assignment are addressed
-* Quality of work – substantively rigorous in addressing the assignment 
-* Demonstrated understanding of the readings and the ability to apply concepts to unique domains
-
-
-
-### E. Late and Missing Assignments
-
-This course is based on students reading course material, participating in discussion with colleagues and producing analytic essays. Accordingly, if students do not participate fully and completely, assessment of student performance will reflect that directly. For example, points lost for lack of participation in a weekly discussion session are not eligible for remedial action. 
-
-All assigned work is accompanied by detailed instructions, adequate time for completion and opportunities to consult the instructor with questions. As a result, each assignment element in the course is expected to be completed in a timely fashion by the specified due date. Unless arrangements have been made beforehand, late assignments will be docked a letter grade for each day late (subject to the instructor’s discretion). Late material should be submitted through Canvas, not sent via email. Missed exams (when applicable) will result in a zero, unless prior arrangements have been made. 
-
-### F.  Course Communications and Instructor Feedback:
-
-Course content will be available on this website. All written assignments (labs and the final paper) will be submitted through the university’s Canvas platform. Yellowdig will serve as our disucussion board. 
-
-*	Course communications will be transmitted through the class email list using ASU email addresses.   
-*	Students should generally expect replies to instructor emails in 24 hours (with exceptions for travel when specified). 
-*	The timeline for instructor grading or other feedback on assignments, either writer work or online discussion work, is generally between 5 and 10 work days. 
-
-### G.  Student Conduct: Expectation of Professional Behavior:
-
-Respectful conversations and tolerance of others’ opinions will be strictly enforced. Any inappropriate language, threatening, harassing, or otherwise inappropriate behavior during discussion could result in the student(s) being administratively dropped from the course with no refund, per ASU policy USI 201-10. Students are required to adhere to the behavior standards listed in the Arizona Board of Regents Policy Manual Chapter V—Campus and Student Affairs .
-
-### H.  Academic Integrity and Honesty
-
-ASU expects the highest standards of academic integrity. Violations of academic integrity include but are not limited to cheating, plagiarism, fabrication, etc. or facilitating any of these activities. This course relies heavily on writing and original critical thought. Any student who is suspected of not producing his or her own original work will be reported to the College of Public Programs for investigation. Plagiarism will not be tolerated. Any student who plagiarizes or otherwise fabricates his or her work will receive no credit for that assignment. It will be recorded as zero points—and the student will risk a failing grade for the course. For more information, refer to http://provost.asu.edu/academicintegrity.
-
-
-### I.  Student Learning Environment: Accommodations
-
-Disability Accommodations:  Students should be fully aware that the Arizona State University, the MA in EMHS program, and all program course instructors are committed to providing reasonable accommodation and access to programs and services to persons with disabilities. Students with disabilities who wish to seek academic accommodations must contact the ASU Disability Resources Center directly.  Information on the Center’s procedures, resources and how to contact its staff can be found here: https://eoss.asu.edu/drc/.  The Disability Resources Center is responsible for reviewing any student’s requests; once that review has taken place, the Center will provide the student with appropriate information on academic accommodations which in turn will be provided to the course instructor. 
-
-Religious accommodations: Students will not be penalized for missing an assignment due solely to a religious holiday/observance, but as this class operates with a fairly flexible schedule, all efforts should be made to complete work within the required timeframe. If this is not possible, students must notify the instructor as far in advance as possible in order to make an alternative arrangement.
-
-Military Accommodations: A student who is a member of the National Guard, Reserve, or other branch of the armed forces and is unable to complete classes because of military activation may request complete or partial unrestricted administrative withdrawals or incompletes depending on the timing of the activation. For more information see ASU policy USI 201-18.
-
-# KEY COURSE THEMES
-
-### The Promise of Big Data: 
-
-In 2017 The Economist declared, "Data is to this century what oil was to the last one: a driver of growth and change. Flows of data have created new infrastructure, new businesses, new monopolies, new politics and – crucially – new economics."
-
-In 2011 McKinsey & Co. described big data as "the next frontier for innovation, competition, and productivity.” 
-GE looked to big data to drive "changes as profound as industrialization... in the late 1700s".
-
-### [Challenges of Harnessing Data]( https://sloanreview.mit.edu/case-study/lessons-from-becoming-a-data-driven-organization/):
-
-Many organizations have been slow in compiling, classifying, and organizing the data sitting in siloes and dark corners. It’s “a boring, boring job,” says Ger Baron, Amsterdam’s first-ever chief technology officer. “But very useful!” 
-
-He ought to know. The Netherlands’ capital has 12,000 different datasets, and even they can’t tell him everything about the city. For example, no one knows exactly how many bridges span Amsterdam’s famous canals, because the city’s individual districts have not centralized their infrastructure data.
-
-That story underscores the challenges organizations face in the realm of data governance, or the methods and rules that organizations use to assure the quality of data, manage it, integrate it into business processes, and manage its risks.
-
-### [Abundant Data by Itself Solves Nothing](https://graymattersystems.com/cio-survey-reveals-challenges-opportunities-potential-industrial-big-data/ ):  
-
-Despite the promise of big data, industrial enterprises are struggling to maximize its value. Why? Abundant data by itself solves nothing. Its unstructured nature, sheer volume, and variety exceed human capacity and traditional tools to organize it efficiently and at a cost which supports return on investment requirements. Inherent challenges tied to evolution and integration of industrial information and operational technology, make it difficult to glean intelligence from operational data, compromising projects underway and promise for further investment and value. 
-
-### [Firms are years away from getting full value from their data assets](https://www.theregister.co.uk/2017/06/07/go_small_on_big_data/):  
-
-Throwing cash at the problem isn't helping matters either. Companies need to scale back their ambitions to invest in projects that are more evolutionary than revolutionary in nature, looking to tweak rather than overhaul existing operational practices. In short, the best big data strategy may be to go small.
-
-### [Effective Approaches](https://sloanreview.mit.edu/case-study/lessons-from-becoming-a-data-driven-organization/ ): 
-
-It’s tough enough for many organizations to catalog and categorize the data at their disposal and devise the rules and processes for using it. It’s even tougher to translate that data into tangible value.
-
-There would be no data and analytics revolution without easily accessible, increasingly inexpensive computing power: the cloud, the Internet, and powerful, versatile software and algorithms. Yet technology is only part of the story. People are equally important.
-
-The technology and the people who deploy it also need a process or system of rules to guide how people create and use information. Rules help transform the noise of disordered information into legible signals with the power to sharpen and deepen the focus on the customer (broadly defined), and in the process improve health outcomes, the customer experience, the realization of business value, and civic life and engagement.
-
-
-
-
-
-
-# Course Schedule
-
-This represents a general plan. Check on the Schedule tab of this site for the most recent dates and deadlines.
-
-### READING ASSIGNMENTS: DUE SUNDAY OF EACH WEEK
-
-Each week one team is assigned to a topic. They are responsible for reading all of the articles listed under the topic and creating an overview of key management insights and suggested best practices for the topic, and short (half page) summaries of each article. The summaries comprise the chapters of a collaborative class text book that is written using an open-source book model. The purpose of this assignment is to create a useful overview of the topics covered in this class that will serve as a reference guide so that it is easy for students to find content in the future. 
-
-http://ds4ps.org/ddm-textbook-summer-2019/
-
-The team is also responsible for writing a Yellowdig blog post on their readings and generate some discussion questions for classmates. 
-
-
-### Groups
-
-**Team 1:**
-
-Robert Lott  
-James Hogue  
-Kirsten VanDeventer  
-
-**Team 2:**
-
-Annie Ackroyd  
-Victoria Adair  
-Bret Petersen  
-
-**Team 3:**
-
-Cody Lundell  
-Christina Worden  
-Daniel Gabiou  
-
-**Team 4:**
-
-Martha Ramos  
-Philip Schlotter  
-Randolph Wilkins  
-
-**Team 5:**
-
-Troy George  
-Jamie Bandy  
-
-
-
-### Week 01:   The Value of Data
-
-* The Value of Data
-* Open Data (Team 1)
-* The Big Promise of Big Data (Team 2)
-* Challenges of Big Data (Team 3) 
-
-**LAB COMPONENT:** Models of Neighborhood Change 
-
-
-### Week 2: Collecting Data 
-
-* Data on Teams (Team 4)
-* Eyes in the Sky (Team 5)
-* Social Media Data (Team 1)
-* Remote Sensors (Team 2)
-
-**LAB COMPONENT:** Measurement
-
-
-
-### Week 3: Prediction 
-* Discovery (Team 3)
-* Prediction / Moneyball (Team 4)
-* Bias in Prediction (Team 5)
-
-**LAB COMPONENT:** Feature Selection
-
-### Week 4: Challenges of Big Data
-
-* Data Quality (Team 1)
-* Manipulation (Team 2)
-* Ethics of Algorithms (Team 3)
-* Best Practices for Privacy (Team 4)
-
-**LAB COMPONENT:** Feature engineering 
-
-### Week 5: Managing with Data
-
-* Managerial Experiments (Team 5)
-* Information Blindness (Team 1)
-
-**No Lab**
-
-### Week 6: Data-Driven Human Resources
-
-* Building Effective Teams (Team 2) 
-* Incentivizing Teams (Team 3)
-* A Tale of Two Data-Driven Management Systems: Amazon and Zappos (Team 4)
-* A Tale of Two Data-Driven Management Systems: Amazon and Zappos (Team 5)
-
-### August 13 - Final Memo Due
-
-**FINAL MEMO OPTIONS:**
-
-* Option A: Write a proposal to automate a process in your organization. Define the variables you would need for your model, describe how data would be collected, and discuss ethics. 
-* Option B: Develop a plan to moneyball the school district using AI for better HR practices. What data would you need for hiring and firing decisions? How would it be collected? What challenges of predictive accuracy and bias might you anticipate? 
