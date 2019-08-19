@@ -223,7 +223,7 @@ We will need three tools to manage your data science projects: a data programmin
 
 # One-Dimensional Datasets
 
-## CH 03 - Vectors
+## Intro to Vectors
 * Observations vs Variables (rows vs columns) 
 * Vector Types
   - Numeric
@@ -232,14 +232,14 @@ We will need three tools to manage your data science projects: a data programmin
   - Logical (true/false) 
 * Checking Vector Types
 
-## CH 04 - Working with Vectors
+## Working with Vectors
 * Built-In Vectors: e.g. LETTERS
 * Generating Vectors
 * Missing Values and Non-Numbers
 * Empty vectors: NULL
 
 
-## CH 05 - Altering Vectors
+## Altering Vectors
 * Defining factors, relevel()
 * Recoding Values 
 * Find and replace
@@ -250,7 +250,7 @@ We will need three tools to manage your data science projects: a data programmin
 * Implicit Casting (coercion)
 
 
-## CH 06 –Identifying Groups within Data 
+## Identifying Groups within Data 
 * Set theory as categories and membership 
 * Logical Operators 
   - equal
@@ -269,7 +269,7 @@ We will need three tools to manage your data science projects: a data programmin
 
 # Two-Dimensional Datasets
 
-## CH 07 – Dataframes
+## Dataframes
 * Creating data frames from vectors
 * the $ operator
 * Checking and changing class types
@@ -277,7 +277,7 @@ We will need three tools to manage your data science projects: a data programmin
 * Reorder rows or columns 
 * CSV vs RDS formats
 
-## CH 08 – Matrices and Lists
+## Matrices and Lists
 * Matrix
 * Lists
 * Building data objects: 
@@ -288,7 +288,7 @@ We will need three tools to manage your data science projects: a data programmin
 
 # Data IO
 
-## CH 09 – Getting Data into R [ [tutorial](https://www.datacamp.com/community/tutorials/r-data-import-tutorial) ]
+## Getting Data into R [ [tutorial](https://www.datacamp.com/community/tutorials/r-data-import-tutorial) ]
 * Read options   
 * Copy and paste from Excel 
 * Using rdata format 
@@ -304,7 +304,7 @@ We will need three tools to manage your data science projects: a data programmin
   - Socrata
   - Twitter
 
-## CH 10 - Saving Data [ [tutorial](https://thomasleeper.com/Rcourse/Tutorials/savingdata.html) ]
+## Saving Data [ [tutorial](https://thomasleeper.com/Rcourse/Tutorials/savingdata.html) ]
 * Write options 
   - CSV 
   - R Data Sets (RDS)
@@ -322,7 +322,7 @@ Data wrangling is the process of preparing data for analysis, which includes rea
 
 The goal of data wrangling is to create a **rodeo dataset** (clean and well-structured) that is ready for the big show (modeling and visualization)! 
 
-## CH 11 – Slicing Datasets – Base R and dplyr
+## Slicing Datasets – Base R and dplyr
 * Subset operator
 * By index, including order / match
 * By logical
@@ -332,14 +332,14 @@ The goal of data wrangling is to create a **rodeo dataset** (clean and well-stru
 * Selector Vectors
 * Subset by column  ---  dplyr::select()
 
-## CH 12 – Combining Datasets
+## Combining Datasets
 * merge and match
 * join in dplyr
 * inner, outer, right, left
 
 # Explore and Describe
 
-## CH 13 – Summarizing Vectors
+## Summarizing Vectors
 * Counting things:  sum( logical statement )
 * Categorical data:  tables
 * Missing values
@@ -349,7 +349,7 @@ The goal of data wrangling is to create a **rodeo dataset** (clean and well-stru
 * All at once:  summary + data.frame / matrix
 * Creating tables of descriptives: factors vs numeric
 
-## CH 14– Summarizing Groups of Vectors
+## Summarizing Groups of Vectors
 * Table ( f1, f2 ), ftable( row.vars=c(“f1”,”f2”), col.vars=”f3” )
 * Function over groups:  tapply( v1, f1 )  or dplyr:: group_by() + summarise()
 * Functions over levels of numeric data:  tapply( v1, cut(v2) )
@@ -360,12 +360,12 @@ The goal of data wrangling is to create a **rodeo dataset** (clean and well-stru
 
 # Visualize 
 
-## CH 15 – Principles of Visual Communication
+## Principles of Visual Communication
 * Ground, figure, narrative (context, subject, action)
 * Tufte’s rules 
 * Visual tragedies 
 
-## CH 16 – Core Graphics Engine
+## Core Graphics Engine
 * Defining a canvas: xlim, ylim
 * Adding data
 * Type (point, line, both)
@@ -378,28 +378,28 @@ The goal of data wrangling is to create a **rodeo dataset** (clean and well-stru
 * Adding data labels:  text()
 * Margins
 
-## CH 17 – Advanced Graphics
+## Advanced Graphics
 * Colors and color functions
 * Custom fonts / math symbols
 * Multiple Plots (core graphics)
   - Incorrect:  https://en.wikipedia.org/wiki/File:Smallmult.png#/media/File:Smallmult.png
 * Custom graph layouts
 
-## CH 18 – ggplot2
+## ggplot2
 * Grammar of graphics concept
 * ggplot overview
 
 
 # Make Dynamic
 
-## CH 19 - R shiny [ [tutorial](http://rmarkdown.rstudio.com/authoring_shiny.html) ]
+## R shiny [ [tutorial](http://rmarkdown.rstudio.com/authoring_shiny.html) ]
 * What makes documents dynamic? 
 * Widgets 
   - input objects 
 * Render functions 
 * reactive 
 
-## CH 20 - flexdashboards [ [overview](http://rmarkdown.rstudio.com/flexdashboard/) ]
+## flexdashboards [ [overview](http://rmarkdown.rstudio.com/flexdashboard/) ]
 * Principles of good dashboard design 
 * Layouts 
 * Sidebars 
