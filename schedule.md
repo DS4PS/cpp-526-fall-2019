@@ -3,7 +3,7 @@ layout: schedule
 title: Schedule
 
 canvas: 
-  assignment_url: 'https://www.google.com/'
+  assignment_url: 'https://canvas.asu.edu/courses/29528/assignments'
 ---
  
 <!--- 
@@ -51,16 +51,7 @@ article {
 ** Welcome
 
 
-
-*** { @unit = "", @title = "The R Toolbox", @lecture, @foldout }
-
-![](https://github.com/DS4PS/dp4ss-textbook/blob/master/figures/r-tools-overview.png?raw=true)
-
-
-
-
 *** { @unit = "", @title = "Introducing R", @lecture, @foldout }
-
 
 <br>
 
@@ -68,18 +59,30 @@ article {
 
 <br>
 
+
+
+*** { @unit = "", @title = "The R Toolkit", @lecture, @foldout }
+
+![](https://github.com/DS4PS/dp4ss-textbook/blob/master/figures/r-tools-overview.png?raw=true)
+
+## The R Toolkit
+
+In this course we cover the foundations of data programming with the R language. In order to create robust and dynamic analysis we need to use a couple of tools that were built to leverage the power of R and create compelling narratives. R Studio helps you manage projects by organizing files, scripts, packages and output. Markdown is a simple formatting convention that allows you to create publication-quality documents. And R Markdown is a specific version of Markdown that allows you to combine text and code to create data-driven documents. 
+
 [CH-01 Core R](http://ds4ps.org/dp4ss-textbook/ch-010-core-r.html)
-
-
-
-*** { @unit = "", @title = "Introducing R Studio", @lecture, @foldout }
 
 [CH-02 R Studio](http://ds4ps.org/dp4ss-textbook/ch-020-rstudio.html)
 
+[Data-Driven Docs](https://ds4ps.org/docs/)
 
-*** { @unit = "", @title = "Data-Driven Documents", @lecture, @foldout }
+[A Markdown Guide](http://ds4ps.org/dp4ss-textbook/ch-031-markdown.html)
 
-[Data-Driven Docs Overview](https://ds4ps.org/docs/)
+[Getting Started with R Markdown](https://rmarkdown.rstudio.com/lesson-1.html)
+
+You will have plenty of practice with these tools this semester. You will submit your labs as knitted R Markdown (RMD) files.
+
+[![](https://github.com/DS4PS/ds4ps.github.io/blob/master/gifs/NewCodeChunk/NewCodeChunk_media/NewCodeChunk.gif?raw=true)](../gifs/NewCodeChunk/NewCodeChunk.html)
+
 
 
 *** { @unit = "", @title = "Your Course Prep Checklist", @assignment, @foldout }
@@ -89,15 +92,15 @@ article {
 - [ ] [Install R](https://cran.rstudio.com/) and [R Studio Desktop](https://www.rstudio.com/products/rstudio/download/) 
 - [ ] [Sign-Up for a GitHub Account](https://github.com/join) 
 - [ ] Mars 
-
-sdfg
-
 * [ ] Jupiter
 * [ ] Saturn
 * [ ] Uranus
 
 
 
+*** { @unit = "Aug 23", @title = "Introduce Yourself", @assignment  }
+
+Introduce yourself to the class. 
 
 *** { @unit = "", @title = "Lab Example", @assignment, @foldout }
 
@@ -126,12 +129,13 @@ When ready, you can submit your lab via Canvas:
 
 
 
-** Week 1 - Regression Review
+** Week 1 - Functions and Scripts
 
 *** { @unit = "", @title = "Overview of the Week", @foldout  }
 
 
 *** { @unit = "Due DATE", @title = "Reading Title", @reading }
+
 
 
 *** { @unit = "Due DATE", @title = "Lecture Title", @lecture  }
