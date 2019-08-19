@@ -51,6 +51,14 @@ article {
 ** Welcome
 
 
+
+*** { @unit = "", @title = "The R Toolbox", @lecture, @foldout }
+
+![](https://github.com/DS4PS/dp4ss-textbook/blob/master/figures/r-tools-overview.png?raw=true)
+
+
+
+
 *** { @unit = "", @title = "Introducing R", @lecture, @foldout }
 
 
