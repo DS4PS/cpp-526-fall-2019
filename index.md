@@ -192,7 +192,7 @@ The assigned work for the term comes in the form of four elements, described bel
 
 - **Discussion Sessions (10%):**  Each student in the course will be given the opportunity to participate in discussion sessions designed to answer questions related to labs, review key concepts, and prepare for the final exam. New material will not be presented, but we will review content pertaining to assigned reading materials, video, or other similar materials provided. Students are encouraged to bring questions, respond to discussion topics that are provided, as well as responding meaningfully to other students&#39; responses. More details on the mechanics of discussion session operations, including group designations and instructor assessment of student performance, will be provided at the time of the first discussion session.
 
-- **Explainer Assignment (10%):**  You will be invited to pick one topic from the class that you want to learn more about, or that you think you have a clear way to explain. Create a short tutorial for your classmates. It can be a blog post, a video, a GIF, or a simulation. 
+- **Explainer Assignment (10%):**  You are invited to pick one topic from the class that you want to learn more about, or that you think you have a clear way to explain. Create a short tutorial for your classmates. It can be a blog post, a video, a GIF, or a simulation. 
 
 
 ## D. General Grading Rubric for Written Work
@@ -243,6 +243,53 @@ As students are all aware, ASU Online courses are typically offered on a seven a
 
 Please note: the course instructor may from time to time adjust assigned readings or adjust the due dates for assignment. The basic course content approach and learning objectives will not change, but slight modifications are possible if circumstances warrant an adjustment.
 
+[Schedule](https://ds4ps.org/cpp-526-fall-2019/schedule/)
+
+## Couse Schedule
+
+### Unit 0 
+
+**R Data Science Toolkit**
+- CH-01 Core R 
+- CH-02 R Studio
+- CH-03 Data-Driven Docs & RMD
+
+
+### Unit 1
+
+**Functions and Vectors**
+- CH-03, CH-04
+- Lab #1 
+
+### Unit 2
+
+**Operators and Descriptives**
+- Lab #2 
+
+### Unit 3
+
+**Visualization**
+- Lab #3
+
+### Unit 4
+
+**Dynamic Visualization**
+- Lab #4 
+
+### Unit 5
+
+**Data Wrangling**
+- Lab #5
+
+### Unit 6
+
+**Data IO and Joins**
+- Lab #6
+
+### Unit 7
+
+**Dashboards**
+- Start Final Project
 
 
 <br>
