@@ -189,7 +189,7 @@ We will need three tools to manage your data science projects: a data programmin
   - Headers 
   - Chunks 
   - Knitting 
-* Customization [Pimp my RMD](https://holtzy.github.io/Pimp-my-rmd/)
+* [Customization](https://holtzy.github.io/Pimp-my-rmd/)
  
  
  
