@@ -63,9 +63,15 @@ article {
 
 *** { @unit = "", @title = "The R Toolkit", @lecture, @foldout }
 
-![](https://github.com/DS4PS/dp4ss-textbook/blob/master/figures/r-tools-overview.png?raw=true)
+
+<br>
 
 ## The R Toolkit
+
+
+![](https://github.com/DS4PS/dp4ss-textbook/blob/master/figures/r-tools-overview.png?raw=true)
+
+
 
 In this course we cover the foundations of data programming with the R language. In order to create robust and dynamic analysis we need to use a couple of tools that were built to leverage the power of R and create compelling narratives. R Studio helps you manage projects by organizing files, scripts, packages and output. Markdown is a simple formatting convention that allows you to create publication-quality documents. And R Markdown is a specific version of Markdown that allows you to combine text and code to create data-driven documents. 
 
@@ -83,45 +89,32 @@ You will have plenty of practice with these tools this semester. You will submit
 
 [![](https://github.com/DS4PS/ds4ps.github.io/blob/master/gifs/NewCodeChunk/NewCodeChunk_media/NewCodeChunk.gif?raw=true)](../gifs/NewCodeChunk/NewCodeChunk.html)
 
+<br>
+<br>
 
 
-*** { @unit = "", @title = "Your Course Prep Checklist", @assignment, @foldout }
+*** { @unit = "Aug 23", @title = "Your Course Prep Checklist", @assignment, @foldout }
 
 
 - [X] [Read the Syllabus](https://ds4ps.org/cpp-526-fall-2019/) 
 - [ ] [Install R](https://cran.rstudio.com/) and [R Studio Desktop](https://www.rstudio.com/products/rstudio/download/) 
 - [ ] [Sign-Up for a GitHub Account](https://github.com/join) 
-- [ ] Mars 
-* [ ] Jupiter
-* [ ] Saturn
-* [ ] Uranus
+- [ ] Fill out the [doodle poll] for review session times 
+- [ ] Introduce Yourself on YellowDig 
 
 
 
 *** { @unit = "Aug 23", @title = "Introduce Yourself", @assignment  }
 
-Introduce yourself to the class. 
+## Introduce yourself to the class
 
-*** { @unit = "", @title = "Lab Example", @assignment, @foldout }
+We will be using a discussion board called YellowDig for this course. Introduce yourself to the class and share a bit about:
 
-## Data Labs
+1. Your background 
+2. Your previous experience with data analytics 
+3. One thing you hope to do with your new skills in data analytics 
 
-This class highlights two themes:
-
-1. Data is easier to obtain than ever before.
-2. Organizations that use data effectively perform better.
-
-So how can we get better at using data? 
-
-**Learning Objectives**: These labs are designed to better understand the process of collecting and utilizing data. The emphasis is on building a strategy to identify high-value data that is most useful for the organization, which requires basic knowledge about data quality. Does the data provide the type of information that is useful for discovery or prediction, and does it measure outcomes precisely?
-
-Lab 03 is available here:
-
-<a class="uk-button uk-button-default" href="https://ds4ps.org/paf-586-summer-2019/lab-03-feature-selection/">LAB 03</a>
-
-When ready, you can submit your lab via Canvas:
-
-<a class="uk-button uk-button-default" href="https://canvas.asu.edu/courses/26991/assignments/588320">Submit</a>
+<a class="uk-button uk-button-default" href="https://canvas.asu.edu/courses/29528/assignments/656491">Post to YellowDig</a>
 
 
 
