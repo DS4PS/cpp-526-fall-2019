@@ -104,7 +104,7 @@ You will have plenty of practice with these tools this semester. You will submit
 
 
 
-*** { @unit = "Aug 23", @title = "Introduce Yourself", @assignment  }
+*** { @unit = "Aug 23", @title = "Introduce Yourself", @assignment, @foldout   }
 
 ## Introduce yourself to the class
 
@@ -122,100 +122,88 @@ We will be using a discussion board called YellowDig for this course. Introduce 
 
 
 
-** Week 1 - Functions and Scripts
+** Week 1 - Functions and Vectors 
 
-*** { @unit = "", @title = "Overview of the Week", @foldout  }
+*** { @unit = "", @title = "R as a Calculator", @lecture  }
 
 
-*** { @unit = "Due DATE", @title = "Reading Title", @reading }
+*** { @unit = "", @title = "Functions", @lecture }
 
 
+*** { @unit = "", @title = "Vectors", @lecture  }
 
-*** { @unit = "Due DATE", @title = "Lecture Title", @lecture  }
 
+*** { @unit = "Due Aug 26th", @title = "Discussion Topic: Packages", @assignment  }
 
-*** { @unit = "Due DATE", @title = "Lab 01", @assignment  }
 
+*** { @unit = "Due Aug 29th", @title = "Lab 01", @assignment  }
 
 
 
 
-** Week 2 - Regression Review
+** Week 2 - Logical Operators and Descriptive Analysis
 
-*** { @unit = "", @title = "Overview of the Week", @foldout  }
 
+*** { @unit = "Due Sept 2nd", @title = "Discussion Topic", @assignment  }
 
-*** { @unit = "Due DATE", @title = "Reading Title", @reading }
 
+*** { @unit = "Due Sept 6th", @title = "Lab 02", @assignment  }
 
-*** { @unit = "Due DATE", @title = "Lecture Title", @lecture  }
 
 
-*** { @unit = "Due DATE", @title = "Lab 02", @assignment  }
 
 
+** Week 3 - Visualization
 
 
+*** { @unit = "Due Sept 9th", @title = "Discussion Topic", @assignment  }
 
-** Week 3 - Regression Review
 
-*** { @unit = "", @title = "Overview of the Week", @foldout  }
+*** { @unit = "Due Sept 12th", @title = "Lab 03", @assignment  }
 
 
-*** { @unit = "Due DATE", @title = "Reading Title", @reading }
 
 
-*** { @unit = "Due DATE", @title = "Lecture Title", @lecture  }
 
+** Week 4 - Dynamic Visualization 
 
-*** { @unit = "Due DATE", @title = "Lab 03", @assignment  }
 
+*** { @unit = "Due Sept 16th", @title = "Discussion Topic", @assignment  }
 
 
+*** { @unit = "Due Sept 19th", @title = "Lab 04", @assignment  }
 
 
-** Week 4
 
-*** { @unit = "", @title = "Overview of the Week", @foldout  }
+** Week 5 - Data Wrangling 
 
 
-*** { @unit = "Due DATE", @title = "Reading Title", @reading }
+*** { @unit = "Due Sept 23th", @title = "Discussion Topic", @assignment  }
 
 
-*** { @unit = "Due DATE", @title = "Lecture Title", @lecture  }
+*** { @unit = "Due Sept 26th", @title = "Lab 05", @assignment  }
 
 
-*** { @unit = "Due DATE", @title = "Lab 04", @assignment  }
 
 
+** Week 6 - Data IO, Joins, and Dashboard Design 
 
-** Week 5
 
-*** { @unit = "", @title = "Overview of the Week", @foldout  }
+*** { @unit = "Due Sept 30th", @title = "Discussion Topic", @assignment  }
 
 
-*** { @unit = "Due DATE", @title = "Reading Title", @reading }
+*** { @unit = "Due Oct 3rd", @title = "Lab 06", @assignment  }
 
 
-*** { @unit = "Due DATE", @title = "Lecture Title", @lecture  }
 
+** Week 7 - Dashboards
 
-*** { @unit = "Due DATE", @title = "Lab 05", @assignment  }
 
+*** { @unit = "Due Oct 7th", @title = "Discussion Topic", @assignment  }
 
 
-** Week 6 - Specification
+*** { @unit = "Due Oct 10th", @title = "FINAL PROJECT", @assignment  }
 
-*** { @unit = "", @title = "Overview of the Week", @foldout  }
-
-
-*** { @unit = "Due DATE", @title = "Reading Title", @reading }
-
-
-*** { @unit = "Due DATE", @title = "Lecture Title", @lecture  }
-
-
-*** { @unit = "Due DATE", @title = "Lab 06", @assignment  }
 
 
 
