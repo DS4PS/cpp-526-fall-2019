@@ -164,14 +164,14 @@ h2.nocount:before, h3.nocount:before, h4.nocount:before, h5.nocount:before, h6.n
 
 We will need three tools to manage your data science projects: a data programming language (R), a project management interfact (R Studio), and a way to create data-driven documents (R Markdown).
 
-## Core R [CH-01](http://ds4ps.org/dp4ss-textbook/ch-010-core-r.html)
+## Core R [CH-CORE-R](http://ds4ps.org/dp4ss-textbook/ch-010-core-r.html)
 * What is R?  [ [video](https://player.vimeo.com/video/180644880) ]
 * Packages 
   - [CRAN Views](https://cran.r-project.org/web/views/) 
   - [Awesome R](https://awesome-r.com/) 
   - [R Bloggers](https://www.r-bloggers.com/)
 
-## R Studio [CH-02](http://ds4ps.org/dp4ss-textbook/ch-020-rstudio.html)
+## R Studio [CH-RSTUDIO](http://ds4ps.org/dp4ss-textbook/ch-020-rstudio.html)
 * Installing R and R Studio
 * Tour of R Studio 
 
@@ -181,7 +181,7 @@ We will need three tools to manage your data science projects: a data programmin
 * Formats [link](https://rmarkdown.rstudio.com/formats.html)
 * Gallery [link](https://rmarkdown.rstudio.com/gallery.html)
 
-## Markdown Guide [CH-03](http://ds4ps.org/dp4ss-textbook/ch-031-markdown.html)
+## Markdown Guide [CH-MARKDOWN](http://ds4ps.org/dp4ss-textbook/ch-031-markdown.html)
 
 ## R Markdown Formats [overview](https://rmarkdown.rstudio.com/lesson-1.html)
 * Headers and Chunks [link](https://ds4ps.org/docs/#how-do-data-driven-docs-work)
@@ -197,7 +197,7 @@ We will need three tools to manage your data science projects: a data programmin
 * Mathematical Operators 
 * Assignment 
  
-## Functions [ [CH-05](http://ds4ps.org/datacamp-light-demo-for-rmd/calc-mortgage.html) ] 
+## Functions [ [CH-FUNCTIONS](http://ds4ps.org/datacamp-light-demo-for-rmd/calc-mortgage.html) ] 
 * Input-Output Devices 
 * Arguments 
 * Values 
@@ -211,9 +211,9 @@ We will need three tools to manage your data science projects: a data programmin
 
 ## Navigation 
 * Navigating R (directories, paths, object lists)
-* Reading Help Files 
 * Built-In Datasets
 
+## Getting Help [ [CH-HELP](http://ds4ps.org/dp4ss-textbook/ch-032-learning_r.html) ]
 
 
 
