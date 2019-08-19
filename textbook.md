@@ -176,19 +176,16 @@ We will need three tools to manage your data science projects: a data programmin
 * Tour of R Studio 
 
 ## Data-Driven Docs [overview](https://ds4ps.org/docs/)
-* Automation
-* Flexibility
-* The Importance of Reproducibility 
+* Automation & Flexibility 
+* [The Importance of Reproducibility](https://www.nature.com/news/1-500-scientists-lift-the-lid-on-reproducibility-1.19970) 
 * Formats [link](https://rmarkdown.rstudio.com/formats.html)
 * Gallery [link](https://rmarkdown.rstudio.com/gallery.html)
 
 ## Markdown Guide [CH-03](http://ds4ps.org/dp4ss-textbook/ch-031-markdown.html)
 
 ## R Markdown Formats [overview](https://rmarkdown.rstudio.com/lesson-1.html)
-* RMD Files 
-  - Headers 
-  - Chunks 
-  - Knitting 
+* Headers and Chunks [link](https://ds4ps.org/docs/#how-do-data-driven-docs-work)
+* Knitting [link](https://ds4ps.org/docs/#knitting-r-markdown-files)
 * [Customization](https://holtzy.github.io/Pimp-my-rmd/)
  
  
