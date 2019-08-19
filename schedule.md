@@ -51,13 +51,6 @@ article {
 ** Welcome
 
 
-*** { @unit = "", @title = "Introducing R", @lecture, @foldout }
-
-<br>
-
-<iframe src="https://player.vimeo.com/video/180644880" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-
-<br>
 
 
 
@@ -65,12 +58,18 @@ article {
 
 
 <br>
+<br>
 
-## The R Toolkit
+<iframe src="https://player.vimeo.com/video/180644880" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+
+<br>
+<br>
 
 
 ![](https://github.com/DS4PS/dp4ss-textbook/blob/master/figures/r-tools-overview.png?raw=true)
 
+
+## The R Toolkit
 
 
 In this course we cover the foundations of data programming with the R language. In order to create robust and dynamic analysis we need to use a couple of tools that were built to leverage the power of R and create compelling narratives. R Studio helps you manage projects by organizing files, scripts, packages and output. Markdown is a simple formatting convention that allows you to create publication-quality documents. And R Markdown is a specific version of Markdown that allows you to combine text and code to create data-driven documents. 
