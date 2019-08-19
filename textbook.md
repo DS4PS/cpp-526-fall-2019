@@ -162,29 +162,29 @@ h2.nocount:before, h3.nocount:before, h4.nocount:before, h5.nocount:before, h6.n
 
 # The Data Science Toolkit
 
-## [Core R](http://ds4ps.org/dp4ss-textbook/ch-010-core-r.html)
+We will need three tools to manage your data science projects: a data programming language (R), a project management interfact (R Studio), and a way to create data-driven documents (R Markdown).
+
+## Core R [CH-01](http://ds4ps.org/dp4ss-textbook/ch-010-core-r.html)
 * What is R?  [ [video](https://player.vimeo.com/video/180644880) ]
 * Packages 
   - [CRAN Views](https://cran.r-project.org/web/views/) 
   - [Awesome R](https://awesome-r.com/) 
   - [R Bloggers](https://www.r-bloggers.com/)
 
-
-## [R Studio](http://ds4ps.org/dp4ss-textbook/ch-020-rstudio.html)
+## R Studio [CH-02](http://ds4ps.org/dp4ss-textbook/ch-020-rstudio.html)
 * Installing R and R Studio
 * Tour of R Studio 
 
-## [Data-Driven Docs](https://ds4ps.org/docs/)
+## Data-Driven Docs [overview](https://ds4ps.org/docs/)
 * Automation
 * Flexibility
 * The Importance of Reproducibility 
 * Formats [link](https://rmarkdown.rstudio.com/formats.html)
 * Gallery [link](https://rmarkdown.rstudio.com/gallery.html)
 
-## [Markdown Guide](http://ds4ps.org/dp4ss-textbook/ch-031-markdown.html)
+## Markdown Guide [CH-03](http://ds4ps.org/dp4ss-textbook/ch-031-markdown.html)
 
-
-## R Markdown Format
+## R Markdown Formats [overview](https://rmarkdown.rstudio.com/lesson-1.html)
 * RMD Files 
   - Headers 
   - Chunks 
@@ -200,7 +200,7 @@ h2.nocount:before, h3.nocount:before, h4.nocount:before, h5.nocount:before, h6.n
 * Mathematical Operators 
 * Assignment 
  
-## Functions [ [chapter](http://ds4ps.org/datacamp-light-demo-for-rmd/calc-mortgage.html) ] 
+## Functions [ [CH-05](http://ds4ps.org/datacamp-light-demo-for-rmd/calc-mortgage.html) ] 
 * Input-Output Devices 
 * Arguments 
 * Values 
