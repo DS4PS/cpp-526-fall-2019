@@ -152,45 +152,71 @@ h2.nocount:before, h3.nocount:before, h4.nocount:before, h5.nocount:before, h6.n
 
 
 
-# Introducing R
+# Introduction 
 
-## Core R 
+## Rise of Data Science
+
+## Learning How to Learn 
+* Useful Metaphors 
+* Best Practices 
+
+# The Data Science Toolkit
+
+## [Core R](http://ds4ps.org/dp4ss-textbook/ch-010-core-r.html)
 * What is R?  [ [video](https://player.vimeo.com/video/180644880) ]
-* How do Packages Work?
-* Navigation (working directories, list objects, create folders)
-* Scripts 
+* Packages 
+  - [CRAN Views](https://cran.r-project.org/web/views/) 
+  - [Awesome R](https://awesome-r.com/) 
+  - [R Bloggers](https://www.r-bloggers.com/)
 
-## R Studio
+
+## [R Studio](http://ds4ps.org/dp4ss-textbook/ch-020-rstudio.html)
+* Installing R and R Studio
 * Tour of R Studio 
-* Navigation in R Studio 
-* [Style Guides](https://jef.works/R-style-guide/) 
 
-## Data-Driven Docs [ [splainer](https://ds4ps.org/docs/) ] 
-* Data-Driven Documents
+## [Data-Driven Docs](https://ds4ps.org/docs/)
+* Automation
+* Flexibility
 * The Importance of Reproducibility 
-* [Markdown](https://ds4ps.org/cpp-526-fall-2019/markdown/)
-* RMD in RStudio 
+* Formats [link](https://rmarkdown.rstudio.com/formats.html)
+* Gallery [link](https://rmarkdown.rstudio.com/gallery.html)
+
+## [Markdown Guide](http://ds4ps.org/dp4ss-textbook/ch-031-markdown.html)
+
+
+## R Markdown Format
+* RMD Files 
   - Headers 
   - Chunks 
   - Knitting 
-* [Pimp my RMD](https://holtzy.github.io/Pimp-my-rmd/)
+* Customization [Pimp my RMD](https://holtzy.github.io/Pimp-my-rmd/)
+ 
+ 
  
 
 # Getting Started
 
-## CH 
-
-## CH 01 - R as a Calculator
-* Assignment 
+## R as a Calculator
 * Mathematical Operators 
+* Assignment 
  
-## CH 02 - Functions [ [chapter](http://ds4ps.org/datacamp-light-demo-for-rmd/calc-mortgage.html) ] 
+## Functions [ [chapter](http://ds4ps.org/datacamp-light-demo-for-rmd/calc-mortgage.html) ] 
 * Input-Output Devices 
-* Object-Oriented Coding 
 * Arguments 
 * Values 
 * Returns 
+
+## Data Recipes
+* Scripts 
+* Object-Oriented Coding
+* [Style Guides](https://jef.works/R-style-guide/) 
+* Annotation 
+
+## Navigation 
+* Navigating R (directories, paths, object lists)
 * Reading Help Files 
+* Built-In Datasets
+
 
 
 
