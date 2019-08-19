@@ -147,7 +147,7 @@ We will be using a discussion board called YellowDig for this course. Introduce 
 *** { @unit = "Due Sept 2nd", @title = "Discussion Topic", @assignment  }
 
 
-*** { @unit = "Due Sept 6th", @title = "Lab 02", @assignment  }
+*** { @unit = "Due Sept 5th", @title = "Lab 02", @assignment  }
 
 
 
