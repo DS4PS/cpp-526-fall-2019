@@ -57,6 +57,15 @@ article {
 *** { @unit = "", @title = "The R Toolkit", @lecture, @foldout }
 
 
+## Introducing R 
+
+<br>
+<br>
+
+<iframe src="https://player.vimeo.com/video/180644880" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+
+
+<br>
 <br>
 
 
@@ -88,12 +97,6 @@ In this course we cover the foundations of data programming with the R language.
 You will have plenty of practice with these tools this semester. You will submit your labs as knitted R Markdown (RMD) files.
 
 [![](https://github.com/DS4PS/ds4ps.github.io/blob/master/gifs/NewCodeChunk/NewCodeChunk_media/NewCodeChunk.gif?raw=true)](../gifs/NewCodeChunk/NewCodeChunk.html)
-
-<br>
-<br>
-
-<iframe src="https://player.vimeo.com/video/180644880" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-
 
 <br>
 <br>
