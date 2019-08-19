@@ -217,15 +217,3 @@ We will be using a discussion board called YellowDig for this course. Introduce 
 
 
 
-
-
-
-** Week 7  
-
-*** { @unit = "", @title = "Review", @lecture }
-
-
-
-** FINAL EXAM
-
-*** { @unit = "Due DATE", @title = "Final Exam", @assignment }
