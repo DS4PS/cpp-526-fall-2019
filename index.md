@@ -186,13 +186,21 @@ Letter grades comport with a traditional set of intervals:
 
 The assigned work for the term comes in the form of four elements, described below:
 
-- **Weekly Labs (60%):**  Each week you will receive a short lab that will help you synthesize the lectures from the week though exercises that involve data, analysis, and important formulas from the lectures. These labs contain exercises that are similar in form or difficulty to what will be presented on the final exam. They are graded pass / fail by the instructors based upon an assessment of whether you have sincerely attempted the lab and answered over half of the questions correctly. This is designed to hold you accountable for the material, but not create anxiety about perfection.
+- **Weekly Labs (60%):**  Each week you will receive a short lab that will help you synthesize the lectures from the week though exercises that involve data, analysis, and important formulas from the lectures. These labs contain exercises that are similar in form or difficulty to what will be presented on the final exam. **They are graded pass / fail** by the instructors based upon an assessment of whether you have sincerely attempted the lab and answered over half of the questions correctly. This is designed to hold you accountable for the material, but not create anxiety about perfection.
 
 - **Final Dashboard Project (20%):**  This course will close with a final project that requires you to analyze some data and present your results as a data dashboard. It is designed to give you practice integrating material the we have covered throughout the course.
 
-- **Discussion Sessions (10%):**  Each student in the course will be given the opportunity to participate in discussion sessions designed to answer questions related to labs, review key concepts, and prepare for the final exam. New material will not be presented, but we will review content pertaining to assigned reading materials, video, or other similar materials provided. Students are encouraged to bring questions, respond to discussion topics that are provided, as well as responding meaningfully to other students&#39; responses. More details on the mechanics of discussion session operations, including group designations and instructor assessment of student performance, will be provided at the time of the first discussion session.
+- **Discussion Topics (10%):**  YellowDig discussion topics are used to introduce you to the data science ecosystem. Since this course focuses on the skill of learning data programming we cannot cover go in-depth into exciting resources and developments in the broad field of data science. The weekly discussion topics are a chance to explore some resources or reflect on a specific theme or article. We will use YellowDig discussion boards for this assignment. You earn points through your activities on the board. You need to earn at least 100 points by posting topics and interacting with peers in order to earn full credit. The points are allocated as follows:
 
-- **Explainer Assignment (10%):**  You are invited to pick one topic from the class that you want to learn more about, or that you think you have a clear way to explain. Create a short tutorial for your classmates. It can be a blog post, a video, a GIF, or a simulation. 
+  - 5 points for a new pin with at least 50 words.
+  - 2 points for a comment made to another pin.
+  - 2 point if you receive a comment on your pin.
+  - 1 point for liking another pin.
+  - 5 points if you earn an instructor badge for an informative post.
+  - max of 20 points can be earned each week.
+
+
+- **Explainer Assignment (10%):**  You are invited to pick one topic from the class that you want to learn more about, or that you think might provide value to your classmates. Create a short tutorial to make your topic accessible to your peers. It can be a blog post, a video, a GIF, or a tutorial that explains an important concept from data programming, presents a helpful framework, illustrates a useful R tool or approach to data programming, or introduces classmates to a new package or function. 
 
 
 ## D. General Grading Rubric for Written Work
