@@ -197,7 +197,7 @@ We will need three tools to manage your data science projects: a data programmin
 * Mathematical Operators 
 * Assignment 
  
-## Functions [ [CH-FUNCTIONS](http://ds4ps.org/datacamp-light-demo-for-rmd/calc-mortgage.html) ] 
+## Functions [ [CH-FUNCTIONS](http://ds4ps.org/dp4ss-textbook/ch-040-functions.html) ] 
 * Input-Output Devices 
 * Arguments 
 * Values 
