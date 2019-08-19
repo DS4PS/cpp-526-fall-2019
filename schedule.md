@@ -58,15 +58,6 @@ article {
 
 
 <br>
-<br>
-
-<iframe src="https://player.vimeo.com/video/180644880" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-
-<br>
-<br>
-
-
-![](https://github.com/DS4PS/dp4ss-textbook/blob/master/figures/r-tools-overview.png?raw=true)
 
 
 ## The R Toolkit
@@ -82,11 +73,27 @@ In this course we cover the foundations of data programming with the R language.
 
 [A Markdown Guide](http://ds4ps.org/dp4ss-textbook/ch-031-markdown.html)
 
+<br>
+
+![](https://github.com/DS4PS/dp4ss-textbook/blob/master/figures/r-tools-overview.png?raw=true)
+
+<br>
+<br>
+
+
+## R Markdown
+
 [Getting Started with R Markdown](https://rmarkdown.rstudio.com/lesson-1.html)
 
 You will have plenty of practice with these tools this semester. You will submit your labs as knitted R Markdown (RMD) files.
 
 [![](https://github.com/DS4PS/ds4ps.github.io/blob/master/gifs/NewCodeChunk/NewCodeChunk_media/NewCodeChunk.gif?raw=true)](../gifs/NewCodeChunk/NewCodeChunk.html)
+
+<br>
+<br>
+
+<iframe src="https://player.vimeo.com/video/180644880" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+
 
 <br>
 <br>
