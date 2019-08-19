@@ -141,7 +141,7 @@ We will be using a discussion board called YellowDig for this course. Introduce 
 
 
 
-** Week 2 - Logical Operators and Descriptive Analysis
+** Week 2 - Operators and Descriptives
 
 
 *** { @unit = "Due Sept 2nd", @title = "Discussion Topic", @assignment  }
@@ -186,7 +186,7 @@ We will be using a discussion board called YellowDig for this course. Introduce 
 
 
 
-** Week 6 - Data IO, Joins, and Dashboard Design 
+** Week 6 - Data IO and Joins
 
 
 *** { @unit = "Due Sept 30th", @title = "Discussion Topic", @assignment  }
