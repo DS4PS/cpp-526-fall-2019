@@ -113,7 +113,6 @@ The six main learning objectives for the course are:
 - Mastery of functions as the building blocks of all R programs, including arguments and scope
 - Knowledge of variable types and data structures in R, including construction and manipulation of data sets
 - Use of logical statements to create and analyze groups within data
-- Basic programming control structures and simulation techniques
 - Ability to build custom visualizations through the base R graphics package
 - Creation of dynamic graphics and data dashboards using R shiny tools
 
@@ -132,9 +131,10 @@ Assessment of student performance in this course is based on indications that th
 
 Students will demonstrate competency in understanding, producing and communicating results of their analyses through the following assignments:
 
-- Short (1-5 question) assessments associated with each lecture to ensure basic comprehension of key concepts and to help students and instructors track progress through the course.
+- In-lecture assessment questions to ensure basic comprehension of key concepts and to help students and instructors track progress through the course.
 - Weekly labs that provide opportunities to consolidate and apply material from the lectures.
-- A final project that integrates several components of the learning objectives above.
+- Discussion topics on broad data science trends. 
+- A final project that integrates several skills to create a data dashboard. 
 
 Assigned work, including the course final project, and the quality of active participation in the regular online discussion sessions that are a critical part of the course learning strategy are the tools the instructors will use to measure comprehension and skill; the student&#39;s course grade is a direct reflection of demonstrated performance. Students should take stated expectations seriously regarding preparation, conduct, and academic honesty in order to receive a grade reflective of outstanding performance.  Students should be aware that merely completing assigned work in no way guarantees an outstanding grade in the course. To receive an outstanding course grade (using the grading scheme described below and the performance assessment approach noted above) all assigned work should completed on time with careful attention to assignment details.
 
@@ -152,7 +152,7 @@ Online discussion boards are design for students to engage with the material tog
 
 The online discussions are explicitly intended to meet the objectives stated above.  They are not intended as another form of &quot;lecture&quot; where the instructor provides commentary and students simply react to that.  Rather, the discussions are a chance for peer-to-peer interaction and proactive engagement by each individual student.
 
-The purpose of all exams and assigned written work is also threefold: (1) the assignments and written exam afford students the opportunity to demonstrate substantive understanding of materials covered in course readings, lectures and online discussion, (2) the assignments and exam permit students to develop and demonstrate research, analytic and written communication skills, and (3) the written work permits the instructor to assess student knowledge, skills and ability within this subject domain.
+
 
 
 
@@ -160,8 +160,9 @@ The purpose of all exams and assigned written work is also threefold: (1) the as
 
 We will use a custom textbook for this course available at the link above. 
 
+* [Course Textbook](https://ds4ps.org/cpp-526-fall-2019/textbook/)
 
-The following texts are recommended as good resources:
+The following texts are recommended as good reference material for topics covered in this course:
 
 * Wickham, H., &amp; Grolemund, G. (2016). _R for Data Science._ O&#39;Reilly Press_. (free online)_  
 * Teetor, P. (2011). _R Cookbook: Proven recipes for data analysis, statistics, and graphics_. &quot; O&#39;Reilly Media, Inc.&quot;.  
