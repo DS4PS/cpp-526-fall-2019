@@ -67,31 +67,7 @@ textbooks:
 --- 
 
 
-<style> 
-    
-body {
-   font-family: "Roboto", sans-serif;
-}
- 
-p.italic {
-  font-style: italic;
-  color: black !important;
-}
 
-#fa-icon {
-  font-style: normal;
-}
-
-iframe {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-em {
-  color: black !important;
-}
-
-</style>
 
 
 
@@ -304,6 +280,37 @@ Please note: the course instructor may from time to time adjust assigned reading
 
 <br>
 <br>
+
+
+
+
+
+<style> 
+    
+body {
+   font-family: "Roboto", sans-serif;
+}
+ 
+p.italic {
+  font-style: italic;
+  color: black !important;
+}
+
+#fa-icon {
+  font-style: normal;
+}
+
+iframe {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+em {
+  color: black !important;
+}
+
+</style>
+
 
 
 
