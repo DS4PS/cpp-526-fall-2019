@@ -177,13 +177,14 @@ In addition to the required textbooks, the instructor will supplement the assign
 
 Letter grades comport with a traditional set of intervals:
 
-* 100 – 99% = A+  
-* 98 – 94% = A  
-* 93 – 90% = A - 
-* 89 – 87% = B+  
-* 86 – 84% = B  
-* 83 – 80% = B –  
-* Below 80% - C, D, F  
+------------|--------
+100 – 99%   |  A+  
+98 – 94%    |  A  
+93 – 90%    |  A - 
+89 – 87%    |  B+  
+86 – 84%    |  B  
+83 – 80%    |  B –  
+Below 80%   |  C, D, F  
 
 The assigned work for the term comes in the form of four elements, described below:
 
