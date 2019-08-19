@@ -48,16 +48,36 @@ iframe {
 ** Welcome
 
 
-*** { @unit = "", @title = "Video Example", @reading, @foldout }
+*** { @unit = "", @title = "Introducing R", @lecture, @foldout }
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/cDbD_JSCrNo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br>
+
+<iframe src="https://player.vimeo.com/video/180644880" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+
+<br>
+
+
+
 
 
 *** { @unit = "", @title = "Image Example", @lecture, @foldout }
 
 ![](https://raw.githubusercontent.com/DS4PS/paf-586-summer-2019/master/assets/img/course-cadence.png)
 
+
+*** { @unit = "", @title = "Your Course Prep Checklist", @assignment, @foldout }
+
+
+- [X] Read the [Syllabus](https://ds4ps.org/cpp-526-fall-2019/)
+- [ ] [Install R](https://cran.rstudio.com/) and [R Studio Desktop](https://www.rstudio.com/products/rstudio/download/)
+- [ ] [Sign-Up for a GitHub Account](https://github.com/join)
+- [ ] Mars
+- [ ] Jupiter
+- [ ] Saturn
+- [ ] Uranus
+- [ ] Neptune
+- [ ] Comet Haley
 
 
 
