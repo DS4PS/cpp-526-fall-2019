@@ -87,6 +87,9 @@ iframe {
   margin-left: auto;
   margin-right: auto;
 }
+em {
+  color: black !important;
+}
 
 </style>
 
