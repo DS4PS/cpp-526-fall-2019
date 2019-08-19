@@ -69,15 +69,17 @@ iframe {
 *** { @unit = "", @title = "Your Course Prep Checklist", @assignment, @foldout }
 
 
-- [X] Read the [Syllabus](https://ds4ps.org/cpp-526-fall-2019/)
-- [ ] [Install R](https://cran.rstudio.com/) and [R Studio Desktop](https://www.rstudio.com/products/rstudio/download/)
-- [ ] [Sign-Up for a GitHub Account](https://github.com/join)
-- [ ] Mars
-- [ ] Jupiter
-- [ ] Saturn
-- [ ] Uranus
-- [ ] Neptune
-- [ ] Comet Haley
+[X] Read the [Syllabus](https://ds4ps.org/cpp-526-fall-2019/)
+[ ] [Install R](https://cran.rstudio.com/) and [R Studio Desktop](https://www.rstudio.com/products/rstudio/download/)
+[ ] [Sign-Up for a GitHub Account](https://github.com/join)
+[ ] Mars
+
+
+
+* [ ] Jupiter
+* [ ] Saturn
+* [ ] Uranus
+
 
 
 
