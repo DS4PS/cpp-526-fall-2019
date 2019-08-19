@@ -105,11 +105,11 @@ You will have plenty of practice with these tools this semester. You will submit
 *** { @unit = "Aug 23", @title = "Your Course Prep Checklist", @assignment, @foldout }
 
 
-- [X] [Read the Syllabus](https://ds4ps.org/cpp-526-fall-2019/) 
+- [ ] [Read the Syllabus](https://ds4ps.org/cpp-526-fall-2019/) 
 - [ ] [Install R](https://cran.rstudio.com/) and [R Studio Desktop](https://www.rstudio.com/products/rstudio/download/) 
 - [ ] [Sign-Up for a GitHub Account](https://github.com/join) 
 - [ ] Fill out the [doodle poll] for review session times 
-- [ ] Introduce Yourself on YellowDig 
+- [ ] Introduce Yourself on YellowDig (see below)
 
 
 
