@@ -97,26 +97,16 @@ layout: default
 
 <tbody>
 
-{% if page.info.program_title %}
-<tr>
-<td>Program Title </td>
-  <td> <b>{{page.info.program_title}}</b> </td>
-</tr>
-{% endif %}
 
-{% if page.info.program_website %}
-<tr>
-<td>Program Webpage</td>
-<td><b> {{page.info.program_website}} </b></td>
-</tr>
-{% endif %}
-
+  
+  
 {% if page.info.course_title %}
 <tr>
 <td>Course Title</td>
-<td><b> {{page.info.course_title}} </b></td>
+<td> <b><a onclick="location.href='{{ page.info.course_website }}'">{{page.info.course_title}}</a></b> </td>
 </tr>
 {% endif %}
+
 
 {% if page.info.course_number %}
 <tr>
@@ -125,6 +115,14 @@ layout: default
 </tr>
 {% endif %}
 
+{% if page.info.course_website %}
+<tr>
+<td>Canvas Shell</td>
+<td><b> {{page.info.course_website}} </b></td>
+</tr>
+{% endif %}
+  
+  
 {% if page.info.course_level %}
 <tr>
 <td> Course Level </td>
