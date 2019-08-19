@@ -121,7 +121,7 @@ The six main learning objectives for the course are:
 
 There are no prerequisites, and we do not assume any prior background in computer programming or statistics. Students should, however, have installed R and R Studio, and worked through a basic tutorial on R Studio.
 
-# II. Assessment of Student Learning Performance & Proficiency: Keys to Student Success**
+# II. Assessment of Student Learning Performance & Proficiency: Keys to Student Success
 
 Assessment of student performance in this course is based on indications that the course learning objectives stated above have been achieved.  Several areas of measurement will be used to produce a final student performance rating.  These areas of performance assessment include the following:
 
@@ -140,7 +140,7 @@ Assigned work, including the course final project, and the quality of active par
 
 # III. Course Structure and Operations; Performance Expectations
 
-**A. Format and Pedagogical Theory**
+## A. Format and Pedagogical Theory
 
 Mastering advanced analytical techniques and data programming is like learning a language. You start by mastering basic vocabulary that is specific to statistics and data science. Through your coursework you will become conversant in the domains of regression analysis, research design, and data science. Progress might be slow at first as you work to master core concepts, integrate the building blocks into a coherent mental model of real-world problems, learn to translate technical results into clear narratives for non-technical audiences, and become comfortable with data programming skills. Over time you will find that your thought processes change as you approach problem-solving in a more structured and evidence-based manner, you apply counter-factual reasoning to performance problems, and you start reading the news and viewing scientific evidence differently. You begin to think and speak like a program evaluator.
 
@@ -156,19 +156,17 @@ The purpose of all exams and assigned written work is also threefold: (1) the as
 
 
 
-**B. Assigned Reading Materials
+## B. Assigned Reading Materials
 
-There is one required textbook for the data science courses (I, II, and III):
+We will use a custom textbook for this course available at the link above. 
 
-Wickham, H., &amp; Grolemund, G. (2016). _R for Data Science._ O&#39;Reilly Press_. (free online)_
 
 The following texts are recommended as good resources:
 
-Teetor, P. (2011). _R Cookbook: Proven recipes for data analysis, statistics, and graphics_. &quot; O&#39;Reilly Media, Inc.&quot;.
-
-Sanchez, G. (2013). _Handling and processing strings in R._ Berkeley: Trowchez Editions. _(free online)_
-
-Peng, R. D., &amp; Matsui, E. (2015). _The Art of Data Science._ _A Guide for Anyone Who Works with Data._ Skybrude Consulting, 200, 162.
+* Wickham, H., &amp; Grolemund, G. (2016). _R for Data Science._ O&#39;Reilly Press_. (free online)_  
+* Teetor, P. (2011). _R Cookbook: Proven recipes for data analysis, statistics, and graphics_. &quot; O&#39;Reilly Media, Inc.&quot;.  
+* Sanchez, G. (2013). _Handling and processing strings in R._ Berkeley: Trowchez Editions. _(free online)_  
+* Peng, R. D., &amp; Matsui, E. (2015). _The Art of Data Science._ _A Guide for Anyone Who Works with Data._ Skybrude Consulting, 200, 162.  
 
 
 
@@ -188,13 +186,14 @@ Letter grades comport with a traditional set of intervals:
 
 The assigned work for the term comes in the form of four elements, described below:
 
-- **Short Quizzes 40%):** Each lecture is accompanied by a short (1-5 question) quiz. These are designed to ensure that you are grasping the important concepts associated with each lecture. The content in this class is cumulative, the material each week building upon the previous week. We cover complex topics with a lot of nuances, so you may feel uncomfortable if you don&#39;t understand everything from a lecture. Don&#39;t worry – we will revisit a lot of this material many times through the program to reinforce important ideas and introduce more detail in subsequent stages. These quizzes are designed to give you immediate feedback about whether you grasped the core concepts so that you can spend more time on some material or seek help when necessary.
+- **Weekly Labs (60%):**  Each week you will receive a short lab that will help you synthesize the lectures from the week though exercises that involve data, analysis, and important formulas from the lectures. These labs contain exercises that are similar in form or difficulty to what will be presented on the final exam. They are graded pass / fail by the instructors based upon an assessment of whether you have sincerely attempted the lab and answered over half of the questions correctly. This is designed to hold you accountable for the material, but not create anxiety about perfection.
 
-- **Weekly Labs (40%):**  Each week you will receive a short lab that will help you synthesize the lectures from the week though exercises that involve data, analysis, and important formulas from the lectures. These labs contain exercises that are similar in form or difficulty to what will be presented on the final exam. They are graded pass / fail by the instructors based upon an assessment of whether you have sincerely attempted the lab and answered over half of the questions correctly. This is designed to hold you accountable for the material, but not create anxiety about perfection.
+- **Final Dashboard Project (20%):**  This course will close with a final project that requires you to analyze some data and present your results as a data dashboard. It is designed to give you practice integrating material the we have covered throughout the course.
 
-- **Final Project (20%):**  This course will close with a final project that requires you to analyze some data and present your results as a data dashboard. It is designed to give you practice integrating material the we have covered throughout the course.
+- **Discussion Sessions (10%):**  Each student in the course will be given the opportunity to participate in discussion sessions designed to answer questions related to labs, review key concepts, and prepare for the final exam. New material will not be presented, but we will review content pertaining to assigned reading materials, video, or other similar materials provided. Students are encouraged to bring questions, respond to discussion topics that are provided, as well as responding meaningfully to other students&#39; responses. More details on the mechanics of discussion session operations, including group designations and instructor assessment of student performance, will be provided at the time of the first discussion session.
 
-- **Discussion Sessions (0%):**  Each student in the course will be given the opportunity to participate in discussion sessions designed to answer questions related to labs, review key concepts, and prepare for the final exam. New material will not be presented, but we will review content pertaining to assigned reading materials, video, or other similar materials provided. Students are encouraged to bring questions, respond to discussion topics that are provided, as well as responding meaningfully to other students&#39; responses. More details on the mechanics of discussion session operations, including group designations and instructor assessment of student performance, will be provided at the time of the first discussion session.
+- **Explainer Assignment (10%):**  You will be invited to pick one topic from the class that you want to learn more about, or that you think you have a clear way to explain. Create a short tutorial for your classmates. It can be a blog post, a video, a GIF, or a simulation. 
+
 
 ## D. General Grading Rubric for Written Work
 
@@ -244,49 +243,7 @@ As students are all aware, ASU Online courses are typically offered on a seven a
 
 Please note: the course instructor may from time to time adjust assigned readings or adjust the due dates for assignment. The basic course content approach and learning objectives will not change, but slight modifications are possible if circumstances warrant an adjustment.
 
-# Couse Schedule
 
-**Unit 1: Functions and Arguments, Markdown Documents**
-
-* Readings available on Blackboard
-* Lab #1 – Markdown Documents
-
-**Unit 2: Variable Types, Logical Operators, and Subsets**
-
-* Readings available on Blackboard
-* Lab #2 – Logical Operators and Subset Functions
-
-**Unit 3                Data Frames and Merges**
-
-Readings available on Blackboard
-
-Lab #3 – Group Analysis in Data
-
-**Unit 4                Descriptive Statistics**
-
-Readings available on Blackboard
-
-Lab #4 – Basic Graphics
-
-**Unit 5                Graphics and Visualization**
-
-Readings available on Blackboard
-
-Lab #5 – Advanced Graphics
-
-**Unit 6                Dynamic Graphics**
-
-Readings available on Blackboard
-
-Lab #6 – Dynamic Graphics
-
-**Unit 7                Data Programming**
-
-Readings available on Blackboard
-
-Lab #7 – Monty Hall Simulation
-
-**Unit 7.5                Final Project**
 
 <br>
 <br>
