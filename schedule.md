@@ -41,6 +41,9 @@ td.i {
 iframe {
   align: middle;
 }
+article {
+  padding-left:20%;
+}
 </style>
 
 
