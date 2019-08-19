@@ -57,13 +57,18 @@ iframe {
 
 <br>
 
+[CH-01 Core R](http://ds4ps.org/dp4ss-textbook/ch-010-core-r.html)
 
 
 
+*** { @unit = "", @title = "Introducing R Studio", @lecture, @foldout }
 
-*** { @unit = "", @title = "Image Example", @lecture, @foldout }
+[CH-02 R Studio](http://ds4ps.org/dp4ss-textbook/ch-020-rstudio.html)
 
-![](https://raw.githubusercontent.com/DS4PS/paf-586-summer-2019/master/assets/img/course-cadence.png)
+
+*** { @unit = "", @title = "Data-Driven Documents", @lecture, @foldout }
+
+[Data-Driven Docs Overview](https://ds4ps.org/docs/)
 
 
 *** { @unit = "", @title = "Your Course Prep Checklist", @assignment, @foldout }
