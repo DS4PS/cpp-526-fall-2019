@@ -177,29 +177,32 @@ The assigned work for the term comes in the form of four elements, described bel
   - 5 points if you earn an instructor badge for an informative post.
   - max of 20 points can be earned each week.
 
+<br>
 
 - **Explainer Assignment (10%):**  You are invited to pick one topic from the class that you want to learn more about, or that you think might provide value to your classmates. Create a short tutorial to make your topic accessible to your peers. It can be a blog post, a video, a GIF, or a tutorial that explains an important concept from data programming, presents a helpful framework, illustrates a useful R tool or approach to data programming, or introduces classmates to a new package or function. 
 
 
 ## D. General Grading Rubric for Written Work
 
-Individual assignment grading rubrics will be provided. However, in order to understand the assessment approach for assigned work, in general there are several core elements for the instructor&#39;s assessment when grading students&#39; submitted written assignments and/or exams. First, the submitted work is assessed on whether or not it directly addresses the elements requested in the assignment. That is, when assigning a grade, the instructor will ask: did the submitted work actually address clearly and cogently the assigned questions?  Second, it is assessed in terms of the quality of the writing in the submitted work.  The relevant question: is the submitted work well-written, is it coherent and well organized, does it convey its key content clearly, concisely and effective? Third, does the provided appropriate documentation (where applicable), and is it properly punctuated and adhere to basic standards of appropriate grammar and syntax? (This course will use the APA citation format; additional details on this method of sourcing materials will be provided later.) Fourth, it is assessed by the quality of analytic rigor.  That is, the instructor will ask: is any requested analysis performed in the submitted work, and if so, is it done carefully and completely?  Fifth and finally, the submitted work is assessed on the author&#39;s creativity in completing the assignment.  The relevant question here is: did the submitted work provide an original or innovative way of approaching the subject matter and the questions posed in this assessment or research area?
-
-To summarize, in general any submitted work written work (assignments and/or exams) is assessed on these evaluative criteria:
+In general, any submitted work written work (assignments and/or exams) is assessed on these evaluative criteria:
 
 - Assignment completeness – all elements of the assignment are addressed
 - Quality of analysis – substantively rigorous in addressing the assignment
 - Demonstrated synthesis of core concepts from lecture notes and ability to apply to new problems
 
-However, again, to be clear: assignments are distributed with an accompanying specific assessment rubric.
+Most assignments in this course are labs that are graded pass-fail based upon completeness and correctness of responses (every attempt must be made to complete labs, and they must be more than 50% correct to receive credit). Discussion boards that accumulate points through each activity on the board. 
+
+The final project will be accompanied by a rubric describing the allocation of points and criteria for evaluation. 
 
 ## E. Late and Missing Assignments
 
-This course is based on students reading course material, participating in discussion with colleagues and producing analytic essays, through assignments and an essay-based final exam. Accordingly, if students do not participate fully and completely, assessment of student performance will reflect that directly. For example, points lost for lack of participation in a weekly discussion session are not eligible for remedial action. All assigned work is accompanied by detailed instructions, adequate time for completion and opportunities to consult the instructor with questions. As a result, each assignment element in the course is expected to be completed in a timely fashion by the due date.
+Grades for the course are largely based on weekly labs. Assigned work is accompanied by detailed instructions, adequate time for completion and opportunities to consult the instructor with questions. As a result, each assignment element in the course is expected to be completed in a timely fashion by the due date. Once solutions are posted it is no longer possible to receive points for assignments. 
 
 ## F.  Course Communications and Instructor Feedback:
 
-The course is supported on the university&#39;s BlackBoard platform; as such, electronic course materials will be supported through that course site. Lecture files, assignments and other course communications will be transmitted via BlackBoard and/or through the class email list.
+**Course content** is hosted on this website. Lecture files, assignments and other course communications will be transmitted via this site and/or through the class email list. **All assignment submissions** will be made through the [Canvas shell](https://canvas.asu.edu). 
+
+Please post lab questions on the [Get Help](https://ds4ps.github.io/cpp-526-fall-2019/help/) page on this site, schedule individual office hours using the Calendly link provided above, and email the instructor directly instead of using the Canvas system. 
 
 Students should be aware that the course instructor will attempt to respond to any course-related email as quickly as possible. Students are asked to allow between 24 and 48 hours for replies to direct instructor emails, generally, as a reasonable time to reply to questions or other issues posed in an email. Additionally, the general timeline for instructor grading or other feedback on assignments, either writer work or online discussion work, is between 5 and 10 work days.
 
