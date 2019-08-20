@@ -236,48 +236,32 @@ Please note: the course instructor may from time to time adjust assigned reading
 
 ## Couse Schedule
 
-### Unit 0 
-
-**R Data Science Toolkit**
+### Unit 0: R Data Science Toolkit 
 - CH-01 Core R 
 - CH-02 R Studio
 - CH-03 Data-Driven Docs & RMD
 
 
-### Unit 1
-
-**Functions and Vectors**
+### Unit 1: Functions and Vectors
 - CH-03, CH-04
 - Lab #1 
 
-### Unit 2
-
-**Operators and Descriptives**
+### Unit 2: Operators and Descriptives
 - Lab #2 
 
-### Unit 3
-
-**Visualization**
+### Unit 3: Visualization
 - Lab #3
 
-### Unit 4
-
-**Dynamic Visualization**
+### Unit 4: Dynamic Visualization
 - Lab #4 
 
-### Unit 5
-
-**Data Wrangling**
+### Unit 5: Data Wrangling
 - Lab #5
 
-### Unit 6
-
-**Data IO and Joins**
+### Unit 6: Data IO and Joins
 - Lab #6
 
-### Unit 7
-
-**Dashboards**
+### Unit 7: Dashboards
 - Start Final Project
 
 
