@@ -108,8 +108,8 @@ You will have plenty of practice with these tools this semester. You will submit
 - [ ] [Read the Syllabus](https://ds4ps.org/cpp-526-fall-2019/) 
 - [ ] [Install R](https://cran.rstudio.com/) and [R Studio Desktop](https://www.rstudio.com/products/rstudio/download/) 
 - [ ] [Sign-Up for a GitHub Account](https://github.com/join) 
-- [ ] Fill out the [doodle poll] for review session times 
-- [ ] Introduce Yourself on YellowDig (see below)
+- [ ] Fill out the [doodle poll](https://doodle.com/poll/x8fdtsnyi6d54xpg) for review session times 
+- [ ] Introduce Yourself on [YellowDig](https://canvas.asu.edu/courses/29528/assignments/656491) (see below)
 
 
 
@@ -119,7 +119,7 @@ You will have plenty of practice with these tools this semester. You will submit
 
 We will be using a discussion board called YellowDig for this course. Introduce yourself to the class and share a bit about:
 
-1. Your background 
+1. A little about yourself
 2. Your previous experience with data analytics 
 3. One thing you hope to do with your new skills in data analytics 
 
