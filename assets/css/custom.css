@@ -86,6 +86,8 @@ p.i {
 a{
     color: #26b8ef;
     text-decoration: underline; 
+    target-name: new;
+    target-new: tab;
 }
 
 
