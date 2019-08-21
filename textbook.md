@@ -185,16 +185,6 @@ We will need three tools to manage your data science projects: a data programmin
 * Values 
 * Returns 
 
-## Data Recipes
-* Scripts 
-* Object-Oriented Coding
-* [Style Guides](https://jef.works/R-style-guide/) 
-* Annotation 
-
-## Navigation 
-* Navigating R (directories, paths, object lists)
-* Built-In Datasets
-
 
 ## The Learning Curve [ [CH-07](http://ds4ps.org/dp4ss-textbook/ch-032-learning_r.html) ]
 * Vocabular and verbs 
@@ -206,6 +196,16 @@ We will need three tools to manage your data science projects: a data programmin
 * Error messages 
 * Discussion boards 
 
+
+## Data Recipes
+* Scripts 
+* Object-Oriented Coding
+* [Style Guides](https://jef.works/R-style-guide/) 
+* Annotation 
+
+## Navigation 
+* Navigating R (directories, paths, object lists)
+* Built-In Datasets
 
 
 # One-Dimensional Datasets
