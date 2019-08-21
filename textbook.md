@@ -165,8 +165,7 @@ We will need three tools to manage your data science projects: a data programmin
 * Formats [link](https://rmarkdown.rstudio.com/formats.html)
 * Gallery [link](https://rmarkdown.rstudio.com/gallery.html)
 
-## Markdown 
-* Markdown Guide [CH-03](http://ds4ps.org/dp4ss-textbook/ch-031-markdown.html)
+## Markdown [CH-03](http://ds4ps.org/dp4ss-textbook/ch-031-markdown.html)
 * R Markdown Formats [overview](https://rmarkdown.rstudio.com/lesson-1.html)
   * Headers and Chunks [link](https://ds4ps.org/docs/#how-do-data-driven-docs-work)
   * Knitting [link](https://ds4ps.org/docs/#knitting-r-markdown-files)
