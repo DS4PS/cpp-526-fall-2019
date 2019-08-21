@@ -148,24 +148,24 @@ h2.nocount:before, h3.nocount:before, h4.nocount:before, h5.nocount:before, h6.n
 
 We will need three tools to manage your data science projects: a data programming language (R), a project management interfact (R Studio), and a way to create data-driven documents (R Markdown).
 
-## Core R [CH-01](http://ds4ps.org/dp4ss-textbook/ch-010-core-r.html)
+## Core R [ [CH-01](http://ds4ps.org/dp4ss-textbook/ch-010-core-r.html) ]
 * What is R?  [ [video](https://player.vimeo.com/video/180644880) ]
 * Packages 
   - [CRAN Views](https://cran.r-project.org/web/views/) 
   - [Awesome R](https://awesome-r.com/) 
   - [R Bloggers](https://www.r-bloggers.com/)
 
-## R Studio [CH-02](http://ds4ps.org/dp4ss-textbook/ch-020-rstudio.html)
+## R Studio [ [CH-02](http://ds4ps.org/dp4ss-textbook/ch-020-rstudio.html) ]
 * Installing R and R Studio
 * Tour of R Studio 
 
-## Data-Driven Docs [CH-03](http://ds4ps.org/dp4ss-textbook/ch-030-data-driven-docs.html)
+## Data-Driven Docs [ [CH-03](http://ds4ps.org/dp4ss-textbook/ch-030-data-driven-docs.html) ]
 * Automation & Flexibility 
 * [The Importance of Reproducibility](https://www.nature.com/news/1-500-scientists-lift-the-lid-on-reproducibility-1.19970) 
 * Formats [link](https://rmarkdown.rstudio.com/formats.html)
 * Gallery [link](https://rmarkdown.rstudio.com/gallery.html)
 
-## Markdown [CH-04](http://ds4ps.org/dp4ss-textbook/ch-031-markdown.html)
+## Markdown [ [CH-04](http://ds4ps.org/dp4ss-textbook/ch-031-markdown.html) ]
 * R Markdown Formats [overview](https://rmarkdown.rstudio.com/lesson-1.html)
   * Headers and Chunks [link](https://ds4ps.org/docs/#how-do-data-driven-docs-work)
   * Knitting [link](https://ds4ps.org/docs/#knitting-r-markdown-files)
@@ -174,7 +174,7 @@ We will need three tools to manage your data science projects: a data programmin
  
 # Getting Started
 
-## R as a Calculator [CH-05]
+## R as a Calculator [ [CH-05](http://ds4ps.org/dp4ss-textbook/ch-033-calculator.html) ]
 * Mathematical Operators 
 * Assignment 
 * Objects
@@ -196,11 +196,12 @@ We will need three tools to manage your data science projects: a data programmin
 * Built-In Datasets
 
 
-## The Learning Curve [ [CH-06](http://ds4ps.org/dp4ss-textbook/ch-032-learning_r.html) ]
+## The Learning Curve [ [CH-07](http://ds4ps.org/dp4ss-textbook/ch-032-learning_r.html) ]
+* Vocabular and verbs 
 * Learning to Learn R
 
 
-## Getting Help [ [CH-07]() ]
+## Getting Help [ [CH-08]() ]
 * Help files 
 * Error messages 
 * Discussion boards 
