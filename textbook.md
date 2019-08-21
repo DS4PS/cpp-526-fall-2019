@@ -147,7 +147,7 @@ h2.nocount:before, h3.nocount:before, h4.nocount:before, h5.nocount:before, h6.n
 
 ## Rise of Data Science
 
-## Learning How to Learn 
+## Learning How to Learn R [CH-01]
 * Useful Metaphors 
 * Best Practices 
 
@@ -155,14 +155,14 @@ h2.nocount:before, h3.nocount:before, h4.nocount:before, h5.nocount:before, h6.n
 
 We will need three tools to manage your data science projects: a data programming language (R), a project management interfact (R Studio), and a way to create data-driven documents (R Markdown).
 
-## Core R [CH-CORE-R](http://ds4ps.org/dp4ss-textbook/ch-010-core-r.html)
+## Core R [CH-01](http://ds4ps.org/dp4ss-textbook/ch-010-core-r.html)
 * What is R?  [ [video](https://player.vimeo.com/video/180644880) ]
 * Packages 
   - [CRAN Views](https://cran.r-project.org/web/views/) 
   - [Awesome R](https://awesome-r.com/) 
   - [R Bloggers](https://www.r-bloggers.com/)
 
-## R Studio [CH-RSTUDIO](http://ds4ps.org/dp4ss-textbook/ch-020-rstudio.html)
+## R Studio [CH-02](http://ds4ps.org/dp4ss-textbook/ch-020-rstudio.html)
 * Installing R and R Studio
 * Tour of R Studio 
 
@@ -172,23 +172,22 @@ We will need three tools to manage your data science projects: a data programmin
 * Formats [link](https://rmarkdown.rstudio.com/formats.html)
 * Gallery [link](https://rmarkdown.rstudio.com/gallery.html)
 
-## Markdown Guide [CH-MARKDOWN](http://ds4ps.org/dp4ss-textbook/ch-031-markdown.html)
-
-## R Markdown Formats [overview](https://rmarkdown.rstudio.com/lesson-1.html)
-* Headers and Chunks [link](https://ds4ps.org/docs/#how-do-data-driven-docs-work)
-* Knitting [link](https://ds4ps.org/docs/#knitting-r-markdown-files)
-* [Customization](https://holtzy.github.io/Pimp-my-rmd/)
+## Markdown 
+* Markdown Guide [CH-03](http://ds4ps.org/dp4ss-textbook/ch-031-markdown.html)
+* R Markdown Formats [overview](https://rmarkdown.rstudio.com/lesson-1.html)
+  * Headers and Chunks [link](https://ds4ps.org/docs/#how-do-data-driven-docs-work)
+  * Knitting [link](https://ds4ps.org/docs/#knitting-r-markdown-files)
+  * [Customization](https://holtzy.github.io/Pimp-my-rmd/)
  
  
- 
-
 # Getting Started
 
-## R as a Calculator
+## R as a Calculator [CH-04]
 * Mathematical Operators 
 * Assignment 
+* Objects
  
-## Functions [ [CH-FUNCTIONS](http://ds4ps.org/dp4ss-textbook/ch-040-functions.html) ] 
+## Functions [ [CH-05](http://ds4ps.org/dp4ss-textbook/ch-040-functions.html) ] 
 * Input-Output Devices 
 * Arguments 
 * Values 
@@ -204,8 +203,15 @@ We will need three tools to manage your data science projects: a data programmin
 * Navigating R (directories, paths, object lists)
 * Built-In Datasets
 
-## Getting Help [ [CH-HELP](http://ds4ps.org/dp4ss-textbook/ch-032-learning_r.html) ]
 
+## The Learning Curve [ [CH-06](http://ds4ps.org/dp4ss-textbook/ch-032-learning_r.html) ]
+* Learning to Learn R
+
+
+## Getting Help [ [CH-07]() ]
+* Help files 
+* Error messages 
+* Discussion boards 
 
 
 
