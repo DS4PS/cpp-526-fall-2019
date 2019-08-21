@@ -143,13 +143,6 @@ h2.nocount:before, h3.nocount:before, h4.nocount:before, h5.nocount:before, h6.n
 
 
 
-# Introduction 
-
-## Rise of Data Science
-
-## Learning How to Learn R [CH-01]
-* Useful Metaphors 
-* Best Practices 
 
 # The Data Science Toolkit
 
