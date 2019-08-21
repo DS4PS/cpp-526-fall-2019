@@ -78,7 +78,7 @@ In this course we cover the foundations of data programming with the R language.
 
 [CH-02 R Studio](http://ds4ps.org/dp4ss-textbook/ch-020-rstudio.html)
 
-[Data-Driven Docs](https://ds4ps.org/docs/)
+[Data-Driven Docs](http://ds4ps.org/dp4ss-textbook/ch-030-data-driven-docs.html)
 
 [A Markdown Guide](http://ds4ps.org/dp4ss-textbook/ch-031-markdown.html)
 
@@ -133,13 +133,17 @@ We will be using a discussion board called YellowDig for this course. Introduce 
 
 ** Week 1 - Functions and Vectors 
 
-*** { @unit = "", @title = "R as a Calculator", @lecture  }
+*** { @unit = "", @title = "Learning to Learn a Programming Language", @reading, @foldout  }
+
+[Learning to Learn R](http://ds4ps.org/dp4ss-textbook/ch-032-learning_r.html)
+
+*** { @unit = "", @title = "R as a Calculator", @reading  }
 
 
-*** { @unit = "", @title = "Functions", @lecture }
+*** { @unit = "", @title = "Functions", @reading }
 
 
-*** { @unit = "", @title = "Vectors", @lecture  }
+*** { @unit = "", @title = "Vectors", @reading  }
 
 
 *** { @unit = "Due Aug 26th", @title = "Discussion Topic: Packages", @assignment  }
