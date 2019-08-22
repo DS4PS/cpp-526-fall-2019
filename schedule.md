@@ -212,7 +212,7 @@ head( dat )
 
 
 
-*** { @unit = "Due Aug 26th", @title = "Discussion Topic: The Promise of Big, Open Data", @assignment  }
+*** { @unit = "Due Aug 26th", @title = "Discussion Topic: The Promise of Big and Open Data", @assignment  }
 
 ## The Promise of Big, Open Data
 
