@@ -127,14 +127,33 @@ We will be using a discussion board called YellowDig for this course. Introduce 
 
 
 
-*** { @unit = "Aug 23", @title = "Zoom Session", @lecture, @foldout   }
+*** { @unit = "Aug 23", @title = "Orientation Zoom Meeting", @lecture, @foldout   }
 
 
 ## Welcome !
 
+If you were not able to make either Zoom session, I did a brief introduction to the "data science ecosystem" - the community of people that are creating cool analytical tools and building tutorials and case studies for how they might be applied, as well as a core set of tools that are all designed to work nicely together in order to implement projects. 
+
+You can think of R, R Studio, and Markdown kindof like Excel (analysis), Word (drafting a report), and Power Point (presenting results). R allows you to analyze your data to create tables or graphs, but these results are not useful unless you can share them with others. Here is where [data-driven documents](http://ds4ps.org/dp4ss-textbook/ch-030-data-driven-docs.html) really shine. You can quickly package your R code as cool reports, websites, presentations, or dashboards to format the information in whatever way is most accessible and useful for your clients or stakeholders. 
+
+Nerds are stereotypically perceived as anti-social, but in reality they have just created their own universes and civilizations. Surprisingly coding is a very social activity, and real-world analytics projects are almost always collaborative. You will learn how to use discussion boards to accelerate learning and facilitate collaboration, and social coding tools like GitHub to manage large data project. 
+
+We are going to throw a lot at you, but also provide a lot of support. Over these first couple of weeks feel free to reach out for anything you might need. If you find something confusing let me know (likely others will as well). We can jump on a [Zoom call](https://calendly.com/lecy/15min?month=2019-08) to do a screen share if you want to walk through anything. Or post a question to the homework discussion board for [data science I](https://ds4ps.org/cpp-526-fall-2019/help/) or [program evaluation I](https://ds4ps.org/cpp-523-fall-2019/help/). 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/oC1xz97aoYI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## References
+
 [Course Overview Powerpoint for Zoom Call](https://github.com/DS4PS/dp4ss-textbook/raw/master/resources/Couse-Overview.pdf)
 
-https://asu.zoom.us/j/944016877
+The course shells for CPP 523 and CPP 526 are here:
+
+https://ds4ps.org/cpp-526-fall-2019/
+https://ds4ps.org/cpp-523-fall-2019/
+
+And the dashboard example in R can be found here:
+
+[R Storyboard Example](https://beta.rstudioconnect.com/jjallaire/htmlwidgets-showcase-storyboard/htmlwidgets-showcase-storyboard.html)
 
 
 
