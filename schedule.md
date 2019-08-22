@@ -127,7 +127,7 @@ We will be using a discussion board called YellowDig for this course. Introduce 
 
 
 
-*** { @unit = "Aug 23", @title = "Orientation Zoom Meeting", @lecture, @foldout   }
+*** { @unit = "", @title = "ORIENTATION", @lecture, @foldout   }
 
 
 ## Welcome !
