@@ -127,6 +127,14 @@ We will be using a discussion board called YellowDig for this course. Introduce 
 
 
 
+*** { @unit = "Aug 23", @title = "Zoom Session", @lecture, @foldout   }
+
+
+## Welcome !
+
+[Course Overview Powerpoint for Zoom Call](https://github.com/DS4PS/dp4ss-textbook/raw/master/resources/Couse-Overview.pdf)
+
+https://asu.zoom.us/j/944016877
 
 
 
