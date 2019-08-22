@@ -198,13 +198,15 @@ Once you have completed this section you will be able to
 
 Required:
 
-[Assignment]()
+[Assignment](http://ds4ps.org/dp4ss-textbook/ch-033-calculator.html)
 
-[Functions]()
+[Functions](http://ds4ps.org/dp4ss-textbook/ch-040-functions.html)
 
 [Vectors]()
 
-Background:
+Background Chapters:
+
+**You will start simple and get practice with these tools on labs. Skim these, then return for reference as you get stuck or want to deepend your knowledge.**
 
 [Learning to Learn R](http://ds4ps.org/dp4ss-textbook/ch-032-learning_r.html)
 
@@ -215,6 +217,8 @@ Background:
 [Data-Driven Docs](http://ds4ps.org/dp4ss-textbook/ch-030-data-driven-docs.html)
 
 [Markdown](http://ds4ps.org/dp4ss-textbook/ch-031-markdown.html)
+
+
 
 
 ## Lab 
