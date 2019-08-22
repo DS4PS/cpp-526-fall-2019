@@ -253,7 +253,11 @@ You can also check out Ben's [Ted Talk](https://www.youtube.com/watch?v=6xsvGYIx
 *** { @unit = "", @title = "Unit Overview" }
 
 
-*** { @unit = "Due Sept 2nd", @title = "Discussion Topic: R Packages", @assignment, @foldout  }
+*** { @unit = "Due Sept 2nd", @title = "Discussion Topic: A Tour of R Packages", @assignment, @foldout  }
+
+<br>
+
+## A Tour of R Packages
 
 You might not have heard, but [nerd is the new black](https://www.wsj.com/articles/SB10001424127887323478304578332850293360468), data science is the [sexiest job of the 21st century](https://hbr.org/2012/10/data-scientist-the-sexiest-job-of-the-21st-century), and there is [nothing hotter](http://www.startfactor.pt/uploads/3/8/5/0/38505347/r-is-still-hot.pdf) than learning R.
 
@@ -274,6 +278,9 @@ Be warned up-front, this assignment might be overwhelming in you are wading into
 [best of r blogs](https://blog.feedspot.com/r_programming_blogs/)
 
 [r-bloggers](https://www.r-bloggers.com/)
+
+<br>
+<br>
 
 
 *** { @unit = "Due Sept 5th", @title = "Lab 02", @assignment  }
