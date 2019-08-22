@@ -250,7 +250,7 @@ You can also check out Ben's [Ted Talk](https://www.youtube.com/watch?v=6xsvGYIx
 
 ** Week 2 - Operators and Descriptives
 
-*** { @unit = "", @title = "Unit 2 Overview" }
+*** { @unit = "", @title = "Unit Overview" }
 
 
 *** { @unit = "Due Sept 2nd", @title = "Discussion Topic: R Packages", @assignment, @foldout  }
