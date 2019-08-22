@@ -149,6 +149,8 @@ Once you have completed this section you will be able to conceptually understand
 
 Required:
 
+[Assignment]()
+
 [Functions]()
 
 [Vectors]()
@@ -201,13 +203,7 @@ head( dat )
 
 ![](https://github.com/DS4PS/dp4ss-textbook/blob/master/figures/syracus-parcels.png?raw=true)
 
-*** { @unit = "", @title = "R as a Calculator", @reading  }
 
-
-*** { @unit = "", @title = "Functions", @reading }
-
-
-*** { @unit = "", @title = "Vectors", @reading  }
 
 
 *** { @unit = "Due Aug 26th", @title = "Discussion Topic: Packages", @assignment  }
