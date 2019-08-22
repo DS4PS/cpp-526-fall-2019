@@ -143,7 +143,13 @@ This section introduces functions and vectors, two important building blocks of 
 
 ## Learning Objectives
 
-Once you have completed this section you will be able to conceptually understand what a regression slope represents (the conditional mean), how residuals are created, and what the standard error is measuring.
+Once you have completed this section you will be able to 
+* create new objects in R 
+* use functions 
+* summarize vectors by type
+  - numeric vectors 
+  - character vectors 
+  - logical vectors 
 
 ## Assigned Reading
 
