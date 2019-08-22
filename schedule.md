@@ -133,9 +133,73 @@ We will be using a discussion board called YellowDig for this course. Introduce 
 
 ** Week 1 - Functions and Vectors 
 
-*** { @unit = "", @title = "Learning to Learn a Programming Language", @reading, @foldout  }
+*** { @unit = "", @title = "Unit Overview", @foldout  }
+
+
+## Description
+
+This section introduces functions and vectors, two important building blocks of data programming. 
+
+
+## Learning Objectives
+
+Once you have completed this section you will be able to conceptually understand what a regression slope represents (the conditional mean), how residuals are created, and what the standard error is measuring.
+
+## Assigned Reading
+
+Required:
+
+[Functions]()
+
+[Vectors]()
+
+Background:
 
 [Learning to Learn R](http://ds4ps.org/dp4ss-textbook/ch-032-learning_r.html)
+
+[Core R](http://ds4ps.org/dp4ss-textbook/ch-010-core-r.html)
+
+[R Studio](http://ds4ps.org/dp4ss-textbook/ch-020-rstudio.html)
+
+[Data-Driven Docs](http://ds4ps.org/dp4ss-textbook/ch-030-data-driven-docs.html)
+
+[Markdown](http://ds4ps.org/dp4ss-textbook/ch-031-markdown.html)
+
+
+## Lab 
+
+Lab-01 covers the following topics:
+
+* R Markdown (template provided)
+* Vectors
+  - numeric 
+  - character 
+  - factor 
+  - logical 
+
+**Functions**
+
+```r
+names()                 # variable names
+head()                  # preview dataset
+$ operator              # reference a vector inside a dataset
+length()                # vector dimensions
+dim(), nrow(), ncol()   # dataset dimensions
+sum(), summary()        # summarize numeric vectors
+table()                 # summarize factors / character vectors
+```
+
+**Data**:
+
+Syracuse tax parcels: [ [documentation](https://ds4ps.org/Data-Science-Class/DATA/syr_parcels.html) ]
+
+```r
+URL <- "https://raw.githubusercontent.com/DS4PS/Data-Science-Class/master/DATA/syr_parcels.csv"
+dat <- read.csv( URL, stringsAsFactors=FALSE )
+head( dat )
+```
+
+![](https://github.com/DS4PS/dp4ss-textbook/blob/master/figures/syracus-parcels.png?raw=true)
 
 *** { @unit = "", @title = "R as a Calculator", @reading  }
 
