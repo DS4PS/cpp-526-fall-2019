@@ -148,8 +148,8 @@ We are going to throw a lot at you, but also provide a lot of support. Over thes
 
 The course shells for CPP 523 and CPP 526 are located at:
 
-[https://ds4ps.org/cpp-526-fall-2019/](https://ds4ps.org/cpp-526-fall-2019/)
-[https://ds4ps.org/cpp-523-fall-2019/](https://ds4ps.org/cpp-523-fall-2019/)
+[https://ds4ps.org/cpp-526-fall-2019/](https://ds4ps.org/cpp-526-fall-2019/)  
+[https://ds4ps.org/cpp-523-fall-2019/](https://ds4ps.org/cpp-523-fall-2019/)  
 
 The *unofficial* program website can be found at:
 
