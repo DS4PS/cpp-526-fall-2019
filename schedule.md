@@ -212,7 +212,35 @@ head( dat )
 
 
 
-*** { @unit = "Due Aug 26th", @title = "Discussion Topic: Packages", @assignment  }
+*** { @unit = "Due Aug 26th", @title = "Discussion Topic: The Promise of Big, Open Data", @assignment  }
+
+## The Promise of Big, Open Data
+
+
+The world is simultaneously generating more data than it has ever before, as well as pushing for policies for making government data more accessible and democratic. These trends and movements is an important enabling aspect of data science, becuse it provides opportunity for real insights that can change our understanding of systems and allow us to hold institutions accountable.
+
+So ignoring potential problems with big and open data for now, read about two interesting cases where big and open data have offered deep insights into city planning and human nature. 
+
+"[A Data Analyst's Blog](https://www.npr.org/sections/alltechconsidered/2014/11/28/367046864/a-data-analysts-blog-is-transforming-how-new-yorkers-see-their-city
+) Is Transforming How New Yorkers See Their City", NPR, Nov 2018.
+
+[How a blog saved OK Cupid](https://fivethirtyeight.com/features/christian-rudder-dataclysm-okcupid/), FiveThirtyEight Blog, Nov 2014.
+
+
+<br> 
+
+**ASSIGNMENT:** 
+
+> For your discussion topic this week, find one data-driven blog post from Ben Wellington's [I Quant NY](http://iquantny.tumblr.com/) and/or OK Cupid's [OK Trends](https://theblog.okcupid.com/tagged/data) where you discovered something cool that you did not know, and share it with the group. In your post highlight what is interesting about the example, and what data made it possible.
+
+<br>
+
+You can also check out Ben's [Ted Talk](https://www.youtube.com/watch?v=6xsvGYIxJok), or this short interview. 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZTdPpoUp25w?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+<br>
+
 
 
 *** { @unit = "Due Aug 29th", @title = "Lab 01", @assignment  }
@@ -222,8 +250,30 @@ head( dat )
 
 ** Week 2 - Operators and Descriptives
 
+*** { @unit = "", @title = "Unit 2 Overview" }
 
-*** { @unit = "Due Sept 2nd", @title = "Discussion Topic", @assignment  }
+
+*** { @unit = "Due Sept 2nd", @title = "Discussion Topic: R Packages", @assignment, @foldout  }
+
+You might not have heard, but [nerd is the new black](https://www.wsj.com/articles/SB10001424127887323478304578332850293360468), data science is the [sexiest job of the 21st century](https://hbr.org/2012/10/data-scientist-the-sexiest-job-of-the-21st-century), and there is [nothing hotter](http://www.startfactor.pt/uploads/3/8/5/0/38505347/r-is-still-hot.pdf) than learning R.
+
+But what is R, and what are the ~~nerds~~ cool kids using it for? 
+
+**This week, your task is to explore a few blogs about tools in R and find one package or application that you are excited about. It can be an analytics package, a graphics package, a specific application, or otherwise.**
+
+Mine, personally, was the package that allows you to create comic strip graphics in R:
+
+[xkcd comics](https://stackoverflow.com/questions/12675147/how-can-we-make-xkcd-style-graphs)
+
+Be warned up-front, this assignment might be overwhelming in you are wading into a new community where the technical language is unfamiliar and the volume of information vast. There are currently over 13,000 packages available in R! That is partly the point of the assignment - recognizing the sheer volume of creativity surrounding the R community. But also learning how to find some sources that make the content accessible. Here are a few to get you started:
+
+[awesome r](https://awesome-r.com/)
+
+[cran views](https://cran.r-project.org/web/views/)
+
+[best of r blogs](https://blog.feedspot.com/r_programming_blogs/)
+
+[r-bloggers](https://www.r-bloggers.com/)
 
 
 *** { @unit = "Due Sept 5th", @title = "Lab 02", @assignment  }
