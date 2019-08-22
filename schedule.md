@@ -207,6 +207,12 @@ dat <- read.csv( URL, stringsAsFactors=FALSE )
 head( dat )
 ```
 
+**Downtown Syracuse**
+
+![](https://github.com/DS4PS/dp4ss-textbook/blob/master/figures/downtown-syr.png?raw=true)
+
+**All 42,000 Parcels**
+
 ![](https://github.com/DS4PS/dp4ss-textbook/blob/master/figures/syracus-parcels.png?raw=true)
 
 
