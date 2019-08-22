@@ -146,10 +146,14 @@ We are going to throw a lot at you, but also provide a lot of support. Over thes
 
 [Course Overview Powerpoint for Zoom Call](https://github.com/DS4PS/dp4ss-textbook/raw/master/resources/Couse-Overview.pdf)
 
-The course shells for CPP 523 and CPP 526 are here:
+The course shells for CPP 523 and CPP 526 are located at:
 
-https://ds4ps.org/cpp-526-fall-2019/
-https://ds4ps.org/cpp-523-fall-2019/
+[https://ds4ps.org/cpp-526-fall-2019/](https://ds4ps.org/cpp-526-fall-2019/)
+[https://ds4ps.org/cpp-523-fall-2019/](https://ds4ps.org/cpp-523-fall-2019/)
+
+The *unofficial* program website can be found at:
+
+[https://ds4ps.org/ms-prog-eval-data-analytics/](https://ds4ps.org/ms-prog-eval-data-analytics/)
 
 And the dashboard example in R can be found here:
 
