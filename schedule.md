@@ -202,7 +202,7 @@ Required:
 
 [Functions](http://ds4ps.org/dp4ss-textbook/ch-040-functions.html)
 
-[Vectors]()
+[Vectors](http://ds4ps.org/dp4ss-textbook/ch-050-vectors.html)
 
 Background Chapters:
 
