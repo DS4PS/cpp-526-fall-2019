@@ -58,14 +58,18 @@ This lab uses **city tax parcel data** from Syracuse, NY.
 
 [**DATA DICTIONARY**](https://ds4ps.github.io/Data-Science-Class/DATA/syr_parcels.html)
 
-You can load the dataset as follows: 
+<br>
+<br>
+
+## Loading Data Into R
+
+You can load the dataset by including the following code chunk in your file: 
 
 ```{r}
 URL <- "https://raw.githubusercontent.com/DS4PS/Data-Science-Class/master/DATA/syr_parcels.csv"
 dat <- read.csv( URL, stringsAsFactors=FALSE )
 ```
 
-Preview the dataset using the **head()** function:
 
 ```{r, echo=F}
 head( dat, 10 ) # show first ten rows of data
@@ -77,30 +81,61 @@ head( dat, 10 ) # show first ten rows of data
 
 # Lab Instructions
 
-Answer the following questions using the Syracuse parcels dataset and the functions listed. Your solution should include a precise response, as well as the code used to answer the question.
+Answer the following questions using the Syracuse parcels dataset and the functions listed. 
+
+Your solution should include a written response to the question, as well as the code used to generate the result.
+
+<br>
 
 
 #### (1) How many tax parcels are in Syracuse? 
-    
+
+<br>
+
 * dataset dimensions: **dim()** or **nrow()** 
+
+<br>
+
+
     
 #### (2) How many acres of land are in syracuse?
 
+<br>
+
 * **sum()** over the numeric **acres** vector
+
+<br>
+
     
 #### (3) How many vacant BUILDINGS are there in Syracuse?
 
+<br>
+
 * **sum()** over the **vacantbuil** logical vector
+
+<br>
+
     
 #### (4) What proportion of parcels are tax exempt?
 
+<br>
+
 * **sum()** plus **length()** functions withthe logical **tax.exempt** vector
+
+<br>
+
     
 #### (5) Which neighborhood contains the most tax parcels?
 
+<br>
+
 * **table()** with the **neighborhood** variable
+
+<br>
     
 #### (6) Which neighborhood contains the most vacant LOTS?
+
+<br>
 
 * **table()** with the **neighborhood** and **land_use** variables
 

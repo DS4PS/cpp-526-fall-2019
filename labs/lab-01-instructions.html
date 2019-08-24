@@ -1743,10 +1743,12 @@ $(document).ready(function () {
 <li>Each row represents one tax parcel, and all tax parcels in the city are recorded in the dataset.</li>
 </ul>
 <p><a href="https://ds4ps.github.io/Data-Science-Class/DATA/syr_parcels.html"><strong>DATA DICTIONARY</strong></a></p>
-<p>You can load the dataset as follows:</p>
+<p><br> <br></p>
+<div id="loading-data-into-r" class="section level2">
+<h2>Loading Data Into R</h2>
+<p>You can load the dataset by including the following code chunk in your file:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1">URL &lt;-<span class="st"> &quot;https://raw.githubusercontent.com/DS4PS/Data-Science-Class/master/DATA/syr_parcels.csv&quot;</span></a>
 <a class="sourceLine" id="cb2-2" title="2">dat &lt;-<span class="st"> </span><span class="kw">read.csv</span>( URL, <span class="dt">stringsAsFactors=</span><span class="ot">FALSE</span> )</a></code></pre></div>
-<p>Preview the dataset using the <strong>head()</strong> function:</p>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
 {"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["tax_id"],"name":[1],"type":["int"],"align":["right"]},{"label":["neighborhood"],"name":[2],"type":["chr"],"align":["left"]},{"label":["stnum"],"name":[3],"type":["chr"],"align":["left"]},{"label":["stname"],"name":[4],"type":["chr"],"align":["left"]},{"label":["zip"],"name":[5],"type":["chr"],"align":["left"]},{"label":["owner"],"name":[6],"type":["chr"],"align":["left"]},{"label":["frontfeet"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["depth"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["sqft"],"name":[9],"type":["dbl"],"align":["right"]},{"label":["acres"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["yearbuilt"],"name":[11],"type":["int"],"align":["right"]},{"label":["age"],"name":[12],"type":["int"],"align":["right"]},{"label":["age_range"],"name":[13],"type":["chr"],"align":["left"]},{"label":["land_use"],"name":[14],"type":["chr"],"align":["left"]},{"label":["units"],"name":[15],"type":["int"],"align":["right"]},{"label":["residential"],"name":[16],"type":["lgl"],"align":["right"]},{"label":["rental"],"name":[17],"type":["lgl"],"align":["right"]},{"label":["vacantbuil"],"name":[18],"type":["lgl"],"align":["right"]},{"label":["assessedla"],"name":[19],"type":["int"],"align":["right"]},{"label":["assessedva"],"name":[20],"type":["int"],"align":["right"]},{"label":["tax.exempt"],"name":[21],"type":["lgl"],"align":["right"]},{"label":["countytxbl"],"name":[22],"type":["int"],"align":["right"]},{"label":["schooltxbl"],"name":[23],"type":["int"],"align":["right"]},{"label":["citytaxabl"],"name":[24],"type":["int"],"align":["right"]},{"label":["star"],"name":[25],"type":["lgl"],"align":["right"]},{"label":["amtdelinqu"],"name":[26],"type":["dbl"],"align":["right"]},{"label":["taxyrsdeli"],"name":[27],"type":["int"],"align":["right"]},{"label":["totint"],"name":[28],"type":["dbl"],"align":["right"]},{"label":["overduewater"],"name":[29],"type":["dbl"],"align":["right"]}],"data":[{"1":"1393130501","2":"South Valley","3":"2655","4":"VALLEY DR","5":"13215","6":"CLARMIN BUILDERS ONON COR","7":"67.20","8":"50.00","9":"2149.182","10":"0.04933843","11":"NA","12":"NA","13":"NA","14":"Vacant Land","15":"0","16":"FALSE","17":"FALSE","18":"FALSE","19":"475","20":"500","21":"TRUE","22":"500","23":"500","24":"500","25":"NA","26":"0","27":"0","28":"0","29":"0.00","_rn_":"1"},{"1":"1393130500","2":"South Valley","3":"2635","4":"VALLEY DR","5":"13120","6":"JOHNSTON LEE R","7":"104.80","8":"46.50","9":"6370.403","10":"0.14624434","11":"1925","12":"90","13":"81-90","14":"Single Family","15":"0","16":"TRUE","17":"FALSE","18":"FALSE","19":"10800","20":"69300","21":"FALSE","22":"69300","23":"69300","24":"69300","25":"TRUE","26":"0","27":"0","28":"0","29":"177.79","_rn_":"2"},{"1":"1437100600","2":"South Valley","3":"203","4":"HAYES TERR","5":"13224","6":"CHRISTO CRAIG S","7":"82.87","8":"168.28","9":"12910.006","10":"0.29637297","11":"1957","12":"58","13":"51-60","14":"Single Family","15":"0","16":"TRUE","17":"FALSE","18":"FALSE","19":"20200","20":"88300","21":"FALSE","22":"88300","23":"88300","24":"88300","25":"TRUE","26":"0","27":"0","28":"0","29":"0.00","_rn_":"3"},{"1":"1425100900","2":"South Valley","3":"100","4":"EDNA RD & CITY LINE","5":"13120","6":"HAWKINS FARMS INC","7":"65.00","8":"160.89","9":"10322.661","10":"0.23697569","11":"1958","12":"57","13":"51-60","14":"Single Family","15":"0","16":"TRUE","17":"FALSE","18":"FALSE","19":"18000","20":"70500","21":"FALSE","22":"70500","23":"70500","24":"70500","25":"NA","26":"0","27":"0","28":"0","29":"0.00","_rn_":"4"},{"1":"1425101000","2":"South Valley","3":"104","4":"EDNA RD","5":"13205","6":"PETERS LYNNETTE","7":"65.00","8":"160.89","9":"10457.843","10":"0.24007904","11":"1965","12":"50","13":"41-50","14":"Single Family","15":"0","16":"TRUE","17":"FALSE","18":"FALSE","19":"18000","20":"74000","21":"FALSE","22":"74000","23":"74000","24":"74000","25":"TRUE","26":"0","27":"0","28":"0","29":"0.00","_rn_":"5"},{"1":"1425101100","2":"South Valley","3":"108","4":"EDNA RD","5":"13205","6":"MITCHELL LOTAN G","7":"65.00","8":"160.89","9":"10457.855","10":"0.24007931","11":"1954","12":"61","13":"61-70","14":"Single Family","15":"0","16":"TRUE","17":"FALSE","18":"FALSE","19":"18000","20":"95000","21":"FALSE","22":"95000","23":"95000","24":"95000","25":"TRUE","26":"0","27":"0","28":"0","29":"0.00","_rn_":"6"},{"1":"1425101200","2":"South Valley","3":"112","4":"EDNA RD","5":"13205","6":"WHALEN GIOVANNA A","7":"65.00","8":"160.89","9":"10457.844","10":"0.24007906","11":"1953","12":"62","13":"61-70","14":"Single Family","15":"0","16":"TRUE","17":"FALSE","18":"FALSE","19":"18000","20":"72000","21":"FALSE","22":"72000","23":"72000","24":"72000","25":"TRUE","26":"0","27":"0","28":"0","29":"0.00","_rn_":"7"},{"1":"1425101300","2":"South Valley","3":"116","4":"EDNA RD","5":"13205","6":"BERGH GARY D","7":"65.00","8":"160.89","9":"10457.864","10":"0.24007952","11":"1955","12":"60","13":"51-60","14":"Single Family","15":"0","16":"TRUE","17":"FALSE","18":"FALSE","19":"18000","20":"68500","21":"FALSE","22":"67000","23":"67000","24":"67000","25":"TRUE","26":"0","27":"0","28":"0","29":"0.00","_rn_":"8"},{"1":"1323000100","2":"South Valley","3":"301","4":"DORWIN AVE & MIDLAND AVE","5":"13205","6":"CITY OF SYRACUSE TD","7":"150.00","8":"132.00","9":"19799.831","10":"0.45454157","11":"NA","12":"NA","13":"NA","14":"Vacant Land","15":"0","16":"FALSE","17":"FALSE","18":"FALSE","19":"23800","20":"23800","21":"TRUE","22":"23800","23":"23800","24":"23800","25":"NA","26":"0","27":"0","28":"0","29":"0.00","_rn_":"9"},{"1":"1425101400","2":"South Valley","3":"120","4":"EDNA RD","5":"13205","6":"DOUGHERTY ROBERT K JR","7":"65.00","8":"160.89","9":"10457.843","10":"0.24007904","11":"1955","12":"60","13":"51-60","14":"Single Family","15":"0","16":"TRUE","17":"FALSE","18":"FALSE","19":"18000","20":"86100","21":"FALSE","22":"86100","23":"86100","24":"86100","25":"TRUE","26":"0","27":"0","28":"0","29":"0.00","_rn_":"10"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
@@ -1754,41 +1756,55 @@ $(document).ready(function () {
 </div>
 <p><br><br></p>
 </div>
+</div>
 <div id="lab-instructions" class="section level1">
 <h1>Lab Instructions</h1>
-<p>Answer the following questions using the Syracuse parcels dataset and the functions listed. Your solution should include a precise response, as well as the code used to answer the question.</p>
+<p>Answer the following questions using the Syracuse parcels dataset and the functions listed.</p>
+<p>Your solution should include a written response to the question, as well as the code used to generate the result.</p>
+<p><br></p>
 <div id="how-many-tax-parcels-are-in-syracuse" class="section level4">
 <h4>(1) How many tax parcels are in Syracuse?</h4>
+<p><br></p>
 <ul>
 <li>dataset dimensions: <strong>dim()</strong> or <strong>nrow()</strong></li>
 </ul>
+<p><br></p>
 </div>
 <div id="how-many-acres-of-land-are-in-syracuse" class="section level4">
 <h4>(2) How many acres of land are in syracuse?</h4>
+<p><br></p>
 <ul>
 <li><strong>sum()</strong> over the numeric <strong>acres</strong> vector</li>
 </ul>
+<p><br></p>
 </div>
 <div id="how-many-vacant-buildings-are-there-in-syracuse" class="section level4">
 <h4>(3) How many vacant BUILDINGS are there in Syracuse?</h4>
+<p><br></p>
 <ul>
 <li><strong>sum()</strong> over the <strong>vacantbuil</strong> logical vector</li>
 </ul>
+<p><br></p>
 </div>
 <div id="what-proportion-of-parcels-are-tax-exempt" class="section level4">
 <h4>(4) What proportion of parcels are tax exempt?</h4>
+<p><br></p>
 <ul>
 <li><strong>sum()</strong> plus <strong>length()</strong> functions withthe logical <strong>tax.exempt</strong> vector</li>
 </ul>
+<p><br></p>
 </div>
 <div id="which-neighborhood-contains-the-most-tax-parcels" class="section level4">
 <h4>(5) Which neighborhood contains the most tax parcels?</h4>
+<p><br></p>
 <ul>
 <li><strong>table()</strong> with the <strong>neighborhood</strong> variable</li>
 </ul>
+<p><br></p>
 </div>
 <div id="which-neighborhood-contains-the-most-vacant-lots" class="section level4">
 <h4>(6) Which neighborhood contains the most vacant LOTS?</h4>
+<p><br></p>
 <ul>
 <li><strong>table()</strong> with the <strong>neighborhood</strong> and <strong>land_use</strong> variables</li>
 </ul>
