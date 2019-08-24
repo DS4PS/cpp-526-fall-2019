@@ -17,17 +17,21 @@ library( pander )
 
 <br>
 
-*This lab offers practice with some basic R functions for summarizing vectors.*
+
+---
 
 <br>
 
-I have provided you with an RMD template for this lab: 
+#### This lab offers practice with some basic R functions for summarizing vectors.
+
+
+I have provided you with a **LAB-01 RMD template** to get you started: 
 
 
 [![](images/download.png)](https://www.dropbox.com/s/43dj0oszgg34clc/Lab-01-LastName.Rmd?dl=1)
 
 
-If you are having trouble with your RMD file, try the [RMD File Styles and Knitting Tips](https://ds4ps.org/cpp-526-fall-2019/labs/r-markdown-files.html) manual.
+--- 
 
 <br><br>
 
@@ -50,30 +54,32 @@ table()                 # summarize factors / character vectors
 
 # Data
 
-This lab uses **city tax parcel data** from Syracuse, NY.
+This lab uses **city tax parcel data** from Syracuse, NY. [ [Data Dictionary](https://ds4ps.github.io/Data-Science-Class/DATA/syr_parcels.html) ]
 
 * Each house, business, park or empty lot in the city sits on a parcel of land, and the tax rate for that parcel is determined by the city. 
 * All of the characteristics of each parcel is stored in a central database, along with information about the land use classifications, owners, and whether the property is up-to-date on taxes and water bills.  
 * Each row represents one tax parcel, and all tax parcels in the city are recorded in the dataset.  
 
-[**DATA DICTIONARY**](https://ds4ps.github.io/Data-Science-Class/DATA/syr_parcels.html)
+```{r, echo=F}
+URL <- "https://raw.githubusercontent.com/DS4PS/Data-Science-Class/master/DATA/syr_parcels.csv"
+dat <- read.csv( URL, stringsAsFactors=FALSE )
+head( dat, 10 ) # show first ten rows of data
+```
 
 <br>
 <br>
+
 
 ## Loading Data Into R
 
 You can load the dataset by including the following code chunk in your file: 
 
-```{r}
+```{r, eval=F}
 URL <- "https://raw.githubusercontent.com/DS4PS/Data-Science-Class/master/DATA/syr_parcels.csv"
 dat <- read.csv( URL, stringsAsFactors=FALSE )
 ```
 
 
-```{r, echo=F}
-head( dat, 10 ) # show first ten rows of data
-```
 
 
 
@@ -85,62 +91,54 @@ Answer the following questions using the Syracuse parcels dataset and the functi
 
 Your solution should include a written response to the question, as well as the code used to generate the result.
 
+
+--- 
+
+
+
+#### 1. How many tax parcels are in Syracuse? 
+
+> dataset dimensions: **dim()** or **nrow()** 
+
+<br>
+    
+#### 2. How many acres of land are in syracuse?
+
+> **sum()** over the numeric **acres** vector
+
 <br>
 
 
-#### (1) How many tax parcels are in Syracuse? 
+#### 3. How many vacant BUILDINGS are there in Syracuse?
+
+> **sum()** over the **vacantbuil** logical vector
 
 <br>
 
-* dataset dimensions: **dim()** or **nrow()** 
+    
+#### 4. What proportion of parcels are tax exempt?
+
+> **sum()** plus **length()** functions withthe logical **tax.exempt** vector
 
 <br>
 
 
     
-#### (2) How many acres of land are in syracuse?
+#### 5. Which neighborhood contains the most tax parcels?
 
-<br>
-
-* **sum()** over the numeric **acres** vector
-
-<br>
-
-    
-#### (3) How many vacant BUILDINGS are there in Syracuse?
-
-<br>
-
-* **sum()** over the **vacantbuil** logical vector
+> **table()** with the **neighborhood** variable
 
 <br>
 
     
-#### (4) What proportion of parcels are tax exempt?
+#### 6. Which neighborhood contains the most vacant LOTS?
 
-<br>
-
-* **sum()** plus **length()** functions withthe logical **tax.exempt** vector
-
-<br>
-
-    
-#### (5) Which neighborhood contains the most tax parcels?
-
-<br>
-
-* **table()** with the **neighborhood** variable
-
-<br>
-    
-#### (6) Which neighborhood contains the most vacant LOTS?
-
-<br>
-
-* **table()** with the **neighborhood** and **land_use** variables
+> **table()** with the **neighborhood** and **land_use** variables
 
 
-<br>
+---
+
+
 <br>
 
 **HELPFUL HINTS:**
@@ -175,10 +173,10 @@ sum( dat$star, na.rm=T )
 ```
 
 
+---
 
 
-
-<br><br>
+<br>
 
 # Submission Instructions
 
@@ -195,7 +193,17 @@ Remember to:
 
 See [Google's R Style Guide](https://google.github.io/styleguide/Rguide.xml) for examples.
 
-## Notes on Knitting
+
+---
+
+<br>
+
+## Markdown Trouble?
+
+If you are having problems with your RMD file, visit the [**RMD File Styles and Knitting Tips**](https://ds4ps.org/cpp-526-fall-2019/labs/r-markdown-files.html) manual.
+
+
+### Notes on Knitting
 
 Note that when you knit a file, it starts from a blank slate. You might have packages loaded or datasets active on your local machine, so you can run code chunks fine. But when you knit you might get errors that functions cannot be located or datasets don't exist. Be sure that you have included chunks to load these in your RMD file.
 
@@ -204,4 +212,13 @@ Your RMD file will not knit if you have errors in your code. If you get stuck on
 
 <br>
 <br>
+
+<style>
+blockquote {
+    padding: 11px 22px;
+    margin: 0 0 22px;
+    font-size: 18px;
+    border-left: 5px solid gray;
+}
+</style>
 
