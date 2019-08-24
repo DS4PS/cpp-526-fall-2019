@@ -141,7 +141,7 @@ h6 {
 }
 </style>
 
-<link rel="stylesheet" href="textbook.css" type="text/css" />
+<link rel="stylesheet" href="filestyle.css" type="text/css" />
 
 </head>
 
@@ -262,21 +262,22 @@ $(document).ready(function () {
 </div>
 
 
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1">knitr<span class="op">::</span>opts_chunk<span class="op">$</span><span class="kw">set</span>( <span class="dt">echo =</span> <span class="ot">TRUE</span>, <span class="dt">message=</span><span class="ot">FALSE</span>, <span class="dt">warnings=</span><span class="ot">FALSE</span>, <span class="dt">fig.width=</span><span class="dv">8</span> )</a></code></pre></div>
 <div id="introduction" class="section level1">
 <h1><span class="header-section-number">1</span> INTRODUCTION</h1>
 <p>This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <a href="http://rmarkdown.rstudio.com" class="uri">http://rmarkdown.rstudio.com</a>.</p>
 <p>When you click the <strong>Knit</strong> button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.</p>
 <p>You can embed an R code chunk like this:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1"><span class="kw">mosaicplot</span>( HairEyeColor, <span class="dt">shade =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
-<p><img src="r-markdown-files_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1"><span class="kw">mosaicplot</span>( HairEyeColor, <span class="dt">shade =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
+<p><img src="r-markdown-files_files/figure-html/unnamed-chunk-2-1.png" width="768" /></p>
 </div>
 <div id="most-important-chunk-setting" class="section level1">
 <h1><span class="header-section-number">2</span> MOST IMPORTANT CHUNK SETTING</h1>
 <p>If you are working on labs, which have several questions, and you are stuck on one question then your code might not work properly. Markdown documents will not render if code has errors.</p>
 <p>If you want credit for attempting the question, then you need to submit your broken code and note that it doesn’t work. You can do this by telling R to include a code chunk, but not evaluate it.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb2-1" title="1"><span class="bn">```{r, eval=F}</span></a>
-<a class="sourceLine" id="cb2-2" title="2"><span class="bn"># code here</span></a>
-<a class="sourceLine" id="cb2-3" title="3"><span class="bn">```</span></a></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb3-1" title="1"><span class="bn">```{r, eval=F}</span></a>
+<a class="sourceLine" id="cb3-2" title="2"><span class="bn"># code here</span></a>
+<a class="sourceLine" id="cb3-3" title="3"><span class="bn">```</span></a></code></pre></div>
 <p>This way you can still knit your file even if all of the code is not working.</p>
 </div>
 <div id="knitting" class="section level1">
@@ -292,16 +293,8 @@ $(document).ready(function () {
 <div id="required-packages" class="section level2">
 <h2><span class="header-section-number">3.1</span> Required Packages</h2>
 <p>You need to load all libraries required for analysis inside a chunk. Otherwise you will run into the same problem as above. WHen you knit you will get an error message that R cannot find specific functions. It is because they live in a package that you loaded locally, but never added to your script.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1"><span class="kw">library</span>( dplyr )</a></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" title="1"><span class="kw">library</span>( dplyr )</a></code></pre></div>
 <pre><code>## Warning: package &#39;dplyr&#39; was built under R version 3.5.3</code></pre>
-<pre><code>## 
-## Attaching package: &#39;dplyr&#39;</code></pre>
-<pre><code>## The following objects are masked from &#39;package:stats&#39;:
-## 
-##     filter, lag</code></pre>
-<pre><code>## The following objects are masked from &#39;package:base&#39;:
-## 
-##     intersect, setdiff, setequal, union</code></pre>
 <p><strong>NOTE</strong> that you load packages in an RMD document while knitting, but you cannot install a package while knitting (neither should you - you only need to install a library once then just load it after that).</p>
 </div>
 </div>
@@ -313,39 +306,39 @@ $(document).ready(function () {
 <h2><span class="header-section-number">4.1</span> YAML Header</h2>
 <p>Markdown documents require a YAML header. Many formatting options are set in the header. You will specify: * The type of document generated (word, html, website, book, etc.) * The formatting rules for the document</p>
 <p>The most basic header looks like this:</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode md"><code class="sourceCode markdown"><a class="sourceLine" id="cb9-1" title="1">---</a>
-<a class="sourceLine" id="cb9-2" title="2">title: &quot;R Markdown Template&quot;</a>
-<a class="sourceLine" id="cb9-3" title="3">output: html_document:</a>
-<a class="sourceLine" id="cb9-4" title="4">---</a></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode md"><code class="sourceCode markdown"><a class="sourceLine" id="cb7-1" title="1">---</a>
+<a class="sourceLine" id="cb7-2" title="2">title: &quot;R Markdown Template&quot;</a>
+<a class="sourceLine" id="cb7-3" title="3">output: html_document:</a>
+<a class="sourceLine" id="cb7-4" title="4">---</a></code></pre></div>
 <p>Here are the current options for this document:</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode md"><code class="sourceCode markdown"><a class="sourceLine" id="cb10-1" title="1">---</a>
-<a class="sourceLine" id="cb10-2" title="2">title: &quot;R Markdown Template&quot;</a>
-<a class="sourceLine" id="cb10-3" title="3">author: &quot;Jesse Lecy&quot;</a>
-<a class="sourceLine" id="cb10-4" title="4">date: &quot;<span class="bn">`r format(Sys.time(), &#39;%d %B, %Y&#39;)`</span>&quot;</a>
-<a class="sourceLine" id="cb10-5" title="5">output:</a>
-<a class="sourceLine" id="cb10-6" title="6">  html_document:</a>
-<a class="sourceLine" id="cb10-7" title="7"><span class="bn">    df_print: paged</span></a>
-<a class="sourceLine" id="cb10-8" title="8"><span class="bn">    theme: cerulean</span></a>
-<a class="sourceLine" id="cb10-9" title="9"><span class="bn">    highlight: haddock</span></a>
-<a class="sourceLine" id="cb10-10" title="10"><span class="bn">    toc: yes</span></a>
-<a class="sourceLine" id="cb10-11" title="11"><span class="bn">    toc_depth: 3</span></a>
-<a class="sourceLine" id="cb10-12" title="12"><span class="bn">    toc_float:</span></a>
-<a class="sourceLine" id="cb10-13" title="13"><span class="bn">      collapsed: false</span></a>
-<a class="sourceLine" id="cb10-14" title="14"><span class="bn">      smooth_scroll: true</span></a>
-<a class="sourceLine" id="cb10-15" title="15"><span class="bn">    code_fold: show</span></a>
-<a class="sourceLine" id="cb10-16" title="16">---</a></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode md"><code class="sourceCode markdown"><a class="sourceLine" id="cb8-1" title="1">---</a>
+<a class="sourceLine" id="cb8-2" title="2">title: &quot;R Markdown Template&quot;</a>
+<a class="sourceLine" id="cb8-3" title="3">author: &quot;Jesse Lecy&quot;</a>
+<a class="sourceLine" id="cb8-4" title="4">date: &quot;<span class="bn">`r format(Sys.time(), &#39;%d %B, %Y&#39;)`</span>&quot;</a>
+<a class="sourceLine" id="cb8-5" title="5">output:</a>
+<a class="sourceLine" id="cb8-6" title="6">  html_document:</a>
+<a class="sourceLine" id="cb8-7" title="7"><span class="bn">    df_print: paged</span></a>
+<a class="sourceLine" id="cb8-8" title="8"><span class="bn">    theme: cerulean</span></a>
+<a class="sourceLine" id="cb8-9" title="9"><span class="bn">    highlight: haddock</span></a>
+<a class="sourceLine" id="cb8-10" title="10"><span class="bn">    toc: yes</span></a>
+<a class="sourceLine" id="cb8-11" title="11"><span class="bn">    toc_depth: 3</span></a>
+<a class="sourceLine" id="cb8-12" title="12"><span class="bn">    toc_float:</span></a>
+<a class="sourceLine" id="cb8-13" title="13"><span class="bn">      collapsed: false</span></a>
+<a class="sourceLine" id="cb8-14" title="14"><span class="bn">      smooth_scroll: true</span></a>
+<a class="sourceLine" id="cb8-15" title="15"><span class="bn">    code_fold: show</span></a>
+<a class="sourceLine" id="cb8-16" title="16">---</a></code></pre></div>
 </div>
 <div id="knitr-global-options" class="section level2">
 <h2><span class="header-section-number">4.2</span> knitr Global Options</h2>
 <p>The <code>opts_chunk$set()</code> function allows you to set options that impact all chunks in the document.</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" title="1">knitr<span class="op">::</span>opts_chunk<span class="op">$</span><span class="kw">set</span>( <span class="dt">echo =</span> <span class="ot">TRUE</span>, <span class="dt">message=</span><span class="ot">FALSE</span>, <span class="dt">warnings=</span><span class="ot">FALSE</span>, <span class="dt">fig.width=</span><span class="dv">8</span> )</a></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" title="1">knitr<span class="op">::</span>opts_chunk<span class="op">$</span><span class="kw">set</span>( <span class="dt">echo =</span> <span class="ot">TRUE</span>, <span class="dt">message=</span><span class="ot">FALSE</span>, <span class="dt">warnings=</span><span class="ot">FALSE</span>, <span class="dt">fig.width=</span><span class="dv">8</span> )</a></code></pre></div>
 <p><strong>Please turn your warning messages off before submitting labs!</strong> These are usually not important (R lets you know that your package version is not the current one, for example), but they quickly clutter the assignments.</p>
 <p>You can also customize options directly in each chunk.</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode md"><code class="sourceCode markdown"><a class="sourceLine" id="cb12-1" title="1">{r, message=FALSE, fig.width=10}</a></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode md"><code class="sourceCode markdown"><a class="sourceLine" id="cb10-1" title="1">{r, message=FALSE, fig.width=10}</a></code></pre></div>
 </div>
 <div id="data" class="section level2">
 <h2><span class="header-section-number">4.3</span> Data</h2>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb13-1" title="1"><span class="co"># load raw project datasets here</span></a></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" title="1"><span class="co"># load raw project datasets here</span></a></code></pre></div>
 </div>
 </div>
 <div id="markdown-formatting-rules" class="section level1">
@@ -353,34 +346,34 @@ $(document).ready(function () {
 <p>Examples taken from <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet">Adam Pritchard’s Markdown Cheatsheet</a>.</p>
 <div id="headers" class="section level3">
 <h3><span class="header-section-number">5.0.1</span> Headers</h3>
-<div class="sourceCode" id="cb14"><pre class="sourceCode md"><code class="sourceCode markdown"><a class="sourceLine" id="cb14-1" title="1"></a>
-<a class="sourceLine" id="cb14-2" title="2"><span class="fu"># H1</span></a>
-<a class="sourceLine" id="cb14-3" title="3"><span class="fu">## H2</span></a>
-<a class="sourceLine" id="cb14-4" title="4"><span class="fu">### H3</span></a>
-<a class="sourceLine" id="cb14-5" title="5"><span class="fu">#### H4</span></a>
-<a class="sourceLine" id="cb14-6" title="6"><span class="fu">##### H5</span></a>
-<a class="sourceLine" id="cb14-7" title="7"><span class="fu">###### H6</span></a>
-<a class="sourceLine" id="cb14-8" title="8"></a>
-<a class="sourceLine" id="cb14-9" title="9">Alternatively, for H1 and H2, an underline-ish style:</a>
-<a class="sourceLine" id="cb14-10" title="10"></a>
-<a class="sourceLine" id="cb14-11" title="11">Alt-H1</a>
-<a class="sourceLine" id="cb14-12" title="12">======</a>
-<a class="sourceLine" id="cb14-13" title="13"></a>
-<a class="sourceLine" id="cb14-14" title="14">Alt-H2</a>
-<a class="sourceLine" id="cb14-15" title="15">------</a>
-<a class="sourceLine" id="cb14-16" title="16">  </a></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode md"><code class="sourceCode markdown"><a class="sourceLine" id="cb12-1" title="1"></a>
+<a class="sourceLine" id="cb12-2" title="2"><span class="fu"># H1</span></a>
+<a class="sourceLine" id="cb12-3" title="3"><span class="fu">## H2</span></a>
+<a class="sourceLine" id="cb12-4" title="4"><span class="fu">### H3</span></a>
+<a class="sourceLine" id="cb12-5" title="5"><span class="fu">#### H4</span></a>
+<a class="sourceLine" id="cb12-6" title="6"><span class="fu">##### H5</span></a>
+<a class="sourceLine" id="cb12-7" title="7"><span class="fu">###### H6</span></a>
+<a class="sourceLine" id="cb12-8" title="8"></a>
+<a class="sourceLine" id="cb12-9" title="9">Alternatively, for H1 and H2, an underline-ish style:</a>
+<a class="sourceLine" id="cb12-10" title="10"></a>
+<a class="sourceLine" id="cb12-11" title="11">Alt-H1</a>
+<a class="sourceLine" id="cb12-12" title="12">======</a>
+<a class="sourceLine" id="cb12-13" title="13"></a>
+<a class="sourceLine" id="cb12-14" title="14">Alt-H2</a>
+<a class="sourceLine" id="cb12-15" title="15">------</a>
+<a class="sourceLine" id="cb12-16" title="16">  </a></code></pre></div>
 </div>
 <div id="emphasis" class="section level3">
 <h3><span class="header-section-number">5.0.2</span> Emphasis</h3>
-<div class="sourceCode" id="cb15"><pre class="sourceCode md"><code class="sourceCode markdown"><a class="sourceLine" id="cb15-1" title="1"></a>
-<a class="sourceLine" id="cb15-2" title="2">Emphasis, aka italics, with *asterisks* or _underscores_.</a>
-<a class="sourceLine" id="cb15-3" title="3"></a>
-<a class="sourceLine" id="cb15-4" title="4">Strong emphasis, aka bold, with **asterisks** or __underscores__.</a>
-<a class="sourceLine" id="cb15-5" title="5"></a>
-<a class="sourceLine" id="cb15-6" title="6">Combined emphasis with **asterisks and _underscores_**.</a>
-<a class="sourceLine" id="cb15-7" title="7"></a>
-<a class="sourceLine" id="cb15-8" title="8">Strikethrough uses two tildes. ~~Scratch this.~~</a>
-<a class="sourceLine" id="cb15-9" title="9">  </a></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode md"><code class="sourceCode markdown"><a class="sourceLine" id="cb13-1" title="1"></a>
+<a class="sourceLine" id="cb13-2" title="2">Emphasis, aka italics, with *asterisks* or _underscores_.</a>
+<a class="sourceLine" id="cb13-3" title="3"></a>
+<a class="sourceLine" id="cb13-4" title="4">Strong emphasis, aka bold, with **asterisks** or __underscores__.</a>
+<a class="sourceLine" id="cb13-5" title="5"></a>
+<a class="sourceLine" id="cb13-6" title="6">Combined emphasis with **asterisks and _underscores_**.</a>
+<a class="sourceLine" id="cb13-7" title="7"></a>
+<a class="sourceLine" id="cb13-8" title="8">Strikethrough uses two tildes. ~~Scratch this.~~</a>
+<a class="sourceLine" id="cb13-9" title="9">  </a></code></pre></div>
 <p>Emphasis, aka italics, with <em>asterisks</em> or <em>underscores</em>.</p>
 <p>Strong emphasis, aka bold, with <strong>asterisks</strong> or <strong>underscores</strong>.</p>
 <p>Combined emphasis with <strong>asterisks and <em>underscores</em></strong>.</p>
@@ -388,25 +381,25 @@ $(document).ready(function () {
 </div>
 <div id="lists" class="section level3">
 <h3><span class="header-section-number">5.0.3</span> Lists</h3>
-<div class="sourceCode" id="cb16"><pre class="sourceCode md"><code class="sourceCode markdown"><a class="sourceLine" id="cb16-1" title="1"></a>
-<a class="sourceLine" id="cb16-2" title="2">Ordered lists:</a>
-<a class="sourceLine" id="cb16-3" title="3"></a>
-<a class="sourceLine" id="cb16-4" title="4">1. <span class="fl">First ordered list item </span></a>
-<a class="sourceLine" id="cb16-5" title="5"><span class="fl">2. Another item</span></a>
-<a class="sourceLine" id="cb16-6" title="6"><span class="fl">     1. Sub-item A</span></a>
-<a class="sourceLine" id="cb16-7" title="7"><span class="fl">     2. Sub-item B</span></a>
-<a class="sourceLine" id="cb16-8" title="8"><span class="fl">1. Actual numbers don&#39;t matter, just that it&#39;s a number</span></a>
-<a class="sourceLine" id="cb16-9" title="9"><span class="fl">5. And another item.</span>  </a>
-<a class="sourceLine" id="cb16-10" title="10"><span class="fl">   </span></a>
-<a class="sourceLine" id="cb16-11" title="11"><span class="fl">Unordered list:</span></a>
-<a class="sourceLine" id="cb16-12" title="12"></a>
-<a class="sourceLine" id="cb16-13" title="13">* <span class="fl">Unordered list can use asterisks</span></a>
-<a class="sourceLine" id="cb16-14" title="14"><span class="fl">- Or minuses</span></a>
-<a class="sourceLine" id="cb16-15" title="15"><span class="fl">+ Or pluses</span></a>
-<a class="sourceLine" id="cb16-16" title="16"><span class="fl">     * sub-item</span></a>
-<a class="sourceLine" id="cb16-17" title="17"><span class="fl">     - sub-item</span></a>
-<a class="sourceLine" id="cb16-18" title="18"><span class="fl">     + sub-item</span></a>
-<a class="sourceLine" id="cb16-19" title="19"><span class="fl">   </span></a></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode md"><code class="sourceCode markdown"><a class="sourceLine" id="cb14-1" title="1"></a>
+<a class="sourceLine" id="cb14-2" title="2">Ordered lists:</a>
+<a class="sourceLine" id="cb14-3" title="3"></a>
+<a class="sourceLine" id="cb14-4" title="4">1. <span class="fl">First ordered list item </span></a>
+<a class="sourceLine" id="cb14-5" title="5"><span class="fl">2. Another item</span></a>
+<a class="sourceLine" id="cb14-6" title="6"><span class="fl">     1. Sub-item A</span></a>
+<a class="sourceLine" id="cb14-7" title="7"><span class="fl">     2. Sub-item B</span></a>
+<a class="sourceLine" id="cb14-8" title="8"><span class="fl">1. Actual numbers don&#39;t matter, just that it&#39;s a number</span></a>
+<a class="sourceLine" id="cb14-9" title="9"><span class="fl">5. And another item.</span>  </a>
+<a class="sourceLine" id="cb14-10" title="10"><span class="fl">   </span></a>
+<a class="sourceLine" id="cb14-11" title="11"><span class="fl">Unordered list:</span></a>
+<a class="sourceLine" id="cb14-12" title="12"></a>
+<a class="sourceLine" id="cb14-13" title="13">* <span class="fl">Unordered list can use asterisks</span></a>
+<a class="sourceLine" id="cb14-14" title="14"><span class="fl">- Or minuses</span></a>
+<a class="sourceLine" id="cb14-15" title="15"><span class="fl">+ Or pluses</span></a>
+<a class="sourceLine" id="cb14-16" title="16"><span class="fl">     * sub-item</span></a>
+<a class="sourceLine" id="cb14-17" title="17"><span class="fl">     - sub-item</span></a>
+<a class="sourceLine" id="cb14-18" title="18"><span class="fl">     + sub-item</span></a>
+<a class="sourceLine" id="cb14-19" title="19"><span class="fl">   </span></a></code></pre></div>
 <p>Ordered lists:</p>
 <ol style="list-style-type: decimal">
 <li>First ordered list item</li>
@@ -433,49 +426,49 @@ $(document).ready(function () {
 <div id="links" class="section level3">
 <h3><span class="header-section-number">5.0.4</span> Links</h3>
 <p>There are two ways to create links.</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode md"><code class="sourceCode markdown"><a class="sourceLine" id="cb17-1" title="1"></a>
-<a class="sourceLine" id="cb17-2" title="2"><span class="ot">[I&#39;m an inline-style link](https://www.google.com)</span></a>
-<a class="sourceLine" id="cb17-3" title="3"></a>
-<a class="sourceLine" id="cb17-4" title="4">Or leave it empty and use the [link text itself]</a>
-<a class="sourceLine" id="cb17-5" title="5"></a>
-<a class="sourceLine" id="cb17-6" title="6">Some text to show that the reference links can follow later.</a>
-<a class="sourceLine" id="cb17-7" title="7"></a>
-<a class="sourceLine" id="cb17-8" title="8"><span class="ot">[link text itself]: http://www.reddit.com</span></a></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode md"><code class="sourceCode markdown"><a class="sourceLine" id="cb15-1" title="1"></a>
+<a class="sourceLine" id="cb15-2" title="2"><span class="ot">[I&#39;m an inline-style link](https://www.google.com)</span></a>
+<a class="sourceLine" id="cb15-3" title="3"></a>
+<a class="sourceLine" id="cb15-4" title="4">Or leave it empty and use the [link text itself]</a>
+<a class="sourceLine" id="cb15-5" title="5"></a>
+<a class="sourceLine" id="cb15-6" title="6">Some text to show that the reference links can follow later.</a>
+<a class="sourceLine" id="cb15-7" title="7"></a>
+<a class="sourceLine" id="cb15-8" title="8"><span class="ot">[link text itself]: http://www.reddit.com</span></a></code></pre></div>
 <p><a href="https://www.google.com">I’m an inline-style link</a></p>
 <p>Or leave it empty and use the <a href="http://www.reddit.com">link text itself</a></p>
 </div>
 <div id="images" class="section level3">
 <h3><span class="header-section-number">5.0.5</span> Images</h3>
 <p>Here’s a logo (hover to see the title text):</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode md"><code class="sourceCode markdown"><a class="sourceLine" id="cb18-1" title="1">Inline-style: </a>
-<a class="sourceLine" id="cb18-2" title="2"><span class="al">![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png &quot;Logo Title Text 1&quot;)</span></a>
-<a class="sourceLine" id="cb18-3" title="3"></a>
-<a class="sourceLine" id="cb18-4" title="4">Reference-style: </a>
-<a class="sourceLine" id="cb18-5" title="5"><span class="al">![alt text][logo]</span></a>
-<a class="sourceLine" id="cb18-6" title="6"></a>
-<a class="sourceLine" id="cb18-7" title="7"><span class="ot">[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png &quot;Logo Title Text 2&quot;</span></a></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode md"><code class="sourceCode markdown"><a class="sourceLine" id="cb16-1" title="1">Inline-style: </a>
+<a class="sourceLine" id="cb16-2" title="2"><span class="al">![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png &quot;Logo Title Text 1&quot;)</span></a>
+<a class="sourceLine" id="cb16-3" title="3"></a>
+<a class="sourceLine" id="cb16-4" title="4">Reference-style: </a>
+<a class="sourceLine" id="cb16-5" title="5"><span class="al">![alt text][logo]</span></a>
+<a class="sourceLine" id="cb16-6" title="6"></a>
+<a class="sourceLine" id="cb16-7" title="7"><span class="ot">[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png &quot;Logo Title Text 2&quot;</span></a></code></pre></div>
 <p>Inline-style: <img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" title="Logo Title Text 1" alt="alt text" /></p>
 <p>Reference-style: <img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" title="Logo Title Text 2" alt="alt text" /></p>
 </div>
 <div id="tables" class="section level3">
 <h3><span class="header-section-number">5.0.6</span> Tables</h3>
 <p>Tables aren’t part of the core Markdown spec, but they are part of GFM and Markdown Here supports them. They are an easy way of adding tables to your email – a task that would otherwise require copy-pasting from another application.</p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode md"><code class="sourceCode markdown"><a class="sourceLine" id="cb19-1" title="1"></a>
-<a class="sourceLine" id="cb19-2" title="2">Colons can be used to align columns.</a>
-<a class="sourceLine" id="cb19-3" title="3"></a>
-<a class="sourceLine" id="cb19-4" title="4">| Tables        | Are           | Cool  |</a>
-<a class="sourceLine" id="cb19-5" title="5">| ------------- |:-------------:| -----:|</a>
-<a class="sourceLine" id="cb19-6" title="6">| col 3 is      | right-aligned | $1600 |</a>
-<a class="sourceLine" id="cb19-7" title="7">| col 2 is      | centered      |   $12 |</a>
-<a class="sourceLine" id="cb19-8" title="8">| zebra stripes | are neat      |    $1 |</a>
-<a class="sourceLine" id="cb19-9" title="9"></a>
-<a class="sourceLine" id="cb19-10" title="10">The outer pipes (|) are optional, and you don&#39;t need to make the raw Markdown line up prettily. </a>
-<a class="sourceLine" id="cb19-11" title="11">You can also use inline Markdown.</a>
-<a class="sourceLine" id="cb19-12" title="12"></a>
-<a class="sourceLine" id="cb19-13" title="13">Markdown | Less | Pretty</a>
-<a class="sourceLine" id="cb19-14" title="14">--- | --- | ---</a>
-<a class="sourceLine" id="cb19-15" title="15">*Still* | <span class="bn">`renders`</span> | **nicely**</a>
-<a class="sourceLine" id="cb19-16" title="16">1 | 2 | 3</a></code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode md"><code class="sourceCode markdown"><a class="sourceLine" id="cb17-1" title="1"></a>
+<a class="sourceLine" id="cb17-2" title="2">Colons can be used to align columns.</a>
+<a class="sourceLine" id="cb17-3" title="3"></a>
+<a class="sourceLine" id="cb17-4" title="4">| Tables        | Are           | Cool  |</a>
+<a class="sourceLine" id="cb17-5" title="5">| ------------- |:-------------:| -----:|</a>
+<a class="sourceLine" id="cb17-6" title="6">| col 3 is      | right-aligned | $1600 |</a>
+<a class="sourceLine" id="cb17-7" title="7">| col 2 is      | centered      |   $12 |</a>
+<a class="sourceLine" id="cb17-8" title="8">| zebra stripes | are neat      |    $1 |</a>
+<a class="sourceLine" id="cb17-9" title="9"></a>
+<a class="sourceLine" id="cb17-10" title="10">The outer pipes (|) are optional, and you don&#39;t need to make the raw Markdown line up prettily. </a>
+<a class="sourceLine" id="cb17-11" title="11">You can also use inline Markdown.</a>
+<a class="sourceLine" id="cb17-12" title="12"></a>
+<a class="sourceLine" id="cb17-13" title="13">Markdown | Less | Pretty</a>
+<a class="sourceLine" id="cb17-14" title="14">--- | --- | ---</a>
+<a class="sourceLine" id="cb17-15" title="15">*Still* | <span class="bn">`renders`</span> | **nicely**</a>
+<a class="sourceLine" id="cb17-16" title="16">1 | 2 | 3</a></code></pre></div>
 <table>
 <thead>
 <tr class="header">
@@ -526,9 +519,9 @@ $(document).ready(function () {
 </div>
 <div id="blockquotes" class="section level3">
 <h3><span class="header-section-number">5.0.7</span> Blockquotes</h3>
-<div class="sourceCode" id="cb20"><pre class="sourceCode md"><code class="sourceCode markdown"><a class="sourceLine" id="cb20-1" title="1"></a>
-<a class="sourceLine" id="cb20-2" title="2">&gt;<span class="dt"> Blockquotes are very handy in email to emulate reply text.</span></a>
-<a class="sourceLine" id="cb20-3" title="3"><span class="dt">&gt; This line is part of the same quote.</span></a></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode md"><code class="sourceCode markdown"><a class="sourceLine" id="cb18-1" title="1"></a>
+<a class="sourceLine" id="cb18-2" title="2">&gt;<span class="dt"> Blockquotes are very handy in email to emulate reply text.</span></a>
+<a class="sourceLine" id="cb18-3" title="3"><span class="dt">&gt; This line is part of the same quote.</span></a></code></pre></div>
 <blockquote>
 <p>Blockquotes are very handy in email to emulate reply text. This line is part of the same quote.</p>
 </blockquote>
@@ -536,12 +529,12 @@ $(document).ready(function () {
 <div id="horizontal-lines" class="section level3">
 <h3><span class="header-section-number">5.0.8</span> Horizontal Lines</h3>
 <p>Use three or more of the following:</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode md"><code class="sourceCode markdown"><a class="sourceLine" id="cb21-1" title="1"></a>
-<a class="sourceLine" id="cb21-2" title="2">---  # Hyphens</a>
-<a class="sourceLine" id="cb21-3" title="3"></a>
-<a class="sourceLine" id="cb21-4" title="4">***  # Asterisks</a>
-<a class="sourceLine" id="cb21-5" title="5"></a>
-<a class="sourceLine" id="cb21-6" title="6">___  # Underscores</a></code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode md"><code class="sourceCode markdown"><a class="sourceLine" id="cb19-1" title="1"></a>
+<a class="sourceLine" id="cb19-2" title="2">---  # Hyphens</a>
+<a class="sourceLine" id="cb19-3" title="3"></a>
+<a class="sourceLine" id="cb19-4" title="4">***  # Asterisks</a>
+<a class="sourceLine" id="cb19-5" title="5"></a>
+<a class="sourceLine" id="cb19-6" title="6">___  # Underscores</a></code></pre></div>
 <p>Hyphens</p>
 <hr />
 <p>Asterisks</p>
@@ -553,23 +546,23 @@ $(document).ready(function () {
 <h3><span class="header-section-number">5.0.9</span> Mathematical Formulae</h3>
 <p>A full description of TeX math symbols is beyond the scope of this cheatsheet. Here’s a good reference, and you can try stuff out on CodeCogs. You can also play with formulae in the Markdown Here options page.</p>
 <p>Here are some examples to try out:</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode md"><code class="sourceCode markdown"><a class="sourceLine" id="cb22-1" title="1"></a>
-<a class="sourceLine" id="cb22-2" title="2">$-b \pm \sqrt{b^2 - 4ac} \over 2a$</a>
-<a class="sourceLine" id="cb22-3" title="3">$x = a_0 + \frac{1}{a_1 + \frac{1}{a_2 + \frac{1}{a_3 + a_4}}}$</a>
-<a class="sourceLine" id="cb22-4" title="4">$\forall x \in X, \quad \exists y \leq \epsilon$</a></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode md"><code class="sourceCode markdown"><a class="sourceLine" id="cb20-1" title="1"></a>
+<a class="sourceLine" id="cb20-2" title="2">$-b \pm \sqrt{b^2 - 4ac} \over 2a$</a>
+<a class="sourceLine" id="cb20-3" title="3">$x = a_0 + \frac{1}{a_1 + \frac{1}{a_2 + \frac{1}{a_3 + a_4}}}$</a>
+<a class="sourceLine" id="cb20-4" title="4">$\forall x \in X, \quad \exists y \leq \epsilon$</a></code></pre></div>
 <p><span class="math inline">\(-b \pm \sqrt{b^2 - 4ac} \over 2a\)</span> <span class="math inline">\(x = a_0 + \frac{1}{a_1 + \frac{1}{a_2 + \frac{1}{a_3 + a_4}}}\)</span> <span class="math inline">\(\forall x \in X, \quad \exists y \leq \epsilon\)</span></p>
 <p>The beginning and ending dollar signs ($) are the delimiters for the TeX markup.</p>
 </div>
 <div id="youtube-videos" class="section level3">
 <h3><span class="header-section-number">5.0.10</span> YouTube Videos</h3>
-<div class="sourceCode" id="cb23"><pre class="sourceCode md"><code class="sourceCode markdown"><a class="sourceLine" id="cb23-1" title="1"></a>
-<a class="sourceLine" id="cb23-2" title="2">&lt;a href=&quot;http://www.youtube.com/watch?feature=player_embedded&amp;v=YOUTUBE_VIDEO_ID_HERE</a>
-<a class="sourceLine" id="cb23-3" title="3">&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg&quot; </a>
-<a class="sourceLine" id="cb23-4" title="4">alt=&quot;IMAGE ALT TEXT HERE&quot; width=&quot;240&quot; height=&quot;180&quot; border=&quot;10&quot; /&gt;&lt;/a&gt;</a>
-<a class="sourceLine" id="cb23-5" title="5"></a>
-<a class="sourceLine" id="cb23-6" title="6">OR iframes:</a>
-<a class="sourceLine" id="cb23-7" title="7"></a>
-<a class="sourceLine" id="cb23-8" title="8">&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/YOUTUBE_VIDEO_ID_HERE&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen&gt;&lt;/iframe&gt;</a></code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode md"><code class="sourceCode markdown"><a class="sourceLine" id="cb21-1" title="1"></a>
+<a class="sourceLine" id="cb21-2" title="2">&lt;a href=&quot;http://www.youtube.com/watch?feature=player_embedded&amp;v=YOUTUBE_VIDEO_ID_HERE</a>
+<a class="sourceLine" id="cb21-3" title="3">&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg&quot; </a>
+<a class="sourceLine" id="cb21-4" title="4">alt=&quot;IMAGE ALT TEXT HERE&quot; width=&quot;240&quot; height=&quot;180&quot; border=&quot;10&quot; /&gt;&lt;/a&gt;</a>
+<a class="sourceLine" id="cb21-5" title="5"></a>
+<a class="sourceLine" id="cb21-6" title="6">OR iframes:</a>
+<a class="sourceLine" id="cb21-7" title="7"></a>
+<a class="sourceLine" id="cb21-8" title="8">&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/YOUTUBE_VIDEO_ID_HERE&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen&gt;&lt;/iframe&gt;</a></code></pre></div>
 <p><a href="http://www.youtube.com/watch?feature=player_embedded&v=dQw4w9WgXcQ
 " target="_blank"><img src="http://img.youtube.com/vi/dQw4w9WgXcQ/0.jpg" 
 alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a></p>
@@ -589,13 +582,13 @@ alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a></p>
 <li><p><strong>smart</strong> indicates whether to produce typographically correct output, converting straight quotes to curly quotes, — to em-dashes, – to en-dashes, and … to ellipses. Note that smart is enabled by default.</p></li>
 </ul>
 <p>For example:</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode md"><code class="sourceCode markdown"><a class="sourceLine" id="cb24-1" title="1">---</a>
-<a class="sourceLine" id="cb24-2" title="2">title: &quot;Habits&quot;</a>
-<a class="sourceLine" id="cb24-3" title="3">output:</a>
-<a class="sourceLine" id="cb24-4" title="4">  html_document:</a>
-<a class="sourceLine" id="cb24-5" title="5"><span class="bn">    theme: united</span></a>
-<a class="sourceLine" id="cb24-6" title="6"><span class="bn">    highlight: tango</span></a>
-<a class="sourceLine" id="cb24-7" title="7">---</a></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode md"><code class="sourceCode markdown"><a class="sourceLine" id="cb22-1" title="1">---</a>
+<a class="sourceLine" id="cb22-2" title="2">title: &quot;Habits&quot;</a>
+<a class="sourceLine" id="cb22-3" title="3">output:</a>
+<a class="sourceLine" id="cb22-4" title="4">  html_document:</a>
+<a class="sourceLine" id="cb22-5" title="5"><span class="bn">    theme: united</span></a>
+<a class="sourceLine" id="cb22-6" title="6"><span class="bn">    highlight: tango</span></a>
+<a class="sourceLine" id="cb22-7" title="7">---</a></code></pre></div>
 </div>
 <div id="output-formats" class="section level2">
 <h2><span class="header-section-number">6.2</span> Output Formats</h2>
@@ -656,73 +649,73 @@ alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a></p>
 <div id="custome-style-sheets" class="section level2">
 <h2><span class="header-section-number">6.3</span> Custome Style Sheets</h2>
 <p>If you want more control over the style of your document, you can include a CSS which allows you to control fonts and spacing.</p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode css"><code class="sourceCode css"><a class="sourceLine" id="cb25-1" title="1"></a>
-<a class="sourceLine" id="cb25-2" title="2"><span class="co">/* Include a cascading style sheet chunk to cutomize fonts and spacing */</span></a>
-<a class="sourceLine" id="cb25-3" title="3"><span class="co">/* {css, echo=T} */</span>  </a>
-<a class="sourceLine" id="cb25-4" title="4">  </a>
-<a class="sourceLine" id="cb25-5" title="5">p {</a>
-<a class="sourceLine" id="cb25-6" title="6"><span class="kw">color</span>: <span class="cn">black</span><span class="op">;</span></a>
-<a class="sourceLine" id="cb25-7" title="7"><span class="kw">margin</span>: <span class="dv">30</span><span class="dt">px</span> <span class="dv">0</span> <span class="dv">20</span><span class="dt">px</span> <span class="dv">0</span><span class="op">;</span></a>
-<a class="sourceLine" id="cb25-8" title="8">}</a>
-<a class="sourceLine" id="cb25-9" title="9"></a>
-<a class="sourceLine" id="cb25-10" title="10">td {</a>
-<a class="sourceLine" id="cb25-11" title="11">    <span class="kw">padding</span>: <span class="dv">3</span><span class="dt">px</span> <span class="dv">10</span><span class="dt">px</span> <span class="dv">3</span><span class="dt">px</span> <span class="dv">10</span><span class="dt">px</span><span class="op">;</span></a>
-<a class="sourceLine" id="cb25-12" title="12">    <span class="kw">text-align</span>: <span class="dv">center</span><span class="op">;</span></a>
-<a class="sourceLine" id="cb25-13" title="13">}</a>
-<a class="sourceLine" id="cb25-14" title="14"></a>
-<a class="sourceLine" id="cb25-15" title="15">table</a>
-<a class="sourceLine" id="cb25-16" title="16">{ </a>
-<a class="sourceLine" id="cb25-17" title="17">    <span class="kw">margin-left</span>: <span class="bu">auto</span><span class="op">;</span></a>
-<a class="sourceLine" id="cb25-18" title="18">    <span class="kw">margin-right</span>: <span class="bu">auto</span><span class="op">;</span></a>
-<a class="sourceLine" id="cb25-19" title="19">    <span class="kw">margin-top</span>:<span class="dv">80</span><span class="dt">px</span><span class="op">;</span></a>
-<a class="sourceLine" id="cb25-20" title="20">    <span class="kw">margin-bottom</span>:<span class="dv">100</span><span class="dt">px</span><span class="op">;</span></a>
-<a class="sourceLine" id="cb25-21" title="21">}</a>
-<a class="sourceLine" id="cb25-22" title="22"></a>
-<a class="sourceLine" id="cb25-23" title="23">h1<span class="op">,</span> h2{</a>
-<a class="sourceLine" id="cb25-24" title="24">  <span class="kw">margin-top</span>:<span class="dv">100</span><span class="dt">px</span><span class="op">;</span></a>
-<a class="sourceLine" id="cb25-25" title="25">  <span class="kw">margin-bottom</span>:<span class="dv">20</span><span class="dt">px</span><span class="op">;</span></a>
-<a class="sourceLine" id="cb25-26" title="26">}</a>
-<a class="sourceLine" id="cb25-27" title="27"></a>
-<a class="sourceLine" id="cb25-28" title="28">h3{</a>
-<a class="sourceLine" id="cb25-29" title="29">  <span class="kw">margin-top</span>:<span class="dv">50</span><span class="dt">px</span><span class="op">;</span></a>
-<a class="sourceLine" id="cb25-30" title="30">  <span class="kw">margin-bottom</span>:<span class="dv">20</span><span class="dt">px</span><span class="op">;</span></a>
-<a class="sourceLine" id="cb25-31" title="31">}</a>
-<a class="sourceLine" id="cb25-32" title="32"></a>
-<a class="sourceLine" id="cb25-33" title="33">H5{</a>
-<a class="sourceLine" id="cb25-34" title="34">    <span class="kw">text-align</span>: <span class="dv">center</span><span class="op">;</span></a>
-<a class="sourceLine" id="cb25-35" title="35">    <span class="kw">color</span>: <span class="cn">gray</span><span class="op">;</span></a>
-<a class="sourceLine" id="cb25-36" title="36">    <span class="kw">font-size</span>:<span class="dv">0.8</span><span class="dt">em</span><span class="op">;</span></a>
-<a class="sourceLine" id="cb25-37" title="37">}</a>
-<a class="sourceLine" id="cb25-38" title="38"></a>
-<a class="sourceLine" id="cb25-39" title="39">img {</a>
-<a class="sourceLine" id="cb25-40" title="40">    <span class="kw">max-width</span>: <span class="dv">90</span><span class="dt">%</span><span class="op">;</span></a>
-<a class="sourceLine" id="cb25-41" title="41">    <span class="kw">display</span>: <span class="dv">block</span><span class="op">;</span></a>
-<a class="sourceLine" id="cb25-42" title="42">    <span class="kw">margin-right</span>: <span class="bu">auto</span><span class="op">;</span></a>
-<a class="sourceLine" id="cb25-43" title="43">    <span class="kw">margin-left</span>: <span class="bu">auto</span><span class="op">;</span></a>
-<a class="sourceLine" id="cb25-44" title="44">    <span class="kw">margin-top</span>:<span class="dv">30</span><span class="dt">px</span><span class="op">;</span></a>
-<a class="sourceLine" id="cb25-45" title="45">    <span class="kw">margin-bottom</span>:<span class="dv">20</span><span class="dt">px</span><span class="op">;</span></a>
-<a class="sourceLine" id="cb25-46" title="46">}</a>
-<a class="sourceLine" id="cb25-47" title="47"></a>
-<a class="sourceLine" id="cb25-48" title="48">pre {</a>
-<a class="sourceLine" id="cb25-49" title="49">  <span class="kw">overflow-x</span>: <span class="bu">auto</span><span class="op">;</span></a>
-<a class="sourceLine" id="cb25-50" title="50">}</a>
-<a class="sourceLine" id="cb25-51" title="51"></a>
-<a class="sourceLine" id="cb25-52" title="52">pre code {</a>
-<a class="sourceLine" id="cb25-53" title="53">   <span class="kw">display</span>: <span class="dv">block</span><span class="op">;</span> </a>
-<a class="sourceLine" id="cb25-54" title="54">   <span class="kw">padding</span>: <span class="dv">0.5</span><span class="dt">em</span><span class="op">;</span></a>
-<a class="sourceLine" id="cb25-55" title="55">   <span class="kw">margin-bottom</span>:<span class="dv">10</span><span class="dt">px</span><span class="op">;</span></a>
-<a class="sourceLine" id="cb25-56" title="56">}</a>
-<a class="sourceLine" id="cb25-57" title="57"></a>
-<a class="sourceLine" id="cb25-58" title="58"></a>
-<a class="sourceLine" id="cb25-59" title="59">code {</a>
-<a class="sourceLine" id="cb25-60" title="60">  <span class="kw">font-size</span>: <span class="dv">92</span><span class="dt">%</span><span class="op">;</span></a>
-<a class="sourceLine" id="cb25-61" title="61">  <span class="kw">border</span>: <span class="dv">10</span><span class="dt">px</span> <span class="dv">solid</span> <span class="dv">light</span> <span class="cn">gray</span><span class="op">;</span></a>
-<a class="sourceLine" id="cb25-62" title="62">  <span class="kw">margin-bottom</span>: <span class="dv">2</span><span class="dt">px</span><span class="op">;</span></a>
-<a class="sourceLine" id="cb25-63" title="63">}</a>
-<a class="sourceLine" id="cb25-64" title="64"></a>
-<a class="sourceLine" id="cb25-65" title="65">code<span class="ex">[class]</span> {</a>
-<a class="sourceLine" id="cb25-66" title="66">  <span class="kw">background-color</span>: <span class="dv">light</span> <span class="cn">gray</span><span class="op">;</span></a>
-<a class="sourceLine" id="cb25-67" title="67">}</a></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode css"><code class="sourceCode css"><a class="sourceLine" id="cb23-1" title="1"></a>
+<a class="sourceLine" id="cb23-2" title="2"><span class="co">/* Include a cascading style sheet chunk to cutomize fonts and spacing */</span></a>
+<a class="sourceLine" id="cb23-3" title="3"><span class="co">/* {css, echo=T} */</span>  </a>
+<a class="sourceLine" id="cb23-4" title="4">  </a>
+<a class="sourceLine" id="cb23-5" title="5">p {</a>
+<a class="sourceLine" id="cb23-6" title="6"><span class="kw">color</span>: <span class="cn">black</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb23-7" title="7"><span class="kw">margin</span>: <span class="dv">30</span><span class="dt">px</span> <span class="dv">0</span> <span class="dv">20</span><span class="dt">px</span> <span class="dv">0</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb23-8" title="8">}</a>
+<a class="sourceLine" id="cb23-9" title="9"></a>
+<a class="sourceLine" id="cb23-10" title="10">td {</a>
+<a class="sourceLine" id="cb23-11" title="11">    <span class="kw">padding</span>: <span class="dv">3</span><span class="dt">px</span> <span class="dv">10</span><span class="dt">px</span> <span class="dv">3</span><span class="dt">px</span> <span class="dv">10</span><span class="dt">px</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb23-12" title="12">    <span class="kw">text-align</span>: <span class="dv">center</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb23-13" title="13">}</a>
+<a class="sourceLine" id="cb23-14" title="14"></a>
+<a class="sourceLine" id="cb23-15" title="15">table</a>
+<a class="sourceLine" id="cb23-16" title="16">{ </a>
+<a class="sourceLine" id="cb23-17" title="17">    <span class="kw">margin-left</span>: <span class="bu">auto</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb23-18" title="18">    <span class="kw">margin-right</span>: <span class="bu">auto</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb23-19" title="19">    <span class="kw">margin-top</span>:<span class="dv">80</span><span class="dt">px</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb23-20" title="20">    <span class="kw">margin-bottom</span>:<span class="dv">100</span><span class="dt">px</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb23-21" title="21">}</a>
+<a class="sourceLine" id="cb23-22" title="22"></a>
+<a class="sourceLine" id="cb23-23" title="23">h1<span class="op">,</span> h2{</a>
+<a class="sourceLine" id="cb23-24" title="24">  <span class="kw">margin-top</span>:<span class="dv">100</span><span class="dt">px</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb23-25" title="25">  <span class="kw">margin-bottom</span>:<span class="dv">20</span><span class="dt">px</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb23-26" title="26">}</a>
+<a class="sourceLine" id="cb23-27" title="27"></a>
+<a class="sourceLine" id="cb23-28" title="28">h3{</a>
+<a class="sourceLine" id="cb23-29" title="29">  <span class="kw">margin-top</span>:<span class="dv">50</span><span class="dt">px</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb23-30" title="30">  <span class="kw">margin-bottom</span>:<span class="dv">20</span><span class="dt">px</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb23-31" title="31">}</a>
+<a class="sourceLine" id="cb23-32" title="32"></a>
+<a class="sourceLine" id="cb23-33" title="33">H5{</a>
+<a class="sourceLine" id="cb23-34" title="34">    <span class="kw">text-align</span>: <span class="dv">center</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb23-35" title="35">    <span class="kw">color</span>: <span class="cn">gray</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb23-36" title="36">    <span class="kw">font-size</span>:<span class="dv">0.8</span><span class="dt">em</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb23-37" title="37">}</a>
+<a class="sourceLine" id="cb23-38" title="38"></a>
+<a class="sourceLine" id="cb23-39" title="39">img {</a>
+<a class="sourceLine" id="cb23-40" title="40">    <span class="kw">max-width</span>: <span class="dv">90</span><span class="dt">%</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb23-41" title="41">    <span class="kw">display</span>: <span class="dv">block</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb23-42" title="42">    <span class="kw">margin-right</span>: <span class="bu">auto</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb23-43" title="43">    <span class="kw">margin-left</span>: <span class="bu">auto</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb23-44" title="44">    <span class="kw">margin-top</span>:<span class="dv">30</span><span class="dt">px</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb23-45" title="45">    <span class="kw">margin-bottom</span>:<span class="dv">20</span><span class="dt">px</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb23-46" title="46">}</a>
+<a class="sourceLine" id="cb23-47" title="47"></a>
+<a class="sourceLine" id="cb23-48" title="48">pre {</a>
+<a class="sourceLine" id="cb23-49" title="49">  <span class="kw">overflow-x</span>: <span class="bu">auto</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb23-50" title="50">}</a>
+<a class="sourceLine" id="cb23-51" title="51"></a>
+<a class="sourceLine" id="cb23-52" title="52">pre code {</a>
+<a class="sourceLine" id="cb23-53" title="53">   <span class="kw">display</span>: <span class="dv">block</span><span class="op">;</span> </a>
+<a class="sourceLine" id="cb23-54" title="54">   <span class="kw">padding</span>: <span class="dv">0.5</span><span class="dt">em</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb23-55" title="55">   <span class="kw">margin-bottom</span>:<span class="dv">10</span><span class="dt">px</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb23-56" title="56">}</a>
+<a class="sourceLine" id="cb23-57" title="57"></a>
+<a class="sourceLine" id="cb23-58" title="58"></a>
+<a class="sourceLine" id="cb23-59" title="59">code {</a>
+<a class="sourceLine" id="cb23-60" title="60">  <span class="kw">font-size</span>: <span class="dv">92</span><span class="dt">%</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb23-61" title="61">  <span class="kw">border</span>: <span class="dv">10</span><span class="dt">px</span> <span class="dv">solid</span> <span class="dv">light</span> <span class="cn">gray</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb23-62" title="62">  <span class="kw">margin-bottom</span>: <span class="dv">2</span><span class="dt">px</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb23-63" title="63">}</a>
+<a class="sourceLine" id="cb23-64" title="64"></a>
+<a class="sourceLine" id="cb23-65" title="65">code<span class="ex">[class]</span> {</a>
+<a class="sourceLine" id="cb23-66" title="66">  <span class="kw">background-color</span>: <span class="dv">light</span> <span class="cn">gray</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb23-67" title="67">}</a></code></pre></div>
 <style type="text/css">
 
 /* Include a cascading style sheet chunk to cutomize fonts and spacing */

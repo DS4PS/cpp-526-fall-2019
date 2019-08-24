@@ -7,10 +7,13 @@ output:
     toc: false
     number_sections: true
     self_contained: false
-    css: textbook.css
+    css: filestyle.css
 ---
 
 
+```{r}
+knitr::opts_chunk$set( echo = TRUE, message=FALSE, warnings=FALSE, fig.width=8 )
+```
 
 
 # INTRODUCTION
@@ -132,7 +135,7 @@ output:
 
 The `opts_chunk$set()` function allows you to set options that impact all chunks in the document.
 
-```{r setup, include=TRUE}
+```{r setup, include=TRUE, eval=F}
 
 knitr::opts_chunk$set( echo = TRUE, message=FALSE, warnings=FALSE, fig.width=8 )
 
