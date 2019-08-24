@@ -197,15 +197,13 @@ We will need three tools to manage your data science projects: a data programmin
 * Discussion boards 
 
 
-## Data Recipes
+## Starting to Code
 * Scripts 
-* Object-Oriented Coding
+* Comments 
 * [Style Guides](https://jef.works/R-style-guide/) 
-* Annotation 
+* [RMD File Styles and Knitting Tips](https://ds4ps.org/cpp-526-fall-2019/labs/r-markdown-files.html)
 
-## Navigation 
-* Navigating R (directories, paths, object lists)
-* Built-In Datasets
+
 
 
 # One-Dimensional Datasets
@@ -302,6 +300,9 @@ We will need three tools to manage your data science projects: a data programmin
 * Copy to Clipboard 
 * Copy to Excel 
 
+## Navigation 
+* Navigating R (directories, paths, object lists)
+* Built-In Datasets
 
 # Data Wrangling (dplyr)
 
