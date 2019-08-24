@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>RMD File Styles and Knitting Tips</title>
+
+<script src="r-markdown-files_files/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="r-markdown-files_files/bootstrap-3.3.5/css/readable.min.css" rel="stylesheet" />
+<script src="r-markdown-files_files/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="r-markdown-files_files/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="r-markdown-files_files/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="r-markdown-files_files/navigation-1.1/tabsets.js"></script>
+
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  { background-color: #f8f8f8; }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ef2929; } /* Alert */
+code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #c4a000; } /* Attribute */
+code span.bn { color: #0000cf; } /* BaseN */
+code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4e9a06; } /* Char */
+code span.cn { color: #000000; } /* Constant */
+code span.co { color: #8f5902; font-style: italic; } /* Comment */
+code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code span.dt { color: #204a87; } /* DataType */
+code span.dv { color: #0000cf; } /* DecVal */
+code span.er { color: #a40000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #0000cf; } /* Float */
+code span.fu { color: #000000; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code span.ot { color: #8f5902; } /* Other */
+code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code span.sc { color: #000000; } /* SpecialChar */
+code span.ss { color: #4e9a06; } /* SpecialString */
+code span.st { color: #4e9a06; } /* String */
+code span.va { color: #000000; } /* Variable */
+code span.vs { color: #4e9a06; } /* VerbatimString */
+code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    for (var j = 0; j < rules.length; j++) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") continue;
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' || rule.style.backgroundColor === '') continue;
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="textbook.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">RMD File Styles and Knitting Tips</h1>
+
+</div>
+
+
+<div id="introduction" class="section level1">
+<h1><span class="header-section-number">1</span> INTRODUCTION</h1>
+<p>This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <a href="http://rmarkdown.rstudio.com" class="uri">http://rmarkdown.rstudio.com</a>.</p>
+<p>When you click the <strong>Knit</strong> button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.</p>
+<p>You can embed an R code chunk like this:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1"><span class="kw">mosaicplot</span>( HairEyeColor, <span class="dt">shade =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
+<p><img src="r-markdown-files_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+</div>
+<div id="most-important-chunk-setting" class="section level1">
+<h1><span class="header-section-number">2</span> MOST IMPORTANT CHUNK SETTING</h1>
+<p>If you are working on labs, which have several questions, and you are stuck on one question then your code might not work properly. Markdown documents will not render if code has errors.</p>
+<p>If you want credit for attempting the question, then you need to submit your broken code and note that it doesn’t work. You can do this by telling R to include a code chunk, but not evaluate it.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb2-1" title="1"><span class="bn">```{r, eval=F}</span></a>
+<a class="sourceLine" id="cb2-2" title="2"><span class="bn"># code here</span></a>
+<a class="sourceLine" id="cb2-3" title="3"><span class="bn">```</span></a></code></pre></div>
+<p>This way you can still knit your file even if all of the code is not working.</p>
+</div>
+<div id="knitting" class="section level1">
+<h1><span class="header-section-number">3</span> KNITTING</h1>
+<p>When you <strong>Knit</strong> your RMD file, know that R Studio will start from a clean slate (a fresh R environment).</p>
+<p>Students often run into a common problem. As you are developing solutions you might create a subset and save it as a new object:</p>
+<pre><code>dat.treated &lt;- dat[ dat$study.group == &quot;treatment&quot; , ]</code></pre>
+<p>But you do this in the console (the bottom window) and not in a chunk in your RMD file.</p>
+<p>Your RMD chunks work interactively because when you are running them in real time they use your current environment. But then you try to knit your file R will tell you it can’t find specific object (<code>dat.treated</code> in this example).</p>
+<p>This is because you never added the code to create the new object in a chunk. It only exists in your current local environment.</p>
+<p>Students will also paste the commands to load data for the lab into the console directly, then have similar problems with knitting.</p>
+<p>If you get an error that an object can’t be located, check to see if you have included the R code to create the object (load or alter datasets usually) in a chunk.</p>
+<div id="required-packages" class="section level2">
+<h2><span class="header-section-number">3.1</span> Required Packages</h2>
+<p>You need to load all libraries required for analysis inside a chunk. Otherwise you will run into the same problem as above. WHen you knit you will get an error message that R cannot find specific functions. It is because they live in a package that you loaded locally, but never added to your script.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1"><span class="kw">library</span>( dplyr )</a></code></pre></div>
+<pre><code>## Warning: package &#39;dplyr&#39; was built under R version 3.5.3</code></pre>
+<pre><code>## 
+## Attaching package: &#39;dplyr&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:stats&#39;:
+## 
+##     filter, lag</code></pre>
+<pre><code>## The following objects are masked from &#39;package:base&#39;:
+## 
+##     intersect, setdiff, setequal, union</code></pre>
+<p><strong>NOTE</strong> that you load packages in an RMD document while knitting, but you cannot install a package while knitting (neither should you - you only need to install a library once then just load it after that).</p>
+</div>
+</div>
+<div id="setup" class="section level1">
+<h1><span class="header-section-number">4</span> SETUP</h1>
+<p>It is a recommended best practice to load all of your R packages and datasets at the beginning of your file instead of scattering these steps throughout.</p>
+<p>There are also some basic steps you will need to set the formatting options for your markdown document.</p>
+<div id="yaml-header" class="section level2">
+<h2><span class="header-section-number">4.1</span> YAML Header</h2>
+<p>Markdown documents require a YAML header. Many formatting options are set in the header. You will specify: * The type of document generated (word, html, website, book, etc.) * The formatting rules for the document</p>
+<p>The most basic header looks like this:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode md"><code class="sourceCode markdown"><a class="sourceLine" id="cb9-1" title="1">---</a>
+<a class="sourceLine" id="cb9-2" title="2">title: &quot;R Markdown Template&quot;</a>
+<a class="sourceLine" id="cb9-3" title="3">output: html_document:</a>
+<a class="sourceLine" id="cb9-4" title="4">---</a></code></pre></div>
+<p>Here are the current options for this document:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode md"><code class="sourceCode markdown"><a class="sourceLine" id="cb10-1" title="1">---</a>
+<a class="sourceLine" id="cb10-2" title="2">title: &quot;R Markdown Template&quot;</a>
+<a class="sourceLine" id="cb10-3" title="3">author: &quot;Jesse Lecy&quot;</a>
+<a class="sourceLine" id="cb10-4" title="4">date: &quot;<span class="bn">`r format(Sys.time(), &#39;%d %B, %Y&#39;)`</span>&quot;</a>
+<a class="sourceLine" id="cb10-5" title="5">output:</a>
+<a class="sourceLine" id="cb10-6" title="6">  html_document:</a>
+<a class="sourceLine" id="cb10-7" title="7"><span class="bn">    df_print: paged</span></a>
+<a class="sourceLine" id="cb10-8" title="8"><span class="bn">    theme: cerulean</span></a>
+<a class="sourceLine" id="cb10-9" title="9"><span class="bn">    highlight: haddock</span></a>
+<a class="sourceLine" id="cb10-10" title="10"><span class="bn">    toc: yes</span></a>
+<a class="sourceLine" id="cb10-11" title="11"><span class="bn">    toc_depth: 3</span></a>
+<a class="sourceLine" id="cb10-12" title="12"><span class="bn">    toc_float:</span></a>
+<a class="sourceLine" id="cb10-13" title="13"><span class="bn">      collapsed: false</span></a>
+<a class="sourceLine" id="cb10-14" title="14"><span class="bn">      smooth_scroll: true</span></a>
+<a class="sourceLine" id="cb10-15" title="15"><span class="bn">    code_fold: show</span></a>
+<a class="sourceLine" id="cb10-16" title="16">---</a></code></pre></div>
+</div>
+<div id="knitr-global-options" class="section level2">
+<h2><span class="header-section-number">4.2</span> knitr Global Options</h2>
+<p>The <code>opts_chunk$set()</code> function allows you to set options that impact all chunks in the document.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" title="1">knitr<span class="op">::</span>opts_chunk<span class="op">$</span><span class="kw">set</span>( <span class="dt">echo =</span> <span class="ot">TRUE</span>, <span class="dt">message=</span><span class="ot">FALSE</span>, <span class="dt">warnings=</span><span class="ot">FALSE</span>, <span class="dt">fig.width=</span><span class="dv">8</span> )</a></code></pre></div>
+<p><strong>Please turn your warning messages off before submitting labs!</strong> These are usually not important (R lets you know that your package version is not the current one, for example), but they quickly clutter the assignments.</p>
+<p>You can also customize options directly in each chunk.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode md"><code class="sourceCode markdown"><a class="sourceLine" id="cb12-1" title="1">{r, message=FALSE, fig.width=10}</a></code></pre></div>
+</div>
+<div id="data" class="section level2">
+<h2><span class="header-section-number">4.3</span> Data</h2>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb13-1" title="1"><span class="co"># load raw project datasets here</span></a></code></pre></div>
+</div>
+</div>
+<div id="markdown-formatting-rules" class="section level1">
+<h1><span class="header-section-number">5</span> MARKDOWN FORMATTING RULES</h1>
+<p>Examples taken from <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet">Adam Pritchard’s Markdown Cheatsheet</a>.</p>
+<div id="headers" class="section level3">
+<h3><span class="header-section-number">5.0.1</span> Headers</h3>
+<div class="sourceCode" id="cb14"><pre class="sourceCode md"><code class="sourceCode markdown"><a class="sourceLine" id="cb14-1" title="1"></a>
+<a class="sourceLine" id="cb14-2" title="2"><span class="fu"># H1</span></a>
+<a class="sourceLine" id="cb14-3" title="3"><span class="fu">## H2</span></a>
+<a class="sourceLine" id="cb14-4" title="4"><span class="fu">### H3</span></a>
+<a class="sourceLine" id="cb14-5" title="5"><span class="fu">#### H4</span></a>
+<a class="sourceLine" id="cb14-6" title="6"><span class="fu">##### H5</span></a>
+<a class="sourceLine" id="cb14-7" title="7"><span class="fu">###### H6</span></a>
+<a class="sourceLine" id="cb14-8" title="8"></a>
+<a class="sourceLine" id="cb14-9" title="9">Alternatively, for H1 and H2, an underline-ish style:</a>
+<a class="sourceLine" id="cb14-10" title="10"></a>
+<a class="sourceLine" id="cb14-11" title="11">Alt-H1</a>
+<a class="sourceLine" id="cb14-12" title="12">======</a>
+<a class="sourceLine" id="cb14-13" title="13"></a>
+<a class="sourceLine" id="cb14-14" title="14">Alt-H2</a>
+<a class="sourceLine" id="cb14-15" title="15">------</a>
+<a class="sourceLine" id="cb14-16" title="16">  </a></code></pre></div>
+</div>
+<div id="emphasis" class="section level3">
+<h3><span class="header-section-number">5.0.2</span> Emphasis</h3>
+<div class="sourceCode" id="cb15"><pre class="sourceCode md"><code class="sourceCode markdown"><a class="sourceLine" id="cb15-1" title="1"></a>
+<a class="sourceLine" id="cb15-2" title="2">Emphasis, aka italics, with *asterisks* or _underscores_.</a>
+<a class="sourceLine" id="cb15-3" title="3"></a>
+<a class="sourceLine" id="cb15-4" title="4">Strong emphasis, aka bold, with **asterisks** or __underscores__.</a>
+<a class="sourceLine" id="cb15-5" title="5"></a>
+<a class="sourceLine" id="cb15-6" title="6">Combined emphasis with **asterisks and _underscores_**.</a>
+<a class="sourceLine" id="cb15-7" title="7"></a>
+<a class="sourceLine" id="cb15-8" title="8">Strikethrough uses two tildes. ~~Scratch this.~~</a>
+<a class="sourceLine" id="cb15-9" title="9">  </a></code></pre></div>
+<p>Emphasis, aka italics, with <em>asterisks</em> or <em>underscores</em>.</p>
+<p>Strong emphasis, aka bold, with <strong>asterisks</strong> or <strong>underscores</strong>.</p>
+<p>Combined emphasis with <strong>asterisks and <em>underscores</em></strong>.</p>
+<p>Strikethrough uses two tildes. <del>Scratch this.</del></p>
+</div>
+<div id="lists" class="section level3">
+<h3><span class="header-section-number">5.0.3</span> Lists</h3>
+<div class="sourceCode" id="cb16"><pre class="sourceCode md"><code class="sourceCode markdown"><a class="sourceLine" id="cb16-1" title="1"></a>
+<a class="sourceLine" id="cb16-2" title="2">Ordered lists:</a>
+<a class="sourceLine" id="cb16-3" title="3"></a>
+<a class="sourceLine" id="cb16-4" title="4">1. <span class="fl">First ordered list item </span></a>
+<a class="sourceLine" id="cb16-5" title="5"><span class="fl">2. Another item</span></a>
+<a class="sourceLine" id="cb16-6" title="6"><span class="fl">     1. Sub-item A</span></a>
+<a class="sourceLine" id="cb16-7" title="7"><span class="fl">     2. Sub-item B</span></a>
+<a class="sourceLine" id="cb16-8" title="8"><span class="fl">1. Actual numbers don&#39;t matter, just that it&#39;s a number</span></a>
+<a class="sourceLine" id="cb16-9" title="9"><span class="fl">5. And another item.</span>  </a>
+<a class="sourceLine" id="cb16-10" title="10"><span class="fl">   </span></a>
+<a class="sourceLine" id="cb16-11" title="11"><span class="fl">Unordered list:</span></a>
+<a class="sourceLine" id="cb16-12" title="12"></a>
+<a class="sourceLine" id="cb16-13" title="13">* <span class="fl">Unordered list can use asterisks</span></a>
+<a class="sourceLine" id="cb16-14" title="14"><span class="fl">- Or minuses</span></a>
+<a class="sourceLine" id="cb16-15" title="15"><span class="fl">+ Or pluses</span></a>
+<a class="sourceLine" id="cb16-16" title="16"><span class="fl">     * sub-item</span></a>
+<a class="sourceLine" id="cb16-17" title="17"><span class="fl">     - sub-item</span></a>
+<a class="sourceLine" id="cb16-18" title="18"><span class="fl">     + sub-item</span></a>
+<a class="sourceLine" id="cb16-19" title="19"><span class="fl">   </span></a></code></pre></div>
+<p>Ordered lists:</p>
+<ol style="list-style-type: decimal">
+<li>First ordered list item</li>
+<li>Another item
+<ol style="list-style-type: decimal">
+<li>Sub-item A</li>
+<li>Sub-item B</li>
+</ol></li>
+<li>Actual numbers don’t matter, just that it’s a number</li>
+<li>And another item.</li>
+</ol>
+<p>Unordered list:</p>
+<ul>
+<li>Unordered list can use asterisks</li>
+<li>Or minuses</li>
+<li>Or pluses
+<ul>
+<li>sub-item</li>
+<li>sub-item</li>
+<li>sub-item</li>
+</ul></li>
+</ul>
+</div>
+<div id="links" class="section level3">
+<h3><span class="header-section-number">5.0.4</span> Links</h3>
+<p>There are two ways to create links.</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode md"><code class="sourceCode markdown"><a class="sourceLine" id="cb17-1" title="1"></a>
+<a class="sourceLine" id="cb17-2" title="2"><span class="ot">[I&#39;m an inline-style link](https://www.google.com)</span></a>
+<a class="sourceLine" id="cb17-3" title="3"></a>
+<a class="sourceLine" id="cb17-4" title="4">Or leave it empty and use the [link text itself]</a>
+<a class="sourceLine" id="cb17-5" title="5"></a>
+<a class="sourceLine" id="cb17-6" title="6">Some text to show that the reference links can follow later.</a>
+<a class="sourceLine" id="cb17-7" title="7"></a>
+<a class="sourceLine" id="cb17-8" title="8"><span class="ot">[link text itself]: http://www.reddit.com</span></a></code></pre></div>
+<p><a href="https://www.google.com">I’m an inline-style link</a></p>
+<p>Or leave it empty and use the <a href="http://www.reddit.com">link text itself</a></p>
+</div>
+<div id="images" class="section level3">
+<h3><span class="header-section-number">5.0.5</span> Images</h3>
+<p>Here’s a logo (hover to see the title text):</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode md"><code class="sourceCode markdown"><a class="sourceLine" id="cb18-1" title="1">Inline-style: </a>
+<a class="sourceLine" id="cb18-2" title="2"><span class="al">![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png &quot;Logo Title Text 1&quot;)</span></a>
+<a class="sourceLine" id="cb18-3" title="3"></a>
+<a class="sourceLine" id="cb18-4" title="4">Reference-style: </a>
+<a class="sourceLine" id="cb18-5" title="5"><span class="al">![alt text][logo]</span></a>
+<a class="sourceLine" id="cb18-6" title="6"></a>
+<a class="sourceLine" id="cb18-7" title="7"><span class="ot">[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png &quot;Logo Title Text 2&quot;</span></a></code></pre></div>
+<p>Inline-style: <img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" title="Logo Title Text 1" alt="alt text" /></p>
+<p>Reference-style: <img src="https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png" title="Logo Title Text 2" alt="alt text" /></p>
+</div>
+<div id="tables" class="section level3">
+<h3><span class="header-section-number">5.0.6</span> Tables</h3>
+<p>Tables aren’t part of the core Markdown spec, but they are part of GFM and Markdown Here supports them. They are an easy way of adding tables to your email – a task that would otherwise require copy-pasting from another application.</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode md"><code class="sourceCode markdown"><a class="sourceLine" id="cb19-1" title="1"></a>
+<a class="sourceLine" id="cb19-2" title="2">Colons can be used to align columns.</a>
+<a class="sourceLine" id="cb19-3" title="3"></a>
+<a class="sourceLine" id="cb19-4" title="4">| Tables        | Are           | Cool  |</a>
+<a class="sourceLine" id="cb19-5" title="5">| ------------- |:-------------:| -----:|</a>
+<a class="sourceLine" id="cb19-6" title="6">| col 3 is      | right-aligned | $1600 |</a>
+<a class="sourceLine" id="cb19-7" title="7">| col 2 is      | centered      |   $12 |</a>
+<a class="sourceLine" id="cb19-8" title="8">| zebra stripes | are neat      |    $1 |</a>
+<a class="sourceLine" id="cb19-9" title="9"></a>
+<a class="sourceLine" id="cb19-10" title="10">The outer pipes (|) are optional, and you don&#39;t need to make the raw Markdown line up prettily. </a>
+<a class="sourceLine" id="cb19-11" title="11">You can also use inline Markdown.</a>
+<a class="sourceLine" id="cb19-12" title="12"></a>
+<a class="sourceLine" id="cb19-13" title="13">Markdown | Less | Pretty</a>
+<a class="sourceLine" id="cb19-14" title="14">--- | --- | ---</a>
+<a class="sourceLine" id="cb19-15" title="15">*Still* | <span class="bn">`renders`</span> | **nicely**</a>
+<a class="sourceLine" id="cb19-16" title="16">1 | 2 | 3</a></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th>Tables</th>
+<th align="center">Are</th>
+<th align="right">Cool</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>col 3 is</td>
+<td align="center">right-aligned</td>
+<td align="right">$1600</td>
+</tr>
+<tr class="even">
+<td>col 2 is</td>
+<td align="center">centered</td>
+<td align="right">$12</td>
+</tr>
+<tr class="odd">
+<td>zebra stripes</td>
+<td align="center">are neat</td>
+<td align="right">$1</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr class="header">
+<th>Markdown</th>
+<th>Less</th>
+<th>Pretty</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><em>Still</em></td>
+<td><code>renders</code></td>
+<td><strong>nicely</strong></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>2</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="blockquotes" class="section level3">
+<h3><span class="header-section-number">5.0.7</span> Blockquotes</h3>
+<div class="sourceCode" id="cb20"><pre class="sourceCode md"><code class="sourceCode markdown"><a class="sourceLine" id="cb20-1" title="1"></a>
+<a class="sourceLine" id="cb20-2" title="2">&gt;<span class="dt"> Blockquotes are very handy in email to emulate reply text.</span></a>
+<a class="sourceLine" id="cb20-3" title="3"><span class="dt">&gt; This line is part of the same quote.</span></a></code></pre></div>
+<blockquote>
+<p>Blockquotes are very handy in email to emulate reply text. This line is part of the same quote.</p>
+</blockquote>
+</div>
+<div id="horizontal-lines" class="section level3">
+<h3><span class="header-section-number">5.0.8</span> Horizontal Lines</h3>
+<p>Use three or more of the following:</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode md"><code class="sourceCode markdown"><a class="sourceLine" id="cb21-1" title="1"></a>
+<a class="sourceLine" id="cb21-2" title="2">---  # Hyphens</a>
+<a class="sourceLine" id="cb21-3" title="3"></a>
+<a class="sourceLine" id="cb21-4" title="4">***  # Asterisks</a>
+<a class="sourceLine" id="cb21-5" title="5"></a>
+<a class="sourceLine" id="cb21-6" title="6">___  # Underscores</a></code></pre></div>
+<p>Hyphens</p>
+<hr />
+<p>Asterisks</p>
+<hr />
+<p>Underscores</p>
+<hr />
+</div>
+<div id="mathematical-formulae" class="section level3">
+<h3><span class="header-section-number">5.0.9</span> Mathematical Formulae</h3>
+<p>A full description of TeX math symbols is beyond the scope of this cheatsheet. Here’s a good reference, and you can try stuff out on CodeCogs. You can also play with formulae in the Markdown Here options page.</p>
+<p>Here are some examples to try out:</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode md"><code class="sourceCode markdown"><a class="sourceLine" id="cb22-1" title="1"></a>
+<a class="sourceLine" id="cb22-2" title="2">$-b \pm \sqrt{b^2 - 4ac} \over 2a$</a>
+<a class="sourceLine" id="cb22-3" title="3">$x = a_0 + \frac{1}{a_1 + \frac{1}{a_2 + \frac{1}{a_3 + a_4}}}$</a>
+<a class="sourceLine" id="cb22-4" title="4">$\forall x \in X, \quad \exists y \leq \epsilon$</a></code></pre></div>
+<p><span class="math inline">\(-b \pm \sqrt{b^2 - 4ac} \over 2a\)</span> <span class="math inline">\(x = a_0 + \frac{1}{a_1 + \frac{1}{a_2 + \frac{1}{a_3 + a_4}}}\)</span> <span class="math inline">\(\forall x \in X, \quad \exists y \leq \epsilon\)</span></p>
+<p>The beginning and ending dollar signs ($) are the delimiters for the TeX markup.</p>
+</div>
+<div id="youtube-videos" class="section level3">
+<h3><span class="header-section-number">5.0.10</span> YouTube Videos</h3>
+<div class="sourceCode" id="cb23"><pre class="sourceCode md"><code class="sourceCode markdown"><a class="sourceLine" id="cb23-1" title="1"></a>
+<a class="sourceLine" id="cb23-2" title="2">&lt;a href=&quot;http://www.youtube.com/watch?feature=player_embedded&amp;v=YOUTUBE_VIDEO_ID_HERE</a>
+<a class="sourceLine" id="cb23-3" title="3">&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg&quot; </a>
+<a class="sourceLine" id="cb23-4" title="4">alt=&quot;IMAGE ALT TEXT HERE&quot; width=&quot;240&quot; height=&quot;180&quot; border=&quot;10&quot; /&gt;&lt;/a&gt;</a>
+<a class="sourceLine" id="cb23-5" title="5"></a>
+<a class="sourceLine" id="cb23-6" title="6">OR iframes:</a>
+<a class="sourceLine" id="cb23-7" title="7"></a>
+<a class="sourceLine" id="cb23-8" title="8">&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/YOUTUBE_VIDEO_ID_HERE&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen&gt;&lt;/iframe&gt;</a></code></pre></div>
+<p><a href="http://www.youtube.com/watch?feature=player_embedded&v=dQw4w9WgXcQ
+" target="_blank"><img src="http://img.youtube.com/vi/dQw4w9WgXcQ/0.jpg" 
+alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+</iframe>
+</div>
+</div>
+<div id="document-styles" class="section level1">
+<h1><span class="header-section-number">6</span> DOCUMENT STYLES</h1>
+<p>R Markdown documents are extremely customizable using options in the header section and in chunks.</p>
+<div id="appearance-and-style" class="section level2">
+<h2><span class="header-section-number">6.1</span> Appearance and Style</h2>
+<p>There are <a href="http://rmarkdown.rstudio.com/html_document_format.html">many options</a> that control the appearance of HTML documents:</p>
+<ul>
+<li><p><strong>theme</strong> specifies the Bootstrap theme to use for the page (themes are drawn from the Bootswatch theme library). Valid themes include “default”, “cerulean”, “journal”, “flatly”, “readable”, “spacelab”, “united”, “cosmo”, “lumen”, “paper”, “sandstone”, “simplex”, and “yeti”. Pass null for no theme (in this case you can use the css parameter to add your own styles).</p></li>
+<li><p><strong>highlight</strong> specifies the syntax highlighting style. Supported styles include “default”, “tango”, “pygments”, “kate”, “monochrome”, “espresso”, “zenburn”, “haddock”, and “textmate”. Pass null to prevent syntax highlighting.</p></li>
+<li><p><strong>smart</strong> indicates whether to produce typographically correct output, converting straight quotes to curly quotes, — to em-dashes, – to en-dashes, and … to ellipses. Note that smart is enabled by default.</p></li>
+</ul>
+<p>For example:</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode md"><code class="sourceCode markdown"><a class="sourceLine" id="cb24-1" title="1">---</a>
+<a class="sourceLine" id="cb24-2" title="2">title: &quot;Habits&quot;</a>
+<a class="sourceLine" id="cb24-3" title="3">output:</a>
+<a class="sourceLine" id="cb24-4" title="4">  html_document:</a>
+<a class="sourceLine" id="cb24-5" title="5"><span class="bn">    theme: united</span></a>
+<a class="sourceLine" id="cb24-6" title="6"><span class="bn">    highlight: tango</span></a>
+<a class="sourceLine" id="cb24-7" title="7">---</a></code></pre></div>
+</div>
+<div id="output-formats" class="section level2">
+<h2><span class="header-section-number">6.2</span> Output Formats</h2>
+<p>For a list of document formats that R Markdown supports see the <a href="http://rmarkdown.rstudio.com/formats.html">R Markdown website</a>.</p>
+<div id="documents" class="section level3">
+<h3><span class="header-section-number">6.2.1</span> Documents</h3>
+<ul>
+<li>Notebook Interactive R Notebooks</li>
+<li>HTML HTML document w/ Bootstrap CSS</li>
+<li>PDF PDF document (via LaTeX template)</li>
+<li>Word Microsoft Word document (docx)</li>
+<li>ODT OpenDocument Text document</li>
+<li>RTF Rich Text Format document</li>
+<li>Markdown Markdown document (various flavors)</li>
+</ul>
+</div>
+<div id="presentations" class="section level3">
+<h3><span class="header-section-number">6.2.2</span> Presentations</h3>
+<ul>
+<li>ioslides HTML presentation with ioslides</li>
+<li>reveal.js HTML presentation with reveal.js</li>
+<li>Slidy HTML presentation with W3C Slidy</li>
+<li>Beamer PDF presentation with LaTeX Beamer</li>
+<li>shower_presentation Themeable presentations using the Shower framework</li>
+</ul>
+</div>
+<div id="journals-articles" class="section level3">
+<h3><span class="header-section-number">6.2.3</span> Journals Articles</h3>
+<ul>
+<li>jss_article Journal of Statistical Software (JSS)</li>
+<li>acm_article Association for Computing Machinery (ACM)</li>
+<li>acs_article American Chemical Society (ACS) Journal</li>
+<li>ctex Documents based on the LaTeX package ctex</li>
+<li>elsevier_article Submissions to Elsevier journals</li>
+</ul>
+</div>
+<div id="html" class="section level3">
+<h3><span class="header-section-number">6.2.4</span> HTML</h3>
+<ul>
+<li>html_pretty Small yet pretty HTML pages</li>
+<li>readthedown Format adapted from the Read the docs Sphinx theme</li>
+<li>html_docco Format adapted from the docco documentation generator</li>
+<li>html_clean Clean and simple HTML format</li>
+</ul>
+</div>
+<div id="more" class="section level3">
+<h3><span class="header-section-number">6.2.5</span> More</h3>
+<ul>
+<li>flexdashboard Interactive dashboards</li>
+<li>bookdown HTML, PDF, ePub, and Kindle books</li>
+<li>Websites Multi-page websites</li>
+<li>Tufte Handout Handouts in the style of Edward Tufte</li>
+<li>Package Vignette R package vignette (HTML)</li>
+<li>Github Document GitHub Flavored Markdown document.</li>
+</ul>
+</div>
+</div>
+<div id="custome-style-sheets" class="section level2">
+<h2><span class="header-section-number">6.3</span> Custome Style Sheets</h2>
+<p>If you want more control over the style of your document, you can include a CSS which allows you to control fonts and spacing.</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode css"><code class="sourceCode css"><a class="sourceLine" id="cb25-1" title="1"></a>
+<a class="sourceLine" id="cb25-2" title="2"><span class="co">/* Include a cascading style sheet chunk to cutomize fonts and spacing */</span></a>
+<a class="sourceLine" id="cb25-3" title="3"><span class="co">/* {css, echo=T} */</span>  </a>
+<a class="sourceLine" id="cb25-4" title="4">  </a>
+<a class="sourceLine" id="cb25-5" title="5">p {</a>
+<a class="sourceLine" id="cb25-6" title="6"><span class="kw">color</span>: <span class="cn">black</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb25-7" title="7"><span class="kw">margin</span>: <span class="dv">30</span><span class="dt">px</span> <span class="dv">0</span> <span class="dv">20</span><span class="dt">px</span> <span class="dv">0</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb25-8" title="8">}</a>
+<a class="sourceLine" id="cb25-9" title="9"></a>
+<a class="sourceLine" id="cb25-10" title="10">td {</a>
+<a class="sourceLine" id="cb25-11" title="11">    <span class="kw">padding</span>: <span class="dv">3</span><span class="dt">px</span> <span class="dv">10</span><span class="dt">px</span> <span class="dv">3</span><span class="dt">px</span> <span class="dv">10</span><span class="dt">px</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb25-12" title="12">    <span class="kw">text-align</span>: <span class="dv">center</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb25-13" title="13">}</a>
+<a class="sourceLine" id="cb25-14" title="14"></a>
+<a class="sourceLine" id="cb25-15" title="15">table</a>
+<a class="sourceLine" id="cb25-16" title="16">{ </a>
+<a class="sourceLine" id="cb25-17" title="17">    <span class="kw">margin-left</span>: <span class="bu">auto</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb25-18" title="18">    <span class="kw">margin-right</span>: <span class="bu">auto</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb25-19" title="19">    <span class="kw">margin-top</span>:<span class="dv">80</span><span class="dt">px</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb25-20" title="20">    <span class="kw">margin-bottom</span>:<span class="dv">100</span><span class="dt">px</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb25-21" title="21">}</a>
+<a class="sourceLine" id="cb25-22" title="22"></a>
+<a class="sourceLine" id="cb25-23" title="23">h1<span class="op">,</span> h2{</a>
+<a class="sourceLine" id="cb25-24" title="24">  <span class="kw">margin-top</span>:<span class="dv">100</span><span class="dt">px</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb25-25" title="25">  <span class="kw">margin-bottom</span>:<span class="dv">20</span><span class="dt">px</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb25-26" title="26">}</a>
+<a class="sourceLine" id="cb25-27" title="27"></a>
+<a class="sourceLine" id="cb25-28" title="28">h3{</a>
+<a class="sourceLine" id="cb25-29" title="29">  <span class="kw">margin-top</span>:<span class="dv">50</span><span class="dt">px</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb25-30" title="30">  <span class="kw">margin-bottom</span>:<span class="dv">20</span><span class="dt">px</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb25-31" title="31">}</a>
+<a class="sourceLine" id="cb25-32" title="32"></a>
+<a class="sourceLine" id="cb25-33" title="33">H5{</a>
+<a class="sourceLine" id="cb25-34" title="34">    <span class="kw">text-align</span>: <span class="dv">center</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb25-35" title="35">    <span class="kw">color</span>: <span class="cn">gray</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb25-36" title="36">    <span class="kw">font-size</span>:<span class="dv">0.8</span><span class="dt">em</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb25-37" title="37">}</a>
+<a class="sourceLine" id="cb25-38" title="38"></a>
+<a class="sourceLine" id="cb25-39" title="39">img {</a>
+<a class="sourceLine" id="cb25-40" title="40">    <span class="kw">max-width</span>: <span class="dv">90</span><span class="dt">%</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb25-41" title="41">    <span class="kw">display</span>: <span class="dv">block</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb25-42" title="42">    <span class="kw">margin-right</span>: <span class="bu">auto</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb25-43" title="43">    <span class="kw">margin-left</span>: <span class="bu">auto</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb25-44" title="44">    <span class="kw">margin-top</span>:<span class="dv">30</span><span class="dt">px</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb25-45" title="45">    <span class="kw">margin-bottom</span>:<span class="dv">20</span><span class="dt">px</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb25-46" title="46">}</a>
+<a class="sourceLine" id="cb25-47" title="47"></a>
+<a class="sourceLine" id="cb25-48" title="48">pre {</a>
+<a class="sourceLine" id="cb25-49" title="49">  <span class="kw">overflow-x</span>: <span class="bu">auto</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb25-50" title="50">}</a>
+<a class="sourceLine" id="cb25-51" title="51"></a>
+<a class="sourceLine" id="cb25-52" title="52">pre code {</a>
+<a class="sourceLine" id="cb25-53" title="53">   <span class="kw">display</span>: <span class="dv">block</span><span class="op">;</span> </a>
+<a class="sourceLine" id="cb25-54" title="54">   <span class="kw">padding</span>: <span class="dv">0.5</span><span class="dt">em</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb25-55" title="55">   <span class="kw">margin-bottom</span>:<span class="dv">10</span><span class="dt">px</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb25-56" title="56">}</a>
+<a class="sourceLine" id="cb25-57" title="57"></a>
+<a class="sourceLine" id="cb25-58" title="58"></a>
+<a class="sourceLine" id="cb25-59" title="59">code {</a>
+<a class="sourceLine" id="cb25-60" title="60">  <span class="kw">font-size</span>: <span class="dv">92</span><span class="dt">%</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb25-61" title="61">  <span class="kw">border</span>: <span class="dv">10</span><span class="dt">px</span> <span class="dv">solid</span> <span class="dv">light</span> <span class="cn">gray</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb25-62" title="62">  <span class="kw">margin-bottom</span>: <span class="dv">2</span><span class="dt">px</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb25-63" title="63">}</a>
+<a class="sourceLine" id="cb25-64" title="64"></a>
+<a class="sourceLine" id="cb25-65" title="65">code<span class="ex">[class]</span> {</a>
+<a class="sourceLine" id="cb25-66" title="66">  <span class="kw">background-color</span>: <span class="dv">light</span> <span class="cn">gray</span><span class="op">;</span></a>
+<a class="sourceLine" id="cb25-67" title="67">}</a></code></pre></div>
+<style type="text/css">
+
+/* Include a cascading style sheet chunk to cutomize fonts and spacing */
+/* {css, echo=T} */  
+  
+p {
+color: black;
+margin: 30px 0 20px 0;
+}
+
+td {
+    padding: 3px 10px 3px 10px;
+    text-align: center;
+}
+
+table
+{ 
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:80px;
+    margin-bottom:100px;
+}
+
+h1, h2{
+  margin-top:100px;
+  margin-bottom:20px;
+}
+
+h3{
+  margin-top:50px;
+  margin-bottom:20px;
+}
+
+H5{
+    text-align: center;
+    color: gray;
+    font-size:0.8em;
+}
+
+img {
+    max-width: 90%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top:30px;
+    margin-bottom:20px;
+}
+
+pre {
+  overflow-x: auto;
+}
+
+pre code {
+   display: block; 
+   padding: 0.5em;
+   margin-bottom:10px;
+}
+
+
+code {
+  font-size: 92%;
+  border: 10px solid light gray;
+  margin-bottom: 2px;
+}
+
+code[class] {
+  background-color: light gray;
+}
+
+</style>
+</div>
+<div id="cheat-sheet" class="section level2">
+<h2><span class="header-section-number">6.4</span> Cheat Sheet</h2>
+<p>Learn more by reviewing the <a href="https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf">R Markdown Cheat Sheet</a>.</p>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
