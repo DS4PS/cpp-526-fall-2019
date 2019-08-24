@@ -12,7 +12,7 @@ output:
 
 
 ```{r}
-knitr::opts_chunk$set( echo = TRUE, message=FALSE, warnings=FALSE, fig.width=8 )
+knitr::opts_chunk$set( echo = TRUE, message=FALSE, warning=FALSE, fig.width=8 )
 ```
 
 
@@ -73,9 +73,7 @@ If you get an error that an object can't be located, check to see if you have in
 You need to load all libraries required for analysis inside a chunk. Otherwise you will run into the same problem as above. WHen you knit you will get an error message that R cannot find specific functions. It is because they live in a package that you loaded locally, but never added to your script. 
 
 ```{r packages}
-
 library( dplyr )
-
 ```
 
 **NOTE** that you load packages in an RMD document while knitting, but you cannot install a package while knitting (neither should you - you only need to install a library once then just load it after that).
@@ -137,7 +135,7 @@ The `opts_chunk$set()` function allows you to set options that impact all chunks
 
 ```{r setup, include=TRUE, eval=F}
 
-knitr::opts_chunk$set( echo = TRUE, message=FALSE, warnings=FALSE, fig.width=8 )
+knitr::opts_chunk$set( echo = TRUE, message=FALSE, warning=FALSE, fig.width=8 )
 
 ```
 

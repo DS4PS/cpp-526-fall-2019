@@ -19,7 +19,12 @@ library( pander )
 
 *This lab offers practice with some basic R functions for summarizing vectors.*
 
-I have provided you with an RMD template for this lab: [Download RMD Template](https://www.dropbox.com/s/43dj0oszgg34clc/Lab-01-LastName.Rmd?dl=1)
+<br>
+
+I have provided you with an RMD template for this lab: 
+
+
+[![](images/download.png)](https://www.dropbox.com/s/43dj0oszgg34clc/Lab-01-LastName.Rmd?dl=1)
 
 
 If you are having trouble with your RMD file, try the [RMD File Styles and Knitting Tips](https://ds4ps.org/cpp-526-fall-2019/labs/r-markdown-files.html) manual.
@@ -47,11 +52,9 @@ table()                 # summarize factors / character vectors
 
 This lab uses **city tax parcel data** from Syracuse, NY.
 
-Each house, business, park or empty lot in the city sits on a parcel of land, and the tax rate for that parcel is determined by the city. 
-
-All of the characteristics of each parcel is stored in a central database, along with information about the land use classifications, owners, and whether the property is up-to-date on taxes and water bills. 
-
-Each row represents one tax parcel, and all tax parcels in the city are recorded in the dataset. 
+* Each house, business, park or empty lot in the city sits on a parcel of land, and the tax rate for that parcel is determined by the city. 
+* All of the characteristics of each parcel is stored in a central database, along with information about the land use classifications, owners, and whether the property is up-to-date on taxes and water bills.  
+* Each row represents one tax parcel, and all tax parcels in the city are recorded in the dataset.  
 
 [**DATA DICTIONARY**](https://ds4ps.github.io/Data-Science-Class/DATA/syr_parcels.html)
 
@@ -64,7 +67,7 @@ dat <- read.csv( URL, stringsAsFactors=FALSE )
 
 Preview the dataset using the **head()** function:
 
-```{r, echo=T}
+```{r, echo=F}
 head( dat, 10 ) # show first ten rows of data
 ```
 
@@ -74,40 +77,61 @@ head( dat, 10 ) # show first ten rows of data
 
 # Lab Instructions
 
-Answer the following questions in your lab.  
-
-1. How many tax parcels are in Syracuse (dataset dimensions)? 
-2. How many acres of land are in syracuse (sum over a numeric vector)?
-3. How many vacant BUILDINGS are there in Syracuse (sum over a logical vector)?
-4. What proportion of parcels are tax exempt ?
-5. Which neighborhood contains the most tax parcels (table with one variable)?
-6. Which neighborhood contains the most vacant LOTS (table with two variables)? 
+Answer the following questions using the Syracuse parcels dataset and the functions listed. Your solution should include a precise response, as well as the code used to answer the question.
 
 
-**Note:**
+#### (1) How many tax parcels are in Syracuse? 
+    
+* dataset dimensions: **dim()** or **nrow()** 
+    
+#### (2) How many acres of land are in syracuse?
 
-(1) Referencing variables in R requires both the **dataset name** and **variable name**, separated by the `$` operator:
+* **sum()** over the numeric **acres** vector
+    
+#### (3) How many vacant BUILDINGS are there in Syracuse?
+
+* **sum()** over the **vacantbuil** logical vector
+    
+#### (4) What proportion of parcels are tax exempt?
+
+* **sum()** plus **length()** functions withthe logical **tax.exempt** vector
+    
+#### (5) Which neighborhood contains the most tax parcels?
+
+* **table()** with the **neighborhood** variable
+    
+#### (6) Which neighborhood contains the most vacant LOTS?
+
+* **table()** with the **neighborhood** and **land_use** variables
+
+
+<br>
+<br>
+
+**HELPFUL HINTS:**
+
+Referencing variables in R requires both the **dataset name** and **variable name**, separated by the `$` operator:
 
 ```{r, eval=F}
 summary( dat$acres )
 ```
 
-(2) When you apply a **sum()** function to a numeric vector it returns the sum of all elements in the vector. 
+When you apply a **sum()** function to a numeric vector it returns the sum of all elements in the vector. 
 
-```{r}
-sum( c(10,20,5) )
+```{r, eval=F}
+sum( c(10,20,5) )  # 35
 ```
 
 When you apply a **sum()** function to a logical vector, it will count all of the TRUEs:
 
-```{r}
-x <- c(T,T,F,F,F)
-sum( x )
-sum( x ) / length( x ) # proportion of trues
+```{r, eval=F}
+x <- c( TRUE, TRUE, FALSE, FALSE, FALSE )
+sum( x )                # number of TRUEs
+sum( x ) / length( x )  # proportion of TRUEs
 ```
 
 
-(3) R wants to make sure you are aware of missing values, so it will return NA (not available) for functions performed on vectors with missing values. 
+R wants to make sure you are aware of missing values, so it will return NA (not available) for functions performed on vectors with missing values. 
 
 Add the 'NA remove' argument (`na.rm=TRUE`) to functions to ignore missing values: 
 
@@ -142,4 +166,7 @@ Note that when you knit a file, it starts from a blank slate. You might have pac
 
 Your RMD file will not knit if you have errors in your code. If you get stuck on a question, just add `eval=F` to the code chunk and it will be ignored when you knit your file. That way I can give you credit for attempting the question and provide guidance on fixing the problem.
 
+
+<br>
+<br>
 
