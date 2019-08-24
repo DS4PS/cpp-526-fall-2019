@@ -22,7 +22,7 @@ library( pander )
 I have provided you with an RMD template for this lab: [Download RMD Template](https://www.dropbox.com/s/43dj0oszgg34clc/Lab-01-LastName.Rmd?dl=1)
 
 
-If you are having trouble with your RMD file, try the [RMD File Styles and Knitting Tips](https://ds4ps.org/cpp-526-fall-2019/textbook/labs/r-markdown-files.html) manual.
+If you are having trouble with your RMD file, try the [RMD File Styles and Knitting Tips](https://ds4ps.org/cpp-526-fall-2019/LABS/r-markdown-files.html) manual.
 
 <br><br>
 
