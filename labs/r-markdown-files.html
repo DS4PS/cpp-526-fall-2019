@@ -262,29 +262,28 @@ $(document).ready(function () {
 </div>
 
 
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1">knitr<span class="op">::</span>opts_chunk<span class="op">$</span><span class="kw">set</span>( <span class="dt">echo =</span> <span class="ot">TRUE</span>, <span class="dt">message=</span><span class="ot">FALSE</span>, <span class="dt">warning=</span><span class="ot">FALSE</span>, <span class="dt">fig.width=</span><span class="dv">8</span> )</a></code></pre></div>
 <div id="introduction" class="section level1">
 <h1><span class="header-section-number">1</span> INTRODUCTION</h1>
 <p>This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <a href="http://rmarkdown.rstudio.com" class="uri">http://rmarkdown.rstudio.com</a>.</p>
 <p>When you click the <strong>Knit</strong> button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.</p>
 <p>You can embed an R code chunk like this:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1"><span class="kw">mosaicplot</span>( HairEyeColor, <span class="dt">shade =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1"><span class="kw">mosaicplot</span>( HairEyeColor, <span class="dt">shade =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <p><img src="r-markdown-files_files/figure-html/unnamed-chunk-2-1.png" width="768" /></p>
 </div>
 <div id="most-important-chunk-setting" class="section level1">
 <h1><span class="header-section-number">2</span> MOST IMPORTANT CHUNK SETTING</h1>
 <p>If you are working on labs, which have several questions, and you are stuck on one question then your code might not work properly. Markdown documents will not render if code has errors.</p>
 <p>If you want credit for attempting the question, then you need to submit your broken code and note that it doesn’t work. You can do this by telling R to include a code chunk, but not evaluate it.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb3-1" title="1"><span class="bn">```{r, eval=F}</span></a>
-<a class="sourceLine" id="cb3-2" title="2"><span class="bn"># code here</span></a>
-<a class="sourceLine" id="cb3-3" title="3"><span class="bn">```</span></a></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode markdown"><code class="sourceCode markdown"><a class="sourceLine" id="cb2-1" title="1"><span class="bn">```{r, eval=F}</span></a>
+<a class="sourceLine" id="cb2-2" title="2"><span class="bn"># code here</span></a>
+<a class="sourceLine" id="cb2-3" title="3"><span class="bn">```</span></a></code></pre></div>
 <p>This way you can still knit your file even if all of the code is not working.</p>
 </div>
 <div id="knitting" class="section level1">
 <h1><span class="header-section-number">3</span> KNITTING</h1>
 <p>When you <strong>Knit</strong> your RMD file, know that R Studio will start from a clean slate (a fresh R environment).</p>
 <p>Students often run into a common problem. As you are developing solutions you might create a subset and save it as a new object:</p>
-<pre><code>dat.treated &lt;- dat[ dat$study.group == &quot;treatment&quot; , ]</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1">dat.treated &lt;-<span class="st"> </span>dat[ dat<span class="op">$</span>study.group <span class="op">==</span><span class="st"> &quot;treatment&quot;</span> , ]</a></code></pre></div>
 <p>But you do this in the console (the bottom window) and not in a chunk in your RMD file.</p>
 <p>Your RMD chunks work interactively because when you are running them in real time they use your current environment. But then you try to knit your file R will tell you it can’t find specific object (<code>dat.treated</code> in this example).</p>
 <p>This is because you never added the code to create the new object in a chunk. It only exists in your current local environment.</p>
@@ -293,8 +292,10 @@ $(document).ready(function () {
 <div id="required-packages" class="section level2">
 <h2><span class="header-section-number">3.1</span> Required Packages</h2>
 <p>You need to load all libraries required for analysis inside a chunk. Otherwise you will run into the same problem as above. WHen you knit you will get an error message that R cannot find specific functions. It is because they live in a package that you loaded locally, but never added to your script.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" title="1"><span class="kw">library</span>( dplyr )</a></code></pre></div>
 <p><strong>NOTE</strong> that you load packages in an RMD document while knitting, but you cannot install a package while knitting (neither should you - you only need to install a library once then just load it after that).</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1"><span class="kw">install.packages</span>(<span class="st">&quot;tidyverse&quot;</span>)   <span class="co"># BAD - do not include this</span></a>
+<a class="sourceLine" id="cb4-2" title="2"></a>
+<a class="sourceLine" id="cb4-3" title="3"><span class="kw">library</span>( tidyverse )            <span class="co"># GOOD</span></a></code></pre></div>
 </div>
 </div>
 <div id="setup" class="section level1">
@@ -305,39 +306,47 @@ $(document).ready(function () {
 <h2><span class="header-section-number">4.1</span> YAML Header</h2>
 <p>Markdown documents require a YAML header. Many formatting options are set in the header. You will specify: * The type of document generated (word, html, website, book, etc.) * The formatting rules for the document</p>
 <p>The most basic header looks like this:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode md"><code class="sourceCode markdown"><a class="sourceLine" id="cb5-1" title="1">---</a>
+<a class="sourceLine" id="cb5-2" title="2">title: &quot;R Markdown Template&quot;</a>
+<a class="sourceLine" id="cb5-3" title="3">output: html_document:</a>
+<a class="sourceLine" id="cb5-4" title="4">---</a></code></pre></div>
+<p>Here are the current options for this document:</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode md"><code class="sourceCode markdown"><a class="sourceLine" id="cb6-1" title="1">---</a>
 <a class="sourceLine" id="cb6-2" title="2">title: &quot;R Markdown Template&quot;</a>
-<a class="sourceLine" id="cb6-3" title="3">output: html_document:</a>
-<a class="sourceLine" id="cb6-4" title="4">---</a></code></pre></div>
-<p>Here are the current options for this document:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode md"><code class="sourceCode markdown"><a class="sourceLine" id="cb7-1" title="1">---</a>
-<a class="sourceLine" id="cb7-2" title="2">title: &quot;R Markdown Template&quot;</a>
-<a class="sourceLine" id="cb7-3" title="3">author: &quot;Jesse Lecy&quot;</a>
-<a class="sourceLine" id="cb7-4" title="4">date: &quot;<span class="bn">`r format(Sys.time(), &#39;%d %B, %Y&#39;)`</span>&quot;</a>
-<a class="sourceLine" id="cb7-5" title="5">output:</a>
-<a class="sourceLine" id="cb7-6" title="6">  html_document:</a>
-<a class="sourceLine" id="cb7-7" title="7"><span class="bn">    df_print: paged</span></a>
-<a class="sourceLine" id="cb7-8" title="8"><span class="bn">    theme: cerulean</span></a>
-<a class="sourceLine" id="cb7-9" title="9"><span class="bn">    highlight: haddock</span></a>
-<a class="sourceLine" id="cb7-10" title="10"><span class="bn">    toc: yes</span></a>
-<a class="sourceLine" id="cb7-11" title="11"><span class="bn">    toc_depth: 3</span></a>
-<a class="sourceLine" id="cb7-12" title="12"><span class="bn">    toc_float:</span></a>
-<a class="sourceLine" id="cb7-13" title="13"><span class="bn">      collapsed: false</span></a>
-<a class="sourceLine" id="cb7-14" title="14"><span class="bn">      smooth_scroll: true</span></a>
-<a class="sourceLine" id="cb7-15" title="15"><span class="bn">    code_fold: show</span></a>
-<a class="sourceLine" id="cb7-16" title="16">---</a></code></pre></div>
+<a class="sourceLine" id="cb6-3" title="3">author: &quot;Jesse Lecy&quot;</a>
+<a class="sourceLine" id="cb6-4" title="4">date: &quot;<span class="bn">`r format(Sys.time(), &#39;%d %B, %Y&#39;)`</span>&quot;</a>
+<a class="sourceLine" id="cb6-5" title="5">output:</a>
+<a class="sourceLine" id="cb6-6" title="6">  html_document:</a>
+<a class="sourceLine" id="cb6-7" title="7"><span class="bn">    df_print: paged</span></a>
+<a class="sourceLine" id="cb6-8" title="8"><span class="bn">    theme: cerulean</span></a>
+<a class="sourceLine" id="cb6-9" title="9"><span class="bn">    highlight: haddock</span></a>
+<a class="sourceLine" id="cb6-10" title="10"><span class="bn">    toc: yes</span></a>
+<a class="sourceLine" id="cb6-11" title="11"><span class="bn">    toc_depth: 3</span></a>
+<a class="sourceLine" id="cb6-12" title="12"><span class="bn">    toc_float:</span></a>
+<a class="sourceLine" id="cb6-13" title="13"><span class="bn">      collapsed: false</span></a>
+<a class="sourceLine" id="cb6-14" title="14"><span class="bn">      smooth_scroll: true</span></a>
+<a class="sourceLine" id="cb6-15" title="15"><span class="bn">    code_fold: show</span></a>
+<a class="sourceLine" id="cb6-16" title="16">---</a></code></pre></div>
 </div>
 <div id="knitr-global-options" class="section level2">
 <h2><span class="header-section-number">4.2</span> knitr Global Options</h2>
 <p>The <code>opts_chunk$set()</code> function allows you to set options that impact all chunks in the document.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" title="1">knitr<span class="op">::</span>opts_chunk<span class="op">$</span><span class="kw">set</span>( <span class="dt">echo =</span> <span class="ot">TRUE</span>, <span class="dt">message=</span><span class="ot">FALSE</span>, <span class="dt">warning=</span><span class="ot">FALSE</span>, <span class="dt">fig.width=</span><span class="dv">8</span> )</a></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" title="1">knitr<span class="op">::</span>opts_chunk<span class="op">$</span><span class="kw">set</span>( <span class="dt">echo =</span> <span class="ot">TRUE</span>, <span class="dt">message=</span><span class="ot">FALSE</span>, <span class="dt">warning=</span><span class="ot">FALSE</span>, <span class="dt">fig.width=</span><span class="dv">8</span> )</a></code></pre></div>
 <p><strong>Please turn your warning messages off before submitting labs!</strong> These are usually not important (R lets you know that your package version is not the current one, for example), but they quickly clutter the assignments.</p>
 <p>You can also customize options directly in each chunk.</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode md"><code class="sourceCode markdown"><a class="sourceLine" id="cb9-1" title="1">{r, message=FALSE, fig.width=10}</a></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode md"><code class="sourceCode markdown"><a class="sourceLine" id="cb8-1" title="1">{r, message=FALSE, fig.width=10}</a></code></pre></div>
+</div>
+<div id="packages" class="section level2">
+<h2><span class="header-section-number">4.3</span> Packages</h2>
+<p>Always load packages at the top of the file in one chunk.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" title="1"><span class="kw">library</span>( tidyverse )</a></code></pre></div>
+<p>It’s a bad idea to hide library() calls throughout your RMD because you cannot easily keep track of which packages are needed for a project, and loading packages multiple times can cause unwanted behaviors.</p>
 </div>
 <div id="data" class="section level2">
-<h2><span class="header-section-number">4.3</span> Data</h2>
+<h2><span class="header-section-number">4.4</span> Data</h2>
+<p>Similarly, files are easier to maintain if you load all of the necessary data once at the top of the file instead of scattering load operations throughout.</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" title="1"><span class="co"># load raw project datasets here</span></a></code></pre></div>
+<p><strong>PRO TIP</strong>: If you have a large dataset that takes time to load, consider using the <strong>cache</strong> argument to your load data chunk. This saves a version of your RMD file that already has data pre-loaded and will open much faster than re-loading data every time you want to knit the file.</p>
 </div>
 </div>
 <div id="markdown-formatting-rules" class="section level1">

@@ -11,7 +11,7 @@ output:
 ---
 
 
-```{r}
+```{r, echo=F}
 knitr::opts_chunk$set( echo = TRUE, message=FALSE, warning=FALSE, fig.width=8 )
 ```
 
@@ -54,7 +54,7 @@ When you **Knit** your RMD file, know that R Studio will start from a clean slat
 
 Students often run into a common problem. As you are developing solutions you might create a subset and save it as a new object:
 
-```
+```{r, eval=F}
 dat.treated <- dat[ dat$study.group == "treatment" , ]
 ```
 
@@ -72,11 +72,16 @@ If you get an error that an object can't be located, check to see if you have in
 
 You need to load all libraries required for analysis inside a chunk. Otherwise you will run into the same problem as above. WHen you knit you will get an error message that R cannot find specific functions. It is because they live in a package that you loaded locally, but never added to your script. 
 
-```{r packages}
-library( dplyr )
-```
-
 **NOTE** that you load packages in an RMD document while knitting, but you cannot install a package while knitting (neither should you - you only need to install a library once then just load it after that).
+
+
+```{r, eval=F}
+
+install.packages("tidyverse")   # BAD - do not include this
+
+library( tidyverse )            # GOOD
+
+```
 
 
 
@@ -150,9 +155,21 @@ You can also customize options directly in each chunk.
 
 
 
+## Packages
+
+Always load packages at the top of the file in one chunk. 
+
+```{r packages}
+library( tidyverse )
+```
+
+
+It's a bad idea to hide library() calls throughout your RMD because you cannot easily keep track of which packages are needed for a project, and loading packages multiple times can cause unwanted behaviors. 
 
 
 ## Data
+
+Similarly, files are easier to maintain if you load all of the necessary data once at the top of the file instead of scattering load operations throughout. 
 
 ```{r data}
 
@@ -160,6 +177,7 @@ You can also customize options directly in each chunk.
 
 ```
 
+**PRO TIP**: If you have a large dataset that takes time to load, consider using the **cache** argument to your load data chunk. This saves a version of your RMD file that already has data pre-loaded and will open much faster than re-loading data every time you want to knit the file. 
 
 
 
