@@ -52,8 +52,6 @@ article {
 
 
 
-
-
 *** { @unit = "", @title = "The R Toolkit", @lecture, @foldout }
 
 
@@ -298,9 +296,22 @@ You can also check out Ben's [Ted Talk](https://www.youtube.com/watch?v=6xsvGYIx
 
 
 
-*** { @unit = "Due Aug 29th", @title = "Lab 01", @assignment  }
+*** { @unit = "Due Aug 29th", @title = "Lab 01", @assignment, @foldout  }
 
 
+<br>
+<br>
+
+## Lab-01 - Practice with Vectors
+
+<a class="uk-button uk-button-default" href="https://ds4ps.org/cpp-526-fall-2019/labs/lab-01-instructions.html">LAB-01 Instructions</a>
+
+## Submit Solutions to Canvas:
+
+<a class="uk-button uk-button-primary" href="https://canvas.asu.edu/courses/29528/assignments/750552">SUBMIT LAB-01</a>
+
+<br>
+<br>
 
 
 ** Week 2 - Operators and Descriptives
