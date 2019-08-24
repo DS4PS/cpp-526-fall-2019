@@ -191,7 +191,7 @@ We will need three tools to manage your data science projects: a data programmin
 * Learning to Learn R
 
 
-## Getting Help [ [CH-08] ]
+## Getting Help [ [CH-08](http://ds4ps.org/dp4ss-textbook/ch-021-help.html) ]
 * Help files 
 * Error messages 
 * Discussion boards 
