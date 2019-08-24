@@ -310,6 +310,8 @@ You can also check out Ben's [Ted Talk](https://www.youtube.com/watch?v=6xsvGYIx
 
 <a class="uk-button uk-button-primary" href="https://canvas.asu.edu/courses/29528/assignments/750552">SUBMIT LAB-01</a>
 
+<br>
+<br>
 
 
 ** Week 2 - Operators and Descriptives
