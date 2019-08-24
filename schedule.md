@@ -284,7 +284,7 @@ So ignoring potential problems with big and open data for now, read about two in
 
 > For your discussion topic this week, find one data-driven blog post from Ben Wellington's [I Quant NY](http://iquantny.tumblr.com/) and/or OK Cupid's [OK Trends](https://theblog.okcupid.com/tagged/data) where you discovered something cool that you did not know, and share it with the group. In your post highlight what is interesting about the example, and what data made it possible.
 
-**Post your reflection as a new pin on [YellowDig](https://canvas.asu.edu/courses/29528/assignments/656491).**
+**Please post your reflection as a new pin on [YellowDig](https://canvas.asu.edu/courses/29528/assignments/656491).**
 
 <br>
 
@@ -346,6 +346,9 @@ Be warned up-front, this assignment might be overwhelming in you are wading into
 [r-bloggers](https://www.r-bloggers.com/)
 
 <br>
+
+**Please post your reflection as a new pin on [YellowDig](https://canvas.asu.edu/courses/29528/assignments/656491).**
+
 <br>
 
 
