@@ -347,9 +347,17 @@ Be warned up-front, this assignment might be overwhelming in you are wading into
 
 <br>
 
-**Please post your reflection as a new pin on [YellowDig](https://canvas.asu.edu/courses/29528/assignments/656491).**
+**Please post your reflection as a new pin on YellowDig:**
+
+
+
+<a class="uk-button uk-button-primary" href="https://www.yellowdig.com/board/40500">YELLOWDIG</a>
 
 <br>
+<br>
+
+
+
 
 
 *** { @unit = "Due Sept 5th", @title = "Lab 02", @assignment  }
