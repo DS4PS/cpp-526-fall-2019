@@ -18,14 +18,25 @@ Note that there will not be review sessions on the following days. Feel free to 
 
 ### TIMES: 
 
-Mon 12pm - 1pm:  523 Program Eval
-Mon  1pm - 2pm:  526 Data Science
 ---
+
+Mon 12pm - 1pm:  523 Program Eval  
+Mon  1pm - 2pm:  526 Data Science  
+
+---
+
 Tues 5pm - 6pm:  523 Program Eval
-Tues 6pm - 7pm:  526 Data Science
+Tues 6pm - 7pm:  526 Data Science  
+
 ---
+
 Wed  5pm - 6pm:  526 Data Science
 Wed  6pm - 7pm:  523 Program Eval
+
+---
+
+<br>
+
 
 ### LOCATION: 
 
