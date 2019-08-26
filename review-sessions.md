@@ -57,12 +57,17 @@ Or if you need to schedule office hours:
 <br>
 
 
-# Video Archives
+# Content and Archives
 
 Recorded videos of review sessions will be posted here. 
 
 
+Week 2:  
 
+* Handouts: 
+  - [ [Base R Cheet Sheet](https://www.rstudio.com/wp-content/uploads/2016/05/base-r.pdf) ]
+  - [ [Helpful Vocabulary](https://github.com/DS4PS/dp4ss-textbook/raw/master/resources/ch-001_handout1_r_vocabulary.pdf) ]
+* Scripts  [ [right-click and save](https://raw.githubusercontent.com/DS4PS/cpp-526-fall-2019/master/review-sessions/week-01.R) ]
 
 <br>
 <br>
