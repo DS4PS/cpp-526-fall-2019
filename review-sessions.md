@@ -43,7 +43,9 @@ Wed  6pm - 7pm:  523 Program Eval
 You can attend the session in-person if you are on campus, or virtually:
 
 **In-Person**: Policy Analytics Lab: 4th Floor of UCENT (take a left off the elevators)
-**Virtually**: Zoom session: https://asu.zoom.us/j/944016877 
+**Virtually**: Zoom session: https://asu.zoom.us/j/944016877   
+
+Or if you need to schedule office hours:
 
 **Virtual Office Hours**:  [Scheduling App](https://calendly.com/lecy/15min?month=2019-08)
 
