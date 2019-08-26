@@ -17,6 +17,8 @@ course_url:         "http://ds4ps.org/cpp-526-fall-2019/"
 permalink:          /:title/
 
 
+# calendly app for virtual office hours
+calendly:  'https://calendly.com/lecy/15min'
 
 # Header text on the left
 brand:
