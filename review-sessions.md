@@ -8,10 +8,10 @@ layout: default
 
 # Review Sessions
 
-Note that there will not be review sessions on the following days. Feel free to schedule virtual office hours those weeks if are need help (see link below). 
+Please note that there will **NOT** be review sessions on the following days. Feel free to schedule virtual office hours those weeks if are need help (see link below). 
 
-* Wednesday, Sept 4th
-* Monday, Sept 30th
+* **Wednesday, Sept 4th**
+* **Monday, Sept 30th**
 
 
 
