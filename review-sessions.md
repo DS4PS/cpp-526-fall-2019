@@ -25,13 +25,13 @@ Mon  1pm - 2pm:  526 Data Science
 
 ---
 
-Tues 5pm - 6pm:  523 Program Eval
-Tues 6pm - 7pm:  526 Data Science  
+Tues 5pm - 6pm:  523 Program Eval  
+Tues 6pm - 7pm:  526 Data Science   
 
 ---
 
-Wed  5pm - 6pm:  526 Data Science
-Wed  6pm - 7pm:  523 Program Eval
+Wed  5pm - 6pm:  526 Data Science  
+Wed  6pm - 7pm:  523 Program Eval  
 
 ---
 
