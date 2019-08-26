@@ -79,8 +79,13 @@ URL <- "https://raw.githubusercontent.com/DS4PS/Data-Science-Class/master/DATA/s
 dat <- read.csv( URL, stringsAsFactors=FALSE )
 ```
 
+Note that referencing variables in R requires both the **dataset name** and **variable name**, separated by the `$` operator:
 
+```{r, eval=F}
+summary( dat$acres )
+```
 
+Unlike other stats programs, you can have several datasets loaded at the same time in R. They will often have variables with the same name (if you create a subset, for example, and save it as a new object you will have two datasets with identical names). To avoid conflicts R forces you to use the `dataset$variable` convention.
 
 
 <br><br>
@@ -143,11 +148,6 @@ Your solution should include a written response to the question, as well as the 
 
 **HELPFUL HINTS:**
 
-Referencing variables in R requires both the **dataset name** and **variable name**, separated by the `$` operator:
-
-```{r, eval=F}
-summary( dat$acres )
-```
 
 When you apply a **sum()** function to a numeric vector it returns the sum of all elements in the vector. 
 
