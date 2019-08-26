@@ -2,6 +2,10 @@
 .DS_Store
 node_modules
 
+# Microsoft
+.ppt
+.pptx
+
 # Jekyllg
 _site
 .sass-cache
