@@ -50,8 +50,12 @@ You can attend the session in-person if you are on campus, or virtually:
 
 Or if you need to schedule office hours:
 
-**Virtual Office Hours**:  [Scheduling App](https://calendly.com/lecy/15min?month=2019-08)
+**Virtual Office Hours**: 
 
+<!-- Calendly inline widget begin -->
+<div class="calendly-inline-widget" data-url="https://calendly.com/lecy/15min" style="min-width:320px;height:630px;"></div>
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
+<!-- Calendly inline widget end -->
 
 
 <br>
