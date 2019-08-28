@@ -66,7 +66,11 @@ Or if you need to schedule office hours:
 Recorded videos of review sessions will be posted here. 
 
 
-Week 2:  
+**Week 1:**
+
+* Video from Intro to Data Science session [ [link](https://youtu.be/oC1xz97aoYI) ]
+
+**Week 2:**
 
 * Handouts: 
   - **Data Science:**
