@@ -372,6 +372,9 @@ Be warned up-front, this assignment might be overwhelming in you are wading into
 *** { @unit = "Due Sept 9th", @title = "Discussion Topic", @assignment  }
 
 
+
+
+
 *** { @unit = "Due Sept 12th", @title = "Lab 03", @assignment  }
 
 
@@ -382,6 +385,67 @@ Be warned up-front, this assignment might be overwhelming in you are wading into
 
 
 *** { @unit = "Due Sept 16th", @title = "Discussion Topic", @assignment  }
+
+<br>
+<br>
+
+## GitHub for Government
+
+Hear me out. The government is just one big open-source project. 
+
+Except currently the source code is only edited irregularly by one giant team, and they debate every single change, and then vote on it. 
+
+The code is now millions of lines long, and most of it doesn't do what it was originally designed for, but it is too exhausting to make changes so they just leave it. There are lots of bugs, and many features do not work.
+
+Despite the flaws, the code somehow still functions (albeit very slowly now, like really slow), and the fan is making funny noises, and sometimes we get a blue screen during the budget process and it shuts down for a few weeks. But when it is re-started, it still kinda works. 
+
+---
+
+It's an imperfect metaphor, but many people have theorized that government can learn a lot from how open source projects are managed (or governed if we are being precise). 
+
+<br>
+<div style="max-width:854px"><div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://embed.ted.com/talks/clay_shirky_how_the_internet_will_one_day_transform_government" width="854" height="480" style="position:absolute;center:0;top:0;width:100%;height:100%" frameborder="0" scrolling="no" allowfullscreen></iframe></div></div>
+<br>
+
+There's been some uptake of these ideas:
+
+[http://open.innovatesf.com/openlaw/](http://open.innovatesf.com/openlaw/)
+
+
+### GitHub’s official Government Evangelist
+
+> Ben Balter wants to get all up in the U.S. government’s code, and he thinks you should be able to as well. Balter, a Washington, D.C.-based lawyer, is GitHub’s official Government Evangelist. His purpose: to educate government agencies about adopting open-source software.
+
+My favorite Ben Balter project was something simple. GIS files are notoriously large and hard to work with (for some reason GIS shapefiles still split data into five separate files that you have to keep together for them to work properly). 
+
+The open source community has created some better data structures that are more efficient and easier to share (geoJSON files), but the geographers that work for cities were all trained on ArcGIS products so it's all they know! Ben wrote a script that downloaded all of Washington DC's open data files, converted them to better formats, then uploaded them to GitHub so others have access. 
+
+https://github.com/benbalter/dc-maps
+
+It might seem trivial - but geoJSON files can be read into R directly from GitHub, making it easy to deploy the data for a wide variety of purposes:
+
+```r
+library( geojsonio )
+library( sp )
+github <- "https://raw.githubusercontent.com/benbalter/dc-maps/master/maps/2006-traffic-volume.geojson"
+traffic <- geojson_read( x=github, method="local", what="sp" )
+plot( traffic, col="steelblue" )
+```
+**traffic data from dc**
+
+![](assets/img/dc-traffic.png)
+
+For this week, read about how GitHub has evolved to support government:
+
+https://readwrite.com/2014/08/14/github-government-ben-balter-open-source/
+
+**On YellowDig join the discussion about the challenges of trying to open-source government.**
+
+<a class="uk-button uk-button-primary" href="https://www.yellowdig.com/board/40500">YELLOWDIG</a>
+
+<br>
+<br>
+
 
 
 *** { @unit = "Due Sept 19th", @title = "Lab 04", @assignment  }
