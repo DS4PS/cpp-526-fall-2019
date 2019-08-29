@@ -45,7 +45,7 @@ article {
   padding-left:20%;
 }
 em {
-  color: black important!;
+  color: black !important;
 }
 </style>
 
