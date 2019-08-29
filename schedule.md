@@ -324,6 +324,11 @@ You can also check out Ben's [Ted Talk](https://www.youtube.com/watch?v=6xsvGYIx
 
 
 
+
+
+
+
+
 ** Week 2 - Operators and Descriptives
 
 *** { @unit = "", @title = "Week 2 Reflection Point", @foldout }
@@ -406,13 +411,26 @@ Be warned up-front, this assignment might be overwhelming in you are wading into
 
 
 
+
+
+
+
+
+
+
 ** Week 3 - Visualization
 
 
 *** { @unit = "Due Sept 9th", @title = "Discussion Topic", @assignment  }
 
 
+People naturally go through a few phases. When you start out, you don’t have many tips and techniques at your disposal. So, you are forced to do the simplest thing possible using the simplest ideas. And sometimes you face problems that are really hard to solve, because you don’t know quite the right techniques yet. So, the very earliest phase, you’ve got a few techniques that you understand really well, and you apply them everywhere because those are the techniques you know.
 
+And the next stage that a lot of people go through, is that you learn more techniques, and more complex ways of solving problems, and then you get excited about them and start to apply them everywhere possible. So instead of using the simplest possible solution, you end up creating something that’s probably overly complex or uses some overly general formulation.
+
+And then eventually you get past that and it’s about understanding, “what are the techniques at my disposal? Which techniques fit this problem most naturally? How can I express myself as clearly as possible, so I can understand what I am doing, and so other people can understand what I am doing?” I talk about this a lot but think explicitly about code as communication. You are obviously telling the computer what to do, but ideally you want to write code to express what it means or what it is trying to do as well, so when others read it and when you in the future reads it, you can understand some of the reasoning.
+
+https://www.r-bloggers.com/advice-to-young-and-old-programmers-a-conversation-with-hadley-wickham/
 
 
 *** { @unit = "Due Sept 12th", @title = "Lab 03", @assignment  }
