@@ -44,6 +44,9 @@ iframe {
 article {
   padding-left:20%;
 }
+em {
+  color: black important!;
+}
 </style>
 
 
