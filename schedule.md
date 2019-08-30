@@ -451,7 +451,7 @@ Be warned up-front, this assignment might be overwhelming in you are wading into
 
 ## Lab-02 - Constructing Groups
 
-<a class="uk-button uk-button-default" href="https://ds4ps.org/cpp-526-fall-2019/labs/lab-02-instructions.html">LAB-02 Instructions</a>
+<a class="uk-button uk-button-default" href="https://ds4ps.org/cpp-526-fall-2019/LABS/lab-02-instructions.html">LAB-02 Instructions</a>
 
 ## Submit Solutions to Canvas:
 
