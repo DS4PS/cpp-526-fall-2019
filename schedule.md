@@ -463,6 +463,8 @@ Read the following sections from the [course chapter on groups](http://ds4ps.org
 - 2.1 Compound Logical Statements  
 - 2.2 The Opposite-Of Operator  
 
+The rest of the chapter is useful information to come back to, but not needed for the lab. Similar to last week the chapter will highlight some easy ways to make errors with your code, not to convince you that R is hard, but rather to ensure you are paying attention to some subtle features of computer languages that can impact your data. 
+
 <a class="uk-button uk-button-default" href="https://ds4ps.org/cpp-526-fall-2019/LABS/lab-02-instructions.html">LAB-02 Instructions</a>
 
 ## Submit Solutions to Canvas:
