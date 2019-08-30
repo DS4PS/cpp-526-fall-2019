@@ -361,7 +361,39 @@ You can also check out Ben's [Ted Talk](https://www.youtube.com/watch?v=6xsvGYIx
 
 
 
-*** { @unit = "", @title = "Unit Overview" }
+*** { @unit = "", @title = "Unit Overview", #foldout }
+
+
+## Description
+
+This section introduces logical statements used to create custom groups from your data.  
+
+
+## Learning Objectives
+
+Once you have completed this section you will be able to 
+* translate human language phrases to a computer language
+* create subsets of data 
+
+## Assigned Reading
+
+Required:
+
+[Group Construction with Logical Statements](http://ds4ps.org/dp4ss-textbook/p-050-business-logic.html)
+
+
+
+## Lab 
+
+Lab-02 covers the following topics:
+
+* Logical operators
+* Group construction 
+
+<br>
+<br>
+
+
 
 
 *** { @unit = "Due Sept 2nd", @title = "Discussion Topic: A Tour of R Packages", @assignment, @foldout  }
@@ -405,9 +437,21 @@ Be warned up-front, this assignment might be overwhelming in you are wading into
 
 
 
-*** { @unit = "Due Sept 5th", @title = "Lab 02", @assignment  }
+*** { @unit = "Due Sept 5th", @title = "Lab 02", @assignment, @foldout }
 
+<br>
+<br>
 
+## Lab-02 - Constructing Groups
+
+<a class="uk-button uk-button-default" href="https://ds4ps.org/cpp-526-fall-2019/labs/lab-02-instructions.html">LAB-02 Instructions</a>
+
+## Submit Solutions to Canvas:
+
+<a class="uk-button uk-button-primary" href="https://canvas.asu.edu/courses/29528/assignments/764453">SUBMIT LAB-02</a>
+
+<br>
+<br>
 
 
 
