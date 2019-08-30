@@ -245,9 +245,11 @@ Your solution should include a written response to the question, as well as the 
 
 # Submission Instructions
 
-When you have completed your assignment, knit your RMD file to generate your rendered HTML file. Platforms like BlackBoard and Canvas often disallow you from submitting HTML files when there is embedded computer code, so create a zipped folder with both the RMD and HTML files.
+When you have completed your assignment, knit your RMD file to generate your rendered HTML file. 
 
-Login to Canvas at <http://canvas.asu.edu> and navigate to the assignments tab in the course repository. Upload your zipped folder to the appropriate lab submission link.
+Login to Canvas at <http://canvas.asu.edu> and navigate to the assignments tab in the course repository. Upload your HTML and RMD files to the appropriate lab submission link.
+
+Platforms like BlackBoard and Canvas sometimes disallow you from submitting HTML files when there is embedded computer code. If this happens create a zipped folder with both the RMD and HTML files.
 
 Remember to:
 
