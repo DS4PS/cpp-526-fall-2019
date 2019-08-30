@@ -413,13 +413,13 @@ You might not have heard, but [nerd is the new black](https://www.wsj.com/articl
 
 But what is R, and what are the ~~nerds~~ cool kids using it for? 
 
-**This week, your task is to explore a few blogs about tools in R and find one package or application that you are excited about. It can be an analytics package, a graphics package, a specific application, or otherwise.**
+**This week, your task is to explore a few blogs about tools in R and find one package or application that you are excited about. It can be an analytics package, a graphics package, a specific application, or a tutorial on a topic that interests you. I don't expect you use of understand the package or tutorial, rather just identify a tool that would be useful given your interests.**
 
 Mine, personally, was the package that allows you to create comic strip graphics in R:
 
 [xkcd comics](https://stackoverflow.com/questions/12675147/how-can-we-make-xkcd-style-graphs)
 
-Be warned up-front, this assignment might be overwhelming in you are wading into a new community where the technical language is unfamiliar and the volume of information vast. There are currently over 13,000 packages available in R! That is partly the point of the assignment - recognizing the sheer volume of creativity surrounding the R community. But also learning how to find some sources that make the content accessible. Here are a few to get you started:
+Take note, this assignment asks you to explore a new community where the technical language is unfamiliar and the volume of information vast. There are currently over 15,000 packages available in R! Part of the goal of the assignment is to recognize the sheer volume of creativity in the R community and the scope of work that can be done with the language. But the immediate learning objective is to find some sources that make the content accessible. Here are a few to get you started:
 
 [awesome r](https://awesome-r.com/)
 
@@ -428,6 +428,8 @@ Be warned up-front, this assignment might be overwhelming in you are wading into
 [best of r blogs](https://blog.feedspot.com/r_programming_blogs/)
 
 [r-bloggers](https://www.r-bloggers.com/)
+
+[data science podcasts](https://ds4ps.org/careers/#data-science-podcasts)
 
 <br>
 
