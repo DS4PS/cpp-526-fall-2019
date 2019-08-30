@@ -453,6 +453,16 @@ Take note, this assignment asks you to explore a new community where the technic
 
 ## Lab-02 - Constructing Groups
 
+Read the following sections from the [course chapter on groups](http://ds4ps.org/dp4ss-textbook/p-050-business-logic.html) before starting the lab:
+
+1 Constructing Groups    
+- 1.1 Logical Operators  
+- 1.2 Selector Vectors  
+- 1.3 Usefulness of Selector Vectors  
+2 Subsets  
+- 2.1 Compound Logical Statements  
+- 2.2 The Opposite-Of Operator  
+
 <a class="uk-button uk-button-default" href="https://ds4ps.org/cpp-526-fall-2019/LABS/lab-02-instructions.html">LAB-02 Instructions</a>
 
 ## Submit Solutions to Canvas:
