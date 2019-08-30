@@ -197,9 +197,7 @@ We will need three tools to manage your data science projects: a data programmin
 * Discussion boards 
 
 
-## Starting to Code
-* Scripts 
-* Comments 
+## Starting to Code 
 * [Style Guides](https://jef.works/R-style-guide/) 
 * [RMD File Styles and Knitting Tips](https://ds4ps.org/cpp-526-fall-2019/labs/r-markdown-files.html)
 
@@ -216,26 +214,10 @@ We will need three tools to manage your data science projects: a data programmin
   - Factors (ordered vs unordered) 
   - Logical (true/false) 
 * Checking Vector Types
-
-## Working with Vectors
-* Built-In Vectors: e.g. LETTERS
-* Generating Vectors
-* Missing Values and Non-Numbers
-* Empty vectors: NULL
-
-
-## Altering Vectors
-* Defining factors, relevel()
-* Recoding Values 
-* Find and replace
-* Variable Transformations
-  - Vectorized addition
-  - Defining new vector as function of others:  ifelse(), gsub(), [] <- 
 * Casting 
-* Implicit Casting (coercion)
+  - Implicit Casting (coercion)
 
-
-## Identifying Groups within Data 
+## Identifying Groups within Data [ [CH-10](http://ds4ps.org/dp4ss-textbook/p-050-business-logic.html) ]
 * Set theory as categories and membership 
 * Logical Operators 
   - equal
@@ -249,7 +231,8 @@ We will need three tools to manage your data science projects: a data programmin
   - from categorical variables
   - from numeric variables
   - missing values as a group
-
+* Recoding Values 
+* Find and replace
 
 
 # Two-Dimensional Datasets
