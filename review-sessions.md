@@ -82,7 +82,19 @@ Recorded videos of review sessions will be posted here.
 * **Video** from Monday's Session [ [link](https://youtu.be/uHlRC38Vwxo) ]  
 
 <br>
+
+**Week 3:**
+ 
+* **Data Science:**
+  - Compound Statements Hints [ [pdf](https://github.com/DS4PS/cpp-526-fall-2019/raw/master/review-sessions/week-02-logical-statements.pdf) ]  
+  - Logical Statements Practice [ [R script](https://raw.githubusercontent.com/DS4PS/cpp-526-fall-2019/master/review-sessions/week-02-logical-statements-practice.R) ]  (right click to save)
+* **Program Eval**
+  - Interpretation of Program Impact [ [pdf](https://github.com/DS4PS/cpp-526-fall-2019/raw/master/review-sessions/p-05-program-impact.pdf) ]   
+  - Intro to Control Variables: Ballentine Venn Diagrams [ [pdf](https://github.com/DS4PS/cpp-526-fall-2019/raw/master/review-sessions/p-06-control-variables.pdf) ]  
+  
 <br>
+<br>
+
 
 
 </div>
