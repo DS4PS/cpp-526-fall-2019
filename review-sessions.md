@@ -91,6 +91,7 @@ Recorded videos of review sessions will be posted here.
 * **Program Eval**
   - Interpretation of Program Impact [ [pdf](https://github.com/DS4PS/cpp-526-fall-2019/raw/master/review-sessions/p-05-program-impact.pdf) ]   
   - Intro to Control Variables: Ballentine Venn Diagrams [ [pdf](https://github.com/DS4PS/cpp-526-fall-2019/raw/master/review-sessions/p-06-control-variables.pdf) ]  
+* **Video** from Tuesday's session [ [link](https://asu.zoom.us/recording/play/Srhs7u-Q_l9aCq_ZUiZalDk17AUAnFWze4LD4d6uNRSjVtGwMd4WnEoFDNPr9hPO?continueMode=true) ]
   
 <br>
 <br>
