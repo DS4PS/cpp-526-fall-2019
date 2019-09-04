@@ -46,7 +46,7 @@ Wed  6pm - 7pm:  523 Program Eval
 You can attend the session in-person if you are on campus, or virtually:
 
 **In-Person**: Policy Analytics Lab: 4th Floor of UCENT (take a left off the elevators)
-**Virtually**: Zoom session: https://asu.zoom.us/j/944016877   
+**Virtually**: Zoom session: [https://asu.zoom.us/j/944016877](https://asu.zoom.us/j/944016877 )     
 
 Or if you need to schedule office hours:
 
@@ -82,7 +82,19 @@ Recorded videos of review sessions will be posted here.
 * **Video** from Monday's Session [ [link](https://youtu.be/uHlRC38Vwxo) ]  
 
 <br>
+
+**Week 3:**
+ 
+* **Data Science:**
+  - Compound Statements Hints [ [pdf](https://github.com/DS4PS/cpp-526-fall-2019/raw/master/review-sessions/week-02-logical-statements.pdf) ]  
+  - Logical Statements Practice [ [R script](https://raw.githubusercontent.com/DS4PS/cpp-526-fall-2019/master/review-sessions/week-02-logical-statements-practice.R) ]  (right click to save)
+* **Program Eval**
+  - Interpretation of Program Impact [ [pdf](https://github.com/DS4PS/cpp-526-fall-2019/raw/master/review-sessions/p-05-program-impact.pdf) ]   
+  - Intro to Control Variables: Ballentine Venn Diagrams [ [pdf](https://github.com/DS4PS/cpp-526-fall-2019/raw/master/review-sessions/p-06-control-variables.pdf) ]  
+  
 <br>
+<br>
+
 
 
 </div>
