@@ -527,10 +527,29 @@ Once you have completed this section you will be able to:
 
 Required:
 
-[The plot() Function]  
-[The Canvas]  
-[Custom Graphics]  
 
+[The plot() Function](http://ds4ps.org/dp4ss-textbook/p-061-plot-basics.html)
+[The Canvas]  
+[Graphics Functions]()  
+
+Suggested:
+
+[Intro. to Data Viz](http://ds4ps.org/dp4ss-textbook/p-060-intro-to-data-viz.html)
+
+*Help with R graphics:* 
+
+* [R Graph Gallery](https://www.r-graph-gallery.com/)  
+* [R Graph Catalog](http://shiny.stat.ubc.ca/r-graph-catalog/)  
+* [R Graph Compendium](http://shinyapps.org/apps/RGraphCompendium/index.php)  
+* [ggplot2 Geoms Gallery](https://ggplot2.tidyverse.org/reference/)  
+
+*Inspiration:*
+
+* [Makeover Mondays](http://www.makeovermonday.co.uk/gallery/)  
+* [Flowing Data](http://flowingdata.com/)  
+* [Junk Charts](http://junkcharts.typepad.com/junk_charts/)  
+* [NYT Graphics Blog](http://kpq.github.io/chartsnthings/)  
+* [Help Me Viz](https://twitter.com/HelpMeViz)  
 
 
 ## Lab 
