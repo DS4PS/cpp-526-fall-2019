@@ -528,9 +528,9 @@ Once you have completed this section you will be able to:
 Required:
 
 
-[The plot() Function](http://ds4ps.org/dp4ss-textbook/p-061-plot-basics.html)
-[The Canvas]  
-[Graphics Functions]()  
+[The plot() Function](http://ds4ps.org/dp4ss-textbook/p-061-plot-basics.html)  
+[The Plot Canvas]  
+[Core Graphing Functions]
 
 Suggested:
 
