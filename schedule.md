@@ -519,8 +519,13 @@ This section introduces the Core R graphics engine.
 ## Learning Objectives
 
 Once you have completed this section you will be able to:
-* Build a canvas for custom graphics 
-* Use the primary graphing functions (points(), lines(), axis(), text(), etc.) to build a graph with layers 
+* Use the plot() function 
+* Build custom graphics with base graphing commands:
+  * plot()  
+  * points()  
+  * lines(), abline()    
+  * text()  
+  * axis()  
 
 
 ## Assigned Reading
@@ -552,7 +557,7 @@ Suggested:
 
 ## Lab 
 
-Lab-03 covers the following topics:
+Lab-03 introduces the primary plotting functions used to build graphics. 
 
 * plot()  
 * points()  
@@ -560,6 +565,9 @@ Lab-03 covers the following topics:
 * text()  
 * axis()  
 
+The lab requires you to re-create a graph that was featured in the New York Times:
+
+![](assets/img/pitcher-dominance.png)
 
 <br>
 <br>
