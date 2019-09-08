@@ -336,7 +336,7 @@ The goal of data wrangling is to create a **rodeo dataset** (clean and well-stru
 * Tufte’s rules 
 * Visual tragedies 
 
-## Core Graphics Engine
+## Core Graphics Engine [ [Intro](http://ds4ps.org/dp4ss-textbook/p-060-intro-to-data-viz.html) ] [ [Core](http://ds4ps.org/dp4ss-textbook/p-061-plot-basics.html) ] [ [Custom](http://ds4ps.org/dp4ss-textbook/p-062-customized-graphics.html) ] 
 * Defining a canvas: xlim, ylim
 * Adding data
 * Type (point, line, both)
