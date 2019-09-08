@@ -1,0 +1,99 @@
+---
+title: 'Lab 03 - Graphics'
+author: 'Your Name Here'
+output:
+  html_document:
+    theme: readable
+    df_print: paged
+    highlight: tango
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message=F, warning=F, fig.width=10, fig.height=8)
+library( dplyr )
+library( pander )
+```
+
+
+
+<br><br>
+
+## Strikeouts on the Rise
+
+This lab offers a replication of the following [NYT Graphic](https://archive.nytimes.com/www.nytimes.com/interactive/2013/03/29/sports/baseball/Strikeouts-Are-Still-Soaring.html?_r=0&ref=baseball) using core graphics in R. 
+
+![](https://raw.githubusercontent.com/DS4PS/cpp-526-fall-2019/master/LABS/images/strikeouts.png)
+
+
+
+
+<br><br>
+
+# Data
+
+The data comes from the Lahman baseball data package. The **Teams** dataset contains season statistics for each baseball team from the late 1800s onward. 
+
+
+```{r load_data}
+# install.packages( "Lahman" )
+library( Lahman )
+data( Teams )
+```
+
+
+```{r, echo=F}
+head( Teams )
+```
+
+
+For the lab you will use the following variables:
+
+```{r}
+ave.so <- Teams$SO / Teams$G
+year <- Teams$yearID
+
+# min and max values needed to create your plot window 
+ave.so.min <- min( ave.so, na.rm=T )
+ave.so.max <- max( ave.so, na.rm=T )
+
+# the league average for each season
+league.ave <- tapply( X=ave.so, INDEX=as.factor(year), FUN="mean", na.rm=T )
+league.year <- as.numeric( names( league.ave ) )
+```
+
+
+<br><br>
+
+
+
+
+
+
+
+
+# Solution 
+
+Present a single graph with all of the steps below incorporated. 
+
+**your code goes here**
+
+Your final plot should be as similar as possible to the NYT graphic. 
+
+<br><br>
+
+
+
+
+# Submission Instructions
+
+When you submit your file, please do not zip them this time. Canvas seems to manage the HTML files fine, and it is much easier for me to grade when they are not zipped! 
+
+Login to Canvas at <http://canvas.asu.edu> and navigate to the assignments tab in the course repository. Upload your zipped folder to the appropriate lab submission link.
+
+Remember to:
+
+* name your files according to the convention: **Lab-##-LastName.Rmd**
+* show your solution, include your code.
+* do not print excessive output (like a full data set).
+* follow appropriate style guidelines (spaces between arguments, etc.).
+
