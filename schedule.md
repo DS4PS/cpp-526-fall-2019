@@ -520,8 +520,7 @@ This section introduces the Core R graphics engine.
 
 Once you have completed this section you will be able to:
 * Use the plot() function 
-* Build custom graphics with base graphing commands:
-  * plot()  
+* Build custom graphics with base graphing commands: 
   * points()  
   * lines(), abline()    
   * text()  
@@ -531,6 +530,8 @@ Once you have completed this section you will be able to:
 ## Assigned Reading
 
 Required:
+
+Please skim these chapters before starting your lab. Sample code has been provided for each lab question, but you may need the chapters and the R help files to find specific arguments. 
 
 [The plot() Function](http://ds4ps.org/dp4ss-textbook/p-061-plot-basics.html)  
 [Building Custom Graphics](http://ds4ps.org/dp4ss-textbook/p-062-customized-graphics.html)
@@ -600,7 +601,26 @@ You will find sites like the [R Graphs Gallery](https://www.r-graph-gallery.com/
 
 *** { @unit = "Due Sept 14th", @title = "Lab 03", @assignment  }
 
+<br>
+<br>
 
+## Lab-03 - Graphics
+
+This lab is designed to introduce you to core graphing functions in R by replicating a New York Times graphic.
+
+You are advised to **skim** the chapters on graphing functions and custom graphics in R, but sample code has been provided for each step of the lab. 
+
+[The plot() Function](http://ds4ps.org/dp4ss-textbook/p-061-plot-basics.html)  
+[Building Custom Graphics](http://ds4ps.org/dp4ss-textbook/p-062-customized-graphics.html)
+
+<a class="uk-button uk-button-default" href="https://ds4ps.org/cpp-526-fall-2019/LABS/lab-03-instructions.html">LAB-03 Instructions</a>
+
+## Submit Solutions to Canvas:
+
+<a class="uk-button uk-button-primary" href="https://canvas.asu.edu/courses/29528/assignments/775169">SUBMIT LAB-03</a>
+
+<br>
+<br>
 
 
 
