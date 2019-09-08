@@ -633,11 +633,30 @@ You are advised to **skim** the chapters on graphing functions and custom graphi
 ** Week 4 - Dynamic Visualization 
 
 
+*** { @unit = "", @title = "Demo of Shiny Widgets", @foldout }
+
+<br>
+[Download Shiny Widgets Demo](https://cdn.rawgit.com/DS4PS/Data-Science-Class/53c986f1/TEMPLATES/ShinyWidgetsDemo.Rmd
+)
+
+<br>
+
+
+
+*** { @unit = "", @title = "Week 4 Reflection" }
+
+
+
+*** { @unit = "", @title = "Unit Overview" }
+
+
+
+
+
 *** { @unit = "MON Sept 16th", @title = "Discussion Topic", @assignment  }
 
 <br>
 <br>
-
 
 
 
