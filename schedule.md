@@ -599,7 +599,7 @@ You will find sites like the [R Graphs Gallery](https://www.r-graph-gallery.com/
 
 
 
-*** { @unit = "SUN Sept 15th", @title = "Lab 03", @assignment  }
+*** { @unit = "SUN Sept 15th", @title = "Lab 03", @assignment, @foldout  }
 
 <br>
 <br>
