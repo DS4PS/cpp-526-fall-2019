@@ -486,19 +486,125 @@ The rest of the chapter is useful information to come back to, but not needed fo
 ** Week 3 - Visualization
 
 
-*** { @unit = "Due Sept 9th", @title = "Discussion Topic", @assignment  }
+*** { @unit = "", @title = "Week 3 Reflection Point", @foldout  }
 
 
-People naturally go through a few phases. When you start out, you don’t have many tips and techniques at your disposal. So, you are forced to do the simplest thing possible using the simplest ideas. And sometimes you face problems that are really hard to solve, because you don’t know quite the right techniques yet. So, the very earliest phase, you’ve got a few techniques that you understand really well, and you apply them everywhere because those are the techniques you know.
+<br>
 
-And the next stage that a lot of people go through, is that you learn more techniques, and more complex ways of solving problems, and then you get excited about them and start to apply them everywhere possible. So instead of using the simplest possible solution, you end up creating something that’s probably overly complex or uses some overly general formulation.
+### Advice on Learning R
 
-And then eventually you get past that and it’s about understanding, “what are the techniques at my disposal? Which techniques fit this problem most naturally? How can I express myself as clearly as possible, so I can understand what I am doing, and so other people can understand what I am doing?” I talk about this a lot but think explicitly about code as communication. You are obviously telling the computer what to do, but ideally you want to write code to express what it means or what it is trying to do as well, so when others read it and when you in the future reads it, you can understand some of the reasoning.
+> People naturally go through a few phases. When you start out, you don’t have many tips and techniques at your disposal. So, you are forced to do the simplest thing possible using the simplest ideas. And sometimes you face problems that are really hard to solve, because you don’t know quite the right techniques yet. So, the very earliest phase, you’ve got a few techniques that you understand really well, and you apply them everywhere because those are the techniques you know.
+> 
+> And the next stage that a lot of people go through, is that you learn more techniques, and more complex ways of solving problems, and then you get excited about them and start to apply them everywhere possible. So instead of using the simplest possible solution, you end up creating something that’s probably overly complex or uses some overly general formulation.
+> 
+> And then eventually you get past that and it’s about understanding, “what are the techniques at my disposal? Which techniques fit this problem most naturally? How can I express myself as clearly as possible, so I can understand what I am doing, and so other people can understand what I am doing?” I talk about this a lot but think explicitly about code as communication. You are obviously telling the computer what to do, but ideally you want to write code to express what it means or what it is trying to do as well, so when others read it and when you in the future reads it, you can understand some of the reasoning.
 
-https://www.r-bloggers.com/advice-to-young-and-old-programmers-a-conversation-with-hadley-wickham/
+~ Hadley Wickham [Advice to Young and Old R Programmers](https://www.r-bloggers.com/advice-to-young-and-old-programmers-a-conversation-with-hadley-wickham/)
+
+<br>
+<br>
 
 
-*** { @unit = "Due Sept 12th", @title = "Lab 03", @assignment  }
+
+*** { @unit = "", @title = "Unit Overview", @foldout }
+
+
+<br>
+
+## Description
+
+This section introduces the Core R graphics engine. 
+
+
+## Learning Objectives
+
+Once you have completed this section you will be able to:
+* Use the plot() function 
+* Build custom graphics with base graphing commands:
+  * plot()  
+  * points()  
+  * lines(), abline()    
+  * text()  
+  * axis()  
+
+
+## Assigned Reading
+
+Required:
+
+[The plot() Function](http://ds4ps.org/dp4ss-textbook/p-061-plot-basics.html)  
+[Building Custom Graphics](http://ds4ps.org/dp4ss-textbook/p-062-customized-graphics.html)
+
+Suggested:
+
+[Intro. to Data Viz](http://ds4ps.org/dp4ss-textbook/p-060-intro-to-data-viz.html)
+
+*Help with R graphics:* 
+
+* [R Graph Gallery](https://www.r-graph-gallery.com/)  
+* [R Graph Catalog](http://shiny.stat.ubc.ca/r-graph-catalog/)  
+* [R Graph Compendium](http://shinyapps.org/apps/RGraphCompendium/index.php)  
+* [ggplot2 Geoms Gallery](https://ggplot2.tidyverse.org/reference/)  
+
+*Inspiration:*
+
+* [Makeover Mondays](http://www.makeovermonday.co.uk/gallery/)  
+* [Flowing Data](http://flowingdata.com/)  
+* [Junk Charts](http://junkcharts.typepad.com/junk_charts/)  
+* [NYT Graphics Blog](http://kpq.github.io/chartsnthings/)  
+* [Help Me Viz](https://twitter.com/HelpMeViz)  
+
+
+## Lab 
+
+Lab-03 introduces the primary plotting functions used to build graphics. 
+
+* plot()  
+* points()  
+* lines(), abline()    
+* text()  
+* axis()  
+
+The lab requires you to re-create a graph that was featured in the New York Times:
+
+![](assets/img/pitcher-dominance.png)
+
+<br>
+<br>
+
+
+
+
+
+
+*** { @unit = "Due Sept 9th", @title = "Discussion Topic: Data Viz Packages", @assignment, @foldout  }
+
+<br>
+<br>
+
+## R Graphics Packages
+
+This week you will begin working in the core R graphics engine. This discussion topic offers an opportunity to explore some of the myriad [graphics packages in R](https://cran.r-project.org/web/views/Graphics.html).
+
+Your task is to select a specialized graphic that you could use in your own (hypothetical) research or professional life, then describe what data or topic from your own work the visualization would be useful for. Reference the R package you would need for the task.
+
+For example, I might say that I work creating budgets for a government organization. I could use a [Sankey Diagram](https://www.getrichslowly.org/sankey-diagrams/) from the [D3 Package](https://www.r-graph-gallery.com/sankey-diagram/) to visualize our budget. 
+
+You will find sites like the [R Graphs Gallery](https://www.r-graph-gallery.com/) and [The Data Viz Project](https://datavizproject.com/) helpful.
+
+<br>
+<br>
+
+
+
+
+*** { @unit = "Due Sept 14th", @title = "Lab 03", @assignment  }
+
+
+
+
+
+
 
 
 
@@ -510,6 +616,34 @@ https://www.r-bloggers.com/advice-to-young-and-old-programmers-a-conversation-wi
 *** { @unit = "Due Sept 16th", @title = "Discussion Topic", @assignment  }
 
 <br>
+<br>
+
+
+
+
+
+*** { @unit = "Due Sept 19th", @title = "Lab 04", @assignment  }
+
+
+
+** Week 5 - Data Wrangling 
+
+
+*** { @unit = "Due Sept 23th", @title = "Discussion Topic", @assignment  }
+
+
+*** { @unit = "Due Sept 26th", @title = "Lab 05", @assignment  }
+
+
+
+
+** Week 6 - Data IO and Joins
+
+
+
+
+*** { @unit = "Due Sept 30th", @title = "Discussion Topic", @assignment  }
+
 <br>
 
 ## GitHub for Government
@@ -566,30 +700,7 @@ https://readwrite.com/2014/08/14/github-government-ben-balter-open-source/
 
 <a class="uk-button uk-button-primary" href="https://www.yellowdig.com/board/40500">YELLOWDIG</a>
 
-<br>
-<br>
-
-
-
-*** { @unit = "Due Sept 19th", @title = "Lab 04", @assignment  }
-
-
-
-** Week 5 - Data Wrangling 
-
-
-*** { @unit = "Due Sept 23th", @title = "Discussion Topic", @assignment  }
-
-
-*** { @unit = "Due Sept 26th", @title = "Lab 05", @assignment  }
-
-
-
-
-** Week 6 - Data IO and Joins
-
-
-*** { @unit = "Due Sept 30th", @title = "Discussion Topic", @assignment  }
+<br><br>
 
 
 *** { @unit = "Due Oct 3rd", @title = "Lab 06", @assignment  }
