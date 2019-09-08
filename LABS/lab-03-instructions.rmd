@@ -193,7 +193,7 @@ points( league.year, league.ave, type="b", pch=8, col="red" )
 For example:
 
 ```{r, eval=F}
-text( x, y, text="Strike zone enlarged /nfrom 1963 to 1968." )
+text( x, y, text="Strike zone enlarged \nfrom 1963 to 1968." )
 ```
 
 
