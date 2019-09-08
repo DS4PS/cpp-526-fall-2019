@@ -639,6 +639,8 @@ You are advised to **skim** the chapters on graphing functions and custom graphi
 [Download Shiny Widgets Demo](https://cdn.rawgit.com/DS4PS/Data-Science-Class/53c986f1/TEMPLATES/ShinyWidgetsDemo.Rmd
 )
 
+For more widget examples visit the [R Shiny Widget Gallery](https://shiny.rstudio.com/gallery/).
+
 <br>
 
 
