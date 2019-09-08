@@ -578,7 +578,7 @@ The lab requires you to re-create a graph that was featured in the New York Time
 
 
 
-*** { @unit = "Due Sept 9th", @title = "Discussion Topic: Data Viz Packages", @assignment, @foldout  }
+*** { @unit = "MON Sept 9th", @title = "Discussion Topic: Data Viz Packages", @assignment, @foldout  }
 
 <br>
 <br>
@@ -599,7 +599,7 @@ You will find sites like the [R Graphs Gallery](https://www.r-graph-gallery.com/
 
 
 
-*** { @unit = "Due Sept 14th", @title = "Lab 03", @assignment  }
+*** { @unit = "SUN Sept 15th", @title = "Lab 03", @assignment  }
 
 <br>
 <br>
@@ -633,7 +633,7 @@ You are advised to **skim** the chapters on graphing functions and custom graphi
 ** Week 4 - Dynamic Visualization 
 
 
-*** { @unit = "Due Sept 16th", @title = "Discussion Topic", @assignment  }
+*** { @unit = "MON Sept 16th", @title = "Discussion Topic", @assignment  }
 
 <br>
 <br>
@@ -642,17 +642,17 @@ You are advised to **skim** the chapters on graphing functions and custom graphi
 
 
 
-*** { @unit = "Due Sept 19th", @title = "Lab 04", @assignment  }
+*** { @unit = "THURS Sept 19th", @title = "Lab 04", @assignment  }
 
 
 
 ** Week 5 - Data Wrangling 
 
 
-*** { @unit = "Due Sept 23th", @title = "Discussion Topic", @assignment  }
+*** { @unit = "MON Sept 23th", @title = "Discussion Topic", @assignment  }
 
 
-*** { @unit = "Due Sept 26th", @title = "Lab 05", @assignment  }
+*** { @unit = "THURS Sept 26th", @title = "Lab 05", @assignment  }
 
 
 
@@ -662,7 +662,7 @@ You are advised to **skim** the chapters on graphing functions and custom graphi
 
 
 
-*** { @unit = "Due Sept 30th", @title = "Discussion Topic", @assignment  }
+*** { @unit = "MON Sept 30th", @title = "Discussion Topic", @assignment  }
 
 <br>
 
@@ -723,17 +723,17 @@ https://readwrite.com/2014/08/14/github-government-ben-balter-open-source/
 <br><br>
 
 
-*** { @unit = "Due Oct 3rd", @title = "Lab 06", @assignment  }
+*** { @unit = "THURS Oct 3rd", @title = "Lab 06", @assignment  }
 
 
 
 ** Week 7 - Dashboards
 
 
-*** { @unit = "Due Oct 7th", @title = "Discussion Topic", @assignment  }
+*** { @unit = "MON Oct 7th", @title = "Discussion Topic", @assignment  }
 
 
-*** { @unit = "Due Oct 10th", @title = "FINAL PROJECT", @assignment  }
+*** { @unit = "THURS Oct 10th", @title = "FINAL PROJECT", @assignment  }
 
 
 
