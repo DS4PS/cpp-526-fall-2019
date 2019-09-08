@@ -331,12 +331,12 @@ The goal of data wrangling is to create a **rodeo dataset** (clean and well-stru
 
 # Visualize 
 
-## Principles of Visual Communication
+## Principles of Visual Communication [ [Intro to Data Viz](http://ds4ps.org/dp4ss-textbook/p-060-intro-to-data-viz.html) ] 
 * Ground, figure, narrative (context, subject, action)
 * Tufte’s rules 
 * Visual tragedies 
 
-## Core Graphics Engine [ [Intro](http://ds4ps.org/dp4ss-textbook/p-060-intro-to-data-viz.html) ] [ [Core](http://ds4ps.org/dp4ss-textbook/p-061-plot-basics.html) ] [ [Custom](http://ds4ps.org/dp4ss-textbook/p-062-customized-graphics.html) ] 
+## Core Graphics Engine [ [Core](http://ds4ps.org/dp4ss-textbook/p-061-plot-basics.html) ] [ [Custom](http://ds4ps.org/dp4ss-textbook/p-062-customized-graphics.html) ] 
 * Defining a canvas: xlim, ylim
 * Adding data
 * Type (point, line, both)
