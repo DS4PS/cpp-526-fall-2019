@@ -520,8 +520,7 @@ This section introduces the Core R graphics engine.
 
 Once you have completed this section you will be able to:
 * Use the plot() function 
-* Build custom graphics with base graphing commands:
-  * plot()  
+* Build custom graphics with base graphing commands: 
   * points()  
   * lines(), abline()    
   * text()  
@@ -531,6 +530,8 @@ Once you have completed this section you will be able to:
 ## Assigned Reading
 
 Required:
+
+Please skim these chapters before starting your lab. Sample code has been provided for each lab question, but you may need the chapters and the R help files to find specific arguments. 
 
 [The plot() Function](http://ds4ps.org/dp4ss-textbook/p-061-plot-basics.html)  
 [Building Custom Graphics](http://ds4ps.org/dp4ss-textbook/p-062-customized-graphics.html)
@@ -577,7 +578,7 @@ The lab requires you to re-create a graph that was featured in the New York Time
 
 
 
-*** { @unit = "Due Sept 9th", @title = "Discussion Topic: Data Viz Packages", @assignment, @foldout  }
+*** { @unit = "MON Sept 9th", @title = "Discussion Topic: Data Viz Packages", @assignment, @foldout  }
 
 <br>
 <br>
@@ -598,9 +599,28 @@ You will find sites like the [R Graphs Gallery](https://www.r-graph-gallery.com/
 
 
 
-*** { @unit = "Due Sept 14th", @title = "Lab 03", @assignment  }
+*** { @unit = "SUN Sept 15th", @title = "Lab 03", @assignment, @foldout  }
 
+<br>
+<br>
 
+## Lab-03 - Graphics
+
+This lab is designed to introduce you to core graphing functions in R by replicating a New York Times graphic.
+
+You are advised to **skim** the chapters on graphing functions and custom graphics in R, but sample code has been provided for each step of the lab. 
+
+[The plot() Function](http://ds4ps.org/dp4ss-textbook/p-061-plot-basics.html)  
+[Building Custom Graphics](http://ds4ps.org/dp4ss-textbook/p-062-customized-graphics.html)
+
+<a class="uk-button uk-button-default" href="https://ds4ps.org/cpp-526-fall-2019/LABS/lab-03-instructions.html">LAB-03 Instructions</a>
+
+## Submit Solutions to Canvas:
+
+<a class="uk-button uk-button-primary" href="https://canvas.asu.edu/courses/29528/assignments/775169">SUBMIT LAB-03</a>
+
+<br>
+<br>
 
 
 
@@ -613,7 +633,7 @@ You will find sites like the [R Graphs Gallery](https://www.r-graph-gallery.com/
 ** Week 4 - Dynamic Visualization 
 
 
-*** { @unit = "Due Sept 16th", @title = "Discussion Topic", @assignment  }
+*** { @unit = "MON Sept 16th", @title = "Discussion Topic", @assignment  }
 
 <br>
 <br>
@@ -622,17 +642,17 @@ You will find sites like the [R Graphs Gallery](https://www.r-graph-gallery.com/
 
 
 
-*** { @unit = "Due Sept 19th", @title = "Lab 04", @assignment  }
+*** { @unit = "THURS Sept 19th", @title = "Lab 04", @assignment  }
 
 
 
 ** Week 5 - Data Wrangling 
 
 
-*** { @unit = "Due Sept 23th", @title = "Discussion Topic", @assignment  }
+*** { @unit = "MON Sept 23th", @title = "Discussion Topic", @assignment  }
 
 
-*** { @unit = "Due Sept 26th", @title = "Lab 05", @assignment  }
+*** { @unit = "THURS Sept 26th", @title = "Lab 05", @assignment  }
 
 
 
@@ -642,7 +662,7 @@ You will find sites like the [R Graphs Gallery](https://www.r-graph-gallery.com/
 
 
 
-*** { @unit = "Due Sept 30th", @title = "Discussion Topic", @assignment  }
+*** { @unit = "MON Sept 30th", @title = "Discussion Topic", @assignment  }
 
 <br>
 
@@ -703,17 +723,17 @@ https://readwrite.com/2014/08/14/github-government-ben-balter-open-source/
 <br><br>
 
 
-*** { @unit = "Due Oct 3rd", @title = "Lab 06", @assignment  }
+*** { @unit = "THURS Oct 3rd", @title = "Lab 06", @assignment  }
 
 
 
 ** Week 7 - Dashboards
 
 
-*** { @unit = "Due Oct 7th", @title = "Discussion Topic", @assignment  }
+*** { @unit = "MON Oct 7th", @title = "Discussion Topic", @assignment  }
 
 
-*** { @unit = "Due Oct 10th", @title = "FINAL PROJECT", @assignment  }
+*** { @unit = "THURS Oct 10th", @title = "FINAL PROJECT", @assignment  }
 
 
 
