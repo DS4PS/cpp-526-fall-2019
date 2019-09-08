@@ -527,10 +527,8 @@ Once you have completed this section you will be able to:
 
 Required:
 
-
 [The plot() Function](http://ds4ps.org/dp4ss-textbook/p-061-plot-basics.html)  
-[The Plot Canvas]  
-[Core Graphing Functions]
+[Building Custom Graphics](http://ds4ps.org/dp4ss-textbook/p-062-customized-graphics.html)
 
 Suggested:
 
@@ -561,7 +559,7 @@ Lab-03 covers the following topics:
 * lines(), abline()    
 * text()  
 * axis()  
-* segments()  
+
 
 <br>
 <br>
