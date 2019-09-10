@@ -94,6 +94,16 @@ Recorded videos of review sessions will be posted here.
 * **Video** from Tuesday's session [ [link](https://asu.zoom.us/recording/play/Srhs7u-Q_l9aCq_ZUiZalDk17AUAnFWze4LD4d6uNRSjVtGwMd4WnEoFDNPr9hPO?continueMode=true) ]
   
 <br>
+
+**Week 4:**
+
+* **Program Eval**
+  - Regression Review [ [pdf](https://github.com/DS4PS/cpp-523-fall-2019/raw/master/handouts/Regression-Review-Self-Test.pdf) ]   
+  - A Taxonomy of Control Variables [ [pdf](https://github.com/DS4PS/cpp-523-fall-2019/raw/master/lectures/taxonomy-of-control-variables.pdf) ]  
+  - Seven Sins of Regression [ [pdf](https://github.com/DS4PS/cpp-523-fall-2019/raw/master/handouts/Seven-Sins-of-Regression-Analysis.pdf) ]  
+* **Video** from Monday's session [ [link](https://asu.zoom.us/recording/play/rKnTnfYCkx387HO-zLvm06aEEaqpvHhSlmpVhE2HfTxhjMXlIvK6AYBJA2U2y1NI?continueMode=true) ]
+  
+<br>
 <br>
 
 
