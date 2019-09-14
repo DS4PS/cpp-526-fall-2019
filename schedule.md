@@ -633,6 +633,117 @@ You are advised to **skim** the chapters on graphing functions and custom graphi
 ** Week 4 - Dynamic Visualization 
 
 
+
+*** { @unit = "", @title = "Week 4 Reflection", @foldout }
+
+<br>
+
+“With very few exceptions, there is no shortcut between not knowing something and knowing it. There is a beauty to awkwardness, a wisdom in the wobble.”
+
+~Maya Stein
+
+<br>
+
+
+
+
+*** { @unit = "", @title = "Unit Overview" }
+
+<br>
+
+## Description
+
+This section introduces the use of Shiny R widgets to make graphs dynamic. 
+
+
+## Learning Objectives
+
+Graphs are dynamics if users can change input variables or parameters and graphics update in real-time within a web browser.
+
+By the end of this unit you will be able to:
+
+* Construct widgets to allow users to select options.  
+* Convert static graphics to dynamic graphics using the Shiny package.  
+
+
+
+
+## Assigned Reading
+
+Required:
+
+Please skim these chapters before starting your lab. Sample code has been provided for each lab question, but you may need the chapters and the R help files to find specific arguments. 
+
+[The plot() Function](http://ds4ps.org/dp4ss-textbook/p-061-plot-basics.html)  
+[Building Custom Graphics](http://ds4ps.org/dp4ss-textbook/p-062-customized-graphics.html)
+
+Suggested:
+
+[Intro. to Data Viz](http://ds4ps.org/dp4ss-textbook/p-060-intro-to-data-viz.html)
+
+*Help with R graphics:* 
+
+* [R Graph Gallery](https://www.r-graph-gallery.com/)  
+* [R Graph Catalog](http://shiny.stat.ubc.ca/r-graph-catalog/)  
+* [R Graph Compendium](http://shinyapps.org/apps/RGraphCompendium/index.php)  
+* [ggplot2 Geoms Gallery](https://ggplot2.tidyverse.org/reference/)  
+
+*Inspiration:*
+
+* [Makeover Mondays](http://www.makeovermonday.co.uk/gallery/)  
+* [Flowing Data](http://flowingdata.com/)  
+* [Junk Charts](http://junkcharts.typepad.com/junk_charts/)  
+* [NYT Graphics Blog](http://kpq.github.io/chartsnthings/)  
+* [Help Me Viz](https://twitter.com/HelpMeViz)  
+
+
+## Lab 
+
+Lab-03 introduces the primary plotting functions used to build graphics. 
+
+* plot()  
+* points()  
+* lines(), abline()    
+* text()  
+* axis()  
+
+The lab requires you to re-create a graph that was featured in the New York Times:
+
+![](assets/img/pitcher-dominance.png)
+
+<br>
+<br>
+
+
+
+
+
+
+*** { @unit = "MON Sept 16th", @title = "Discussion Topic", @assignment, @foldout  }
+
+<br>
+<br>
+
+#### Bad Graphs
+
+There is a lot of science behind data visualization, but the art to storytelling with data can be hard to distill into a few basic principles. As a result, it takes time to learn how to do it well. The best way to develop data visualization skill is to regularly consume interesting graphics. David McCandless is one of the best ambassadors for the field of graphic design and visualization. Check out his TED Talk,  and some excerpts from his book [*Information is Beautiful*]( https://github.com/DS4PS/Data-Science-Class/raw/master/READINGS/mccandless_information_is_beautiful.pdf).
+
+<div style="max-width:560px"><div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://embed.ted.com/talks/david_mccandless_the_beauty_of_data_visualization" width="854" height="480" style="position:absolute;left:0;top:0;width:100%;height:100%" frameborder="0" scrolling="no" allowfullscreen></iframe></div></div>
+
+Unfortunatly, it is much easier to create tragically bad graphics than it is to create good graphics. For your blog this week, read the *Calling Bullshit* overview on [proportional ink](https://callingbullshit.org/tools/tools_proportional_ink.html) and [misleading axes](https://callingbullshit.org/tools/tools_misleading_axes.html) to develop some sensitivity about misleading graphics. 
+
+Find a graph that violates one of these principles, or commits an equally egregious visualization crime. Share the graph and explain what offense has been committed. You might start by searching for "bad graphs" on google images. 
+
+This use of [clowns](https://peltiertech.com/bad-bar-chart-practices-or-send-in-the-clowns/) in bar charts is one of my favorites. You might also enjoy [pizza charts](http://getdolphins.com/blog/the-worst-graphs-of-2017/) or [these gems](https://www.distractify.com/humor/2017/05/26/cszBB/hilariously-bad-graphs). 
+
+
+<br>
+<br>
+
+
+
+
+
 *** { @unit = "", @title = "Demo of Shiny Widgets", @foldout }
 
 <br>
@@ -645,25 +756,16 @@ For more widget examples visit the [R Shiny Widget Gallery](https://shiny.rstudi
 
 
 
-*** { @unit = "", @title = "Week 4 Reflection" }
 
 
-
-*** { @unit = "", @title = "Unit Overview" }
-
-
-
-
-
-*** { @unit = "MON Sept 16th", @title = "Discussion Topic", @assignment  }
-
-<br>
-<br>
+*** { @unit = "THUR Sept 19th", @title = "Lab 04", @assignment  }
 
 
 
 
-*** { @unit = "THURS Sept 19th", @title = "Lab 04", @assignment  }
+
+
+
 
 
 
