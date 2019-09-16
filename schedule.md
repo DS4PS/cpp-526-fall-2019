@@ -634,11 +634,7 @@ You are advised to **skim** the chapters on graphing functions and custom graphi
 
 
 
-
-
-
-
-*** { @unit = "", @title = "Unit Overview" }
+*** { @unit = "", @title = "Unit Overview", @foldout }
 
 <br>
 
@@ -661,10 +657,7 @@ By the end of this unit you will be able to:
 
 ## Assigned Reading
 
-Required:
-
-Please skim these chapters before starting your lab. Sample code has been provided for each lab question, but you may need the chapters and the R help files to find specific arguments. 
-
+No required reading this week. 
 
 
 ## Lab 
