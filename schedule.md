@@ -657,8 +657,11 @@ By the end of this unit you will be able to:
 
 ## Assigned Reading
 
-No required reading this week. 
+Read the notes on using R Shiny **widgets** and **render** functions to accept user input (widgets), and change graphics in response (render).  
 
+[Notes on R Shiny](https://github.com/DS4PS/cpp-526-fall-2019/raw/master/lectures/shiny-widgets.pdf)  
+
+<br>
 
 ## Lab 
 
@@ -668,7 +671,7 @@ Lab 04 will again use the graph that was featured in the New York Times:
 
 <br>
 
-But we will now add an input widget that allows users to select one team that will be highlighted on the graphic.
+But we will now add an input widget that allows users to select one team that will be highlighted on the graph in yellow.
 
 <br>
 <br>
