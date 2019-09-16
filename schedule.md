@@ -634,15 +634,6 @@ You are advised to **skim** the chapters on graphing functions and custom graphi
 
 
 
-*** { @unit = "", @title = "Week 4 Reflection", @foldout }
-
-<br>
-
-“With very few exceptions, there is no shortcut between not knowing something and knowing it. There is a beauty to awkwardness, a wisdom in the wobble.”
-
-~Maya Stein
-
-<br>
 
 
 
@@ -653,16 +644,16 @@ You are advised to **skim** the chapters on graphing functions and custom graphi
 
 ## Description
 
-This section introduces the use of Shiny R widgets to make graphs dynamic. 
+This section introduces the use of R Shiny **widgets** to make graphs dynamic. 
 
 
 ## Learning Objectives
 
-Graphs are dynamics if users can change input variables or parameters and graphics update in real-time within a web browser.
+Dynamic graphics allow a user to select parameters that change the visualization in some way. Graphics will update in real-time within a web browser.
 
 By the end of this unit you will be able to:
 
-* Construct widgets to allow users to select options.  
+* Construct widgets to allow users to select inputs. 
 * Convert static graphics to dynamic graphics using the Shiny package.  
 
 
@@ -674,42 +665,17 @@ Required:
 
 Please skim these chapters before starting your lab. Sample code has been provided for each lab question, but you may need the chapters and the R help files to find specific arguments. 
 
-[The plot() Function](http://ds4ps.org/dp4ss-textbook/p-061-plot-basics.html)  
-[Building Custom Graphics](http://ds4ps.org/dp4ss-textbook/p-062-customized-graphics.html)
-
-Suggested:
-
-[Intro. to Data Viz](http://ds4ps.org/dp4ss-textbook/p-060-intro-to-data-viz.html)
-
-*Help with R graphics:* 
-
-* [R Graph Gallery](https://www.r-graph-gallery.com/)  
-* [R Graph Catalog](http://shiny.stat.ubc.ca/r-graph-catalog/)  
-* [R Graph Compendium](http://shinyapps.org/apps/RGraphCompendium/index.php)  
-* [ggplot2 Geoms Gallery](https://ggplot2.tidyverse.org/reference/)  
-
-*Inspiration:*
-
-* [Makeover Mondays](http://www.makeovermonday.co.uk/gallery/)  
-* [Flowing Data](http://flowingdata.com/)  
-* [Junk Charts](http://junkcharts.typepad.com/junk_charts/)  
-* [NYT Graphics Blog](http://kpq.github.io/chartsnthings/)  
-* [Help Me Viz](https://twitter.com/HelpMeViz)  
 
 
 ## Lab 
 
-Lab-03 introduces the primary plotting functions used to build graphics. 
-
-* plot()  
-* points()  
-* lines(), abline()    
-* text()  
-* axis()  
-
-The lab requires you to re-create a graph that was featured in the New York Times:
+Lab 04 will again use the graph that was featured in the New York Times:
 
 ![](assets/img/pitcher-dominance.png)
+
+<br>
+
+But we will now add an input widget that allows users to select one team that will be highlighted on the graphic.
 
 <br>
 <br>
@@ -770,6 +736,17 @@ For more widget examples visit the [R Shiny Widget Gallery](https://shiny.rstudi
 
 
 ** Week 5 - Data Wrangling 
+
+
+*** { @unit = "", @title = "Reflection" }
+
+<br>
+
+“With very few exceptions, there is no shortcut between not knowing something and knowing it. There is a beauty to awkwardness, a wisdom in the wobble.”
+
+~Maya Stein
+
+<br>
 
 
 *** { @unit = "MON Sept 23th", @title = "Discussion Topic", @assignment  }
