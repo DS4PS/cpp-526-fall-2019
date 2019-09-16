@@ -657,8 +657,13 @@ By the end of this unit you will be able to:
 
 ## Assigned Reading
 
-No required reading this week. 
+Read the notes on using R Shiny **widgets** and **render** functions to accept user input (widgets), and change graphics in response (render).  
 
+* [Notes on R Shiny](https://github.com/DS4PS/cpp-526-fall-2019/raw/master/lectures/shiny-widgets.pdf)  
+* [Example of a Dynamic Graph](https://shiny.rstudio.com/gallery/kmeans-example.html)  
+* [Widgets Gallery](https://shiny.rstudio.com/gallery/widget-gallery.html)   
+
+<br>
 
 ## Lab 
 
@@ -666,9 +671,13 @@ Lab 04 will again use the graph that was featured in the New York Times:
 
 ![](assets/img/pitcher-dominance.png)
 
+<br> 
+
+Try the [**interactive graphic**](https://archive.nytimes.com/www.nytimes.com/interactive/2013/03/29/sports/baseball/Strikeouts-Are-Still-Soaring.html) at the NYT.
+
 <br>
 
-But we will now add an input widget that allows users to select one team that will be highlighted on the graphic.
+But we will now add an input widget that allows users to select one team that will be highlighted on the graph in yellow.
 
 <br>
 <br>
@@ -709,7 +718,7 @@ This use of [clowns](https://peltiertech.com/bad-bar-chart-practices-or-send-in-
 [Download Shiny Widgets Demo](https://cdn.rawgit.com/DS4PS/Data-Science-Class/53c986f1/TEMPLATES/ShinyWidgetsDemo.Rmd
 )
 
-For more widget examples visit the [R Shiny Widget Gallery](https://shiny.rstudio.com/gallery/).
+For more widget examples visit the [R Shiny Widget Gallery](https://shiny.rstudio.com/gallery/widget-gallery.html) and the [R Shiny Gallery](https://shiny.rstudio.com/gallery/).  
 
 <br>
 
