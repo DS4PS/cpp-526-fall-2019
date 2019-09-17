@@ -27,6 +27,10 @@ This lab builds on the previous lab, but you will now add the drop-down menu sim
 ![](images/strikeouts2.png)
 
 
+<br>
+<br>
+
+
 ## Dynamic Graphics
 
 Shiny allows you to build interactive components in graphics or dashboards. The terms "dynamic" or "interactive" mean specifically that a set of widgets are used to gather user input, and that input changes the analysis or visualization accordingly. 
@@ -62,6 +66,8 @@ In the rest of your code, you can then reference the user input value at:
 ```{r, eval=F}
 input$my_widget_id
 ```
+
+<br>
 
 #### Adding a Team Trend to the Graph
 
