@@ -104,9 +104,20 @@ Recorded videos of review sessions will be posted here.
 * **Video** from Monday's session [ [link](https://asu.zoom.us/recording/play/rKnTnfYCkx387HO-zLvm06aEEaqpvHhSlmpVhE2HfTxhjMXlIvK6AYBJA2U2y1NI?continueMode=true) ]  
   
 <br>
+
+**Week 5:**
+
+* **Program Eval** 
+  - A Taxonomy of Control Variables [ [pdf](https://github.com/DS4PS/cpp-523-fall-2019/raw/master/lectures/taxonomy-of-control-variables.pdf) ]  
+  -  [ [pdf](https://github.com/DS4PS/cpp-523-fall-2019/raw/master/handouts/Seven-Sins-of-Regression-Analysis.pdf) ] 
+* **Data Science** 
+  - Shiny Overview [ [pdf](https://github.com/DS4PS/cpp-526-fall-2019/raw/master/lectures/shiny-widgets.pdf) ]  
+  - Shiny Demo[ [rmd](https://cdn.rawgit.com/DS4PS/Data-Science-Class/53c986f1/TEMPLATES/ShinyWidgetsDemo.Rmd) ] 
+  - Widgets Gallery[ [link](https://shiny.rstudio.com/gallery/widget-gallery.html) ]
+* **Video** from Monday's session [ [link](https://asu.zoom.us/recording/play/vJMBi-9RB3o7yHGt4Np4-3tU_gt_z9U2r2L4oxTkmJDzpC03-5SZuu_vL-V7VfwU?continueMode=true) ]  
+  
 <br>
-
-
+<br>
 
 </div>
   
