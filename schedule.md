@@ -726,10 +726,24 @@ For more widget examples visit the [R Shiny Widget Gallery](https://shiny.rstudi
 
 
 
-*** { @unit = "THUR Sept 19th", @title = "Lab 04", @assignment  }
+*** { @unit = "SUN Sept 22nd", @title = "Lab 04", @assignment, @foldout  }
 
 
+<br>
+<br>
 
+## Lab-04 - Dynamic Graphics
+
+This lab is designed to introduce you to R Shiny functions by adding a dynamic element to the NYT graphic from last week.
+
+<a class="uk-button uk-button-default" href="https://ds4ps.org/cpp-526-fall-2019/LABS/lab-04-instructions.html">LAB-04 Instructions</a>
+
+## Submit Solutions to Canvas:
+
+<a class="uk-button uk-button-primary" href="https://canvas.asu.edu/courses/29528/assignments/786492">SUBMIT LAB-04</a>
+
+<br>
+<br>
 
 
 
