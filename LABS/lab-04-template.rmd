@@ -1,0 +1,58 @@
+---
+title: "Lab-04 Dynamic Graphics"
+output: flexdashboard::flex_dashboard
+runtime: shiny
+---
+
+```{r global, include=FALSE}
+library( dplyr )
+library( Lahman )
+data( Teams )
+ave.so <- Teams$SO / Teams$G
+
+# min and max values needed to create your plot window 
+ave.so.min <- min( ave.so, na.rm=T )
+ave.so.max <- max( ave.so, na.rm=T )
+
+# the league average for each season
+league.ave <- tapply( X=ave.so, INDEX=as.factor(year), FUN="mean", na.rm=T )
+league.year <- as.numeric( names( league.ave ) )
+```
+
+
+
+Column {.sidebar}
+-----------------------------------------------------------------------
+
+Select a team to highlight on the graph.
+
+```{r}
+selectInput( inputId=,
+             label=,
+             choices=,
+             selected=   
+           )
+```
+
+
+
+**Author:** Your Name Here
+
+**Date:**  `r format(Sys.time(), '%B %d, %Y')`
+
+
+
+
+Column
+-----------------------------------------------------------------------
+
+### Strikeouts on the Rise
+
+```{r}
+renderPlot({
+  
+# your code here
+  
+})
+```
+
