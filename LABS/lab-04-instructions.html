@@ -1651,12 +1651,15 @@ $(document).ready(function () {
 <a class="sourceLine" id="cb1-5" data-line-number="5">             <span class="dt">selected=</span><span class="st">&quot;B&quot;</span>   </a>
 <a class="sourceLine" id="cb1-6" data-line-number="6">           )</a></code></pre></div>
 <p>Shiny automatically creates an object called “input” for you. When you create a widget, shiny will perform the folowing assignment implicitly in the background:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1">input<span class="op">$</span>my_widget_id &lt;-<span class="st"> &quot;B&quot;</span></a></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1">input<span class="op">$</span>my_widget_id &lt;-<span class="st"> &quot;B&quot;</span>  <span class="co"># user selected value</span></a></code></pre></div>
 <p>Before the user selects a value from the dropdown menu, the “<em>selected=</em>” argument specifies the default value. In this case, <em>input$my_widget_id</em> would store the value “B” by default. When the user makes a new selection, that value is updated with whatever option the user selected.</p>
 <p>In the rest of your code, you can then reference the user input value at:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">input<span class="op">$</span>my_widget_id</a></code></pre></div>
-<p>The solutions for Lab-06 include an example of how you can add a specific team to the graph. It generalizes the team by using a generic <strong>team.name</strong> variable that stores the value. Then in the subsequent code instead of using the specific team name for data steps and graphing functions it references the placeholder variables. This enables you to change all of the team name references in one place, simplifying your code.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="co">## TEAM NAME HARD-CODED:</span></a>
+<div id="adding-a-team-trend-to-the-graph" class="section level4">
+<h4>Adding a Team Trend to the Graph</h4>
+<p>The solutions for last week’s lab include an example of how you can add a specific team to the graph. It generalizes the team by using a generic <strong>team.name</strong> variable that stores the value.</p>
+<p>Note that in the subsequent code instead of using the specific team name for data steps and graphing functions it references the placeholder variable <strong>team.name</strong>. This enables you to change all of the team name references in one place, simplifying your code.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="co">## TEAM NAME HARD-CODED: APPEARS MULTIPLE TIMES IN CODE</span></a>
 <a class="sourceLine" id="cb4-2" data-line-number="2"></a>
 <a class="sourceLine" id="cb4-3" data-line-number="3"><span class="co"># adding season stats for the team:</span></a>
 <a class="sourceLine" id="cb4-4" data-line-number="4">dat.one.team &lt;-<span class="st"> </span><span class="kw">filter</span>( Teams, name <span class="op">==</span><span class="st"> &quot;Chicago Cubs&quot;</span> )</a>
@@ -1671,7 +1674,7 @@ $(document).ready(function () {
 <a class="sourceLine" id="cb4-13" data-line-number="13"></a>
 <a class="sourceLine" id="cb4-14" data-line-number="14"><span class="co">## GENERALIZED TEAM NAME:</span></a>
 <a class="sourceLine" id="cb4-15" data-line-number="15"></a>
-<a class="sourceLine" id="cb4-16" data-line-number="16">team.name &lt;-<span class="st"> &quot;Chicago Cubs&quot;</span>  </a>
+<a class="sourceLine" id="cb4-16" data-line-number="16">team.name &lt;-<span class="st"> &quot;Chicago Cubs&quot;</span>   <span class="co"># only place it appears</span></a>
 <a class="sourceLine" id="cb4-17" data-line-number="17"></a>
 <a class="sourceLine" id="cb4-18" data-line-number="18"><span class="co"># adding season stats for the team:</span></a>
 <a class="sourceLine" id="cb4-19" data-line-number="19">dat.one.team &lt;-<span class="st"> </span><span class="kw">filter</span>( Teams, name <span class="op">==</span><span class="st"> </span>team.name )</a>
@@ -1684,6 +1687,7 @@ $(document).ready(function () {
 <a class="sourceLine" id="cb4-26" data-line-number="26"><span class="kw">text</span> ( <span class="dt">x=</span><span class="dv">1912</span>, <span class="dt">y=</span><span class="fl">8.3</span>, <span class="dt">col=</span><span class="st">&quot;goldenrod1&quot;</span>, <span class="dt">labels=</span>team.name, <span class="dt">cex=</span><span class="fl">0.8</span> )</a></code></pre></div>
 <p>After you build your widget you can make the team selection dynamic by linking the user selection to your generic <strong>team.name</strong> variable.</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1">team.name &lt;-<span class="st"> </span>input<span class="op">$</span>my_widget_id  <span class="co"># input widget value</span></a></code></pre></div>
+</div>
 </div>
 <div id="lab-instructions" class="section level1">
 <h1>Lab Instructions</h1>
