@@ -822,11 +822,11 @@ The R community has made a lot of APIs easier to use by creating packages that a
 
 R packages translate the API into functions that will translate your request into the correct API format, send the request, return the data directly into R, and often convert it into an easy to use format like a data frame. In this way, you can quickly access thousands of datasets in real time through R, and you can also store your requests in scripts for future use.
 
-For the discussion topic this week, do a Google search and find an example of an API that could be useful for your work. For example, I use a lot of federal data. I was excited to learn that the website [Data USA](https://datausa.io/) has created a public API that allows users to access over a dozen federal datasets:
+For the discussion topic this week find an example of an API that could be useful for your work. For example, I use a lot of federal data. I was excited to learn that the website [Data USA](https://datausa.io/) has created a public API that allows users to access over a dozen federal datasets:
 
 https://gist.github.com/lecy/0aa782a873cd174573f32d243233ca5b
 
-Altnernatively, you can report on a package in R that uses a data API and describe what kinds of data the package allows you to access. 
+You can find APIs through a Google search, or browse datasets on the [DS4PS Open Data](https://ds4ps.org/data/) page. Altnernatively, you can report on a package in R that uses a data API and describe what kinds of data the package allows you to access. 
 
 *Note, you do not have to show how to use the API for the post, just identify what information is accessible and how it might be used.* 
 
