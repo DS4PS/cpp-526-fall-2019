@@ -792,7 +792,9 @@ You may also find the [Data Wrangling Cheatsheet](https://www.rstudio.com/wp-con
 
 Lab 05 will use data on traffic accidents in the City of Tempe:
 
-https://data.tempe.gov/dataset/high-severity-traffic-crashes-1-08
+[City of Tempe Open Data](https://data.tempe.gov/dataset/high-severity-traffic-crashes-1-08)  
+
+<br>
 
 ![](assets/img/traffic-accidents.png)
 
@@ -824,7 +826,7 @@ R packages translate the API into functions that will translate your request int
 
 For the discussion topic this week find an example of an API that could be useful for your work. For example, I use a lot of federal data. I was excited to learn that the website [Data USA](https://datausa.io/) has created a public API that allows users to access over a dozen federal datasets:
 
-https://gist.github.com/lecy/0aa782a873cd174573f32d243233ca5b
+[Tutorial on Data USA API](https://gist.github.com/lecy/0aa782a873cd174573f32d243233ca5b)
 
 You can find APIs through a Google search, or browse datasets on the [DS4PS Open Data](https://ds4ps.org/data/) page. Altnernatively, you can report on a package in R that uses a data API and describe what kinds of data the package allows you to access. 
 
