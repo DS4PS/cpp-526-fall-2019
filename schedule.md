@@ -837,7 +837,7 @@ You can find APIs through a Google search, or browse datasets on the [DS4PS Open
 
 
 
-*** { @unit = "THURS Sept 26th", @title = "Lab 05", @assignment  }
+*** { @unit = "SUN Sept 29th", @title = "Lab 05", @assignment  }
 
 
 
