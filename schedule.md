@@ -842,11 +842,11 @@ You can find APIs through a Google search, or browse datasets on the [DS4PS Open
 <br>
 <br>
 
-## Lab-04 - Dynamic Graphics
+## Lab-05 - Data Wrangling
 
-This lab offers practice analyzing data traffic patterns using **dplyr** data wrangling functions. 
+This lab offers practice analyzing traffic accident patterns using **dplyr** data wrangling functions. 
 
-*Note, this data will be used for your final dashboard. This assignment will get you started on the types of analysis and graphics you might report on the dashboard.*
+*Note, this data will be used for your final dashboard. This assignment is a preview of the types of analysis and graphics you might report on the dashboard.*
 
 <a class="uk-button uk-button-default" href="https://ds4ps.org/cpp-526-fall-2019/LABS/lab-05-instructions.html">LAB-05 Instructions</a>
 
