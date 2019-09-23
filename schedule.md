@@ -751,24 +751,96 @@ This lab is designed to introduce you to R Shiny functions by adding a dynamic e
 
 
 
+
+
+
 ** Week 5 - Data Wrangling 
 
 
-*** { @unit = "", @title = "Reflection" }
+*** { @unit = "", @title = "Unit Overview", @foldout }
 
 <br>
 
-“With very few exceptions, there is no shortcut between not knowing something and knowing it. There is a beauty to awkwardness, a wisdom in the wobble.”
+## Description
 
-~Maya Stein
+This unit focuses on the important task of "**data wrangling**", various manipulations that allow you to quickly filter, join, sort, transform, and describe your data. The **dplyr** package and **tidyverse** tools are some of the most popular in R. 
+
+
+## Learning Objectives
+
+By the end of this unit you will be able to:
+
+* Subset data by rows or columns
+* Create multi-dimensional summary tables by grouping data
+* Generate new variables through transformations of existing variables 
+* Write efficient "data recipes" using pipe operators 
+ 
+
+## Assigned Reading
+
+Read the notes on data wrangling in R:
+
+* [Data Verbs in dplyr](http://ds4ps.org/dp4ss-textbook/p-070-data-verbs.html)  
+* [Data Recipes Using Pipes](http://ds4ps.org/dp4ss-textbook/p-072-data-recipes.html)  
+* [Efficient Use of Groups](http://ds4ps.org/dp4ss-textbook/p-073-group-structure.html)   
+
+You may also find the [Data Wrangling Cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf) useful.
 
 <br>
 
+## Lab 
 
-*** { @unit = "MON Sept 23th", @title = "Discussion Topic", @assignment  }
+Lab 05 will use data on traffic accidents in the City of Tempe:
+
+[City of Tempe Open Data](https://data.tempe.gov/dataset/high-severity-traffic-crashes-1-08)  
+
+<br>
+
+![](assets/img/traffic-accidents.png)
+
+<br>
+<br>
 
 
-*** { @unit = "THURS Sept 26th", @title = "Lab 05", @assignment  }
+
+*** { @unit = "TUES Sept 24th", @title = "Discussion Topic Data APIs", @assignment, @foldout  }
+
+<br>
+<br>
+
+### Data APIs
+
+Part of the reason data science has grown so much as a field in recent years is because of advances in computing technologies that allows us to run powerful programs and to work with large datasets on personal computers. But just as important, data has become so ubiquitous, cheap, and valuable for organizations. 
+
+Your skill level in data science can be measured by how quickly you can take a real-world problem and produce analysis that offers better solutions than the status quo. Analyzing the data is important, but the process of obtaining data is not a trivial step. Having knowledge about where to look for data, or how to augment your existing data, will help you be more effective as an analyst. 
+
+Next week we will discuss some ways to get data into R. You can always download data from a website in its current format (CSV, SPSS, or Stata, etc.) then import it into R. Alternatively, it is typically more efficient to use an API.
+
+API stands for "Application Programming Interface", which is computer science jargon for the protocols that allow two applications to speak to each other. If you are using your mobile phone and you want to log into your bank using an app, an API will send your user credential and password to your bank, and will return information about your balances and transactions. In other words, APIs are structured ways of sending requests back and fourth between systems. The provide permission for external users to query some parts of internal databases (e.g. what is my checking account balance?), and control what information will be returned.
+
+In some cases, organizations that host public datasets have created data APIs to make it easier to request and share the data. To see some examples visit the [Data Science Toolkit](http://www.datasciencetoolkit.org) website, and test out some APIs. In some cases you give some search parameters (such as a zip code), and it returns a new dataset (census data). In other cases, you send data (raw text), and the API sends you a processed version of the data (a sentiment score based upon words in the text). Thus APIs can be used both to access new data sources, as well as to clean or process your current data as part of your project.
+
+The R community has made a lot of APIs easier to use by creating packages that allow you to access data directly in R using custom functions. For example, the Twitter package allows you to request tweets from specific dates and users, and sends back a dataset of all tweets that meet your criteria (with limits on how much you can access at a time). 
+
+R packages translate the API into functions that will translate your request into the correct API format, send the request, return the data directly into R, and often convert it into an easy to use format like a data frame. In this way, you can quickly access thousands of datasets in real time through R, and you can also store your requests in scripts for future use.
+
+For the discussion topic this week find an example of an API that could be useful for your work. For example, I use a lot of federal data. I was excited to learn that the website [Data USA](https://datausa.io/) has created a public API that allows users to access over a dozen federal datasets:
+
+[Tutorial on Data USA API](https://gist.github.com/lecy/0aa782a873cd174573f32d243233ca5b)
+
+You can find APIs through a Google search, or browse datasets on the [DS4PS Open Data](https://ds4ps.org/data/) page. Altnernatively, you can report on a package in R that uses a data API and describe what kinds of data the package allows you to access. 
+
+*Note, you do not have to show how to use the API for the post, just identify what information is accessible and how it might be used.* 
+
+<br>
+<br>
+
+
+
+*** { @unit = "SUN Sept 29th", @title = "Lab 05", @assignment  }
+
+
+
 
 
 
@@ -843,7 +915,22 @@ https://readwrite.com/2014/08/14/github-government-ben-balter-open-source/
 
 
 
+
+
+
+
 ** Week 7 - Dashboards
+
+
+*** { @unit = "", @title = "Reflection" }
+
+<br>
+
+“With very few exceptions, there is no shortcut between not knowing something and knowing it. There is a beauty to awkwardness, a wisdom in the wobble.”
+
+~Maya Stein
+
+<br>
 
 
 *** { @unit = "MON Oct 7th", @title = "Discussion Topic", @assignment  }
