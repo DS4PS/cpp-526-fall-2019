@@ -188,7 +188,7 @@ library( ggthemes ) # fancy themes for ggplots
 
 # Data
 
-In this lab you will use a traffic accidents dataset from the Tempe [Open Data Portal](https://data.tempe.gov/dataset/high-severity-traffic-crashes-1-08), available at:
+In this lab you will use a traffic accidents dataset from the Tempe [Open Data Portal](https://data.tempe.gov/dataset/high-severity-traffic-crashes-1-08):
 
 ```{r, echo=T}
 URL <- "https://github.com/DS4PS/Data-Science-Class/blob/master/DATA/TempeTrafficAccidents.rds?raw=true"
