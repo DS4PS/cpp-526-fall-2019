@@ -1,0 +1,931 @@
+---
+title: 'Lab 05 - Data Wrangling'
+output:
+  html_document:
+    theme: readable
+    df_print: paged
+    highlight: tango
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message=F, warning=F, fig.align='center', fig.width=9 )
+```
+
+#### [DS4PS](https://ds4ps.org/cpp-526-fall-2019/)
+
+<br>
+
+As an expert data scientist, you have been hired by the Mayor of Tempe to conduct a study and make recommendations on ways to reduce traffic injuries in the city. You will use the crash data from the city's open data portal and your data wrangling skills to look for patterns that help us understand the causes of traffic accidents in the city, and might suggest some ways to reduce injuries and fatalities.
+
+Consider the following questions:
+
+* Where are accidents likely located at different times of day?
+* What happens at 3pm each day?
+* Which age groups cause the most accidents? 
+* What types of accidents are most harmful? 
+
+
+
+<br><br>
+
+
+```{r, echo=F, fig.width=10, fig.height=12}
+library( dplyr )
+library( pander )
+library( ggmap )
+library( ggplot2 )
+library( leaflet )
+library( viridis )
+library( ggthemes )
+
+URL <- "https://github.com/DS4PS/Data-Science-Class/blob/master/DATA/TempeTrafficAccidents.rds?raw=true"
+dat <- readRDS(gzcon(url( URL )))
+
+dat$Age_Drv1[ dat$Age_Drv1 > 99 ] <- NA
+dat$Age_Drv1[ dat$Age_Drv1 < 16 ] <- NA
+dat$age <- cut( dat$Age_Drv1, breaks=c(16,18,25,35,45,55,65,75,100) )
+labz <- paste0( c(16,18,25,35,45,55,65,75), "-", c(18,25,35,45,55,65,75,100) )
+dat$age <- cut( dat$Age_Drv1, breaks=c(16,18,25,35,45,55,65,75,100), labels=labz )
+
+dat$Collisionmanner <- recode( dat$Collisionmanner, 
+                             "ANGLE (Front To Side)(Other Than Left Turn)"="Angle" )
+dat$Collisionmanner <- recode( dat$Collisionmanner, "Sideswipe Same Direction"="Lane Change" )
+drop.these <- c("Unknown","10","Rear To Side","Rear To Rear","Sideswipe Opposite Direction","Other")
+dat <- filter( dat, ! ( Collisionmanner %in% drop.these ) )
+dat$Collisionmanner <- factor( dat$Collisionmanner )
+
+date.vec <- strptime( dat$DateTime, format="%m/%d/%y %H:%M" )
+dat$hour   <- format( date.vec, format="%H" )
+dat$hour12   <- format( date.vec, format="%l %p" )
+dat$month  <- format( date.vec, format="%b" )
+dat$day    <- format( date.vec, format="%a" )
+dat$day365 <- format( date.vec, format="%j" )
+dat$week   <- format( date.vec, format="%V" )
+dat$day <- factor( dat$day, levels=c("Mon","Tue","Wed","Thu","Fri","Sat","Sun") )
+
+dat$hour12 <- factor( dat$hour12,
+                      levels=c( "12 AM", " 1 AM", " 2 AM", " 3 AM", " 4 AM", " 5 AM", 
+" 6 AM", " 7 AM", " 8 AM", " 9 AM", "10 AM", "11 AM", 
+"12 PM", " 1 PM", " 2 PM", " 3 PM", " 4 PM", " 5 PM", 
+" 6 PM", " 7 PM", " 8 PM", " 9 PM", "10 PM", "11 PM" ) )
+
+d5 <- filter( dat, !is.na(age) )
+d5$age <- paste0( "Age ", d5$age )
+
+qmplot( Longitude, Latitude, data=d5, geom = "blank", 
+  zoom = 13, maptype = "toner-background", darken = .1 ) + 
+  stat_density_2d( aes(fill = ..level..), geom = "polygon", alpha=0.2, color = NA) +
+  scale_fill_viridis( begin=0, end=1, option="C" ) + 
+  facet_wrap( ~ age, ncol=4 ) + 
+  theme_fivethirtyeight(  ) +
+  scale_x_continuous(breaks = NULL) +
+  scale_y_continuous(breaks = NULL) +
+  ggtitle("Crash Locations by Age Group")
+
+
+
+
+```
+
+<br><br>
+
+```{r, echo=F, fig.width=10, fig.height=12}
+qmplot( Longitude, Latitude, data=d5, geom = "blank", 
+  zoom = 13, maptype = "toner-background", darken = .1 ) + 
+  stat_density_2d( aes(fill = ..level..), geom = "polygon", alpha=0.2, color = NA) +
+  scale_fill_viridis( begin=0, end=1, option="C" ) + 
+  facet_wrap( ~ hour12, ncol=6 ) + 
+  theme_fivethirtyeight(  ) +
+  scale_x_continuous(breaks = NULL) +
+  scale_y_continuous(breaks = NULL) +
+  ggtitle("Crash Locations by Hour of Day")
+```
+
+
+<br><br>
+
+```{r, echo=F, fig.width=10, fig.height=6}
+
+dat$age <- factor( dat$age )
+
+d3 <- 
+  dat %>% 
+  count( hour, age )
+
+d3 <- na.omit( d3 )
+d3$age <- paste0( "Age ", d3$age )
+
+# ggplot( d3, aes( x=as.numeric(as.character(hour)), y=n, fill=age )) + 
+#     geom_area( position='fill' ) +
+#     scale_fill_brewer(  type="qual" ) +
+#     xlab("Time of Day (24hrs)") + ylab("Number of Accidents")
+
+qplot( data=d3, x=as.numeric(as.character(hour)), y=n ) + 
+  geom_line( size=0.8, color="firebrick4" ) + 
+  geom_point( size=3, color="darkred" ) + 
+  facet_wrap( ~ age, ncol=4 ) +
+  xlab("Time of Day (24hrs)") + 
+  ylab("Number of Accidents") +
+  ggtitle("Number of Accidents by Time and Age Group") +
+  # theme_minimal() 
+  theme_wsj( base_size=10, color="gray" )
+
+
+
+```
+
+
+<br> <br>
+
+```{r, echo=F, fig.width=10, fig.height=6}
+d3 <- 
+dat %>% 
+group_by( hour, age ) %>%
+summarize( harm = mean( Totalinjuries > 0 | Totalfatalities > 0 ) )
+
+d3 <- na.omit( d3 )
+d3$age <- paste0( "Age ", d3$age )
+
+
+# ggplot( d3, aes( x=as.numeric(as.character(hour)), y=harm, fill=age )) + 
+#     geom_area( position='fill' ) +
+#     xlab("Time of Day (24hrs)") + ylab("Rate of Harm")
+
+mean.harm <- mean( d3$harm )
+
+
+qplot( data=d3, x=as.numeric(as.character(hour)), y=harm ) + 
+  geom_line( color="steelblue", size=0.8 ) + 
+  geom_point( color="darkblue", size=3 ) + 
+  geom_hline( yintercept=mean.harm, color="black" ) + 
+  facet_wrap( ~ age, ncol=4 ) + 
+  xlab("Time of Day (24hrs)") + ylab("Rate of Harm") +
+  ggtitle("Proportion of Accidents Resulting in Harm") +
+  # theme_fivethirtyeight() 
+  theme_wsj( base_size=10, color="gray" )
+```
+
+
+
+<br><br>
+
+
+# Packages
+
+You will use the following packages for this lab:
+
+```{r, eval=F}
+library( dplyr )    # data wrangling
+library( pander )   # formatting output
+library( ggmap )    # grab map tiles
+library( viridis )  # color pallette for maps
+library( ggplot2 )  # fancy graphics
+library( ggthemes ) # fancy themes for ggplots
+```
+
+
+<br>
+
+# Data
+
+In this lab you will use a traffic accidents dataset from the Tempe [Open Data Portal](https://data.tempe.gov/dataset/high-severity-traffic-crashes-1-08), available at:
+
+```{r, echo=T}
+URL <- "https://github.com/DS4PS/Data-Science-Class/blob/master/DATA/TempeTrafficAccidents.rds?raw=true"
+dat <- readRDS(gzcon(url( URL )))
+head( dat )
+```
+
+The dataset contains the following variables:
+
+
+|column              |type      |label                      |description                                                                                                                 |
+|:-------------------|:---------|:--------------------------|:---------------------------------------------------------------------------------------------------------------------------|
+|Incidentid          |numeric   |Incident ID                |Unique incident ID number assigned by Arizona Department of Transportation (ADOT).                                          |
+|DateTime            |timestamp |Date Time                  |Date and time that the crash occurred.                                                                                      |
+|Year                |numeric   |Year                       |Year that the crash occurred.                                                                                               |
+|StreetName          |text      |Street Name                |The street that the crash occurred on.                                                                                      |
+|CrossStreet         |text      |Cross-street               |The nearest intersecting street or road.                                                                                    |
+|Distance            |numeric   |Distance from Intersection |The distance, in feet, that the crash occurred from the cross-street.                                                       |
+|JunctionRelation    |text      |Junction Relation          |The location of the crash in relation to a junction, either an intersection or connection between a driveway and a roadway. |
+|Totalinjuries       |numeric   |Total Injuries             |Total number of persons with non-fatal injuries involved in the crash.                                                      |
+|Totalfatalities     |numeric   |Total Fatalities           |Total number of persons with fatal injuries involved in the crash.                                                          |
+|Injuryseverity      |text      |Injury Severity            |The highest severity of injury of all persons involved in the crash.                                                        |
+|Collisionmanner     |text      |Collision Manner           |Identifies the manner in which two vehicles initially came into contact.                                                    |
+|Lightcondition      |text      |Lighting Conditions        |The type/level of light that existed at the time of the crash.                                                              |
+|Weather             |text      |Weather                    |The prevailing (most significant) atmospheric conditions that existed at the time of the crash.                             |
+|SurfaceCondition    |text      |Surface Condition          |The roadway surface condition at the time and place of a crash.                                                             |
+|Unittype_One        |text      |Unit Type One              |Driver, Passenger, Pedestrian, Pedalcyclist or Driverless.                                                                  |
+|Age_Drv1            |numeric   |                           |                                                                                                                            |
+|Gender_Drv1         |text      |                           |                                                                                                                            |
+|Traveldirection_One |text      |Travel Direction           |The direction the unit was traveling before the incident occurred,                                                          |
+|Unitaction_One      |text      |Unit Action One            |The maneuver, or last action, of the unit before the crash.                                                                 |
+|Violation1_Drv1     |text      |Violation  One             |The main violation/behavior of the unit that contributed to the crash.                                                      |
+|AlcoholUse_Drv1     |text      |Alcohol Use 1              |Indicates whether alcohol was a contributing factor in the crash or not.                                                    |
+|DrugUse_Drv1        |text      |Drug Use 1                 |Indicates whether drug use was a contributing factor in the crash or not.                                                   |
+|Unittype_Two        |text      |Unit Type Two              |Driver, Passenger, Pedestrian, Pedalcyclist or Driverless.                                                                  |
+|Age_Drv2            |numeric   |                           |                                                                                                                            |
+|Gender_Drv2         |text      |                           |                                                                                                                            |
+|Traveldirection_Two |text      |Travel Direction Two       |The direction the unit was traveling before the incident occurred.                                                          |
+|Unitaction_Two      |text      |Unit Action Two            |The maneuver, or last action, of the unit before the crash.                                                                 |
+|Violation1_Drv2     |text      |Violation Two              |The main violation/behavior of the unit that contributed to the crash.                                                      |
+|AlcoholUse_Drv2     |text      |Alcohol Use 2              |Indicates whether alcohol was a contributing factor in the crash or not.                                                    |
+|DrugUse_Drv2        |text      |Drug Use 2                 |Indicates whether drug use was a contributing factor in the crash or not.                                                   |
+|Latitude            |numeric   |Latitude                   |Used to specify the precise location of the crash.                                                                          |
+|Longitude           |numeric   |Longitude                  |Used to specify the precise location of the crash.                                                                          |
+
+
+
+
+### Add Date Fields
+
+```{r}
+date.vec <- strptime( dat$DateTime, format="%m/%d/%y %H:%M" )
+
+dat$hour   <- format( date.vec, format="%H" )
+dat$month  <- format( date.vec, format="%b" )
+dat$day    <- format( date.vec, format="%a" )
+dat$day365 <- format( date.vec, format="%j" )
+dat$week   <- format( date.vec, format="%V" )
+```
+
+Correct the order of categorical variables by making them ordered factors:
+
+```{r}
+table( dat$day ) %>% pander()
+
+# correct order of days
+dat$day <- factor( dat$day, levels=c("Mon","Tue","Wed","Thu","Fri","Sat","Sun") )
+table( dat$day ) %>% pander()
+```
+
+Create 12-hour format and order the times correctly:
+
+```{r}
+dat$hour12 <- format( date.vec, format="%l %p" )
+table( dat$hour12 ) %>% head() %>% pander()
+
+# set the levels so they are in the correct order
+time.levels <-
+  c( "12 AM", " 1 AM", " 2 AM", " 3 AM", " 4 AM", " 5 AM", 
+     " 6 AM", " 7 AM", " 8 AM", " 9 AM", "10 AM", "11 AM", 
+     "12 PM", " 1 PM", " 2 PM", " 3 PM", " 4 PM", " 5 PM", 
+     " 6 PM", " 7 PM", " 8 PM", " 9 PM", "10 PM", "11 PM" )
+
+dat$hour12 <- factor( dat$hour12, levels=time.levels )
+table( dat$hour12 ) %>% head() %>% pander()
+```
+
+
+## Make Age Categorical
+
+```{r}
+age.labels <- paste0( "Age ", c(16,18,25,35,45,55,65,75), "-", c(18,25,35,45,55,65,75,100) )
+age.labels
+
+dat$age <- cut( dat$Age_Drv1, breaks=c(16,18,25,35,45,55,65,75,100), labels=age.labels )
+```
+
+
+
+<br><br>
+
+
+
+# Lab Instructions
+
+In this lab you will practice your logical statements, data verbs (dplyr functions), and recipes to conduct analysis looking for types of accidents that cause serious injury. You will need to pay attention to the difference between counts of events, and severity of events. 
+
+We will define "harm" as any accident that causes at least one injury OR fatality. You need to define a new variable in your dataset that indicates whether accidents caused harm or not. 
+
+For each question, write down your data recipe or pseudocode. 
+
+You can create a new RMarkdown file, or download the lab template: [RMD Template](https://cdn.rawgit.com/DS4PS/Data-Science-Class/c464d527/TEMPLATES/MarkdownTemplateSimple.Rmd)
+
+
+<br><br>
+
+## PART 1: Summary Statistics
+
+Practice writing logical statements and basic data recipes for the following:
+
+#### 1) How many accidents happen on Mondays?
+
+#### 2) What proportion of accidents each week occur on Monday?
+
+#### 3) What proportion of accidents on Mondays result in harm?
+
+
+#### 4) What is the most common type of accident (Collisionmanner) that occurs on Mondays?
+
+
+<br>
+<br>
+
+
+
+
+## PART 2: Age Groups
+
+
+#### 1) Create a table of counts of accidents by time of day (24 one-hour segments) and age of driver (use the factor age groups). 
+
+
+Which age group has the largest number of accidents at 7am? 
+
+You can use the dplyr **count()** function for this (or use **table()** in core R if you are old school like that). 
+
+
+#### 2) Create a new table of time of day and age group, but report the proportion of accidents by time of day for each age group (i.e. the proportions WITHIN EACH AGE GROUP should sum to one).
+
+Which age group experiences the largest proportion of accidents at 7am? 
+
+Note, this calculation would be useful for assessing whether there are differences when each age group is driving recklessly. You can see differences in alertness and physical stamina across age groups at different times of day. 
+
+Do NOT confuse this question with, what age group is most likely to cause an accident at a given time of day. In that case, all of the proportions WITHIN EACH TIME PERIOD would sum to one. 
+
+You will need the dplyr **group_by()** and **summary()** functions. 
+
+
+
+<br><br>
+
+## PART 3: Rates of Harm
+
+As a public health expert specializing in traffic accidents, you need to think about how to best target traffic accidents to reduce harm. 
+
+Should we focus on the volume of traffic accidents, or the types of accidents that are most likely to cause harm? 
+
+
+```{r, echo=F}
+
+d2 <- 
+  dat %>% 
+  count( hour )
+
+plot( as.numeric(d2$hour), d2$n, pch=19, type="b", cex=2, bty="n",
+      xlab="Hour of the Day", ylab="Number of Crashes", 
+      main="Number of Crashes by Hour of the Day" )
+
+
+d2 <- 
+  dat %>% 
+  group_by( hour ) %>%
+  summarize( tot.num.injuries = sum( Totalinjuries + Totalfatalities ) )
+
+plot( as.numeric(d2$hour), d2$tot.num.injuries, pch=19, type="b", cex=2, bty="n",
+      xlab="Hour of the Day", ylab="Total Number of Passengers Hurt or Killed",
+      main="Total Injuries or Fatalities by Hour of the Day")
+
+
+d2 <- 
+  dat %>% 
+  group_by( hour ) %>%
+  summarize( harm = mean( Totalinjuries > 0 | Totalfatalities > 0 ) )
+
+plot( as.numeric(d2$hour), d2$harm, pch=19, type="b", cex=2, bty="n",
+      xlab="Hour of the Day", ylab="Proportion of Accidents Resulting in Harm",
+      main="Proportion of Crashes that Result in Injuries or Fatalities")
+
+d2 <- 
+  dat %>% 
+  filter(  Totalinjuries > 0 | Totalfatalities > 0 ) %>%
+  group_by( hour ) %>%
+  summarize( ave.num.injuries = mean( Totalinjuries + Totalfatalities ) )
+
+plot( as.numeric(d2$hour), d2$ave.num.injuries, pch=19, type="b", cex=2, bty="n",
+      xlab="Hour of the Day", ylab="Ave. Number of Passengers Hurt",
+      main="Average Injuries or Fatalities Per Harmful Crash")
+
+
+
+
+```
+
+Calculate each of these four descriptive statistics above as a function of the 24 hours of the day, and either **print a table with times and counts/rates, or plot a graph of the statistics** as a function of time similar to the examples above.
+
+
+```{r, eval=F}
+# example plotting code
+plot( as.numeric(d2$hour), d2$ave.num.injuries, 
+      pch=19, type="b", cex=2, bty="n",
+      xlab="Hour of the Day", 
+      ylab="Ave. Number of Passengers Hurt",
+      main="Average Injuries or Fatalities Per Harmful Crash")
+```
+
+
+*Reflection point: as the analyst your job is to translate research questions into the models that are presented to decision-makers. You will likely receive a broad objective like identifying patterns in traffic accidents, and you will often have a lot of flexibility in how you operationalize the question.*
+
+*How might strategies for addressing traffic injuries change if you switch from an emphasis on the accidents that are most common to accidents that are most likely to cause harm? These are subtle nuances in how to calculate simple statistics (counts and proportions) over groups, but they can have a big impact on policy-making!*
+
+Report your tables or graphcs. You don't have to include a written response to the reflection point. 
+
+
+
+<br><br>
+
+## CHALLENGE QUESTION (not graded): 
+
+Using at most two variables in the dataset to define a group structure and identify:
+
+**The most dangerous accident to be involved in (highest rate of harm).**
+
+For example, your groups could be teen-agers (group 1: age) that rear-end another driver (group 2: collision type), or drunk-drivers (group 1: alcohol) that hit pedestrians (group 2: driver type), or men (group 1: gender) on Labor Day (group 2: date). Calculate rates of harm for each type of accident, and identify the most harmful case. 
+
+There is one constraint: there must be at least five cases of the accident in the dataset. For example, any type of accident involving a 95-year old likely occurs once in the dataset since these drivers are rare. If the driver was injured then that accident type will have a 100% harm rate, but it's unlikely an accurate representation of the true harm rate because we are generalizing from a single observation. 
+
+You can use any variables from the dataset, but you are limit to groups constructed from two variables. Report the most dangerous accident type (most likely to cause harm - i.e. injury or death) that you can identify. 
+
+
+
+
+<br><br>
+
+
+# Working with Dates
+
+So far we have worked with character, numeric, logical, and categorical (factor) vectors.
+
+We need to introduce a new type of vector class for this lab, a date variable. Dates are complicated because they must function simultaneously as categorical variables (months of the year) and numeric variables capable of arithmatic (time that passes between two dates). Furthermore, we often want to convert between idiosyncratic date representations, such as a day of a specific month to a day of the week. 
+
+They are also complicated because they can be represented in many ways:
+
+* Jan-05-2012
+* 01/05/2012
+* 01-05-2012 
+
+When you first read a dataset, they are typically loaded as character vectors:
+
+```{r, eval=F}
+head( dat$DateTime )
+```
+
+```{r, echo=F}
+head( as.character(dat$DateTime) )
+```
+
+We can convert dates stored as characters to a special date object by specifying the format using codes understood by the **strptime()** function:
+
+```{r}
+date.vec <- strptime( dat$DateTime, format="%m/%d/%y %H:%M" )
+head( date.vec )
+```
+
+
+Now R will recognize that the variable is a date, not a string, and it will be able to do complex day and time manipulations. Note that the *format=* argument above requires you to tell R what each value represents. In this case, %m represents month, %d represents day, and %y represents year. In the original data they are separated by a back slash, so that's included in the format argument. 
+
+We need to be explicit because dates can be stored as DD-MM-YYYY, MM-DD-YY, YYYY-MM-DD, or any other number of formats. The format argument tells R how to structure the date.
+
+We can now use the **format()** function to specify how we want the date represented using many common styles. Note that `format()` will return a character vector, not another date class.
+
+
+```{r}
+format( head( date.vec ), format="%H" )  # hour of day 0-23
+
+format( head( date.vec ), format="%I" )  # hour of day 1-12
+
+format( head( date.vec ), format="%p" )  # AM or PM
+ 
+format( head( date.vec ), format="%m" )  # month 1-12
+
+format( head( date.vec ), format="%b" )  # abbreviated month Jan, Feb, etc
+
+format( head( date.vec ), format="%A" )  # day of the week Monday, Tuesday, etc.
+
+format( head( date.vec ), format="%a" )  # abbreviated day of the week Mon, Tue, etc.
+```
+
+
+
+
+<br> 
+
+### Date Formatting Options
+
+We can apply a wide range of formatting options to dates:
+
+
+* **%a**:
+Abbreviated weekday name in the current locale on this platform. (Also matches full name on input: in some locales there are no abbreviations of names.)
+
+* **%A**:
+Full weekday name in the current locale. (Also matches abbreviated name on input.)
+
+* **%b**:
+Abbreviated month name in the current locale on this platform. (Also matches full name on input: in some locales there are no abbreviations of names.)
+
+* **%B**:
+Full month name in the current locale. (Also matches abbreviated name on input.)
+
+* **%c**:
+Date and time. Locale-specific on output, "%a %b %e %H:%M:%S %Y" on input.
+
+* **%C**:
+Century (00–99): the integer part of the year divided by 100.
+
+* **%d**:
+Day of the month as decimal number 01–31.
+
+* **%D**:
+Date format such as %m/%d/%y: the C99 standard says it should be that exact format, but not all OS's comply.
+
+* **%e**:
+Day of the month as decimal number 1–31, with a leading space for a single-digit number.
+
+* **%F**:
+Equivalent to %Y-%m-%d the ISO 8601 date format.
+
+* **%g**:
+The last two digits of the week-based year. Accepted but ignored on input.
+
+* **%G**:
+The week-based year as a decimal number. Accepted but ignored on input.
+
+* **%h**:
+Equivalent to %b.
+
+* **%H**:
+Hours as decimal number 00–23. As a special exception strings such as 24:00:00 are accepted for input, since ISO 8601 allows these.
+
+* **%I**:
+Hours as decimal number 01–12.
+
+* **%j**:
+Day of year as decimal number 001–366.
+
+* **%m**:
+Month as decimal number 01–12.
+
+* **%M**:
+Minute as decimal number 00–59.
+
+* **%n**:
+Newline on output, arbitrary whitespace on input.
+
+* **%p**:
+AM/PM indicator in the locale. Used in conjunction with %I and not with %H. An empty string in some locales (and the behaviour is undefined if used for input in such a locale). Some platforms accept %P for output, which uses a lower-case version: others will output P.
+
+* **%r**:
+The 12-hour clock time (using the locale's AM or PM). Only defined in some locales.
+
+* **%R**:
+Equivalent to %H:%M.
+
+* **%S**:
+Second as integer 00–61, allowing for up to two leap-seconds (but POSIX-compliant implementations will ignore leap seconds).
+
+* **%t**:
+Tab on output, arbitrary whitespace on input.
+
+* **%T**:
+Equivalent to %H:%M:%S.
+
+* **%u**:
+Weekday as a decimal number 1–7, Monday is 1.
+
+* **%U**:
+Week of the year as decimal number 00–53 using Sunday as the first day 1 of the week (and typically with the first Sunday of the year as day 1 of week 1). The US convention.
+
+* **%V**:
+Week of the year as decimal number 01–53 as defined in ISO 8601. If the week (starting on Monday) containing 1 January has four or more days in the new year, then it is considered week 1. Otherwise, it is the last week of the previous year, and the next week is week 1. (Accepted but ignored on input.)
+
+* **%w**:
+Weekday as decimal number 0–6, Sunday is 0.
+
+* **%W**:
+Week of the year as decimal number 00–53 using Monday as the first day of week (and typically with the first Monday of the year as day 1 of week 1). The UK convention.
+
+* **%x**:
+Date. Locale-specific on output, "%y/%m/%d" on input.
+
+* **%X**:
+Time. Locale-specific on output, "%H:%M:%S" on input.
+
+* **%y**:
+Year without century 00–99. On input, values 00 to 68 are prefixed by 20 and 69 to 99 by 19 – that is the behaviour specified by the 2004 and 2008 POSIX standards, but they do also say ‘it is expected that in a future version the default century inferred from a 2-digit year will change’.
+
+* **%Y**:
+Year with century. Note that whereas there was no zero in the original Gregorian calendar, ISO 8601:2004 defines it to be valid (interpreted as 1BC): see https://en.wikipedia.org/wiki/0_(year). Note that the standards also say that years before 1582 in its calendar should only be used with agreement of the parties involved. For input, only years 0:9999 are accepted.
+
+* **%z**:
+Signed offset in hours and minutes from UTC, so -0800 is 8 hours behind UTC. Values up to +1400 are accepted as from R 3.1.1: previous versions only accepted up to +1200. (Standard only for output.)
+
+* **%Z**:
+(Output only.) Time zone abbreviation as a character string (empty if not available). This may not be reliable when a time zone has changed abbreviations over the years.
+
+
+
+
+### Creating New Date Variables
+
+```{r}
+date.vec <- strptime( dat$DateTime, format="%m/%d/%y %H:%M" )
+
+dat$hour   <- format( date.vec, format="%H" )
+dat$month  <- format( date.vec, format="%b" )
+dat$day    <- format( date.vec, format="%a" )
+dat$day365 <- format( date.vec, format="%j" )
+dat$week   <- format( date.vec, format="%V" )
+
+# set the levels so they are in the correct order
+time.levels <-
+  c( "12 AM", " 1 AM", " 2 AM", " 3 AM", " 4 AM", " 5 AM", 
+     " 6 AM", " 7 AM", " 8 AM", " 9 AM", "10 AM", "11 AM", 
+     "12 PM", " 1 PM", " 2 PM", " 3 PM", " 4 PM", " 5 PM", 
+     " 6 PM", " 7 PM", " 8 PM", " 9 PM", "10 PM", "11 PM" )
+
+dat$hour12 <- format( date.vec, format="%l %p" )
+dat$hour12 <- factor( dat$hour12, levels=time.levels )
+```
+
+
+
+```{r, fig.width=10, fig.height=14}
+
+qmplot( Longitude, Latitude, data=dat, geom = "blank", 
+  zoom = 13, maptype = "toner-background", darken = .1 ) + 
+  stat_density_2d( aes(fill = ..level..), geom = "polygon", alpha=0.3, color = NA) +
+  scale_fill_viridis(  ) + 
+  facet_wrap( ~ hour12, ncol=6, nrow=4)
+  
+```
+
+```{r, eval=F, echo=F}
+qmplot( Longitude, Latitude, data=dat, geom = "blank", 
+  zoom = 13, maptype = "toner-background", darken = .7 ) +
+  stat_density_2d( aes(fill = ..level..), geom = "polygon", alpha=0.2, color = NA) +
+  scale_fill_gradient2( low="white", mid="yellow", high="red",  midpoint=10 ) + 
+  facet_wrap( ~ hour12, ncol=6, nrow=4 )
+```
+
+
+<br><br>
+
+```{r}
+
+d2 <- 
+  dat %>% 
+  filter( as.numeric(week) <= 52 ) %>%
+  count( week )
+
+plot( as.numeric(d2$week), d2$n, pch=19, type="b", cex=2, bty="n",
+      xlab="Week", ylab="Number of Crashes", 
+      main="Cumulative Crashes by Week of the Year: 2012-2018" )
+
+d2 <- 
+  dat %>% 
+  filter( as.numeric(week) <= 52 ) %>%
+  group_by( week ) %>%
+  summarize( harm = mean( Totalinjuries > 0 | Totalfatalities > 0 ) )
+
+plot( as.numeric(d2$week), d2$harm, pch=19, type="b", cex=2, bty="n",
+      xlab="Weeks in the Year", ylab="Rate of Harm",
+      main="Proportion of Crashes that Result in Harm Across Weeks")
+
+abline( h=mean(d2$harm), col="gray", lty=2, lwd=2 )
+
+```
+
+
+If we want to be more precise about crash counts per week within a given year, which is a more intuitive and actionable statistic than summing across all years in the dataset:
+
+```{r}
+d2 <- 
+  dat %>% 
+  filter( as.numeric(week) <= 52 ) %>%
+  group_by( Year ) %>%
+  count( week ) %>%
+  group_by( week ) %>%
+  summarize( ave.crashes.per.week = mean(n) )
+
+plot( as.numeric(d2$week), d2$ave.crashes.per.week, 
+      pch=19, type="b", cex=2, bty="n",
+      xlab="Week", ylab="Number of Crashes", 
+      main="Ave Crashes by Week of Year" )
+
+```
+
+
+
+<br><br>
+
+# Recode Factor Levels
+
+Some of the categorical variables are hard to work with because they have a levels that are small or hard to interpret. 
+
+```{r}
+count( dat, Collisionmanner ) %>% arrange(n) %>% pander()
+```
+
+
+```{r}
+
+dat$Collisionmanner <- recode( dat$Collisionmanner, 
+                             "ANGLE (Front To Side)(Other Than Left Turn)"="Angle" )
+
+dat$Collisionmanner <- recode( dat$Collisionmanner, "Sideswipe Same Direction"="Lane Change" )
+
+drop.these <- c("Unknown","10","Rear To Side","Rear To Rear","Sideswipe Opposite Direction","Other")
+dat <- filter( dat, ! ( Collisionmanner %in% drop.these ) )
+
+dat$Collisionmanner <- factor( dat$Collisionmanner )
+
+count( dat, Collisionmanner ) %>% arrange(n) %>% pander()
+```
+
+
+Patterns in types of crashes by time of day:
+
+```{r}
+table( dat$hour, dat$Collisionmanner ) %>% pander()
+
+d3 <- data.frame( table( dat$hour, dat$Collisionmanner ) )
+
+ggplot( d3, aes( x=as.numeric(Var1), y=Freq, fill=Var2 ) ) + 
+    geom_area( position='fill' ) +
+    scale_fill_brewer(  type="qual" ) +
+    xlab("Time of Day (hours)") + ylab("Proportion of Accidents")
+```
+
+
+
+
+
+
+```{r, eval=F, echo=F}
+
+dat$day <- factor( dat$day, levels=c("Mon","Tue","Wed","Thu","Fri","Sat","Sun") )
+table( dat$day, dat$Collisionmanner ) %>% prop.table(margin=1) %>% round(2) %>% pander()
+
+d3 <- data.frame( table( dat$day, dat$Collisionmanner ) )
+
+ggplot( d3, aes( x=as.numeric(Var1), y=Freq, fill=Var2 ) ) + 
+    geom_area( position='fill' ) +
+    scale_fill_brewer(  type="qual" ) +
+    xlab("Day") + ylab("Proportion of Accidents")
+
+# qplot( data=d3, x=as.numeric(Var1), y=Freq ) + 
+#   geom_point() + geom_line() + 
+#   facet_wrap( d3$Var2 ) +
+#   xlab("Day (Mon-Sun)") + ylab("Number of Accidents")
+
+
+d4 <-
+  dat %>%
+  group_by( day, Collisionmanner ) %>%
+  summarize( harm=mean( Totalinjuries > 0 | Totalfatalities > 0) )
+
+# qplot( data=d4, x=as.numeric(day), y=harm ) + 
+#   geom_point() + geom_line() + 
+#   facet_wrap( d4$Collisionmanner ) +
+#   xlab("Day (Mon-Sun)") + ylab("Harm Rate") # +
+#   # scale_x_discrete( labels=c("1"="Mon","2"="Tue","3"="Wed","4"="Thu","5"="Fri","6"="Sat","7"="Sun") )
+
+
+```
+
+
+
+
+
+# Age of Driver
+
+We have a wide range of driver ages:
+
+```{r}
+summary( dat$Age_Drv1 ) %>% pander()
+
+# remove meaningless ages
+dat$Age_Drv1[ dat$Age_Drv1 > 99 ] <- NA
+dat$Age_Drv1[ dat$Age_Drv1 < 16 ] <- NA
+
+dat %>%
+  filter( ! is.na(Age_Drv1) ) %>%
+  count( Age_Drv1 ) %>%
+  ggplot( aes( x=Age_Drv1, y=n ) ) + 
+  geom_point(size=3) + geom_line() +
+  theme_fivethirtyeight() +
+  ggtitle("Crash Count by Age") +
+  xlab("Age")
+```
+
+
+
+This many ages will make our analysis complicated, so it is better to convert the numeric age variable into a categorical age-group variable. We will use the **cut()** function for this, which accepts a numeric variable and group cut points (the *breaks=* argument), then returns the proper group label for each age.
+
+```{r, fig.width=10}
+dat$age <- cut( dat$Age_Drv1, breaks=c(16,18,25,35,45,55,65,75,100) )
+barplot( table(dat$age) )
+```
+
+These group labels are a little awkward, so let's improve them a bit by creating our own:
+
+```{r}
+age.labels <- paste0( "Age ", c(16,18,25,35,45,55,65,75), "-", c(18,25,35,45,55,65,75,100) )
+dat$age <- cut( dat$Age_Drv1, breaks=c(16,18,25,35,45,55,65,75,100), labels=age.labels )
+barplot( table(dat$age) )
+```
+
+We can now analyze some trends by age group.
+
+
+```{r, echo=T, fig.width=10, fig.height=6}
+d3 <- 
+  dat %>% 
+  count( hour, age )
+
+d3 <- na.omit( d3 )
+
+qplot( data=d3, x=as.numeric(as.character(hour)), y=n ) + 
+  geom_line( size=0.8, color="firebrick4" ) + 
+  geom_point( size=3, color="darkred" ) + 
+  facet_wrap( ~ age, ncol=4 ) +
+  xlab("Time of Day (24hrs)") + 
+  ylab("Number of Accidents") +
+  ggtitle("Number of Accidents by Time and Age Group") +
+  # theme_minimal() 
+  theme_wsj( base_size=10, color="gray" )
+```
+
+
+
+```{r, eval=F, echo=F}
+d5 <- filter( dat, !is.na(age) )
+
+qmplot( Longitude, Latitude, data=d5, geom = "blank", 
+  zoom = 13, maptype = "toner-background", darken = .1 ) + 
+  stat_density_2d( aes(fill = ..level..), geom = "polygon", alpha=0.2, color = NA) +
+  scale_fill_viridis( begin=0, end=1, option="C" ) + 
+  facet_wrap( ~ age, ncol=4 )
+
+
+
+d3 <- 
+dat %>% 
+group_by( hour, age ) %>%
+summarize( harm = mean( Totalinjuries > 0 | Totalfatalities > 0 ) )
+
+d3 <- na.omit( d3 )
+
+ggplot( d3, aes( x=as.numeric(as.character(hour)), y=harm, fill=age )) + 
+    geom_area( position='fill' ) +
+    xlab("Time of Day (24hrs)") + ylab("Rate of Harm")
+
+mean.harm <- mean( d3$harm )
+
+qplot( data=d3, x=as.numeric(as.character(hour)), y=harm ) + 
+  geom_point( color="steelblue", size=3 ) + geom_line( color="steelblue" ) + 
+  geom_hline( yintercept=mean.harm, color="black" ) + 
+  facet_wrap( ~ age, ncol=4 ) + 
+  xlab("Time of Day (24hrs)") + ylab("Rate of Harm") +
+  ggtitle("Proportion of Accidents Resulting in Harm") +
+  # theme_fivethirtyeight() 
+  theme_stata()
+
+
+dat$age <- factor( dat$age )
+
+d3 <- 
+  dat %>% 
+  count( hour, age )
+
+d3 <- na.omit( d3 )
+
+ggplot( d3, aes( x=as.numeric(as.character(hour)), y=n, fill=age )) + 
+    geom_area( position='fill' ) +
+    scale_fill_brewer(  type="qual" ) +
+    xlab("Time of Day (24hrs)") + ylab("Number of Accidents")
+
+qplot( data=d3, x=as.numeric(as.character(hour)), y=n ) + 
+  geom_point() + geom_line() + 
+  facet_wrap( ~ age, ncol=4 ) +
+  xlab("Time of Day (24hrs)") + 
+  ylab("Number of Accidents") +
+  ggtitle("Number of Accidents by Time and Age Group")
+```
+
+
+
+
+
+
+
+
+<br><br>
+
+# Submission Instructions
+
+After you have completed your lab, knit your RMD file. Login to Canvas at <http://canvas.asu.edu> and navigate to the assignments tab in the course repository. Upload your RMD and your HTML files to the appropriate lab submission link.
+
+Remember to:
+
+* name your files according to the convention: **Lab-##-LastName.Rmd**
+* show your solution, include your code.
+* do not print excessive output (like a full data set).
+* follow appropriate style guidelines (spaces between arguments, etc.).
+
+<br>
+<br>
+
+
