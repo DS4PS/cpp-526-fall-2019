@@ -117,6 +117,17 @@ Recorded videos of review sessions will be posted here.
 * **Video** from Monday's session [ [link](https://asu.zoom.us/recording/play/vJMBi-9RB3o7yHGt4Np4-3tU_gt_z9U2r2L4oxTkmJDzpC03-5SZuu_vL-V7VfwU?continueMode=true) ]  
   
 <br>
+
+**Week 6:**
+
+* **Program Eval** 
+  - Testing Group Means w Dummy Variables [ [link](https://ds4ps.org/cpp-523-fall-2019/lectures/dummy-variables.html) ]  
+* **Data Science** 
+  - Data Verbs [ [link](https://ds4ps.org/Data-Science-Class/LECTURES/CH-05-data-verbs.html#1) ] 
+  - Data Recipes [ [link](https://ds4ps.org/Data-Science-Class/LECTURES/LECT-07-data-recipes.html#1) ]
+
+
+<br>
 <br>
 
 </div>
