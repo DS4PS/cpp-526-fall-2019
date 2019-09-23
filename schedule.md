@@ -837,8 +837,25 @@ You can find APIs through a Google search, or browse datasets on the [DS4PS Open
 
 
 
-*** { @unit = "SUN Sept 29th", @title = "Lab 05", @assignment  }
+*** { @unit = "SUN Sept 29th", @title = "Lab 05", @assignment, @foldout  }
 
+<br>
+<br>
+
+## Lab-05 - Data Wrangling
+
+This lab offers practice analyzing traffic accident patterns using **dplyr** data wrangling functions. 
+
+*Note, this data will be used for your final dashboard. This assignment is a preview of the types of analysis and graphics you might report on the dashboard.*
+
+<a class="uk-button uk-button-default" href="https://ds4ps.org/cpp-526-fall-2019/LABS/lab-05-instructions.html">LAB-05 Instructions</a>
+
+## Submit Solutions to Canvas:
+
+<a class="uk-button uk-button-primary" href="https://canvas.asu.edu/courses/29528/assignments/794992">SUBMIT LAB-05</a>
+
+<br>
+<br>
 
 
 
