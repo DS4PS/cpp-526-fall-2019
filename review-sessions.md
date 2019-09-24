@@ -123,6 +123,7 @@ Recorded videos of review sessions will be posted here.
 * **Program Eval** 
   - Testing Group Means w Dummy Variables [ [link](https://ds4ps.org/cpp-523-fall-2019/lectures/dummy-variables.html) ]  
 * **Data Science** 
+  - R Script for Examples [ [right click save](https://raw.githubusercontent.com/DS4PS/cpp-526-fall-2019/master/review-sessions/week-05-data-verbs-dplyr.R) ]
   - Data Verbs [ [link](https://ds4ps.org/Data-Science-Class/LECTURES/CH-05-data-verbs.html#1) ] 
   - Data Recipes [ [link](https://ds4ps.org/Data-Science-Class/LECTURES/LECT-07-data-recipes.html#1) ]
 
