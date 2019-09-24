@@ -332,6 +332,11 @@ Practice writing logical statements and basic data recipes for the following:
 * Note you can define custom summary statistics in summarize() using logical statements from above 
 
 
+```r
+dat %>% group_by( factor ) %>% summarize( my.stat = formula or logical statement )
+```
+
+
 #### 6) Create a table that reports the following for each day of the week:
 
 1. Number of accidents 
@@ -379,7 +384,7 @@ Note, this calculation would be useful for assessing whether there are differenc
 
 Do NOT confuse this question with, what age group is most likely to cause an accident at a given time of day. In that case, all of the proportions WITHIN EACH TIME PERIOD would sum to one. 
 
-You will need the dplyr **group_by()** and **summary()** functions. 
+You will need the dplyr **group_by()** and **summarize()** functions. 
 
 
 
