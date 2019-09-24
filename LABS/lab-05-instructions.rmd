@@ -305,19 +305,54 @@ You can create a new RMarkdown file, or download the lab template: [RMD Template
 
 <br><br>
 
-## PART 1: Summary Statistics
+## PART 1: Warm-Up With Data Summaries
 
 Practice writing logical statements and basic data recipes for the following:
 
 #### 1) How many accidents happen on Mondays?
 
+* Sum over a logical statement 
+
 #### 2) What proportion of accidents each week occur on Monday?
+
+* Mean of a logical statement 
 
 #### 3) What proportion of accidents on Mondays result in harm?
 
+* Compound logical statement 
 
 #### 4) What is the most common type of accident (Collisionmanner) that occurs on Mondays?
 
+* Use dplyr's **count()** function. 
+
+#### 5) Are there differences in the proportion of accidents that result in harm each day of the week?
+
+* Create a table of proportion of accidents that result in harm each day of the week
+* Use **group_by()** and **summarize()** 
+* Note you can define custom summary statistics in summarize() using logical statements from above 
+
+
+#### 6) Create a table that reports the following for each day of the week:
+
+1. Number of accidents 
+2. Number of people hurt in accidents (total injuries) 
+3. Number of people killed in accidents (total fatalities) 
+4. Proportion of accidents resulting in harm (injuries + fatalities) 
+
+* Use group_by() and summarize()  
+* Note that in the summarize function you can count occurrences by **n=n()** 
+
+
+```{r, echo=F}
+dat %>%
+  group_by( day ) %>%
+  summarize( n=n(), 
+             injuries = sum( Totalinjuries ),
+             fatalities = sum( Totalfatalities ),
+             harm.rate = round( mean( Totalinjuries > 0 | Totalfatalities > 0 ), 2 ) ) %>%
+  pander()
+             
+```
 
 <br>
 <br>
