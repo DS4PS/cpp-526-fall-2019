@@ -16,6 +16,8 @@ Just like learning a new language, there is no way to become fluent in a semeste
 
 Cheat sheets are parsimonious and stylized notes that help organizat functions and syntax so it is easier to learn and find. R Studio has an extensive list of [R Cheat Sheets](https://www.rstudio.com/resources/cheatsheets/) that you might find helpful.
 
+[R Studio Resources for Beginners](https://education.rstudio.com/) 
+
 ## R Exercises
 
 Short exercises on basic R skills [ [link](https://rstudio.cloud/learn/primers) ]
