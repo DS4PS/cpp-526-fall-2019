@@ -867,7 +867,7 @@ This lab offers practice analyzing traffic accident patterns using **dplyr** dat
 
 
 
-*** { @unit = "MON Sept 30th", @title = "Discussion Topic", @assignment  }
+*** { @unit = "MON Sept 30th", @title = "Discussion Topic", @assignment, @foldout  }
 
 <br>
 
@@ -917,11 +917,9 @@ plot( traffic, col="steelblue" )
 
 ![](assets/img/dc-traffic.png)
 
-For this week, read about how GitHub has evolved to support government:
+For this week, read about how [GitHub has evolved to support government](https://readwrite.com/2014/08/14/github-government-ben-balter-open-source/).
 
-https://readwrite.com/2014/08/14/github-government-ben-balter-open-source/
-
-**On YellowDig join the discussion about the challenges of trying to open-source government.**
+For your topic this week, I invite you to reflect on your experiences with government services. Do you think open source frameworks could help open the black box and make government more accessible? Would people contribute? Would government become more accessible, or more accessible for engineers and more alienating for regular citizens? 
 
 <a class="uk-button uk-button-primary" href="https://www.yellowdig.com/board/40500">YELLOWDIG</a>
 
