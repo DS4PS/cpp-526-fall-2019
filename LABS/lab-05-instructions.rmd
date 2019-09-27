@@ -384,7 +384,185 @@ Note, this calculation would be useful for assessing whether there are differenc
 
 Do NOT confuse this question with, what age group is most likely to cause an accident at a given time of day. In that case, all of the proportions WITHIN EACH TIME PERIOD would sum to one. 
 
-You will need the dplyr **group_by()** and **summarize()** functions. 
+
+```{r, eval=T, echo=F}
+# set.seed( 1234 )
+# f1 <- sample( c("A","B"), 10, replace=TRUE )
+# f2 <- sample( c("L-01","L-02","L-03"), 10, replace=TRUE )
+# x <- rep(1,10) 
+# 
+# d <- data.frame( f1, f2, x )
+# d <- arrange( d, f1, f2 ) 
+# d
+
+d <- 
+structure(list(f1 = structure(c(1L, 1L, 1L, 1L, 1L, 1L, 2L, 2L, 
+2L, 2L), .Label = c("A", "B"), class = "factor"), f2 = structure(c(1L, 
+1L, 2L, 2L, 2L, 3L, 1L, 1L, 3L, 3L), .Label = c("L-01", "L-02", 
+"L-03"), class = "factor"), x = c(1, 1, 1, 1, 1, 1, 1, 1, 1, 
+1)), row.names = c(NA, -10L), class = "data.frame")
+```
+
+
+Let's break this problem down with a sample dataset. Instead of age and hour12, we will use factors f1 and f2. We want to know the proportion of each f2 within f1 (i.e. proportion of accidents per hour for each age group). 
+
+```{r, echo=F}
+d %>% pander()
+```
+
+
+
+
+
+The data recipe will be:
+
+1) Calculate the frequency of each f1-f2 combination (cells in the f1 x f2 table). 
+2) Calculate the frequency of each f1 group. 
+3) Combine steps 1-2 into a single dataset.
+4) Divide each f1-f2 group count by the f1 group count. 
+
+**Step 1: count f1-f2 groups**
+
+```r
+d %>% count( f1, f2 )
+# or
+d %>% group_by( f1, f2 ) %>% summarize( n=n() )
+```
+
+```{r, echo=F}
+d %>% count( f1, f2 ) %>% pander()
+```
+
+
+
+
+
+**Step 2: count f1 groups**
+
+```r
+d %>% count( f1 )
+# or 
+d %>% group_by( f1 ) %>% summarize( n.f1 = n() )
+```
+
+```{r, echo=F}
+d %>% count( f1 ) %>% pander()
+```
+
+
+
+**Step 3: Combine steps 1-2 into a single dataset**
+
+The problem with Step 2 is that count() and summarize() drop all columns except the summary stats. We know, however, that mutate() creates new variables and keeps the rest of the dataset. So the trick is to replace summarize with mutate. 
+
+```r
+d %>% 
+  count( f1, f2 ) %>% 
+  group_by( f1 ) %>% 
+  mutate( n.f1 = n() )
+```
+
+
+```{r, echo=F}
+d %>% 
+  count( f1, f2 ) %>% 
+  group_by( f1 ) %>% 
+  mutate( n.f1 = n() ) %>% pander()
+```
+
+
+
+That's not quite right because we are counting the occurrences of f1 in a summary table. We know that there are 6 f1's, not 3. Each row of f1 occurs **n** times in the original dataset. So we need to sum over **n**, not count rows. 
+
+```r
+d %>% 
+  count( f1, f2 ) %>% 
+  group_by( f1 ) %>% 
+  mutate( n.f1 = sum(n) )
+```
+```{r, echo=F}
+d %>% 
+  count( f1, f2 ) %>% 
+  group_by( f1 ) %>% 
+  mutate( n.f1 = sum(n) ) %>% pander()
+```
+
+
+That looks better! 
+
+**Step 4: Divide each f1-f2 group count by the f1 group count.**
+
+The last step is then to divide (f1-f2) / f1. 
+
+```r
+d %>% 
+  count( f1, f2 ) %>% 
+  group_by( f1 ) %>% 
+  mutate( n.f1 = sum(n) ) %>% 
+  mutate( prop= n / n.f1 )
+```
+
+
+We can then filter by a specific factor to answer a question like what age of driver is most dangerous at 7am? 
+
+```r
+d %>% 
+  count( f1, f2 ) %>% 
+  group_by( f1 ) %>% 
+  mutate( n.f1 = sum(n) ) %>% 
+  mutate( prop= round( n / n.f1, 2 ) ) %>% 
+  filter( f2 == "L-01" )
+```
+
+```{r, echo=F}
+d %>% 
+  count( f1, f2 ) %>% 
+  group_by( f1 ) %>% 
+  mutate( n.f1 = sum(n) ) %>% 
+  mutate( prop= round( n / n.f1, 2 ) ) %>% 
+  filter( f2 == "L-01" ) %>% pander()
+```
+
+
+
+Your final table will look something like this, with **p.age** representing the within-age proportions.
+
+The **p.age** proportion answers the question, for all of the drivers from a specific age group that get into accidents, what time of day are they most likely to have an accident? 
+
+The **p.hour** proportion answers the question, which age group causes the most accidents at a given time of day (e.g. 7AM). 
+
+We don't have info on the total number of drivers from each age group on the road at any given time, so we cannot say anything about the absolute rates of dangerous driving. These rates tell us, for drivers that get into accidents, how do the accidents vary by time and age group across the day? 
+
+
+```{r, echo=F}
+library( knitr )
+d1 <- 
+dat %>%
+  count( age, hour12 ) %>%
+  group_by( age ) %>% 
+  mutate( n.age = sum( n ) ) %>%
+  group_by( hour12 ) %>% 
+  mutate( n.hour = sum( n ) ) %>%
+  mutate( p = n / sum(n), p.age = n / n.age, p.hour = n / n.hour ) %>%
+  filter( hour12 == " 7 AM" ) 
+
+d1 %>% kable( digits=2 )
+
+d1 <- d1[ 1:8 , ]
+
+plot( d1$p.age, bty="n", pch=19, cex=3, type="b", lwd=2,
+      ylab="Proportion of All Accidents Within Each Age Group",
+      xaxt="n", xlab="", ylim=c(0,0.08), main="Within Age Accident Rates at 7AM" )
+axis( side=1, at=1:8, lab=d1$age )
+abline( v=1:8, col=gray(0.5,0.5), lty=2 )
+abline( h=seq( 0.00, 0.08, 0.01 ), col=gray(0.5,0.5), lty=2 )
+```
+
+Maybe these are related? 
+
+![](http://www.ladamic.com/wordpress/wp-content/uploads/2010/12/sleepvsage.jpg)
+
+
 
 
 
