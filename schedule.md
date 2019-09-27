@@ -919,7 +919,7 @@ plot( traffic, col="steelblue" )
 
 For this week, read about how [GitHub has evolved to support government](https://readwrite.com/2014/08/14/github-government-ben-balter-open-source/).
 
-For your topic this week, I invite you to reflect on your experiences with government services. Do you think open source frameworks could help open the black box and make government more accessible? Would people contribute? Would government become more accessible, or more accessible for engineers and more alienating for regular citizens? 
+Do you think open source frameworks would help open the black box and make government more accessible? Would government become more accessible, or alienate regular citizens that are not computer scientists? Would it make influence from special interests more transparent, or would it make it easier for them to hijack the process of shaping local laws? 
 
 <a class="uk-button uk-button-primary" href="https://www.yellowdig.com/board/40500">YELLOWDIG</a>
 
