@@ -866,6 +866,45 @@ This lab offers practice analyzing traffic accident patterns using **dplyr** dat
 
 
 
+*** { @unit = "", @title = "Unit Overview", @foldout }
+
+<br>
+
+## Description
+
+This week has you continue practicing "**data wrangling**". This week will add the step of joining multiple datasets prior to analysis. We will continue to use the **dplyr** package. 
+
+
+## Learning Objectives
+
+By the end of this unit you will be able to:
+
+* Merge two related datasets using join functions
+* Identify appropriate keys for joins 
+* Determine whether you need an inner, outer, or full join
+ 
+![](assets/img/dplyr-joins.png)
+
+## Assigned Reading
+
+Read the notes on data joins. 
+
+* [Data Joins](https://stat545.com/join-cheatsheet.html)  
+
+<br>
+
+## Lab 
+
+Lab 06 will use Lahman data on baseball again. We will join the Salaries table to player bios (Master table) and performance data (Batting and Fielding) to assess which characteristics predict salary. 
+
+<br>
+
+![](assets/img/moneyball1.jpg)
+
+<br>
+<br>
+
+
 
 *** { @unit = "MON Sept 30th", @title = "Discussion Topic", @assignment, @foldout  }
 
