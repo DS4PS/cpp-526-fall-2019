@@ -887,19 +887,25 @@ By the end of this unit you will be able to:
 
 ## Assigned Reading
 
-Read the notes on data joins. 
+Read the notes on data joins: 
 
-* [Data Joins](https://stat545.com/join-cheatsheet.html)  
+* [Merging Data](http://ds4ps.org/dp4ss-textbook/p-076-merging-data.html)
+
+For reference: 
+
+* [Data Joins in dplyr](https://stat545.com/join-cheatsheet.html)  
 
 <br>
 
 ## Lab 
 
-Lab 06 will use Lahman data on baseball again. We will join the Salaries table to player bios (Master table) and performance data (Batting and Fielding) to assess which characteristics predict salary. 
+Lab 06 will use Lahman data on baseball for some [moneyball examples](https://towardsdatascience.com/linear-regression-moneyball-part-1-b93b3b9f5b53). 
+
+We will join the Salaries table to player bios (Master table) and performance data (Batting and Fielding) to assess which characteristics predict salary and which teams have been able to most efficiently convert salary to wins. 
 
 <br>
 
-![](assets/img/moneyball1.jpg)
+![](assets/img/moneyball.jpg)
 
 <br>
 <br>
