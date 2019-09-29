@@ -893,6 +893,7 @@ Read the notes on data joins:
 
 For reference: 
 
+* [Manny Gimond's Page](https://mgimond.github.io/ES218/Week03c.html)  
 * [Data Joins in dplyr](https://stat545.com/join-cheatsheet.html)  
 
 <br>
