@@ -128,7 +128,13 @@ Recorded videos of review sessions will be posted here.
   - Data Recipes [ [link](https://ds4ps.org/Data-Science-Class/LECTURES/LECT-07-data-recipes.html#1) ]
 * **Video** [ [watch](https://asu.zoom.us/recording/play/pqjPIZ7l0siCsD1dt8qjYONo2HiZh2KVLMZjKqWkAmPcHQjlKInXvE3GrDrGnVV9?continueMode=true) ] 
 
+**Week 7:**
 
+* **Program Eval** 
+  - Specification Bias [ [html](https://ds4ps.org/cpp-523-fall-2019/lectures/specification-bias.html) ] [ [pdf](https://github.com/DS4PS/cpp-523-fall-2019/raw/master/lectures/p-09-specification.pdf) ]    
+* **Data Science** 
+  - Table Keys [ [ppt](https://www.dropbox.com/s/4b68hlms2wmutz0/RDB-Table-Keys.pptx?dl=1) ]  
+  
 <br>
 <br>
 
