@@ -972,7 +972,7 @@ Do you think open source frameworks would help open the black box and make gover
 <br><br>
 
 
-*** { @unit = "THURS Oct 3rd", @title = "Lab 06", @assignment  }
+*** { @unit = "FRI Oct 4th", @title = "Lab 06", @assignment  }
 
 
 
