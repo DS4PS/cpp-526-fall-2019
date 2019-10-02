@@ -257,6 +257,11 @@ Teams %>%
 ```
 
 
+Notes:
+
+* **n** represents the number of players where salaries were available. Data was not available for all players in all seasons, so we filter by n > 25 to ensure we have a reliable estimate of the team's budget that year. 
+* **cost.per.win** is represented in hundreds of thousands of dollars here for simplicity. (wins / (budget/100000) )  
+* **Rank** is from Teams, and is their final league ranking at the end of the season. 
 
 Submit your code and a printed view of your final table. 
 
