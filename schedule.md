@@ -974,7 +974,26 @@ Do you think open source frameworks would help open the black box and make gover
 
 *** { @unit = "FRI Oct 4th", @title = "Lab 06", @assignment  }
 
+<br>
+<br>
 
+## Lab-06 - Data Joins
+
+This lab is designed to introduce you to core graphing functions in R by replicating a New York Times graphic.
+
+You are advised to **skim** the chapters on graphing functions and custom graphics in R, but sample code has been provided for each step of the lab. 
+
+[The plot() Function](http://ds4ps.org/dp4ss-textbook/p-061-plot-basics.html)  
+[Building Custom Graphics](http://ds4ps.org/dp4ss-textbook/p-062-customized-graphics.html)
+
+<a class="uk-button uk-button-default" href="https://ds4ps.org/cpp-526-fall-2019/LABS/lab-06-instructions.html">LAB-06 Instructions</a>
+
+## Submit Solutions to Canvas:
+
+<a class="uk-button uk-button-primary" href="https://canvas.asu.edu/courses/29528/assignments/">SUBMIT LAB-06</a>
+
+<br>
+<br>
 
 
 
