@@ -263,14 +263,22 @@ Notes:
 * **cost.per.win** is represented in hundreds of thousands of dollars here for simplicity. (wins / (budget/100000) )  
 * **Rank** is from Teams, and is their final league ranking at the end of the season. 
 
-Submit your code and a printed view of your final table. 
+<br>
+
+If you are interested in some of the actual math behind Moneyball ("Sabermetrics") that breaks open the black box of each season to figure out what types of players to recruit to maximize wins, you should check out [this nice blog](https://towardsdatascience.com/linear-regression-moneyball-part-1-b93b3b9f5b53) or this [R book](https://www.amazon.com/Analyzing-Baseball-Data-Chapman-Hall/dp/1466570229) on baseball statistics. 
+
+
+
+
 
 
 <br><br>
 
 # Submission Instructions
 
-After you have completed your lab, knit your RMD file. Login to Canvas at <http://canvas.asu.edu> and navigate to the assignments tab in the course repository. Upload your RMD and your HTML files to the appropriate lab submission link.
+After you have completed your lab, knit your RMD file. **Submit your code and a printed view of your final table.**
+
+Login to Canvas at <http://canvas.asu.edu> and navigate to the assignments tab in the course repository. Upload your RMD and your HTML files to the appropriate lab submission link.
 
 Remember to:
 
