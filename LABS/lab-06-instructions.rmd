@@ -199,12 +199,12 @@ We are interested in identifying the teams that have achieved the largest number
 This analysis requires us to link two tables from Lahman - the Salaries table for pay, and the Teams table for total wins per season. Our outcome of interest will be the cost of each win that a team earns in a season. 
 
 
-If we are comparing salaries across several decades, it is important to adjust salaries for inflation so that everything is in 2016 dollars. For simplicity sake we are assuming steady 3% inflation each year since 1985. Tranform the raw numbers and save the variable as **salary.adj**. 
+If we are comparing salaries across several decades, it is important to adjust salaries for inflation so that everything is in 2016 dollars. For simplicity sake we are assuming steady 2.5% inflation each year since 1985. Tranform the raw numbers and save the variable as **salary.adj**. 
 
 ```{r}
 # adjust old salaries for inflation
 # to convert all salaries into 2016 dollars
-# assuming a 3 percent inflation each year 
+# assuming a 2.5 percent inflation each year 
 Salaries <- 
   Salaries %>% 
   mutate( salary.adj = salary*(1.025)^( max(yearID) - yearID ) )

@@ -2048,10 +2048,10 @@ summary {
 <a class="sourceLine" id="cb8-5" data-line-number="5"><span class="kw">data</span>( Teams )</a></code></pre></div>
 <p>We are interested in identifying the teams that have achieved the largest number of wins on the smallest budgets. Who are the teams that have far outperformed their resource constraints?</p>
 <p>This analysis requires us to link two tables from Lahman - the Salaries table for pay, and the Teams table for total wins per season. Our outcome of interest will be the cost of each win that a team earns in a season.</p>
-<p>If we are comparing salaries across several decades, it is important to adjust salaries for inflation so that everything is in 2016 dollars. For simplicity sake we are assuming steady 3% inflation each year since 1985. Tranform the raw numbers and save the variable as <strong>salary.adj</strong>.</p>
+<p>If we are comparing salaries across several decades, it is important to adjust salaries for inflation so that everything is in 2016 dollars. For simplicity sake we are assuming steady 2.5% inflation each year since 1985. Tranform the raw numbers and save the variable as <strong>salary.adj</strong>.</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" data-line-number="1"><span class="co"># adjust old salaries for inflation</span></a>
 <a class="sourceLine" id="cb9-2" data-line-number="2"><span class="co"># to convert all salaries into 2016 dollars</span></a>
-<a class="sourceLine" id="cb9-3" data-line-number="3"><span class="co"># assuming a 3 percent inflation each year </span></a>
+<a class="sourceLine" id="cb9-3" data-line-number="3"><span class="co"># assuming a 2.5 percent inflation each year </span></a>
 <a class="sourceLine" id="cb9-4" data-line-number="4">Salaries &lt;-<span class="st"> </span></a>
 <a class="sourceLine" id="cb9-5" data-line-number="5"><span class="st">  </span>Salaries <span class="op">%&gt;%</span><span class="st"> </span></a>
 <a class="sourceLine" id="cb9-6" data-line-number="6"><span class="st">  </span><span class="kw">mutate</span>( <span class="dt">salary.adj =</span> salary<span class="op">*</span>(<span class="fl">1.025</span>)<span class="op">^</span>( <span class="kw">max</span>(yearID) <span class="op">-</span><span class="st"> </span>yearID ) )</a>
