@@ -972,9 +972,23 @@ Do you think open source frameworks would help open the black box and make gover
 <br><br>
 
 
-*** { @unit = "FRI Oct 4th", @title = "Lab 06", @assignment  }
+*** { @unit = "FRI Oct 4th", @title = "Lab 06", @assignment, @foldout  }
 
+<br>
+<br>
 
+## Lab-06 - Data Joins
+
+This lab is designed to introduce you to primary data join functions in R.
+
+<a class="uk-button uk-button-default" href="https://ds4ps.org/cpp-526-fall-2019/LABS/lab-06-instructions.html">LAB-06 Instructions</a>
+
+## Submit Solutions to Canvas:
+
+<a class="uk-button uk-button-primary" href="https://canvas.asu.edu/courses/29528/assignments/">SUBMIT LAB-06</a>
+
+<br>
+<br>
 
 
 
