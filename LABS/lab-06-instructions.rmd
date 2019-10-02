@@ -194,9 +194,7 @@ data( Teams )
 ```
 
 
-We are interested in identifying the teams that largest number of wins on the smallest budgets. Who are the teams that have far outperformed their constrained budgets? 
-
-We want to examine teams that are 
+We are interested in identifying the teams that have achieved the largest number of wins on the smallest budgets. Who are the teams that have far outperformed their resource constraints? 
 
 This analysis requires us to link two tables from Lahman - the Salaries table for pay, and the Teams table for total wins per season. Our outcome of interest will be the cost of each win that a team earns in a season. 
 
@@ -209,7 +207,7 @@ If we are comparing salaries across several decades, it is important to adjust s
 # assuming a 3 percent inflation each year 
 Salaries <- 
   Salaries %>% 
-  mutate( salary.adj = salary*(1.03)^( max(yearID) - yearID ) )
+  mutate( salary.adj = salary*(1.025)^( max(yearID) - yearID ) )
 
 head( Salaries ) %>% pander()
 ```
@@ -230,7 +228,9 @@ Follow these steps to build your dataset:
 3. Merge the Teams dataset with your new team salaries table using both **teamID** and **yearID** as unique keys. 
 4. Create a new variable that measures the cost of each win for each team, by season.
 5. Filter the results to retain only teams that have at least 25 teams on their roster each year. 
-6. Sort your list and report the teams with the lowest cost of wins. 
+6. Sort your list and report the teams with the lowest cost per win. 
+
+Your table will look something like this (this table not sorted to show the moneyball teams). 
 
 
 ```{r, echo=F}
@@ -258,7 +258,7 @@ Teams %>%
 
 
 
-Submit your code and some view of the final result. 
+Submit your code and a printed view of your final table. 
 
 
 <br><br>
