@@ -2048,13 +2048,13 @@ summary {
 <a class="sourceLine" id="cb8-5" data-line-number="5"><span class="kw">data</span>( Teams )</a></code></pre></div>
 <p>We are interested in identifying the teams that have achieved the largest number of wins on the smallest budgets. Who are the teams that have far outperformed their resource constraints?</p>
 <p>This analysis requires us to link two tables from Lahman - the Salaries table for pay, and the Teams table for total wins per season. Our outcome of interest will be the cost of each win that a team earns in a season.</p>
-<p>If we are comparing salaries across several decades, it is important to adjust salaries for inflation so that everything is in 2016 dollars. For simplicity sake we are assuming steady 2.5% inflation each year since 1985. Tranform the raw numbers and save the variable as <strong>salary.adj</strong>.</p>
+<p>If we are comparing salaries across several decades, it is important to adjust salaries for inflation so that everything is in 2016 dollars. For simplicity sake we are assuming steady 3% inflation each year since 1985. Tranform the raw numbers and save the variable as <strong>salary.adj</strong>.</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" data-line-number="1"><span class="co"># adjust old salaries for inflation</span></a>
 <a class="sourceLine" id="cb9-2" data-line-number="2"><span class="co"># to convert all salaries into 2016 dollars</span></a>
-<a class="sourceLine" id="cb9-3" data-line-number="3"><span class="co"># assuming a 2.5 percent inflation each year </span></a>
+<a class="sourceLine" id="cb9-3" data-line-number="3"><span class="co"># assuming a 3 percent inflation each year </span></a>
 <a class="sourceLine" id="cb9-4" data-line-number="4">Salaries &lt;-<span class="st"> </span></a>
 <a class="sourceLine" id="cb9-5" data-line-number="5"><span class="st">  </span>Salaries <span class="op">%&gt;%</span><span class="st"> </span></a>
-<a class="sourceLine" id="cb9-6" data-line-number="6"><span class="st">  </span><span class="kw">mutate</span>( <span class="dt">salary.adj =</span> salary<span class="op">*</span>(<span class="fl">1.025</span>)<span class="op">^</span>( <span class="kw">max</span>(yearID) <span class="op">-</span><span class="st"> </span>yearID ) )</a>
+<a class="sourceLine" id="cb9-6" data-line-number="6"><span class="st">  </span><span class="kw">mutate</span>( <span class="dt">salary.adj =</span> salary<span class="op">*</span>(<span class="fl">1.03</span>)<span class="op">^</span>( <span class="kw">max</span>(yearID) <span class="op">-</span><span class="st"> </span>yearID ) )</a>
 <a class="sourceLine" id="cb9-7" data-line-number="7"></a>
 <a class="sourceLine" id="cb9-8" data-line-number="8"><span class="kw">head</span>( Salaries ) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">pander</span>()</a></code></pre></div>
 <table style="width:82%;">
@@ -2083,7 +2083,7 @@ summary {
 <td align="center">NL</td>
 <td align="center">barkele01</td>
 <td align="center">870000</td>
-<td align="center">1870506</td>
+<td align="center">2175070</td>
 </tr>
 <tr class="even">
 <td align="center">1985</td>
@@ -2091,7 +2091,7 @@ summary {
 <td align="center">NL</td>
 <td align="center">bedrost01</td>
 <td align="center">550000</td>
-<td align="center">1182504</td>
+<td align="center">1375044</td>
 </tr>
 <tr class="odd">
 <td align="center">1985</td>
@@ -2099,7 +2099,7 @@ summary {
 <td align="center">NL</td>
 <td align="center">benedbr01</td>
 <td align="center">545000</td>
-<td align="center">1171754</td>
+<td align="center">1362544</td>
 </tr>
 <tr class="even">
 <td align="center">1985</td>
@@ -2107,7 +2107,7 @@ summary {
 <td align="center">NL</td>
 <td align="center">campri01</td>
 <td align="center">633333</td>
-<td align="center">1361670</td>
+<td align="center">1583383</td>
 </tr>
 <tr class="odd">
 <td align="center">1985</td>
@@ -2115,7 +2115,7 @@ summary {
 <td align="center">NL</td>
 <td align="center">ceronri01</td>
 <td align="center">625000</td>
-<td align="center">1343754</td>
+<td align="center">1562550</td>
 </tr>
 <tr class="even">
 <td align="center">1985</td>
@@ -2123,7 +2123,7 @@ summary {
 <td align="center">NL</td>
 <td align="center">chambch01</td>
 <td align="center">8e+05</td>
-<td align="center">1720005</td>
+<td align="center">2e+06</td>
 </tr>
 </tbody>
 </table>
@@ -2663,7 +2663,7 @@ summary {
 <p>Your table will look something like this (this table not sorted to show the moneyball teams).</p>
 <div data-pagedtable="false">
 <script data-pagedtable-source type="application/json">
-{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["yearID"],"name":[1],"type":["int"],"align":["right"]},{"label":["teamID"],"name":[2],"type":["fctr"],"align":["left"]},{"label":["lgID"],"name":[3],"type":["fctr"],"align":["left"]},{"label":["Rank"],"name":[4],"type":["int"],"align":["right"]},{"label":["G"],"name":[5],"type":["int"],"align":["right"]},{"label":["W"],"name":[6],"type":["int"],"align":["right"]},{"label":["n"],"name":[7],"type":["int"],"align":["right"]},{"label":["team.budget"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["cost.per.win"],"name":[9],"type":["dbl"],"align":["right"]}],"data":[{"1":"1985","2":"CAL","3":"AL","4":"2","5":"162","6":"90","7":"28","8":"31020070","9":"3.446674","_rn_":"1"},{"1":"1986","2":"ATL","3":"NL","4":"6","5":"161","6":"72","7":"29","8":"35874249","9":"4.982535","_rn_":"2"},{"1":"1986","2":"BAL","3":"AL","4":"7","5":"162","6":"73","7":"29","8":"27271017","9":"3.735756","_rn_":"3"},{"1":"1986","2":"BOS","3":"AL","4":"1","5":"161","6":"95","7":"29","8":"30209670","9":"3.179965","_rn_":"4"},{"1":"1986","2":"CAL","3":"AL","4":"1","5":"162","6":"92","7":"29","8":"30262149","9":"3.289364","_rn_":"5"},{"1":"1986","2":"CHA","3":"AL","4":"5","5":"162","6":"72","7":"31","8":"21854177","9":"3.035302","_rn_":"6"},{"1":"1986","2":"CHN","3":"NL","4":"5","5":"160","6":"70","7":"31","8":"36095289","9":"5.156470","_rn_":"7"},{"1":"1986","2":"CIN","3":"NL","4":"2","5":"162","6":"86","7":"30","8":"24974453","9":"2.904006","_rn_":"8"},{"1":"1986","2":"CLE","3":"AL","4":"5","5":"163","6":"84","7":"31","8":"16380954","9":"1.950114","_rn_":"9"},{"1":"1986","2":"DET","3":"AL","4":"3","5":"162","6":"87","7":"27","8":"25874994","9":"2.974137","_rn_":"10"},{"1":"1986","2":"KCA","3":"AL","4":"3","5":"162","6":"76","7":"28","8":"27360038","9":"3.600005","_rn_":"11"},{"1":"1986","2":"LAN","3":"NL","4":"5","5":"162","6":"73","7":"32","8":"31282653","9":"4.285295","_rn_":"12"},{"1":"1986","2":"ML4","3":"AL","4":"6","5":"161","6":"77","7":"28","8":"20857461","9":"2.708761","_rn_":"13"},{"1":"1986","2":"MON","3":"NL","4":"4","5":"161","6":"78","7":"32","8":"23290551","9":"2.985968","_rn_":"14"},{"1":"1986","2":"NYA","3":"AL","4":"2","5":"162","6":"90","7":"28","8":"38792945","9":"4.310327","_rn_":"15"},{"1":"1986","2":"NYN","3":"NL","4":"1","5":"162","6":"108","7":"28","8":"32289355","9":"2.989755","_rn_":"16"},{"1":"1986","2":"OAK","3":"AL","4":"3","5":"162","6":"76","7":"31","8":"20512996","9":"2.699078","_rn_":"17"},{"1":"1986","2":"PHI","3":"NL","4":"2","5":"161","6":"86","7":"31","8":"24311156","9":"2.826879","_rn_":"18"},{"1":"1986","2":"PIT","3":"NL","4":"6","5":"162","6":"64","7":"29","8":"22744974","9":"3.553902","_rn_":"19"},{"1":"1986","2":"SEA","3":"AL","4":"7","5":"162","6":"67","7":"26","8":"12497956","9":"1.865367","_rn_":"20"},{"1":"1986","2":"SFN","3":"NL","4":"3","5":"162","6":"83","7":"28","8":"18766937","9":"2.261077","_rn_":"21"},{"1":"1986","2":"SLN","3":"NL","4":"3","5":"161","6":"79","7":"27","8":"20713501","9":"2.621962","_rn_":"22"},{"1":"1986","2":"TEX","3":"AL","4":"2","5":"162","6":"87","7":"26","8":"14144148","9":"1.625764","_rn_":"23"},{"1":"1986","2":"TOR","3":"AL","4":"4","5":"163","6":"86","7":"27","8":"26452523","9":"3.075875","_rn_":"24"},{"1":"1987","2":"ATL","3":"NL","4":"5","5":"161","6":"69","7":"32","8":"33856910","9":"4.906799","_rn_":"25"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["yearID"],"name":[1],"type":["int"],"align":["right"]},{"label":["teamID"],"name":[2],"type":["fctr"],"align":["left"]},{"label":["lgID"],"name":[3],"type":["fctr"],"align":["left"]},{"label":["Rank"],"name":[4],"type":["int"],"align":["right"]},{"label":["G"],"name":[5],"type":["int"],"align":["right"]},{"label":["W"],"name":[6],"type":["int"],"align":["right"]},{"label":["n"],"name":[7],"type":["int"],"align":["right"]},{"label":["team.budget"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["cost.per.win"],"name":[9],"type":["dbl"],"align":["right"]}],"data":[{"1":"1985","2":"CAL","3":"AL","4":"2","5":"162","6":"90","7":"28","8":"36070894","9":"4.007877","_rn_":"1"},{"1":"1986","2":"ATL","3":"NL","4":"6","5":"161","6":"72","7":"29","8":"41512951","9":"5.765688","_rn_":"2"},{"1":"1986","2":"BAL","3":"AL","4":"7","5":"162","6":"73","7":"29","8":"31557466","9":"4.322940","_rn_":"3"},{"1":"1986","2":"BOS","3":"AL","4":"1","5":"161","6":"95","7":"29","8":"34958014","9":"3.679791","_rn_":"4"},{"1":"1986","2":"CAL","3":"AL","4":"1","5":"162","6":"92","7":"29","8":"35018742","9":"3.806385","_rn_":"5"},{"1":"1986","2":"CHA","3":"AL","4":"5","5":"162","6":"72","7":"31","8":"25289208","9":"3.512390","_rn_":"6"},{"1":"1986","2":"CHN","3":"NL","4":"5","5":"160","6":"70","7":"31","8":"41768733","9":"5.966962","_rn_":"7"},{"1":"1986","2":"CIN","3":"NL","4":"2","5":"162","6":"86","7":"30","8":"28899929","9":"3.360457","_rn_":"8"},{"1":"1986","2":"CLE","3":"AL","4":"5","5":"163","6":"84","7":"31","8":"18955706","9":"2.256632","_rn_":"9"},{"1":"1986","2":"DET","3":"AL","4":"3","5":"162","6":"87","7":"27","8":"29942016","9":"3.441611","_rn_":"10"},{"1":"1986","2":"KCA","3":"AL","4":"3","5":"162","6":"76","7":"28","8":"31660479","9":"4.165852","_rn_":"11"},{"1":"1986","2":"LAN","3":"NL","4":"5","5":"162","6":"73","7":"32","8":"36199649","9":"4.958856","_rn_":"12"},{"1":"1986","2":"ML4","3":"AL","4":"6","5":"161","6":"77","7":"28","8":"24135829","9":"3.134523","_rn_":"13"},{"1":"1986","2":"MON","3":"NL","4":"4","5":"161","6":"78","7":"32","8":"26951352","9":"3.455301","_rn_":"14"},{"1":"1986","2":"NYA","3":"AL","4":"2","5":"162","6":"90","7":"28","8":"44890406","9":"4.987823","_rn_":"15"},{"1":"1986","2":"NYN","3":"NL","4":"1","5":"162","6":"108","7":"28","8":"37364584","9":"3.459684","_rn_":"16"},{"1":"1986","2":"OAK","3":"AL","4":"3","5":"162","6":"76","7":"31","8":"23737222","9":"3.123319","_rn_":"17"},{"1":"1986","2":"PHI","3":"NL","4":"2","5":"161","6":"86","7":"31","8":"28132375","9":"3.271206","_rn_":"18"},{"1":"1986","2":"PIT","3":"NL","4":"6","5":"162","6":"64","7":"29","8":"26320021","9":"4.112503","_rn_":"19"},{"1":"1986","2":"SEA","3":"AL","4":"7","5":"162","6":"67","7":"26","8":"14462380","9":"2.158564","_rn_":"20"},{"1":"1986","2":"SFN","3":"NL","4":"3","5":"162","6":"83","7":"28","8":"21716717","9":"2.616472","_rn_":"21"},{"1":"1986","2":"SLN","3":"NL","4":"3","5":"161","6":"79","7":"27","8":"23969241","9":"3.034081","_rn_":"22"},{"1":"1986","2":"TEX","3":"AL","4":"2","5":"162","6":"87","7":"26","8":"16367320","9":"1.881301","_rn_":"23"},{"1":"1986","2":"TOR","3":"AL","4":"4","5":"163","6":"86","7":"27","8":"30610321","9":"3.559340","_rn_":"24"},{"1":"1987","2":"ATL","3":"NL","4":"5","5":"161","6":"69","7":"32","8":"38988339","9":"5.650484","_rn_":"25"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
 <p>Submit your code and a printed view of your final table.</p>
