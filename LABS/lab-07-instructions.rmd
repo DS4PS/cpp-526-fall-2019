@@ -47,7 +47,7 @@ There are two things to remember when conducting joins. The first is that when y
 <br>
 
 ```{r, fig.cap="", echo=F, out.width='40%', fig.align='center' }
-knitr::include_graphics( "figures/shared_observations.png" )
+knitr::include_graphics( "images/shared_observations.png" )
 ```
 
 <br>
@@ -56,25 +56,25 @@ These options are specified through the *all=*, *all.x=*, and *all.y=* arguments
 
 
 ```{r, fig.cap="", echo=F, out.width='80%', fig.align='center' }
-knitr::include_graphics( "figures/outer_join.png" )
+knitr::include_graphics( "images/outer_join.png" )
 ```
 
 <br>
 
 ```{r, fig.cap="", echo=F, out.width='80%', fig.align='center'}
-knitr::include_graphics( "figures/inner_join.png" )
+knitr::include_graphics( "images/inner_join.png" )
 ```
 
 <br>
 
 ```{r, fig.cap="", echo=F, out.width='80%', fig.align='center' }
-knitr::include_graphics( "figures/left_join.png" )
+knitr::include_graphics( "images/left_join.png" )
 ```
 
 <br>
 
 ```{r, fig.cap="", echo=F, out.width='80%', fig.align='center' }
-knitr::include_graphics( "figures/right_join.png" )
+knitr::include_graphics( "images/right_join.png" )
 ```
 
 <br>
@@ -82,7 +82,7 @@ knitr::include_graphics( "figures/right_join.png" )
 And the equivalent operations in **dplyr**:
 
 
-![](https://ds4ps.org/cpp-526-fall-2019/assets/img/dplyr-joins.png)
+![](https://raw.githubusercontent.com/DS4PS/cpp-526-fall-2019/master/LABS/images/dplyr-joins.png)
 
  
 <br><br>
@@ -94,7 +94,7 @@ It is often the case where a single ID does not unique specify observations need
 If we want to look at the relationship between employee sick days in a given year and their performance, we now might have multiple years of data for each employee. To merge these two datasets we need to use both ID and YEAR. This is an example of a compound ID - two or more variables are needed to create a unique key for the join.
 
 ```{r, fig.cap="", echo=F, out.width='60%', fig.align='center' }
-knitr::include_graphics( "figures/compound_ids.png" )
+knitr::include_graphics( "images/compound_ids.png" )
 ```
 
 
@@ -200,7 +200,6 @@ We want to examine teams that are
 
 This analysis requires us to link two tables from Lahman - the Salaries table for pay, and the Teams table for total wins per season. Our outcome of interest will be the cost of each win that a team earns in a season. 
 
-![](images/lahman-tables.png)
 
 If we are comparing salaries across several decades, it is important to adjust salaries for inflation so that everything is in 2016 dollars. For simplicity sake we are assuming steady 3% inflation each year since 1985. Tranform the raw numbers and save the variable as **salary.adj**. 
 
