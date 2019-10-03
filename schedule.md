@@ -1013,7 +1013,25 @@ This lab is designed to introduce you to primary data join functions in R.
 
 *** { @unit = "THURS Oct 10th", @title = "FINAL PROJECT", @assignment  }
 
+*** { @unit = "FRI Oct 11th", @title = "Code-Through Assignment", @assignment  }
+
+<br>
+<br>
+
+## Code-Through
+
+<a class="uk-button uk-button-default" href="https://ds4ps.org/cpp-526-fall-2019/labs/code-through-assignment.html">Code-Through Instructions</a>
+
+## Submit to Canvas:
+
+<a class="uk-button uk-button-primary" href="https://canvas.asu.edu/courses/29528/assignments/814647">SUBMIT CODE-THROUGH</a>
+
+## Post on Yellowdig
+
+<a class="uk-button uk-button-primary" href="https://www.yellowdig.com/board/40500">Yellowdig</a>
 
 
+<br>
+<br>
 
 
