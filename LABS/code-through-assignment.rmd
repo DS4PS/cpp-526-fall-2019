@@ -63,7 +63,7 @@ Create your code-through tutorial in an RMD document.
 Include anything that you need to get your ideas across. You might consider:
 
 * Images 
-* Adding [extra labels](https://ds4ps.org/cpp-523-fall-2019/labs/figures/reading-a-regression-table.png) to tables or graphs 
+* [Diagramming](https://ds4ps.org/cpp-523-fall-2019/labs/figures/reading-a-regression-table.png) functions, tables or graphs 
 * Print glimpses of datasets before and after manipulations so the user can see what has changed 
 * Toy datasets that can be useful for demonstrating points 
 
