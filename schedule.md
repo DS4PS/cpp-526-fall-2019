@@ -1015,7 +1015,7 @@ This lab is designed to introduce you to primary data join functions in R.
 
 ## Code-Through
 
-<a class="uk-button uk-button-default" href="https://ds4ps.org/cpp-526-fall-2019/labs/code-through-assignment.html">Code-Through Instructions</a>
+<a class="uk-button uk-button-default" href="https://ds4ps.org/cpp-526-fall-2019/LABS/code-through-assignment.html">Code-Through Instructions</a>
 
 ## Submit to Canvas:
 
