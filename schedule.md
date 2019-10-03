@@ -985,7 +985,7 @@ This lab is designed to introduce you to primary data join functions in R.
 
 ## Submit Solutions to Canvas:
 
-<a class="uk-button uk-button-primary" href="https://canvas.asu.edu/courses/29528/assignments/">SUBMIT LAB-06</a>
+<a class="uk-button uk-button-primary" href="https://canvas.asu.edu/courses/29528/assignments/814525">SUBMIT LAB-06</a>
 
 <br>
 <br>
