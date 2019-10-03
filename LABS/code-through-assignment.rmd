@@ -30,7 +30,7 @@ In the R world, these often take the format of package "vignettes":
 * [dplyr](https://cran.r-project.org/web/packages/dplyr/vignettes/dplyr.html)   
 
 
-They can come in many styles, sizes, and themes. Here are some examples to get you thinking: 
+Code-throughs can come in many styles, sizes, and themes. Here are some examples to get you thinking: 
 
 * [choropleth maps](http://www.rpubs.com/cenuno/choropleth_map)   
 * [making clever graphics](https://davidsmale.netlify.com/portfolio/happy-days/)  
