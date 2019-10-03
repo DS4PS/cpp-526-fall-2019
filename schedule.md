@@ -997,7 +997,7 @@ This lab is designed to introduce you to primary data join functions in R.
 ** Week 7 - Dashboards
 
 
-*** { @unit = "", @title = "Reflection" }
+*** { @unit = "", @title = "Reflection", @foldout }
 
 <br>
 
@@ -1008,12 +1008,7 @@ This lab is designed to introduce you to primary data join functions in R.
 <br>
 
 
-*** { @unit = "MON Oct 7th", @title = "Discussion Topic", @assignment  }
-
-
-*** { @unit = "THURS Oct 10th", @title = "FINAL PROJECT", @assignment  }
-
-*** { @unit = "FRI Oct 11th", @title = "Code-Through Assignment", @assignment  }
+*** { @unit = "FRI Oct 11th", @title = "Code-Through Assignment", @assignment, @foldout  }
 
 <br>
 <br>
@@ -1034,4 +1029,9 @@ This lab is designed to introduce you to primary data join functions in R.
 <br>
 <br>
 
+
+*** { @unit = "MON Oct 7th", @title = "Discussion Topic", @assignment  }
+
+
+*** { @unit = "THURS Oct 10th", @title = "FINAL PROJECT", @assignment  }
 
