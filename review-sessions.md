@@ -134,6 +134,7 @@ Recorded videos of review sessions will be posted here.
   - Specification Bias [ [html](https://ds4ps.org/cpp-523-fall-2019/lectures/specification-bias.html) ] [ [pdf](https://github.com/DS4PS/cpp-523-fall-2019/raw/master/lectures/p-09-specification.pdf) ]    
 * **Data Science** 
   - Table Keys [ [ppt](https://www.dropbox.com/s/4b68hlms2wmutz0/RDB-Table-Keys.pptx?dl=1) ]  
+* **Video** [ [watch](https://asu.zoom.us/recording/play/5NOam6kCjiTNFL7pHcogxLTYXII_iHD_cIVFcQE_dJIEh84YXBOGVD3qRKm38wWW?continueMode=true) ]
   
 <br>
 <br>
