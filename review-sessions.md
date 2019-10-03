@@ -128,6 +128,8 @@ Recorded videos of review sessions will be posted here.
   - Data Recipes [ [link](https://ds4ps.org/Data-Science-Class/LECTURES/LECT-07-data-recipes.html#1) ]
 * **Video** [ [watch](https://asu.zoom.us/recording/play/pqjPIZ7l0siCsD1dt8qjYONo2HiZh2KVLMZjKqWkAmPcHQjlKInXvE3GrDrGnVV9?continueMode=true) ] 
 
+<br>
+
 **Week 7:**
 
 * **Program Eval** 
