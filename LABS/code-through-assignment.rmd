@@ -23,6 +23,12 @@ knitr::opts_chunk$set( echo=F, fig.width=9, fig.height=6, warning=F, message=F )
 
 A code-through is a short tutorial where you explain how to do something in R. They are similar to [explainer videos](https://blog.hubspot.com/marketing/explainer-videos) that you often see shared.
 
+In the R world, these often take the format of package "vignettes":
+
+* [httr](https://cran.r-project.org/web/packages/httr/vignettes/quickstart.html)  
+* [docco style](https://cran.r-project.org/web/packages/knitr/vignettes/docco-linear.html) 
+* [dplyr](https://cran.r-project.org/web/packages/dplyr/vignettes/dplyr.html)   
+
 
 They can come in many styles, sizes, and themes. Here are some examples to get you thinking: 
 
