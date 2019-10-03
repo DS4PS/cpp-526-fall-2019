@@ -68,6 +68,21 @@ Include anything that you need to get your ideas across. You might consider:
 * Toy datasets that can be useful for demonstrating points 
 
 
+# RMD Format
+
+This assignment provides an opportunity to explore some options to customize your R Markdown document. You can see some of the templates available here:
+
+* [RMD Gallery 01](https://bootswatch.com/3/) 
+* [RMD Gallery 02](http://www.datadreaming.org/post/r-markdown-theme-gallery/) 
+* [syntax highlighting options](https://eranraviv.com/syntax-highlighting-style-in-rmarkdown/) 
+
+And some advice on ways to customize appearance:
+
+* [Pimp My RMD](https://holtzy.github.io/Pimp-my-rmd/) 
+
+<br>
+
+
 # What to Submit? 
 
 Submit your RMD and knitted HTML file on Canvas. 
