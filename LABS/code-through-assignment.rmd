@@ -86,6 +86,11 @@ And some advice on ways to customize appearance:
 
 * [Pimp My RMD](https://holtzy.github.io/Pimp-my-rmd/) 
 
+You can also create a slideshow presentation if you like:
+
+* [RMD Gallery](https://rmarkdown.rstudio.com/gallery.html)
+
+
 <br>
 
 
