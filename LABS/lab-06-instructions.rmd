@@ -265,7 +265,7 @@ Notes:
 
 <br>
 
-If you are interested in some of the actual math behind Moneyball ("Sabermetrics") that breaks open the black box of each season to figure out what types of players to recruit to maximize wins, you should check out [this nice blog](https://towardsdatascience.com/linear-regression-moneyball-part-1-b93b3b9f5b53) or this [R book](https://www.amazon.com/Analyzing-Baseball-Data-Chapman-Hall/dp/1466570229) on baseball statistics. 
+If you are interested in some of the actual math behind Moneyball ("Sabermetrics") that breaks open the black box of each season to figure out what types of players to recruit to maximize wins, you should check out [this nice blog](https://towardsdatascience.com/linear-regression-moneyball-part-1-b93b3b9f5b53) or this [R book](https://www.amazon.com/Analyzing-Baseball-Data-Second-Chapman/dp/0815353510) on baseball statistics. 
 
 
 

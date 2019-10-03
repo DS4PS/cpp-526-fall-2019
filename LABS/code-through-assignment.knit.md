@@ -1,0 +1,86 @@
+---
+title: "Code-Through Assignment"
+output:
+  html_document:
+    theme: readable
+    highlight: tango
+    toc: true
+    self_contained: false
+    number_sections: false
+    css: textbook.css
+---
+
+
+
+
+-----
+
+
+
+# What is a Code-Through? 
+
+A code-through is a short tutorial where you explain how to do something in R. They are similar to [explainer videos](https://blog.hubspot.com/marketing/explainer-videos) that you often see shared.
+
+
+They can come in many styles, sizes, and themes. Here are some examples to get you thinking: 
+
+* [choropleth maps](http://www.rpubs.com/cenuno/choropleth_map)   
+* [making clever graphics](https://davidsmale.netlify.com/portfolio/happy-days/)  
+* [network visualization](https://kateto.net/network-visualization) 
+* [more maps](https://geocompr.robinlovelace.net/adv-map.html)  
+* [analysis of trees](https://cran.r-project.org/web/packages/ForestTools/vignettes/treetopAnalysis.html) 
+* [predicting child maltreatment](http://urbanspatialanalysis.com/portfolio/an-open-source-geospatial-risk-predictive-framework-for-child-maltreatment/)  
+
+
+<br> 
+
+# Why Do a Code-Through? 
+
+It is very useful to learn how to explain the steps needed to successfully complete a task or replicate results. Within organizations they are very useful for training new hires, collaborating on projects, and creating internal knowledge banks. 
+
+Quickly skimming some examples above, what are the best elements to include in a tutorial to make it clear and accessible? 
+
+<br>
+
+# What Should We Explain? 
+
+For this assignment your code-through should be short and simple. It can be as short as two printed pages, or as long as you like.
+
+You can focus your code-through on:
+
+* A demonstration of a topic from class or a programming trick you have learned this semester. 
+* A tour of a dataset that you have found, and how it might be used. 
+* An introduction to a new package or function. 
+
+<br> 
+
+# What Should I Include? 
+
+Create your code-through tutorial in an RMD document. 
+
+Include anything that you need to get your ideas across. You might consider:
+
+* Images 
+* Adding [extra labels](https://ds4ps.org/cpp-523-fall-2019/labs/figures/reading-a-regression-table.png) to tables or graphs 
+* Print glimpses of datasets before and after manipulations so the user can see what has changed 
+* Toy datasets that can be useful for demonstrating points 
+
+
+# What to Submit? 
+
+Submit your RMD and knitted HTML file on Canvas. 
+
+Also post a link to your file on Yellowdig and explain your concept to your classmates. 
+
+
+<br>
+ 
+-----
+
+<br>
+<br>
+
+
+
+
+
