@@ -997,7 +997,7 @@ This lab is designed to introduce you to primary data join functions in R.
 ** Week 7 - Dashboards
 
 
-*** { @unit = "", @title = "Reflection" }
+*** { @unit = "", @title = "Reflection", @foldout }
 
 <br>
 
@@ -1008,19 +1008,14 @@ This lab is designed to introduce you to primary data join functions in R.
 <br>
 
 
-*** { @unit = "MON Oct 7th", @title = "Discussion Topic", @assignment  }
-
-
-*** { @unit = "THURS Oct 10th", @title = "FINAL PROJECT", @assignment  }
-
-*** { @unit = "FRI Oct 11th", @title = "Code-Through Assignment", @assignment  }
+*** { @unit = "FRI Oct 11th", @title = "Code-Through Assignment", @assignment, @foldout  }
 
 <br>
 <br>
 
 ## Code-Through
 
-<a class="uk-button uk-button-default" href="https://ds4ps.org/cpp-526-fall-2019/labs/code-through-assignment.html">Code-Through Instructions</a>
+<a class="uk-button uk-button-default" href="https://ds4ps.org/cpp-526-fall-2019/LABS/code-through-assignment.html">Code-Through Instructions</a>
 
 ## Submit to Canvas:
 
@@ -1034,4 +1029,9 @@ This lab is designed to introduce you to primary data join functions in R.
 <br>
 <br>
 
+
+*** { @unit = "MON Oct 7th", @title = "Discussion Topic", @assignment  }
+
+
+*** { @unit = "THURS Oct 10th", @title = "FINAL PROJECT", @assignment  }
 
