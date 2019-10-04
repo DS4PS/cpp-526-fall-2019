@@ -1015,6 +1015,10 @@ This lab is designed to introduce you to primary data join functions in R.
 
 ## Code-Through
 
+Since you are sharing your code-through with your classmates on Yellowdig, it will serve as your discussion topic this week.
+
+If you send me your RMD and HTML files via email, I will post them to GitHub and create a link for you if you would like to share a URL instead of a file. 
+
 <a class="uk-button uk-button-default" href="https://ds4ps.org/cpp-526-fall-2019/LABS/code-through-assignment.html">Code-Through Instructions</a>
 
 ## Submit to Canvas:
@@ -1028,9 +1032,6 @@ This lab is designed to introduce you to primary data join functions in R.
 
 <br>
 <br>
-
-
-*** { @unit = "MON Oct 7th", @title = "Discussion Topic", @assignment  }
 
 
 *** { @unit = "THURS Oct 10th", @title = "FINAL PROJECT", @assignment  }
