@@ -1036,3 +1036,20 @@ If you send me your RMD and HTML files via email, I will post them to GitHub and
 
 *** { @unit = "THURS Oct 10th", @title = "FINAL PROJECT", @assignment  }
 
+<br>
+<br>
+
+
+## Create a Data Dashboard in R
+
+Working with the crash data from Lab-05, you will extend the work you began in Lab-04 by creating a dynamic data dashboard that will be used to search for patterns in Tempe crash data.
+
+<a class="uk-button uk-button-default" href="https://ds4ps.org/cpp-526-fall-2019/LABS/final-project-instructions.html">Final Project Instructions</a>
+
+## Submit to Canvas:
+
+<a class="uk-button uk-button-primary" href="https://canvas.asu.edu/courses/29528/assignments">SUBMIT DASHBOARD</a>
+
+
+<br>
+<br>
