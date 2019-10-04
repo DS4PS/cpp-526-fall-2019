@@ -1034,7 +1034,7 @@ If you send me your RMD and HTML files via email, I will post them to GitHub and
 <br>
 
 
-*** { @unit = "THURS Oct 10th", @title = "FINAL PROJECT", @assignment, @foldout  }
+*** { @unit = "FRI Oct 11th", @title = "FINAL PROJECT", @assignment, @foldout  }
 
 <br>
 <br>
@@ -1050,6 +1050,7 @@ Working with the crash data from Lab-05, you will extend the work you began in L
 
 <a class="uk-button uk-button-primary" href="https://canvas.asu.edu/courses/29528/assignments">SUBMIT DASHBOARD</a>
 
+*Please note that I will be traveling on Friday Oct 11th, so response to questions will be slow if you wait until Friday.*
 
 <br>
 <br>
