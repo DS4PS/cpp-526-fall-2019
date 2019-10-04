@@ -1810,6 +1810,20 @@ runtime: shiny
 <a class="sourceLine" id="cb3-6" data-line-number="6"><span class="kw">pander</span>( dd.simple ) <span class="co"># html table, from pander package</span></a></code></pre></div>
 <p><br><br></p>
 </div>
+<div id="bonus-principles-of-dashboard-design" class="section level2">
+<h2>BONUS: Principles of Dashboard Design</h2>
+<p>You will note that on the second tab the input widgets are a little awkward for creating comparisons. It could potentially be improved by considering some of the following.</p>
+<ul>
+<li>Since we have two drivers, perhaps splitting the map into two views is more meaningful for comparisons?</li>
+<li>Age can be treated as categories to make it easier to select a meaningful group?</li>
+<li>The use of mutually exclusive categories forces us to use gender in any comparison we make, which makes the choice set less flexible (perhaps we want to only consider age and not gender).</li>
+<li>Is the map of points the best way to convey the comparisons? What information do you take from the side-by-side maps? Would tables or a heatmap summary of points, a table or a chart be better?</li>
+<li>Driver 1 is typically the individual that caused the accident in the study. Is a driver 1 to driver 2 comparison the most meaningful way to slice the data? Perhaps it would be better as driver 1 to driver 1, with different characteristics?</li>
+<li>Can we organize the widgets into groups to convey that they belong to different maps?</li>
+</ul>
+<p>In other words, as the programmer you have a lot of control over how you shape the user’s consumption of the information! There are lots of assumptions about reference points and meaningful comparisons built into the dashboard.</p>
+<p><br><br></p>
+</div>
 </div>
 <div id="shiny-advice" class="section level1">
 <h1>Shiny Advice</h1>
