@@ -1034,7 +1034,7 @@ If you send me your RMD and HTML files via email, I will post them to GitHub and
 <br>
 
 
-*** { @unit = "THURS Oct 10th", @title = "FINAL PROJECT", @assignment  }
+*** { @unit = "THURS Oct 10th", @title = "FINAL PROJECT", @assignment, @foldout  }
 
 <br>
 <br>
