@@ -1,0 +1,315 @@
+---
+title: 'Final Project - Instructions'
+output:
+  html_document:
+    theme: readable
+    df_print: paged
+    highlight: tango
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message=F, warning=F)
+library( dplyr )
+library( pander )
+```
+
+#### CPP 526
+
+<br>
+
+A dashboard template has been provided:
+
+[![](images/download.png)](https://www.dropbox.com/s/9l2kdaxk942q6ob/final-project-dashboard-template.rmd?dl=1)
+
+
+
+<br><br>
+
+# Data
+
+You will again use the traffic accidents dataset from the Tempe Open Data Portal. The details of the dataset are reported at the end of these instructions. 
+
+
+
+<br><br>
+
+
+# Instructions
+
+Create a dashboard with **at least six tabs**, four have already been provided for your.
+
+The template currently provides: 
+
+* The first tab allows the user to explore traffic accidents in Tempe by time periods. 
+* The second tab looks at accidents by driver characteristics. 
+* A leaftlet map with all accidents selected by the query color-coded to differentiate those with no injuries, injuries, and fatalities.
+* Informative pop-up info boxes that give crash details when you click on a crash.
+* Input widgets on a separate sidebar on the left-hand side.
+
+Using these input widgets, the user should be able to define a query that selects a specific time-period (weekends, afternoon rush-hour, etc.) and the map should display the correct data.
+
+The second tab allows the user to explore the prevelance and severity of different types of accidents by driver characteristics.
+
+* Age
+* Gender
+* Driver, pedestrian, or cyclist
+
+The template includes 4 [value boxes](https://rmarkdown.rstudio.com/flexdashboard/using.html#value_boxes) at the top of the page to report statistics for each user query:
+
+* Number of crashes
+* Rate of harm (at least one person injured or killed)
+* Total injuries
+* Total fatalities
+
+You can find new icons for the value boxes in the [Font Awesome Gallery](https://fontawesome.com/icons?d=gallery).
+
+
+## YAML Header
+
+The options in the template header embed the source code in your dashboard for easy access. Make sure to include the runtime shiny argument when you include dynamic widgets. 
+
+
+```
+---
+title: "Crash Data: City of Tempe"
+output: 
+  flexdashboard::flex_dashboard:
+    theme: spacelab
+    source: embed
+    smart: false
+runtime: shiny
+---
+```
+
+## Access to Raw Data
+
+The template includes a data table with the raw data that allows the users to filter and download the data they are interested in.
+
+We use the Data Table **DT** package to embed data in a dashboard. 
+
+```{r, echo=T, eval=F}
+
+# library( DT )
+
+these.buttons <- c( 'copy', 'csv', 'excel', 'pdf', 'print' )
+
+datatable( dat,
+           filter='bottom', rownames=FALSE, 
+           #options=list( pageLength=5, autoWidth=TRUE ),
+           fillContainer=TRUE, 
+           style="bootstrap",
+           class='table-condensed table-striped',
+           extensions = 'Buttons', 
+           options=list( dom='Bfrtip', 
+                         buttons=these.buttons  )) %>%
+  
+  formatStyle( "name", "white-space"="nowrap" )
+
+```
+
+
+<br><br>
+
+
+# Your Task
+
+Add at least two additional tabs that allow for meaningful analysis of the data. Include widgets for user input, and link the widgets to a leaflet map (like tabs 1 and 2) or any other tables or graphs that you find useful for analyzing traffic patterns. You might consider:
+
+Accident characteristics:
+
+* Type (Collisionmanner)
+* Violations issued
+
+
+Conditions at the time of accident:
+
+* Time of day 
+* Weather
+* Light
+* Surface
+* Junction
+
+Impairement?
+* Alcohol or drugs 
+* Violations issued
+
+
+*Note that some categories like weather conditions are mutually exclusive and thus should be radio buttons, and others might be inclusive such as drugs and alcohol for driver 1 and driver 2, and could be operationalized with check-boxes.*
+
+
+*Instead of using 24-hour periods you might consider defining your own periods such as rush hour, work day, school pick-up, etc.).*
+
+
+The main window in this tab should include four tables or graphs:
+
+
+
+<br><br>
+
+
+
+
+## The About Tab
+
+Include a description of the project including references for the data source, your contact info, and the intended use of the dashboard. 
+
+The data dictionary is included in this tab. The data dictionary was created as follows:
+
+```{r, eval=F}
+# pseudo-code only
+data.dictionary <- read.csv()
+dd.simple <-
+  data.dictionary %>%
+  select( variableNames, variableDescriptions )
+pander( dd.simple ) # html table, from pander package
+```
+
+
+
+<br><br>
+
+# Shiny Advice
+
+When developing your analysis using shiny widgets, each will entail three steps:
+
+* Defining parameters
+* Filtering data according to parameters
+* Re-analyzing your data
+
+I suggest that you develop each analytical step outside of the dashboard, then add the code in the appropriate dashboard buckets. Start with static versions of your parameters.
+
+```{r, eval=F}
+# parameters
+days.of.week <- c("Sat","Sun")
+start.time <- 3
+end.time <- 6
+
+# filter data
+d2 <-
+  dat %>%
+  filter( day %in% days.of.week, hour >= start.time & hour <= end.time )
+
+# analyze data
+d2 %>%
+  count( Collisionmanner ) %>%
+  arrange( -n ) %>%
+  pander()
+```
+
+Now to link to your shiny widgets, you just need to grab the user inputs:
+
+```{r, eval=F}
+# shiny widgets
+
+checkboxGroupInput("days", label = h3("Day of Week"), 
+    choices = list("Monday"    = "Mon", 
+                   "Tuesday"   = "Tue", 
+                   "Wednesday" = "Wed", 
+                   "Thursday"  = "Thu",
+                   "Friday"    = "Fri",
+                   "Saturday"  = "Sat",
+                   "Sunday"    = "Sun" ),
+    selected = c("Mon","Tue","Wed","Thu","Fri","Sat","Sun"),
+
+sliderInput("hour", label = h3("Time of Day"), 
+            min = 0, max = 23, value = c(6, 12))
+
+# parameters
+days.of.week <- input$days    # vector will all checked values
+start.time <- input$hour[1]   # sliderInput lower value
+end.time  <-  input$hour[2]   # sliderInput upper value
+```
+
+Pay attention to the return values of each widget:
+
+[Shiny Widget Gallery](https://shiny.rstudio.com/gallery/widget-gallery.html)
+
+They may be a single value or a vector, and they are typically characters, not numeric values, so you may need to recast as the correct value type to use in the filters. For example, if you use a check box for hours of the day, the return value will be a character and the greater than or less than operators would not work.
+
+
+```{r, eval=F}
+filter( day %in% days.of.week, hour >= start.time & hour <= end.time )
+```
+
+
+
+<br><br>
+
+
+# Submission Instructions
+
+There are two steps to submitting your final project:
+
+**1) Upload RMD to Canvas**
+
+Login to Canvas at <http://canvas.asu.edu> and navigate to the assignments tab in the course repository. Upload your RMD file to the appropriate lab submission link.
+
+**2) Deploy your dashboard**
+
+Visit the [Shiny Apps platform](https://www.shinyapps.io/) hosted by R Studio, and create a free own account. 
+Upload your dashboard to your account (after you run your file you should see the option "Publish" at the top right - follow the commands). 
+
+Include the link to your dashboard in your submission comments on Canvas.
+
+
+
+Remember to:
+
+* name your files according to the convention: **Final-Project-LastName.Rmd**
+* show your solution, include your code.
+* do not print excessive output (like a full data set).
+* follow appropriate style guidelines (spaces between arguments, etc.).
+
+<br><br>
+
+
+
+
+# Data
+
+You will use a traffic accidents dataset from the Tempe Open Data Portal, available at:
+
+https://data.tempe.gov/dataset/high-severity-traffic-crashes-1-08
+
+You will download the "Crash Data" CSV dataset, store it on your machine, and read it into R using the read.csv() fuction.
+
+The dataset contains the following variables:
+
+
+|column              |type      |label                      |description                                                                                                                 |
+|:-------------------|:---------|:--------------------------|:---------------------------------------------------------------------------------------------------------------------------|
+|Incidentid          |numeric   |Incident ID                |Unique incident ID number assigned by Arizona Department of Transportation (ADOT).                                          |
+|DateTime            |timestamp |Date Time                  |Date and time that the crash occurred.                                                                                      |
+|Year                |numeric   |Year                       |Year that the crash occurred.                                                                                               |
+|StreetName          |text      |Street Name                |The street that the crash occurred on.                                                                                      |
+|CrossStreet         |text      |Cross-street               |The nearest intersecting street or road.                                                                                    |
+|Distance            |numeric   |Distance from Intersection |The distance, in feet, that the crash occurred from the cross-street.                                                       |
+|JunctionRelation    |text      |Junction Relation          |The location of the crash in relation to a junction, either an intersection or connection between a driveway and a roadway. |
+|Totalinjuries       |numeric   |Total Injuries             |Total number of persons with non-fatal injuries involved in the crash.                                                      |
+|Totalfatalities     |numeric   |Total Fatalities           |Total number of persons with fatal injuries involved in the crash.                                                          |
+|Injuryseverity      |text      |Injury Severity            |The highest severity of injury of all persons involved in the crash.                                                        |
+|Collisionmanner     |text      |Collision Manner           |Identifies the manner in which two vehicles initially came into contact.                                                    |
+|Lightcondition      |text      |Lighting Conditions        |The type/level of light that existed at the time of the crash.                                                              |
+|Weather             |text      |Weather                    |The prevailing (most significant) atmospheric conditions that existed at the time of the crash.                             |
+|SurfaceCondition    |text      |Surface Condition          |The roadway surface condition at the time and place of a crash.                                                             |
+|Unittype_One        |text      |Unit Type One              |Driver, Passenger, Pedestrian, Pedalcyclist or Driverless.                                                                  |
+|Age_Drv1            |numeric   |                           |                                                                                                                            |
+|Gender_Drv1         |text      |                           |                                                                                                                            |
+|Traveldirection_One |text      |Travel Direction           |The direction the unit was traveling before the incident occurred,                                                          |
+|Unitaction_One      |text      |Unit Action One            |The maneuver, or last action, of the unit before the crash.                                                                 |
+|Violation1_Drv1     |text      |Violation  One             |The main violation/behavior of the unit that contributed to the crash.                                                      |
+|AlcoholUse_Drv1     |text      |Alcohol Use 1              |Indicates whether alcohol was a contributing factor in the crash or not.                                                    |
+|DrugUse_Drv1        |text      |Drug Use 1                 |Indicates whether drug use was a contributing factor in the crash or not.                                                   |
+|Unittype_Two        |text      |Unit Type Two              |Driver, Passenger, Pedestrian, Pedalcyclist or Driverless.                                                                  |
+|Age_Drv2            |numeric   |                           |                                                                                                                            |
+|Gender_Drv2         |text      |                           |                                                                                                                            |
+|Traveldirection_Two |text      |Travel Direction Two       |The direction the unit was traveling before the incident occurred.                                                          |
+|Unitaction_Two      |text      |Unit Action Two            |The maneuver, or last action, of the unit before the crash.                                                                 |
+|Violation1_Drv2     |text      |Violation Two              |The main violation/behavior of the unit that contributed to the crash.                                                      |
+|AlcoholUse_Drv2     |text      |Alcohol Use 2              |Indicates whether alcohol was a contributing factor in the crash or not.                                                    |
+|DrugUse_Drv2        |text      |Drug Use 2                 |Indicates whether drug use was a contributing factor in the crash or not.                                                   |
+|Latitude            |numeric   |Latitude                   |Used to specify the precise location of the crash.                                                                          |
+|Longitude           |numeric   |Longitude                  |Used to specify the precise location of the crash.                                                                          |
+
+
+
