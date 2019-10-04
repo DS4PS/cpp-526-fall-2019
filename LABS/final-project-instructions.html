@@ -1797,7 +1797,6 @@ runtime: shiny
 <p>Impairement? * Alcohol or drugs * Violations issued</p>
 <p><em>Note that some categories like weather conditions are mutually exclusive and thus should be radio buttons, and others might be inclusive such as drugs and alcohol for driver 1 and driver 2, and could be operationalized with check-boxes.</em></p>
 <p><em>Instead of using 24-hour periods you might consider defining your own periods such as rush hour, work day, school pick-up, etc.).</em></p>
-<p>The main window in this tab should include four tables or graphs:</p>
 <p><br><br></p>
 <div id="the-about-tab" class="section level2">
 <h2>The About Tab</h2>
@@ -1861,6 +1860,12 @@ runtime: shiny
 <p>They may be a single value or a vector, and they are typically characters, not numeric values, so you may need to recast as the correct value type to use in the filters. For example, if you use a check box for hours of the day, the return value will be a character and the greater than or less than operators would not work.</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="kw">filter</span>( day <span class="op">%in%</span><span class="st"> </span>days.of.week, hour <span class="op">&gt;=</span><span class="st"> </span>start.time <span class="op">&amp;</span><span class="st"> </span>hour <span class="op">&lt;=</span><span class="st"> </span>end.time )</a></code></pre></div>
 <p><br><br></p>
+<div id="practice-with-dplyr" class="section level2">
+<h2>Practice with dplyr</h2>
+<p>If you want to practice some more with data wrangling steps, you might find this tutorial helpful:</p>
+<p><a href="https://www.kaggle.com/ryanburge/hipster-names">How to Identify Hipster Names</a></p>
+<p><br> <br></p>
+</div>
 </div>
 <div id="submission-instructions" class="section level1">
 <h1>Submission Instructions</h1>

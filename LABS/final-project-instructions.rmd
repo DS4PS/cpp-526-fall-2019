@@ -140,7 +140,6 @@ Impairement?
 *Instead of using 24-hour periods you might consider defining your own periods such as rush hour, work day, school pick-up, etc.).*
 
 
-The main window in this tab should include four tables or graphs:
 
 
 
@@ -234,6 +233,17 @@ filter( day %in% days.of.week, hour >= start.time & hour <= end.time )
 
 
 <br><br>
+
+## Practice with dplyr
+
+If you want to practice some more with data wrangling steps, you might find this tutorial helpful:
+
+[How to Identify Hipster Names](https://www.kaggle.com/ryanburge/hipster-names)
+
+
+
+<br>
+<br>
 
 
 # Submission Instructions
