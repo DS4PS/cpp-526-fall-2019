@@ -1,0 +1,209 @@
+---
+title: "KableExtra Package"
+author: "Sunayna Goel"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+output:
+  html_document:
+    df_print: paged
+    theme: cerulean
+    highlight: textmate
+    toc: yes
+    toc_float: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set( echo=TRUE, message=FALSE, warning=FALSE, fig.width=10 )
+```
+
+### Code Through Assignment
+
+# Introduction 
+
+Creating complex tables which are easier to read has never been simpler.  **KableExtra** function makes it possible to create professional looking complex table in Rmarkdown document. It allows for lots of customizations.  **KableExtra** uses **%>%** function which makes the language very intuitive and making it easier to code. It can also be easily used with packages like **dplyr**, **ggplot** .
+
+## Getting started 
+
+The following packages and libraries are needed for this purpose. 
+```{r}
+# install.packages() cannot be included in an RMD file when knitting
+#install.packages("kableExtra")
+#install.packages("prettydoc")
+#install.packages("dplyr")
+```
+```{r load_packages}
+library(knitr)
+library(kableExtra)
+library(prettydoc)
+library(dplyr)
+```
+
+The dataset, **USAarrest**, is used for this assignment.  This data set has 50 rows and 4 columns but for the purpose of this assignment we will use first 8 rows.
+
+```{r}
+data ("USArrests")
+dat<- USArrests
+dim (dat)
+```
+
+The basic **Kable** function presents data without any formatting in the following view. 
+
+## Basic Table
+```{r}
+dat<- USArrests [1:8,1:4]
+kable(dat)
+```
+
+## Styling Table
+**kable_styling()** function can be used to style the table in various ways. Here is the most basic version. 
+
+```{r}
+dat %>%
+  kable() %>%
+  kable_styling()
+```
+
+**KableExtra** offers many styling options. Some of the most popular ones are striped lines, group columns, change row colors, condensed table, flexible font sizes, change of indentation, texts, explanations, and notations. There are endless possibilities around this package. Few of them are explained below. 
+
+### Table width
+In this style, striped lines of alternate colors  can be added to the rows to make it visually interesting. **Kable**, by default, takes up the whole screen when displaying the output. 
+
+```{r}
+kable(dat) %>%
+kable_styling(bootstrap_options = c("striped", "hover"))
+```
+
+However, **"full_width = F"**, as an argument, can be added so the output does not take up the whole screen. This does not change any grid options of the table. 
+
+```{r}
+kable(dat) %>%
+  kable_styling(bootstrap_options = c("striped", "hover"))%>%
+  kable_styling (full_width = F)
+```
+
+### Condensed 
+Output can be printed in condensed form.  **condensed argument** in **kable_styling ()** function makes this possible.  It can be used when dealing with huge datasets to improve the readability. This condenses the row height and column width as well. It is different than **full_width = F**. The effect will be more visible if there were more columns in the example.  
+
+```{r}
+kable(dat) %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"))
+```
+
+### Responsive 
+In today's day and age output is not just limited to a computer screen. Mobile or handheld devices should be taken into consideration as well. To overcome this situation and improve readability across various mediums **kable_styling ()** offers **responsive** option which allows users to scroll data horizontally.  The data will look the same on a computer screen.  
+
+```{r}
+kable(dat) %>%
+kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"))
+```
+
+## Positioning table
+
+There are also options available to justify the table **left, right or center** of the page. 
+If there are lots of explanatory texts related to the table **float** can be used to position table to the left or right to include text using the argument **position = "float_right" or position = "float_left"**
+
+```{r}
+kable(dat) %>%
+  kable_styling(bootstrap_options = "striped", full_width = F, position = "right")
+```
+
+## Font size 
+
+Font size can also be adjusted by using  **font_size** in the argument. 
+
+### Increasing Font size
+```{r}
+kable(dat) %>%
+kable_styling(font_size = 20)
+```
+
+### Decreasing Font Size
+```{r}
+kable(dat) %>%
+kable_styling(font_size = 10)
+```
+
+## Conditional Logic 
+
+Conditional logic can be easily applied using **cell_spec()**. This makes it easier to analyze data visually. 
+
+```{r}
+dat %>%
+  mutate(
+    States = row.names(.),
+    Murders = cell_spec(Murder, "html", color = ifelse(Murder > 9, "firebrick", "darkblue")),
+    Assaults = cell_spec(Assault, "html", color = ifelse(Assault > 250, "firebrick", "darkblue")), 
+    UrbanPops = cell_spec(UrbanPop, "html", color = ifelse(UrbanPop > 75, "firebrick", "darkblue") ),
+    Rapes = cell_spec(Rape, "html", color = ifelse(Rape > 30, "firebrick", "darkblue"))                
+  ) %>%
+  select(States,Murders,Assaults, UrbanPops, Rapes) %>%
+  kable(format = "html", escape = F) %>%
+  kable_styling("striped", full_width = F)
+```
+
+##  Header rows
+
+### Adding one header row
+Sometimes adding a **header row** to explain the data table is required. It is easy to do so by using **%>% in Kable**. The table output can be piped to add extra row using **add_header_above()** function. 
+
+```{r}
+kable(dat) %>%
+  kable_styling("striped") %>%
+  add_header_above(c(" " = 1, "Crime group 1" = 2, "Crime Group 2" = 2))
+```
+
+### Adding multiple header rows
+Additional header rows can be added to further enhance the table. 
+```{r}
+kable(dat) %>%
+  kable_styling(c("striped", "bordered")) %>%
+  add_header_above(c(" ", "Crime Group 1" = 2, " Crime Group 2" = 2)) %>%
+  add_header_above(c(" ", "Group 3" = 1, "Group 4" = 3)) %>%
+  add_header_above(c(" ", "Statewise Crime Data" = 4))
+```
+
+### Formatting header row
+Header row can be easily formatted using **row_spec()**. Position of the header can be adjusted by changing the angle. Changing the color is easy as well. 
+
+```{r}
+kable(dat) %>%
+  kable_styling("striped", full_width = F) %>%
+  row_spec(0, angle = -15, color = "steelblue")
+```
+
+
+## Adding footnote
+
+Sometimes adding **footnote** is a required to explain the  data set in the table. **add_footnote ()** function can be used for this. Within this function **symbol, number or alphabets** can be assigned to explain footnote. Here is an example using alphabets. It can be customized by changing **argument notation = ""** within the function. 
+
+### Alphabet
+```{r}
+kable(dat) %>%
+  kable_styling("striped") %>%
+  add_footnote(c(" Statewise Crime Data under 4 categories ", "Displaying First 8 states only."),notation = "alphabet" )
+```
+
+### Number
+```{r}
+kable(dat) %>%
+  kable_styling("striped") %>%
+  add_footnote(c(" Statewise Crime Data under 4 categories ", "Displaying First 8 states only."), notation = "number")
+```
+
+### Symbol
+```{r}
+kable(dat) %>%
+  kable_styling("striped") %>%
+  add_footnote(c(" Statewise Crime Data under 4 categories ", "Displaying First 8 states only."), notation = "symbol")
+```
+## Acknowledgement 
+There are many functions available within this package. The following resources were used to create this tutorial for the assignment. To explore more please click the following links.   
+
+[rpubs](https://rpubs.com/yutao/444395)   
+
+[github](https://github.com/haozhu233/kableExtra)   
+
+[cran.rstudio](https://cran.rstudio.com/web/packages/kableExtra/kableExtra.pdf)   
+
+[Cran.r-project](https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html)   
+
+[haozhu233.github](http://haozhu233.github.io/kableExtra/kableExtra_in_other_HTML_themes.html)   
