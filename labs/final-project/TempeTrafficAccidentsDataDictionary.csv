@@ -4,7 +4,7 @@ DateTime,timestamp,Date Time,Date and time that the crash occurred.
 Year,numeric,Year,Year that the crash occurred.
 StreetName,text,Street Name,The street that the crash occurred on.
 CrossStreet,text,Cross-street,The nearest intersecting street or road.
-Distance,numeric,Distance from Intersection,"The distance, in feet, that the crash occurred from the cross-street.  This distance is expressed in feet with positive numbers being either north or east of the intersection and negative numbers being either south or west of the intersection, based on the orientation of the street that the incident occurred on. (i.e. Baseline Rd runs in an E/W direction and so a negative number would be west of the intersection and a positive number would be east of the intersection)."
+Distance,numeric,Distance from Intersection,"The distance, in feet, that the crash occurred from the cross-street.  This distance is expressed in feet with positive numbers being either north or east of the intersection and negative numbers being either south or west of the intersection, based on the orientation of the street that the incident occurred on. (i.e. Baseline Rd runs in an East-West direction and so a negative number would be west of the intersection and a positive number would be east of the intersection)."
 JunctionRelation,text,Junction Relation,"The location of the crash in relation to a junction, either an intersection or connection between a driveway and a roadway."
 Totalinjuries,numeric,Total Injuries,Total number of persons with non-fatal injuries involved in the crash.
 Totalfatalities,numeric,Total Fatalities,Total number of persons with fatal injuries involved in the crash.
@@ -12,12 +12,12 @@ Injuryseverity,text,Injury Severity ,"The highest severity of injury of all pers
 
 No Injury - No complaint or treatment was required by the person.
 
-Possible Injury - Complaint of pain without visible injury. Includes – momentary unconsciousness, claim of injuries not evident, limping, complaint of pain, nausea or hysteria.
+Possible Injury - Complaint of pain without visible injury. Includes momentary unconsciousness, claim of injuries not evident, limping, complaint of pain, nausea or hysteria.
 
 Non-Incapacitating Injury - Any injury, other than a fatal injury or an incapacitating injury, which is evident to observers at the scene of the crash in which the injury occurred.
 Examples: contusions (bruises), laceration, bloody nose, lump on head, or abrasions.
 
-Incapacitating Injury - Any injury, other than a fatal injury, which prevents the injured person from walking, driving or normally continuing the activities the person was capable of performing before the injury occurred. Often defined as “needing help from the scene.” Includes: severe lacerations, broken or distorted limbs, skull or chest injuries, abdominal injuries, unconsciousness when taken from the crash scene.
+Incapacitating Injury - Any injury, other than a fatal injury, which prevents the injured person from walking, driving or normally continuing the activities the person was capable of performing before the injury occurred. Often defined as needing help from the scene.� Includes: severe lacerations, broken or distorted limbs, skull or chest injuries, abdominal injuries, unconsciousness when taken from the crash scene.
 
 Fatal Injury - Any injury that results in death within 30 days after the crash occurred.
 "

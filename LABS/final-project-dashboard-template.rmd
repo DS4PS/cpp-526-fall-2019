@@ -543,62 +543,11 @@ DATA DICTIONARY
 
 
 ```{r}
-data.dictionary <- 
-structure(list(column = structure(c(13L, 7L, 32L, 19L, 6L, 8L, 
-15L, 22L, 21L, 14L, 5L, 17L, 31L, 20L, 27L, 1L, 11L, 23L, 25L, 
-29L, 3L, 9L, 28L, 2L, 12L, 24L, 26L, 30L, 4L, 10L, 16L, 18L), .Label = c("Age_Drv1", 
-"Age_Drv2", "AlcoholUse_Drv1", "AlcoholUse_Drv2", "Collisionmanner", 
-"CrossStreet", "DateTime", "Distance", "DrugUse_Drv1", "DrugUse_Drv2", 
-"Gender_Drv1", "Gender_Drv2", "Incidentid", "Injuryseverity", 
-"JunctionRelation", "Latitude", "Lightcondition", "Longitude", 
-"StreetName", "SurfaceCondition", "Totalfatalities", "Totalinjuries", 
-"Traveldirection_One", "Traveldirection_Two", "Unitaction_One", 
-"Unitaction_Two", "Unittype_One", "Unittype_Two", "Violation1_Drv1", 
-"Violation1_Drv2", "Weather", "Year"), class = "factor"), type = structure(c(1L, 
-3L, 1L, 2L, 2L, 1L, 2L, 1L, 1L, 2L, 2L, 2L, 2L, 2L, 2L, 1L, 2L, 
-2L, 2L, 2L, 2L, 2L, 2L, 1L, 2L, 2L, 2L, 2L, 2L, 2L, 1L, 1L), .Label = c("numeric", 
-"text", "timestamp"), class = "factor"), label = structure(c(10L, 
-6L, 29L, 16L, 5L, 7L, 12L, 19L, 18L, 11L, 4L, 14L, 28L, 17L, 
-24L, 1L, 1L, 20L, 22L, 26L, 2L, 8L, 25L, 1L, 1L, 21L, 23L, 27L, 
-3L, 9L, 13L, 15L), .Label = c("", "Alcohol Use 1 ", "Alcohol Use 2", 
-"Collision Manner", "Cross-street", "Date Time", "Distance from Intersection", 
-"Drug Use 1", "Drug Use 2", "Incident ID", "Injury Severity ", 
-"Junction Relation", "Latitude", "Lighting Conditions", "Longitude", 
-"Street Name", "Surface Condition", "Total Fatalities", "Total Injuries", 
-"Travel Direction", "Travel Direction Two", "Unit Action One", 
-"Unit Action Two", "Unit Type One", "Unit Type Two", "Violation  One", 
-"Violation Two", "Weather", "Year"), class = "factor"), description = structure(c(21L, 
-2L, 23L, 17L, 14L, 9L, 11L, 20L, 19L, 10L, 4L, 18L, 15L, 16L, 
-3L, 1L, 1L, 7L, 13L, 12L, 5L, 6L, 3L, 1L, 1L, 8L, 13L, 12L, 5L, 
-6L, 22L, 22L), .Label = c("", "Date and time that the crash occurred.", 
-"Driver, Passenger, Pedestrian, Pedalcyclist or Driverless.", 
-"Identifies the manner in which two vehicles initially came into contact.", 
-"Indicates whether alcohol was a contributing factor in the crash or not.", 
-"Indicates whether drug use was a contributing factor in the crash or not.", 
-"The direction the unit was traveling before the incident occurred,", 
-"The direction the unit was traveling before the incident occurred.", 
-"The distance, in feet, that the crash occurred from the cross-street.  This distance is expressed in feet with positive numbers being either north or east of the intersection and negative numbers being either south or west of the intersection, based on the orientation of the street that the incident occurred on. (i.e. Baseline Rd runs in an E/W direction and so a negative number would be west of the intersection and a positive number would be east of the intersection).", 
-"The highest severity of injury of all persons involved in the crash.\n\nNo Injury - No complaint or treatment was required by the person.\n\nPossible Injury - Complaint of pain without visible injury. Includes â\200“ momentary unconsciousness, claim of injuries not evident, limping, complaint of pain, nausea or hysteria.\n\nNon-Incapacitating Injury - Any injury, other than a fatal injury or an incapacitating injury, which is evident to observers at the scene of the crash in which the injury occurred.\nExamples: contusions (bruises), laceration, bloody nose, lump on head, or abrasions.\n\nIncapacitating Injury - Any injury, other than a fatal injury, which prevents the injured person from walking, driving or normally continuing the activities the person was capable of performing before the injury occurred. Often defined as â\200œneeding help from the scene.â\200\235 Includes: severe lacerations, broken or distorted limbs, skull or chest injuries, abdominal injuries, unconsciousness when taken from the crash scene.\n\nFatal Injury - Any injury that results in death within 30 days after the crash occurred.\n", 
-"The location of the crash in relation to a junction, either an intersection or connection between a driveway and a roadway.", 
-"The main violation/behavior of the unit that contributed to the crash.", 
-"The maneuver, or last action, of the unit before the crash.", 
-"The nearest intersecting street or road.", "The prevailing (most significant) atmospheric conditions that existed at the time of the crash.", 
-"The roadway surface condition at the time and place of a crash.", 
-"The street that the crash occurred on.", "The type/level of light that existed at the time of the crash.", 
-"Total number of persons with fatal injuries involved in the crash.", 
-"Total number of persons with non-fatal injuries involved in the crash.", 
-"Unique incident ID number assigned by Arizona Department of Transportation (ADOT).", 
-"Used to specify the precise location of the crash.", "Year that the crash occurred."
-), class = "factor")), class = "data.frame", row.names = c(NA, 
--32L))
-```
-
-```{r}
-dd.simple <-
-  data.dictionary %>%
-  select( column, description )
-#kable( dd.simple )  # markdown table, from knitr package
-pander( dd.simple )  # html table, from pander package
+URL.dd <- "https://raw.githubusercontent.com/DS4PS/cpp-526-fall-2019/master/labs/final-project/TempeTrafficAccidentsDataDictionary.csv"
+data.dictionary <- read.csv( URL.dd, stringsAsFactors=F )
+data.dictionary %>%
+  select( column, description ) %>%
+  pander( )
 ```
 
 
