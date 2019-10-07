@@ -545,6 +545,8 @@ DATA DICTIONARY
 ```{r}
 URL.dd <- "https://raw.githubusercontent.com/DS4PS/cpp-526-fall-2019/master/labs/final-project/TempeTrafficAccidentsDataDictionary.csv"
 data.dictionary <- read.csv( URL.dd, stringsAsFactors=F )
+
+data.dictionary$description <- stringi::stri_trans_general( data.dictionary$description, "latin-ascii" )
 data.dictionary %>%
   select( column, description ) %>%
   pander( )
