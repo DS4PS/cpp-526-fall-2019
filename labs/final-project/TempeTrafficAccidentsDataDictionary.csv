@@ -9,18 +9,11 @@ JunctionRelation,text,Junction Relation,"The location of the crash in relation t
 Totalinjuries,numeric,Total Injuries,Total number of persons with non-fatal injuries involved in the crash.
 Totalfatalities,numeric,Total Fatalities,Total number of persons with fatal injuries involved in the crash.
 Injuryseverity,text,Injury Severity ,"The highest severity of injury of all persons involved in the crash.
-
-No Injury - No complaint or treatment was required by the person.
-
-Possible Injury - Complaint of pain without visible injury. Includes momentary unconsciousness, claim of injuries not evident, limping, complaint of pain, nausea or hysteria.
-
-Non-Incapacitating Injury - Any injury, other than a fatal injury or an incapacitating injury, which is evident to observers at the scene of the crash in which the injury occurred.
-Examples: contusions (bruises), laceration, bloody nose, lump on head, or abrasions.
-
-Incapacitating Injury - Any injury, other than a fatal injury, which prevents the injured person from walking, driving or normally continuing the activities the person was capable of performing before the injury occurred. Often defined as needing help from the scene.ù Includes: severe lacerations, broken or distorted limbs, skull or chest injuries, abdominal injuries, unconsciousness when taken from the crash scene.
-
-Fatal Injury - Any injury that results in death within 30 days after the crash occurred.
-"
+NO INJURY - No complaint or treatment was required by the person.
+POSSIBLE INJURY - Complaint of pain without visible injury. Includes momentary unconsciousness, claim of injuries not evident, limping, complaint of pain, nausea or hysteria.
+NON-INCAPACITATING INJURY - Any injury, other than a fatal injury or an incapacitating injury, which is evident to observers at the scene of the crash in which the injury occurred. Examples: contusions (bruises), laceration, bloody nose, lump on head, or abrasions.
+INCAPACITATING INJURY - Any injury, other than a fatal injury, which prevents the injured person from walking, driving or normally continuing the activities the person was capable of performing before the injury occurred. Often defined as needing help from the scene.ù Includes: severe lacerations, broken or distorted limbs, skull or chest injuries, abdominal injuries, unconsciousness when taken from the crash scene.
+FATAL INJURY - Any injury that results in death within 30 days after the crash occurred."
 Collisionmanner,text,Collision Manner,Identifies the manner in which two vehicles initially came into contact.
 Lightcondition,text,Lighting Conditions,The type/level of light that existed at the time of the crash.
 Weather,text,Weather,The prevailing (most significant) atmospheric conditions that existed at the time of the crash.
