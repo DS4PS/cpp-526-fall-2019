@@ -139,6 +139,12 @@ Recorded videos of review sessions will be posted here.
 * **Video** [ [watch](https://asu.zoom.us/recording/play/5NOam6kCjiTNFL7pHcogxLTYXII_iHD_cIVFcQE_dJIEh84YXBOGVD3qRKm38wWW?continueMode=true) ]
   
 <br>
+
+**Review:**
+ 
+* **Video** [ [download](https://www.dropbox.com/s/vdwmaj84jw2eztx/zoom_0.mp4?dl=1) ]
+  
+<br>
 <br>
 
 </div>
