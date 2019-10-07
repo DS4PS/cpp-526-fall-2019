@@ -1048,7 +1048,7 @@ Working with the crash data from Lab-05, you will extend the work you began in L
 
 ## Submit to Canvas:
 
-<a class="uk-button uk-button-primary" href="https://canvas.asu.edu/courses/29528/assignments">SUBMIT DASHBOARD</a>
+<a class="uk-button uk-button-primary" href="https://canvas.asu.edu/courses/29528/assignments/821740">SUBMIT DASHBOARD</a>
 
 *Please note that I will be traveling on Friday Oct 11th, so response to questions will be slow if you wait until Friday.*
 
