@@ -256,6 +256,10 @@ We will need three tools to manage your data science projects: a data programmin
 
 # Data IO
 
+## Navigation 
+* Navigating R (directories, paths, object lists)
+* Built-In Datasets
+
 ## Getting Data into R [ [data import](http://ds4ps.org/dp4ss-textbook/ch-100-importing.html) ] 
 * Read options   
 * Copy and paste from Excel 
@@ -268,14 +272,6 @@ We will need three tools to manage your data science projects: a data programmin
 * Import from GitHub
 * Import from DropBox
 * [ [tutorial](https://www.datacamp.com/community/tutorials/r-data-import-tutorial) ]
-
-
-## APIs [ [using APIs in R](http://www.storybench.org/how-to-access-apis-in-r/) ] [ [Demo with DataUSA API](https://gist.github.com/lecy/0aa782a873cd174573f32d243233ca5b) ]
-* What is an API?
-* Examples 
-  - Census
-  - Socrata
-  - Twitter
 
 ## Saving Data [ [exporting datasets](http://ds4ps.org/dp4ss-textbook/ch-101-exporting_files.html) ] 
 * Write options 
@@ -290,9 +286,13 @@ We will need three tools to manage your data science projects: a data programmin
 * [ [tutorial](https://thomasleeper.com/Rcourse/Tutorials/savingdata.html) ]
 
 
-## Navigation 
-* Navigating R (directories, paths, object lists)
-* Built-In Datasets
+## APIs [ [using APIs in R](http://www.storybench.org/how-to-access-apis-in-r/) ] [ [Demo with DataUSA API](https://gist.github.com/lecy/0aa782a873cd174573f32d243233ca5b) ]
+* What is an API?
+* Examples 
+  - Census
+  - Socrata
+  - Twitter
+
 
 
 
