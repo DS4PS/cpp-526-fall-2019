@@ -256,7 +256,7 @@ We will need three tools to manage your data science projects: a data programmin
 
 # Data IO
 
-## Getting Data into R [ [tutorial](https://www.datacamp.com/community/tutorials/r-data-import-tutorial) ]
+## Getting Data into R [ [data import](http://ds4ps.org/dp4ss-textbook/ch-100-importing.html) ] 
 * Read options   
 * Copy and paste from Excel 
 * Using rdata format 
@@ -267,12 +267,17 @@ We will need three tools to manage your data science projects: a data programmin
 * Import from the web (RCurl)
 * Import from GitHub
 * Import from DropBox
-* APIs
+* [ [tutorial](https://www.datacamp.com/community/tutorials/r-data-import-tutorial) ]
+
+
+## APIs [ [using APIs in R](http://www.storybench.org/how-to-access-apis-in-r/) ] [ [Demo with DataUSA API](https://gist.github.com/lecy/0aa782a873cd174573f32d243233ca5b) ]
+* What is an API?
+* Examples 
   - Census
   - Socrata
   - Twitter
 
-## Saving Data [ [tutorial](https://thomasleeper.com/Rcourse/Tutorials/savingdata.html) ]
+## Saving Data [ [exporting datasets](http://ds4ps.org/dp4ss-textbook/ch-101-exporting_files.html) ] 
 * Write options 
   - CSV 
   - R Data Sets (RDS)
@@ -282,10 +287,14 @@ We will need three tools to manage your data science projects: a data programmin
   - SPSS or Stata 
 * Copy to Clipboard 
 * Copy to Excel 
+* [ [tutorial](https://thomasleeper.com/Rcourse/Tutorials/savingdata.html) ]
+
 
 ## Navigation 
 * Navigating R (directories, paths, object lists)
 * Built-In Datasets
+
+
 
 # Data Wrangling (dplyr)
 
