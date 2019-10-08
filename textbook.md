@@ -293,7 +293,7 @@ Data wrangling is the process of preparing data for analysis, which includes rea
 
 The goal of data wrangling is to create a **rodeo dataset** (clean and well-structured) that is ready for the big show (modeling and visualization)! 
 
-## Slicing Datasets – Base R and dplyr
+## Slicing Datasets – Base R and dplyr  [ [CH-11](http://ds4ps.org/dp4ss-textbook/p-070-data-verbs.html) ]
 * Subset operator
 * By index, including order / match
 * By logical
@@ -303,12 +303,22 @@ The goal of data wrangling is to create a **rodeo dataset** (clean and well-stru
 * Selector Vectors
 * Subset by column  ---  dplyr::select()
 
-## Combining Datasets
+## Wrangling Recipes [ [CH-12](http://ds4ps.org/dp4ss-textbook/p-072-data-recipes.html) ]
+* Pipe operator 
+* Window vs summary functions 
+* dplyr [cheat sheet](https://rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf) 
+
+## Combining Datasets  [ [CH-13](http://ds4ps.org/dp4ss-textbook/p-076-merging-data.html) ]
 * merge and match
 * join in dplyr
 * inner, outer, right, left
 
 # Explore and Describe
+
+## Group Structure [ [CH-14](http://ds4ps.org/dp4ss-textbook/p-073-group-structure.html) ]  
+* Combining factors and numeric data for analysis 
+* Faceting in plots 
+
 
 ## Summarizing Vectors
 * Counting things:  sum( logical statement )
@@ -356,21 +366,23 @@ The goal of data wrangling is to create a **rodeo dataset** (clean and well-stru
   - Incorrect:  https://en.wikipedia.org/wiki/File:Smallmult.png#/media/File:Smallmult.png
 * Custom graph layouts
 
-## ggplot2
+## ggplot2  [ [Intro to the Grammar of Graphics](http://ds4ps.org/dp4ss-textbook/ch-102-ggplot2.html) ]
 * Grammar of graphics concept
 * ggplot overview
 
 
 # Make Dynamic
 
-## R shiny [ [tutorial](http://rmarkdown.rstudio.com/authoring_shiny.html) ]
+## R shiny [ [overview](https://github.com/DS4PS/cpp-526-fall-2019/raw/master/lectures/shiny-widgets.pdf) ] [ [tutorial](http://rmarkdown.rstudio.com/authoring_shiny.html) ] 
 * What makes documents dynamic? 
 * Widgets 
-  - input objects 
+  - input objects
+  - [Widgets Gallery](https://shiny.rstudio.com/gallery/widget-gallery.html)
 * Render functions 
 * reactive 
 
-## flexdashboards [ [overview](http://rmarkdown.rstudio.com/flexdashboard/) ]
+
+## flexdashboards [ [overview](http://rmarkdown.rstudio.com/flexdashboard/) ] [ [demo RMD](https://shiny.rstudio.com/gallery/kmeans-example.html) ]
 * Principles of good dashboard design 
 * Layouts 
 * Sidebars 
