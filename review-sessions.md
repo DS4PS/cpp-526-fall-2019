@@ -140,7 +140,7 @@ Recorded videos of review sessions will be posted here.
   
 <br>
 
-**Review:**
+**Final Review (10-07-19):**
  
 * **Video** [ [download](https://www.dropbox.com/s/vdwmaj84jw2eztx/zoom_0.mp4?dl=1) ]
   
