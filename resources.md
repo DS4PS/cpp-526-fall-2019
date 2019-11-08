@@ -78,6 +78,12 @@ Markdown is used on GitHub, Stack Overflow, and in R Markdown documents. Familia
 
 You can see some advanced R Markdown features [HERE](https://ds4ps.github.io/Data-Science-Class/HANDOUTS/R_Markdown_Template.html).
 
+## Shiny Apps
+
+Want to build dynamic applications? Learn more about [R Shiny apps](https://leanpub.com/buildingshinyapps) and fully custom [R Shiny Dashboards](https://leanpub.com/c/shinydashboard).
+
+
+
 
 ## Collaboration Tools
 
