@@ -23,31 +23,6 @@ Unit Metadata is comprised of:
 Submit Button - <a class="uk-button uk-button-primary" href="{{page.canvas.assignment_url}}">Submit Lab</a>
 -->
 
-<style> 
-body {
-   font-family: "Roboto", sans-serif;
-}
- 
-p.italic {
-  font-style: italic;
-  color: black !important;
-}
-td {
-  text-align: left;
-}
-td.i {
-  text-align: center;
-}
-iframe {
-  align: middle;
-}
-article {
-  padding-left:20%;
-}
-em {
-  color: black !important;
-}
-</style>
 
 
 
@@ -1054,3 +1029,32 @@ Working with the crash data from Lab-05, you will extend the work you began in L
 
 <br>
 <br>
+
+
+
+<style> 
+body {
+   font-family: "Roboto", sans-serif;
+}
+ 
+p.italic {
+  font-style: italic;
+  color: black !important;
+}
+td {
+  text-align: left;
+}
+td.i {
+  text-align: center;
+}
+iframe {
+  align: middle;
+}
+article {
+  padding-left:20%;
+}
+em {
+  color: black !important;
+}
+</style>
+
